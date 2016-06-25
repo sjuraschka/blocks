@@ -11,11 +11,21 @@
 
  {:domain "www.braidchat.com"
   :url "/"
-  :meta {:title "Braid"
+  :meta {:title "Braid - Work Better Together"
          :description "Braid is a..."
          :image "url()"}
   :colors ["#abcdef"
            "#000000"]
-  :blocks ["braid-nav"
-           "braid-hero"]}
+  :blocks ["braid-com-nav"
+           "braid-com-hero"]}
+
+ {:domain "www.braidchat.org"
+  :url "/"
+  :meta {:title "Braid - Work Better Together"
+         :description "Braid is a..."
+         :image "url()"}
+  :colors ["#abcdef"
+           "#000000"]
+  :blocks ["braid-org-nav"
+           "braid-org-hero"]}
  ]

@@ -8,7 +8,9 @@
                                    register-sub
                                    dispatch
                                    dispatch-sync
-                                   subscribe]]))
+                                   subscribe]]
+            [blocks.client.templates.nav :refer [nav-template]]
+            [blocks.client.templates.hero :refer [hero-template]]))
 
 (register-handler
   :initialize
@@ -21,19 +23,6 @@
     (reaction (@state :page))))
 
 (enable-console-print!)
-
-(defn nav-template [data]
-  [:div.nav
-   [:img.logo {:src (data :logo)} ]
-   [:div.links
-    (for [link (data :links)]
-      [:a {:href (link :url)}
-       (link :text)])]])
-
-(defn hero-template [data]
-  [:div.hero
-   [:div.heading
-    (data :heading)]])
 
 (defn app-view []
   (let [page (subscribe [:page])]

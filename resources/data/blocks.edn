@@ -8,20 +8,24 @@
                  {:text "Pricing"
                   :url "..."}]}}
 
- "braid-nav"
- {:template "nav"
-  :data {:logo "http://placehold.it/50x50"
-         :links [{:text "For Teams"
-                  :url "..."
-                  :style "special"}
-                 {:text "Pricing"
-                  :url "..."}]}}
-
  "fetch-hero"
  {:template "hero"
   :data {:heading "Fetch!"}}
 
- "braid-hero"
+ "braid-com-nav"
+ {:template "nav"
+  :data {:title "Braid"
+         :version "beta"
+         :logo-url "/images/braid-logo-bw.svg"
+         :menu [{:text "Open Source"
+                 :url "https://www.braidchat.org/"}
+                {:text "Sign In"
+                 :url "https://braid.chat/"
+                 :style "button"}]}}
+
+
+ "braid-com-hero"
  {:template "hero"
   :data {:heading "Braid is awesome!"}}
+
  }
