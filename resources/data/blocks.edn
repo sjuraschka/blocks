@@ -1,0 +1,27 @@
+{
+ "fetch-nav"
+ {:template "nav"
+  :data {:logo "http://placehold.it/50x50"
+         :links [{:text "For Teams"
+                  :url "..."
+                  :style "special"}
+                 {:text "Pricing"
+                  :url "..."}]}}
+
+ "braid-nav"
+ {:template "nav"
+  :data {:logo "http://placehold.it/50x50"
+         :links [{:text "For Teams"
+                  :url "..."
+                  :style "special"}
+                 {:text "Pricing"
+                  :url "..."}]}}
+
+ "fetch-hero"
+ {:template "hero"
+  :data {:heading "Fetch!"}}
+
+ "braid-hero"
+ {:template "hero"
+  :data {:heading "Braid is awesome!"}}
+ }

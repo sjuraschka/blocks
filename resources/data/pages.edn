@@ -1,0 +1,21 @@
+[
+ {:domain "www.usefetch.com"
+  :url "/"
+  :meta {:title "Fetch"
+         :description "Fetch is a..."
+         :image "url()"}
+  :colors ["#abcdef"
+           "#000000"]
+  :blocks ["fetch-nav"
+           "fetch-hero"]}
+
+ {:domain "www.braidchat.com"
+  :url "/"
+  :meta {:title "Braid"
+         :description "Braid is a..."
+         :image "url()"}
+  :colors ["#abcdef"
+           "#000000"]
+  :blocks ["braid-nav"
+           "braid-hero"]}
+ ]
