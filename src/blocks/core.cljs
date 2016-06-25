@@ -33,10 +33,14 @@
                     :style "special"}
                    {:text "Pricing"
                     :url "..."}]}}
-   "braid-hero"
+   "braid-hero-lawyers"
    {:name "Braid Hero"
     :template "hero"
-    :data {:heading "Braid YOOO"}}})
+    :data {:heading "Braid for Lawyers"}}
+   "braid-hero-programmers"
+   {:name "Braid Hero"
+    :template "hero"
+    :data {:heading "Braid for Programmers"}}})
 
 (def pages
   [{:domain "www.braidchat.com"
@@ -47,7 +51,7 @@
     :colors ["#abcdef"
              "#000000"]
     :blocks ["braid-nav"
-             "braid-hero"]}
+             "braid-hero-lawyers"]}
    {:domain "www.braidchat.com"
     :url "/programmers"
     :meta {:title "Braid"
@@ -56,7 +60,7 @@
     :colors ["#abcdef"
              "#000000"]
     :blocks ["braid-nav"
-             "braid-hero"]}])
+             "braid-hero-programmers"]}])
 
 (defn app-view []
   [:div
