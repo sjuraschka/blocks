@@ -10,7 +10,7 @@
 
   :cljsbuild {:builds
               [{:id "dev"
-                :figwheel true
+                :figwheel {:on-jsload "blocks.core/reload"}
                 :source-paths ["src"]
                 :compiler {:main blocks.core
                            :asset-path "/js/dev"
