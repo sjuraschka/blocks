@@ -9,8 +9,9 @@
                                    dispatch
                                    dispatch-sync
                                    subscribe]]
-            [blocks.client.templates.nav :refer [nav-template]]
-            [blocks.client.templates.hero :refer [hero-template]]))
+            [blocks.client.template :refer [template]]
+            blocks.client.templates.nav
+            blocks.client.templates.hero))
 
 (register-handler
   :initialize
@@ -29,9 +30,7 @@
     [:div
      (for [block (@page :blocks)]
        [:div
-        (case (block :template)
-          "nav" [nav-template (block :data)]
-          "hero" [hero-template (block :data)])])]))
+        [(template (block :template)) (block :data)]])]))
 
 (defn ^:export run
   []

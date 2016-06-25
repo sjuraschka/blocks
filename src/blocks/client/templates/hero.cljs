@@ -1,6 +1,9 @@
-(ns braid.client.templates.hero)
+(ns blocks.client.templates.hero
+  (:require [blocks.client.template :refer [template]]))
 
-(defn hero-template [data]
-  [:div.hero
-   [:div.heading
-    (data :heading)]])
+(defmethod template "hero"
+  [_]
+  (fn [data]
+    [:div.hero
+     [:div.heading
+      (data :heading)]]))
