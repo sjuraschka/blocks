@@ -48,5 +48,7 @@ Changes to the server require another `start-server!` and refresh.
 `lein repl`
 `(start-server! 6543)`
 
+turn off figwheel
+`rm resources/public/js/blocks.js`
 `lein cljsbuild once prod`
 `phantomjs export.js http://localhost:6543/ www.braidchat.com / ./export/`
