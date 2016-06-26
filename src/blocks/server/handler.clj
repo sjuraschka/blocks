@@ -5,21 +5,15 @@
     [ring.middleware.not-modified :refer [wrap-not-modified]]
     [ring.middleware.content-type :refer [wrap-content-type]]))
 
-(defn page-handler [request]
+(defn render-page [domain url]
   (let [blocks (read-string (slurp (clojure.java.io/resource "data/blocks.edn")))
-        pages (read-string (slurp (clojure.java.io/resource "data/pages.edn")))
-        {:keys [url domain]} (if (= "localhost" (request :server-name))
-                               (let [[_ domain url] (re-find #"/(.+?)/(.*)?" (request :uri))]
-                                 {:domain domain
-                                  :url (str "/" url)})
-                               {:domain (request :server-name)
-                                :url (request :uri)})]
-    (if-let [page (->> pages
-                       (filter (fn [page]
-                                 (and
-                                   (= (page :url) url)
-                                   (= (page :domain) domain))))
-                       first)]
+        pages (read-string (slurp (clojure.java.io/resource "data/pages.edn")))]
+    (when-let [page (->> pages
+                         (filter (fn [page]
+                                   (and
+                                     (= (page :url) url)
+                                     (= (page :domain) domain))))
+                         first)]
       {:status 200
        :headers {"Content-Type" "text/html"}
        :body (html
@@ -36,7 +30,17 @@
                                                               (blocks block-id)) bs)))))})]
                  [:script {:src "/js/dev.js" :type "text/javascript"}]
                  [:script {:type "text/javascript"}
-                  "blocks.client.core.run()"]]])}
+                  "blocks.client.core.run()"]]])})))
+
+(defn page-handler [request]
+  (let [{:keys [url domain]} (if (= "localhost" (request :server-name))
+                               (let [[_ domain url] (re-find #"/(.+?)/(.*)?" (request :uri))]
+                                 {:domain domain
+                                  :url (str "/" url)})
+                               {:domain (request :server-name)
+                                :url (request :uri)})]
+    (if-let [page-response (render-page domain url)]
+      page-response
       {:status 404
        :body "404; Thank you visitor! But our page is in another castle!"})))
 
