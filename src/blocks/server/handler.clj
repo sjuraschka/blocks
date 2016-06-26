@@ -32,7 +32,7 @@
                                                 (fn [bs]
                                                   (vec (map (fn [block-id]
                                                               (blocks block-id)) bs)))))})]
-                 [:script {:src "/js/dev.js" :type "text/javascript"}]
+                 [:script {:src "/js/blocks.js" :type "text/javascript"}]
                  [:script {:type "text/javascript"}
                   "blocks.client.core.run()"]]])})))
 

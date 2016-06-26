@@ -15,7 +15,8 @@
 
   :main blocks.server.core
 
-  :plugins [[lein-figwheel "0.5.4-4"]]
+  :plugins [[lein-figwheel "0.5.4-4"]
+            [lein-cljsbuild "1.1.3"]]
 
   :figwheel {:server-port 3434}
 
@@ -25,6 +26,13 @@
                 :source-paths ["src/blocks/client"]
                 :compiler {:main blocks.client.core
                            :asset-path "/js/dev"
-                           :output-to "resources/public/js/dev.js"
+                           :output-to "resources/public/js/blocks.js"
                            :output-dir "resources/public/js/dev"
+                           :verbose true}}
+               {:id "prod"
+                :source-paths ["src/blocks/client"]
+                :compiler {:main blocks.client.core
+                           :output-to "resources/public/js/blocks.js"
+                           :output-dir "resources/public/js/prod"
+                           :optimizations :advanced
                            :verbose true}}]})
