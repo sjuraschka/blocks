@@ -1,4 +1,5 @@
 {
+
  "fetch-nav"
  {:template "nav"
   :data {:logo "http://placehold.it/50x50"
@@ -23,9 +24,15 @@
                  :url "https://braid.chat/"
                  :style "button"}]}}
 
-
  "braid-com-hero"
  {:template "hero"
-  :data {:heading "Braid is awesome!"}}
+  :data {:heading "work better\ntogether"
+         :text "a new approach to team chat\ndesigned for teams who care about flow"
+         :featured-image-url "/images/braid-screenshot-archer.png"
+         :button {:url "https://braid.chat/try"
+                  :text "Try Braid Now"
+                  ;:sub-text "Or, read about how Braid is different"
+                  ;:sub-url ""
+                  }}}
 
  }

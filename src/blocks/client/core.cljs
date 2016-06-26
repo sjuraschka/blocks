@@ -11,7 +11,27 @@
                                    subscribe]]
             [blocks.client.template :refer [template]]
             blocks.client.templates.nav
-            blocks.client.templates.hero))
+            blocks.client.templates.hero
+            [garden.core :refer [css]]
+            [garden.stylesheet :refer [at-import]]))
+
+(def styles
+  [(at-import "/css/reset.css")
+   (at-import "//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+   (at-import "//fonts.googleapis.com/css?family=Montserrat:700|Lato")
+
+  [:body
+   {:font-family "Lato"
+    :line-height "1.25"
+    :overflow "hidden"}]
+
+  [:section
+   {:overflow "hidden"}
+
+   [:.content
+    {:max-width "1000px"
+     :position "relative"
+     :margin "0 auto"}]]])
 
 (register-handler
   :initialize
@@ -27,7 +47,10 @@
 
 (defn app-view []
   (let [page (subscribe [:page])]
-    [:div
+    [:div.app
+     [:style {:type "text/css"
+              :dangerouslySetInnerHTML
+              {:__html (css styles)}}]
      (for [block (@page :blocks)]
        [:div
         [(template (block :template)) (block :data)]])]))
