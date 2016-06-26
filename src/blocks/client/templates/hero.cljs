@@ -33,7 +33,7 @@
 (def styles
   [:.hero
    {:background-color "#000225"
-    :background-image "url(images/hero-bg-flip.jpg)"
+    :background-image "url(/images/hero-bg-flip.jpg)"
     :background-repeat "no-repeat"
     :background-size "cover"
     :background-position "center bottom"

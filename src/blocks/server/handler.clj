@@ -7,12 +7,18 @@
 
 (defn page-handler [request]
   (let [blocks (read-string (slurp (clojure.java.io/resource "data/blocks.edn")))
-        pages (read-string (slurp (clojure.java.io/resource "data/pages.edn")))]
+        pages (read-string (slurp (clojure.java.io/resource "data/pages.edn")))
+        {:keys [url domain]} (if (= "localhost" (request :server-name))
+                               (let [[_ domain url] (re-find #"/(.+?)/(.*)?" (request :uri))]
+                                 {:domain domain
+                                  :url (str "/" url)})
+                               {:domain (request :server-name)
+                                :url (request :uri)})]
     (if-let [page (->> pages
                        (filter (fn [page]
                                  (and
-                                   (= (page :url) (request :uri))
-                                   (= (page :domain) (request :server-name)))))
+                                   (= (page :url) url)
+                                   (= (page :domain) domain))))
                        first)]
       {:status 200
        :headers {"Content-Type" "text/html"}
