@@ -47,16 +47,21 @@
 
 (defn app-view []
   (let [page (subscribe [:page])]
-    [:div.app
-     [:style {:type "text/css"
-              :dangerouslySetInnerHTML
-              {:__html (css
-                         styles
-                         (for [block (@page :blocks)]
-                           (:css (template (block :template)))))}}]
-     (for [block (@page :blocks)]
-       [:div
-        [(:component (template (block :template))) (block :data)]])]))
+    (fn []
+      (let [blocks (->> (@page :blocks)
+                        (map (fn [b]
+                               (assoc b :id (gensym "block")))))]
+        [:div.app
+         [:style {:type "text/css"
+                  :dangerouslySetInnerHTML
+                  {:__html (css
+                             styles
+                             (for [block blocks]
+                               [(str "#" (block :id))
+                                (:css (template (block :template)))]))}}]
+         (for [block blocks]
+           [:div {:id (block :id)}
+            [(:component (template (block :template))) (block :data)]])]))))
 
 (defn ^:export run
   []
