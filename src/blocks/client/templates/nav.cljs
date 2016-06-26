@@ -19,7 +19,7 @@
       :width "2rem"
       :height "2rem"
       :display "inline-block"
-      :background "url(/images/braid-logo-bw.svg) no-repeat"
+      :background (str "url(" (data :logo-url) ") no-repeat")
       :background-size "contain"
       :vertical-align "middle"
       :margin-right "0.5em" }]
