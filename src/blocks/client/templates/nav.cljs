@@ -1,6 +1,5 @@
 (ns blocks.client.templates.nav
-  (:require [blocks.client.template :refer [template]]
-            [garden.core :refer [css]]))
+  (:require [blocks.client.template :refer [template]]))
 
 (def pad "3rem")
 

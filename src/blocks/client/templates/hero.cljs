@@ -1,6 +1,5 @@
 (ns blocks.client.templates.hero
-  (:require [blocks.client.template :refer [template]]
-            [garden.core :refer [css]]))
+  (:require [blocks.client.template :refer [template]]))
 
 (def image-height "100vh")
 
