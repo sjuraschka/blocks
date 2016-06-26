@@ -72,7 +72,7 @@
   [:section.header
    [:div.content
     [:a.logo {:href "/"}
-     [:h1 "Braid"]
+     [:h1 (data :title)]
      [:span.version (data :version)]]
     [:div.menu
      (for [link (data :menu)]

@@ -40,7 +40,7 @@
        :text-align "center"}
 
       [:.button
-       (button-mixin (get-in data [:button :colors]))
+       (button-mixin (get-in data [:button :colors] {}))
 
        [:&.download:before
         (fontawesome-mixin \uf019)
