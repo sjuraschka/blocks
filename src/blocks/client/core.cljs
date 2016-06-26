@@ -50,10 +50,13 @@
     [:div.app
      [:style {:type "text/css"
               :dangerouslySetInnerHTML
-              {:__html (css styles)}}]
+              {:__html (css
+                         styles
+                         (for [block (@page :blocks)]
+                           (:css (template (block :template)))))}}]
      (for [block (@page :blocks)]
        [:div
-        [(template (block :template)) (block :data)]])]))
+        [(:component (template (block :template))) (block :data)]])]))
 
 (defn ^:export run
   []

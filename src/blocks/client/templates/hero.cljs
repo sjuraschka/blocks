@@ -116,21 +116,22 @@
       :height "60vh"
       :top "20vh"}]]])
 
+(defn hero [data]
+  [:section.hero
+   [:div.content
+    [:div.story
+     [:h1 (data :heading)]
+     [:h2 (data :text)]
+     (when-let [button (data :button)]
+       [:div.cta
+        [:a.button.try
+         {:href (button :url)} (button :text) ]
+        (when (button :sub-text)
+          [:div.microtext
+           [:a.learn {:href (button :sub-url)}
+            (button :sub-text)]])])]
+    [:img.image {:src (data :featured-image-url)}]]])
+
 (defmethod template "hero" [_]
-  (fn [data]
-    [:section.hero
-     [:style {:dangerouslySetInnerHTML
-              {:__html (css styles)}}]
-     [:div.content
-      [:div.story
-       [:h1 (data :heading)]
-       [:h2 (data :text)]
-       (when-let [button (data :button)]
-         [:div.cta
-          [:a.button.try
-           {:href (button :url)} (button :text) ]
-          (when (button :sub-text)
-            [:div.microtext
-             [:a.learn {:href (button :sub-url)}
-              (button :sub-text)]])])]
-      [:img.image {:src (data :featured-image-url)}]]]))
+  {:css styles
+   :component hero})
