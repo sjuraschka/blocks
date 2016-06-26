@@ -16,8 +16,7 @@
             [garden.stylesheet :refer [at-import]]))
 
 (def styles
-  [(at-import "/css/reset.css")
-   (at-import "//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+  [(at-import "//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
    (at-import "//fonts.googleapis.com/css?family=Montserrat:700|Lato")
 
   [:body

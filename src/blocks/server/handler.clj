@@ -23,6 +23,8 @@
                  [:meta {:http-equiv "x-ua-compatible" :content "ie=edge"}]
                  [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
                  [:meta {:name "generator" :content "blocks"}]
+                 [:style {:type "text/css"}
+                  (slurp (clojure.java.io/resource "public/css/reset.css"))]
                  [:title (get-in page [:meta :title])]]
                 [:body
                  [:div {:id "app"}]
