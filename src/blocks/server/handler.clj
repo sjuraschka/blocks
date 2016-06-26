@@ -32,6 +32,19 @@
                  [:script {:type "text/javascript"}
                   "blocks.client.core.run()"]]])})))
 
+(defn index-page []
+ (let [pages (read-string (slurp (clojure.java.io/resource "data/pages.edn")))]
+   {:status 200
+    :headers {"Content-Type" "text/html"}
+    :body (html
+            [:html
+             [:body
+              [:ul
+               (for [page pages]
+                 [:li
+                  [:a {:href (str "/" (page :domain) (page :url))}
+                  (str (page :domain) (page :url))]])]]])}))
+
 (defn page-handler [request]
   (let [{:keys [url domain]} (if (= "localhost" (request :server-name))
                                (let [[_ domain url] (re-find #"/(.+?)/(.*)?" (request :uri))]
@@ -39,10 +52,12 @@
                                   :url (str "/" url)})
                                {:domain (request :server-name)
                                 :url (request :uri)})]
-    (if-let [page-response (render-page domain url)]
-      page-response
-      {:status 404
-       :body "404; Thank you visitor! But our page is in another castle!"})))
+    (if (nil? domain)
+      (index-page)
+      (if-let [page (render-page domain url)]
+        page
+        {:status 404
+         :body "404; Thank you visitor! But our page is in another castle!"}))))
 
 (def app
   (-> page-handler
