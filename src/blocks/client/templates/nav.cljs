@@ -3,7 +3,7 @@
 
 (def pad "3rem")
 
-(def styles
+(defn styles [data]
   [:.header
    {:position "absolute"
     :z-index 100
@@ -28,7 +28,7 @@
      {:display "inline-block"
       :font-size "1.25em"
       :line-height "2rem"
-      :vertical-align "middle"}]
+      :vertical-align "middle" }]
 
     [:.version
      {:display "inline-block"
@@ -56,6 +56,11 @@
      [:&:hover
       {:opacity 1}]
 
+     ["&[data-icon]:before"
+      {:content "attr(data-icon)"
+       :font-family "FontAwesome"
+       :margin-right "0.25em"}]
+
      [:&.button
       {:display "inline-block"
        :border "1px solid #FFF"
@@ -68,11 +73,12 @@
    [:div.content
     [:a.logo {:href "/"}
      [:h1 "Braid"]
-     [:span.version "beta"]]
+     [:span.version (data :version)]]
     [:div.menu
      (for [link (data :menu)]
        [:a {:href (link :url)
-            :class (link :style)}
+            :class (link :style)
+            :data-icon (link :icon)}
         (link :text)])]]])
 
 (defmethod template "nav" [_]

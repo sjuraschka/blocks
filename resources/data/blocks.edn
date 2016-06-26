@@ -26,13 +26,44 @@
 
  "braid-com-hero"
  {:template "hero"
-  :data {:heading "work better\ntogether"
+  :data {:heading {:text "work better\ntogether"}
          :text "a new approach to team chat\ndesigned for teams who care about flow"
-         :featured-image-url "/images/braid-screenshot-archer.png"
+         :background {:image-url "/images/hero-bg-flip.jpg"
+                      :color "#000225"}
+         :featured-image {:url "/images/braid-screenshot-archer.png"}
          :button {:url "https://braid.chat/try"
                   :text "Try Braid Now"
-                  ;:sub-text "Or, read about how Braid is different"
-                  ;:sub-url ""
-                  }}}
+                  :colors {:text "#FFFFFF"
+                           :bg "#0D6C7F"
+                           :bg-hover "#014F75"
+                           :bg-active "#012156"
+                           :border nil}
+                  :sub-text "Or, read about how Braid is different"
+                  :sub-url "#"}}}
+
+ "braid-org-nav"
+ {:template "nav"
+  :data {:title "Braid"
+         :version "open source"
+         :logo-url "/images/braid-logo-bw.svg"
+         :menu [{:text "Github"
+                 :url "https://github.com/braidchat/braid"
+                 :icon \uf092}]}}
+
+ "braid-org-hero"
+ {:template "hero"
+  :data {:heading {:text "Help us create a new way for groups to work together"
+                   :size "2em"}
+         :text "Braid is an open-source group messaging platform that goes beyond chatrooms to help teams work better together"
+         :background {:image-url "/images/hero-bg.png"
+                      :color "#80abc1"}
+         :featured-image {:url "/images/braid-screenshot-archer.png"}
+         :button {:url "https://github.com/braidchat/braid"
+                  :text "Learn More"
+                  :colors {:text "#659ECA"
+                           :bg "rgba(255,255,255,1.0)"
+                           :bg-hover "rgba(255,255,255,0.8)"
+                           :bg-active "rgba(255,255,255,0.6)"
+                           :border "white"}}}}
 
  }

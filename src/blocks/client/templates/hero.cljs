@@ -2,23 +2,20 @@
   (:require [blocks.client.template :refer [template]]
             [blocks.client.templates.mixins :refer [fontawesome-mixin button-mixin]]))
 
-(def image-height "100vh")
-
-(def styles
+(defn styles [data]
   [:.hero
-   {:background-color "#000225"
-    :background-image "url(/images/hero-bg-flip.jpg)"
+   {:background-color (get-in data [:background :color] "#000000")
+    :background-image (str "url(" (get-in data [:background :image-url]) ")")
     :background-repeat "no-repeat"
     :background-size "cover"
     :background-position "center bottom"
     :color "#FFF"
     :position "relative"
     :min-height "100vh"
-    :overflow "hidden"
-    :box-sizing "border-box"}
+    :overflow "hidden"}
 
    [:.content
-    {:height image-height
+    {:height "100vh"
      :display "flex"
      :flex-direction "column"
      :justify-content "center"}
@@ -27,21 +24,23 @@
      {:max-width "30rem"}
 
      [:h1
-      {:font-size "3em"
-       :font-family "Montserrat"
-       :text-shadow "0 0.05em 0.1em rgba(0,0,0,0.1)"}]
+      {:font-family "Montserrat"
+       :font-size (get-in data [:heading :size] "3em")
+       :text-shadow "0 0.05em 0.1em rgba(0,0,0,0.1)"
+       :white-space "pre-wrap"}]
 
      [:h2
       {:font-size "1.5em"
        :margin "1rem 0 2rem"
-       :text-shadow "0 0.05em 0.1em rgba(0,0,0,0.25)"}]
+       :text-shadow "0 0.05em 0.1em rgba(0,0,0,0.25)"
+       :white-space "pre-wrap"}]
 
      [:.cta
       {:display "inline-block"
        :text-align "center"}
 
       [:.button
-       button-mixin
+       (button-mixin (get-in data [:button :colors]))
 
        [:&.download:before
         (fontawesome-mixin \uf019)
@@ -94,7 +93,7 @@
   [:section.hero
    [:div.content
     [:div.story
-     [:h1 (data :heading)]
+     [:h1 (get-in data [:heading :text])]
      [:h2 (data :text)]
      (when-let [button (data :button)]
        [:div.cta
@@ -104,7 +103,7 @@
           [:div.microtext
            [:a.learn {:href (button :sub-url)}
             (button :sub-text)]])])]
-    [:img.image {:src (data :featured-image-url)}]]])
+    [:img.image {:src (get-in data [:featured-image :url])}]]])
 
 (defmethod template "hero" [_]
   {:css styles

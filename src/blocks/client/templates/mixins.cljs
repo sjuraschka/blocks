@@ -4,10 +4,9 @@
   {:content (str "\"" unicode "\"")
    :font-family "FontAwesome"})
 
-(def button-mixin
+(defn button-mixin [colors]
   [:&
-   {:border "none"
-    :border-radius "0.5rem"
+   {:border-radius "0.5rem"
     :padding "1.5rem 1.75rem"
     :font-size "1.5rem"
     :font-weight "bold"
@@ -16,12 +15,15 @@
     :font-family "Lato"
     :text-decoration "none"
     :display "inline-block"
-    :color "white"
-    :background "#0D6C7F"
+    :color (colors :text)
+    :background-color (colors :bg)
     :transition "background 0.1s ease-in-out"}
+   (if (colors :border)
+     {:border (str "2px solid " (colors :border))}
+     {:border "none"})
 
    [:&:hover
-    {:background "#014F75"}]
+    {:background (colors :bg-hover)}]
 
    [:&:active
-    {:background "#012156"}]])
+    {:background (colors :bg-active)}]])

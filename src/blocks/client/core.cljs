@@ -58,7 +58,7 @@
                              styles
                              (for [block blocks]
                                [(str "#" (block :id))
-                                (:css (template (block :template)))]))}}]
+                                ((:css (template (block :template))) (block :data))]))}}]
          (for [block blocks]
            [:div {:id (block :id)}
             [(:component (template (block :template))) (block :data)]])]))))
