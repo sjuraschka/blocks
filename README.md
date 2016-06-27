@@ -52,3 +52,22 @@ turn off figwheel
 `rm resources/public/js/blocks.js`
 `lein cljsbuild once prod`
 `phantomjs export.js http://localhost:6543/ www.braidchat.com / ./export/`
+
+
+## Upload to S3
+
+export (as above)
+
+set the following in `profiles.clj`:
+
+```
+{:profile_name {:env {:s3-bucket "bucket_name"
+                      :s3-id "S3_ID"
+                      :s3-secret "S3_SECRET"
+                      :s3-endpoint "s3-endpoint"}}}
+```
+
+then:
+
+`lein with-profiles +profile_name repl`
+`(blocks.server.upload/upload!)`
