@@ -12,6 +12,7 @@
             [blocks.client.template :refer [template]]
             blocks.client.templates.nav
             blocks.client.templates.hero
+            blocks.client.templates.features-grid
             [garden.core :refer [css]]
             [garden.stylesheet :refer [at-import]]))
 
@@ -21,8 +22,7 @@
 
   [:body
    {:font-family "Lato"
-    :line-height "1.25"
-    :overflow "hidden"}]
+    :line-height "1.25"}]
 
   [:section
    {:overflow "hidden"}

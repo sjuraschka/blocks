@@ -7,7 +7,10 @@
          :menu [{:text "Products"
                  :url "#"}
                 {:text "Contact"
-                 :url "#"}]}}
+                 :url "#"}
+                {:text "About"
+                  :url "#"
+                  :style "button"}]}}
 
  "fetch-hero"
  {:template "hero"
@@ -40,6 +43,25 @@
                            :border nil}
                   :sub-text "Or, read about how Braid is different"
                   :sub-url "#"}}}
+
+"braid-com-features"
+{:template "features-grid"
+  :data {:columns 3
+         :styles {:background-color "#EEE"
+                  :heading-color "#0D6C7F"
+                  :description-color "#333"}
+         :features [{:icon \uf092
+                     :title "Security and Privacy"
+                     :description "Security is #1. HipChat's secure conversations are transferred in 256-bit SSL encryption – the same security protocol as online banks."}
+                     {:icon \uf092
+                      :title "Easy Sharing"
+                      :description "For when you need to show, not tell. Share your desktop with your colleagues on any device to collaborate in real time"}
+                    {:icon \uf092
+                     :title "Security and Privacy"
+                     :description "Security is #1. HipChat's secure conversations are transferred in 256-bit SSL encryption – the same security protocol as online banks."}
+                    {:icon \uf092
+                    :title "Easy Sharing"
+                    :description "For when you need to show, not tell. Share your desktop with your colleagues on any device to collaborate in real time"}]}}
 
  "braid-org-nav"
  {:template "nav"
