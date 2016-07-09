@@ -33,7 +33,7 @@
         :font-size "3em"
         :color (get-in data [:styles :description-color])}]]]]))
 
-(defn nav [data]
+(defn section [data]
   [:section.features-grid
    [:div.content
     (for [feature (data :features)]
@@ -44,4 +44,4 @@
 
 (defmethod template "features-grid" [_]
   {:css styles
-   :component nav})
+   :component section})

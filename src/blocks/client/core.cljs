@@ -12,6 +12,7 @@
             [blocks.client.template :refer [template]]
             blocks.client.templates.nav
             blocks.client.templates.hero
+            blocks.client.templates.hero-middle
             blocks.client.templates.features-grid
             [garden.core :refer [css]]
             [garden.stylesheet :refer [at-import]]))

@@ -17,7 +17,7 @@
   :colors ["#abcdef"
            "#000000"]
   :blocks ["braid-com-nav"
-           "braid-com-hero"
+           "braid-com-hero-middle"
            "braid-com-features"]}
 
  {:domain "www.braidchat.org"
