@@ -1,14 +1,15 @@
 (ns blocks.client.templates.hero-middle
   (:require [blocks.client.template :refer [template]]
             [blocks.client.templates.mixins :refer [fontawesome-mixin button-mixin]]))
-            
+
 (defn styles [data]
     [:section.hero-middle
-      {:min-height "75vh"
+      {:padding [["8em" 0]]
        :text-align "center"
        :display "flex"
        :flex-direction "column"
        :justify-content "center"
+       :box-sizing "border-box"
        :background-color (get-in data [:background :color])
        :background-image (str "url(" (get-in data [:background :image-url]) ")")
        :background-size "40em"
