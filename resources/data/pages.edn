@@ -7,7 +7,8 @@
   :colors ["#abcdef"
            "#000000"]
   :blocks ["fetch-nav"
-           "fetch-hero"]}
+           "fetch-hero"
+           "fetch-footer"]}
 
  {:domain "www.braidchat.com"
   :url "/"
@@ -18,7 +19,8 @@
            "#000000"]
   :blocks ["braid-com-nav"
            "braid-com-hero-middle"
-           "braid-com-features"]}
+           "braid-com-features"
+           "braid-com-footer"]}
 
  {:domain "www.braidchat.org"
   :url "/"
@@ -29,5 +31,6 @@
            "#000000"]
   :blocks ["braid-org-nav"
            "braid-org-hero"
-           "braid-com-features"]}
+           "braid-com-features"
+           "braid-com-footer"]}
  ]

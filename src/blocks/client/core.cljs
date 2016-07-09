@@ -14,6 +14,7 @@
             blocks.client.templates.hero
             blocks.client.templates.hero-middle
             blocks.client.templates.features-grid
+            blocks.client.templates.footer
             [garden.core :refer [css]]
             [garden.stylesheet :refer [at-import]]))
 

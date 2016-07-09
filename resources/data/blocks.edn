@@ -16,6 +16,20 @@
  {:template "hero"
   :data {:heading {:text "Customer surveys that use TEXT for massive customer engagement."}}}
 
+ "fetch-footer"
+ {:template "footer"
+  :data {:logo-url "http://placehold.it/50x50"
+         :background-color "#000"
+         :text-color "#FFF"
+         :title "Fetch"
+         :menu [{:text "Products"
+                 :url "#"}
+                {:text "Contact"
+                 :url "#"}
+                {:text "About"
+                  :url "#"
+                  :style "button"}]}}
+
  "braid-com-nav"
  {:template "nav"
   :data {:title "Braid"
@@ -78,6 +92,18 @@
                     {:icon \uf092
                     :title "Easy Sharing"
                     :description "For when you need to show, not tell. Share your desktop with your colleagues on any device to collaborate in real time"}]}}
+
+"braid-com-footer"
+{:template "footer"
+  :data {:logo-url "/images/braid-logo-bw.svg"
+         :background-color "#000"
+         :text-color "#FFF"
+         :title "Braid"
+         :menu [{:text "Open Source"
+                 :url "https://www.braidchat.org/"}
+                {:text "Sign In"
+                 :url "https://braid.chat/"
+                 :style "button"}]}}
 
  "braid-org-nav"
  {:template "nav"
