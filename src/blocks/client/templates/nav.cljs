@@ -12,7 +12,7 @@
 
    [:a.logo
     {:display "inline-block"
-     :color "#FFF"}
+     :color (data :color)}
 
     [:&:before
      {:content "\"\""
@@ -46,7 +46,7 @@
      :right 0}
 
     [:a
-     {:color "#FFF"
+     {:color (data :color)
       :opacity 0.6
       :text-decoration "none"
       :margin-left "2em"
@@ -63,7 +63,7 @@
 
      [:&.button
       {:display "inline-block"
-       :border "1px solid #FFF"
+       :border [["1px" "solid" (data :color)]]
        :border-radius "0.25em"
        :height "2em"
        :padding "0 0.5em" }]]]])
