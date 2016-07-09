@@ -6,6 +6,8 @@
 (defn styles [data]
   [:.header
    {:position "absolute"
+    :top 0
+    :left 0
     :z-index 100
     :width "100%"
     :margin [[pad 0]]}
