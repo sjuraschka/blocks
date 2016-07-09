@@ -4,6 +4,7 @@
  {:template "nav"
   :data {:title "Fetch"
          :logo-url "http://placehold.it/50x50"
+         :color "#fff"
          :menu [{:text "Products"
                  :url "#"}
                 {:text "Contact"
