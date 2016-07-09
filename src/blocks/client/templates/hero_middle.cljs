@@ -1,6 +1,7 @@
 (ns blocks.client.templates.hero-middle
   (:require [blocks.client.template :refer [template]]
             [blocks.client.templates.mixins :refer [fontawesome-mixin button-mixin]]))
+            
 (defn styles [data]
     [:section.hero-middle
       {:min-height "75vh"
@@ -17,14 +18,14 @@
       [:h1 {
         :font-size "3.5em"
         :font-weight "bold"
-        :color (get-in data [:styles :main-heading-color])
+        :color (get-in data [:heading :color])
         }]
 
       [:h2 {
         :font-size "2em"
         :margin "0.75em"
         :max-width "20em"
-        :color (get-in data [:styles :sub-text-color])}]
+        :color (get-in data [:sub-heading :color])}]
 
         [:a.button
          {:margin-bottom "5em"}
@@ -40,10 +41,6 @@
     [:h2 (get-in data [:sub-heading :text])]
     [:a.button {:href ""} (get-in data [:button :text])]
       ]])
-
-
-
-
 
   (defmethod template "hero-middle" [_]
     {:css styles

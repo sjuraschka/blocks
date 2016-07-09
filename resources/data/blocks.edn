@@ -46,13 +46,12 @@
 
 "braid-com-hero-middle"
 {:template "hero-middle"
- :data {:styles {:main-heading-color "#444"
-                 :sub-text-color "#777"}
-        :heading {:text "Work Better Together"}
-        :sub-heading {:text "A new approach to team chat designed for teams who care about flow." }
+ :data {:heading {:text "Work Better Together"
+                  :color "#444"}
+        :sub-heading {:text "A new approach to team chat designed for teams who care about flow."
+                      :color "#777"}
         :background {:image-url "https://hipchat-magnolia-cdn.atlassian.com/assets/img/hipchat/homepage-hero-meeple-group.png"
                      :color "#ccc"}
-
         :button {:url "https://braid.chat/try"
                  :text "Try Braid Now"
                  :colors {:text "#fff"
