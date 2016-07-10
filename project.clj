@@ -5,6 +5,7 @@
                  [http-kit "2.1.19"]
                  [ring/ring-devel "1.4.0"]
                  [hiccup "1.0.5"]
+                 [compojure "1.5.1"]
 
                  ; export
                  [amazonica "0.3.64"]
