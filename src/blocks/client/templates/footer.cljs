@@ -12,13 +12,9 @@
     {:display "inline-block"
      :color (data :text-color)}
 
-    [:&:before
-     {:content "\"\""
-      :width "2rem"
-      :height "2rem"
+    [:img
+     {:height "2rem"
       :display "inline-block"
-      :background (str "url(" (data :logo-url) ") no-repeat")
-      :background-size "contain"
       :vertical-align "middle"
       :margin-right "0.5em" }]
 
@@ -70,6 +66,7 @@
   [:section.footer
    [:div.content
     [:a.logo {:href "/"}
+     [:img {:src (data :logo-url)}]
      [:h1 (data :title)]]
     [:div.menu
      (for [link (data :menu)]
