@@ -67,7 +67,8 @@
         :sub-heading {:text "A new approach to team chat designed for teams who care about flow."
                       :color "#777"}
         :background {:image-url "https://hipchat-magnolia-cdn.atlassian.com/assets/img/hipchat/homepage-hero-meeple-group.png"
-                     :color "#ccc"}
+                     :color "#ccc"
+                     :size "40em"}
         :button {:url "https://braid.chat/try"
                  :text "Try Braid Now"
                  :colors {:text "#fff"
@@ -131,5 +132,77 @@
                            :bg-hover "rgba(255,255,255,0.8)"
                            :bg-active "rgba(255,255,255,0.6)"
                            :border "white"}}}}
+
+
+  "rookie-nav"
+  {:template "nav"
+   :data {:color "#fff"
+          :logo-url "http://www.tryrookie.com/assets/images/logos/logo-light@2x.png"
+          :menu [{:text "647-267-5292"
+                  :url "tel:6472675292"
+                  :icon \uf095}
+                  {:text "hi@tryrookie.com"
+                   :url "mailto:hi@tryrookie.com"
+                   :icon \uf003}]}}
+
+  "rookie-hero"
+  {:template "hero-middle"
+   :data {:heading {:text "Take your game to the next level"
+                    :color "#fff"}
+          :sub-heading {:text "One-on-One Video Training from Renowned Skills Development Coaches"
+                        :color "#fff"}
+          :background {:image-url "http://www.tryrookie.com/assets/images/backgrounds/background.jpg"
+                       :color "#ccc"
+                       :size "cover"}
+          :form {:prompt-text "Sign up for early access and be notified when we launch"
+                 :placeholder "super.baller@example.com"
+                 :button {:text "Sign Me Up"
+                          :colors {}}}}}
+
+  "rookie-step-1"
+  {:template "feature-highlight"
+   :data {:heading {:text "Pick a world-class skills development trainer"
+                    :color "#444"
+                    :step 1}
+          :background {:color "#FFF"}
+          :description {:text "Browse through hundreds of renowned basketball skills-development trainers in order to see their experience as well as what other athletes have to say about them"
+                        :color "#777"}
+          :image {:image-url "http://www.tryrookie.com/assets/images/phones/benefits-phone-front1@2x.png"
+                  :position "right"}}}
+
+  "rookie-step-2"
+  {:template "feature-highlight"
+   :data {:heading {:text "Start working with your trainer right away"
+                    :color "#444"
+                    :step 2}
+          :background {:color "#f1f4f5"}
+          :description {:text "Do a professional level skills-assessment and set clear objectives for your training sessions. Send your trainers all the information they need in order to give you the most thorough feedback possible."
+                        :color "#777"}
+          :image {:image-url "http://www.tryrookie.com/assets/images/phones/benefits-phone-front2@2x.png"
+                  :position "left"}}}
+
+
+  "rookie-step-3"
+  {:template "feature-highlight"
+   :data {:heading {:text "Receive professional-level private training"
+                    :color "#444"
+                    :step 3}
+          :background {:color "#FFF"}
+          :description {:text "Get your game and drill film reviewed by professional skills development coaches and receive their world-class feedback en route to becoming a dominant basketball player. Also receive personalized skills development plans, athletic development plans, and much more..."
+                        :color "#777"}
+          :image {:image-url "http://www.tryrookie.com/assets/images/phones/benefits-phone-front3@2x.png"
+                  :position "right"}}}
+
+  "rookie-footer"
+  {:template "footer"
+   :data {:logo-url "http://www.tryrookie.com/assets/images/logos/logo-light@2x.png"
+          :background-color "#000"
+          :text-color "#FFF"
+          :menu [{:text "647-267-5292"
+                  :url "tel:6472675292"
+                  :icon \uf095}
+                  {:text "hi@tryrookie.com"
+                   :url "mailto:hi@tryrookie.com"
+                    :icon \uf003}]}}
 
  }

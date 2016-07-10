@@ -33,4 +33,16 @@
            "braid-org-hero"
            "braid-com-features"
            "braid-com-footer"]}
+
+{:domain "tryrookie.com"
+  :url "/"
+  :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
+         :description "rooke is..."
+         :image "url ()"}
+  :blocks ["rookie-nav"
+           "rookie-hero"
+           "rookie-step-1"
+           "rookie-step-2"
+           "rookie-step-3"
+           "rookie-footer"]}
  ]
