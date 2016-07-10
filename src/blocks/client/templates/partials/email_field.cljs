@@ -1,4 +1,5 @@
-(ns blocks.client.templates.partials.email-field)
+(ns blocks.client.templates.partials.email-field
+  (:require [blocks.client.templates.mixins :refer [button-mixin]]))
 
 (defn styles [data]
   [:form
@@ -22,13 +23,12 @@
         {:color "#ccc"}]]
 
       ["&[type=submit]"
-        {:border-radius "0 0.5em 0.5em 0"
-         :border "none"
-         :font-size "1em"
-         :text-transform "uppercase"
-         :cursor "pointer"
-         :color (get-in data [:form :button :color])
-         :background (get-in data [:form :button :background-color])}]]])
+        (button-mixin (get-in data [:form :button :colors] {}))
+        [:&
+          {:border-radius "0 0.5em 0.5em 0"
+           :font-size "1em"
+           :padding "0 1em"
+           :text-transform "uppercase"}]]]])
 
 (defn component [data]
   [:form

@@ -157,8 +157,10 @@
           :form {:prompt-text "Sign up for early access and be notified when we launch"
                  :placeholder "super.baller@example.com"
                  :button {:text "Sign Me Up"
-                          :color "#FFF"
-                          :background-color "#FF8043"}}}}
+                          :colors {:text "#fff"
+                                   :bg "#FF8043"
+                                   :bg-hover "#FF8060"
+                                   :bg-active "#FF89143"}}}}}
 
   "rookie-step-1"
   {:template "feature-highlight"
@@ -203,7 +205,10 @@
                  :placeholder "super.baller@example.com"
                  :button {:text "Get Invited"
                           :color "#fff"
-                          :background-color "#FF8043"}}}}
+                          :colors {:text "#fff"
+                                   :bg "#FF8043"
+                                   :bg-hover "#FF8060"
+                                   :bg-active "#FF8143"}}}}}
 
   "rookie-footer"
   {:template "footer"
