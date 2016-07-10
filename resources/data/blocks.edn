@@ -4,20 +4,39 @@
  {:template "nav"
   :data {:title "Fetch"
          :logo-url "http://placehold.it/50x50"
+         :color "#fff"
          :menu [{:text "Products"
                  :url "#"}
                 {:text "Contact"
-                 :url "#"}]}}
+                 :url "#"}
+                {:text "About"
+                  :url "#"
+                  :style "button"}]}}
 
  "fetch-hero"
  {:template "hero"
   :data {:heading {:text "Customer surveys that use TEXT for massive customer engagement."}}}
+
+ "fetch-footer"
+ {:template "footer"
+  :data {:logo-url "http://placehold.it/50x50"
+         :background-color "#000"
+         :text-color "#FFF"
+         :title "Fetch"
+         :menu [{:text "Products"
+                 :url "#"}
+                {:text "Contact"
+                 :url "#"}
+                {:text "About"
+                  :url "#"
+                  :style "button"}]}}
 
  "braid-com-nav"
  {:template "nav"
   :data {:title "Braid"
          :version "beta"
          :logo-url "/images/braid-logo-bw.svg"
+         :color "#fff"
          :menu [{:text "Open Source"
                  :url "https://www.braidchat.org/"}
                 {:text "Sign In"
@@ -41,10 +60,58 @@
                   :sub-text "Or, read about how Braid is different"
                   :sub-url "#"}}}
 
+"braid-com-hero-middle"
+{:template "hero-middle"
+ :data {:heading {:text "Work Better Together"
+                  :color "#444"}
+        :sub-heading {:text "A new approach to team chat designed for teams who care about flow."
+                      :color "#777"}
+        :background {:image-url "https://hipchat-magnolia-cdn.atlassian.com/assets/img/hipchat/homepage-hero-meeple-group.png"
+                     :color "#ccc"
+                     :size "40em"}
+        :button {:url "https://braid.chat/try"
+                 :text "Try Braid Now"
+                 :colors {:text "#fff"
+                          :bg "#0D6C7F"
+                          :bg-hover "#014F75"
+                          :bg-active "#012156"}}}}
+
+"braid-com-features"
+{:template "features-grid"
+  :data {:columns 3
+         :styles {:background-color "#EEE"
+                  :heading-color "#0D6C7F"
+                  :description-color "#333"}
+         :features [{:icon \uf092
+                     :title "Security and Privacy"
+                     :description "Security is #1. HipChat's secure conversations are transferred in 256-bit SSL encryption – the same security protocol as online banks."}
+                     {:icon \uf092
+                      :title "Easy Sharing"
+                      :description "For when you need to show, not tell. Share your desktop with your colleagues on any device to collaborate in real time"}
+                    {:icon \uf092
+                     :title "Security and Privacy"
+                     :description "Security is #1. HipChat's secure conversations are transferred in 256-bit SSL encryption – the same security protocol as online banks."}
+                    {:icon \uf092
+                    :title "Easy Sharing"
+                    :description "For when you need to show, not tell. Share your desktop with your colleagues on any device to collaborate in real time"}]}}
+
+"braid-com-footer"
+{:template "footer"
+  :data {:logo-url "/images/braid-logo-bw.svg"
+         :background-color "#000"
+         :text-color "#FFF"
+         :title "Braid"
+         :menu [{:text "Open Source"
+                 :url "https://www.braidchat.org/"}
+                {:text "Sign In"
+                 :url "https://braid.chat/"
+                 :style "button"}]}}
+
  "braid-org-nav"
  {:template "nav"
   :data {:title "Braid"
          :version "open source"
+         :color "#fff"
          :logo-url "/images/braid-logo-bw.svg"
          :menu [{:text "Github"
                  :url "https://github.com/braidchat/braid"
@@ -65,5 +132,94 @@
                            :bg-hover "rgba(255,255,255,0.8)"
                            :bg-active "rgba(255,255,255,0.6)"
                            :border "white"}}}}
+
+
+  "rookie-nav"
+  {:template "nav"
+   :data {:color "#fff"
+          :logo-url "http://www.tryrookie.com/assets/images/logos/logo-light@2x.png"
+          :menu [{:text "647-267-5292"
+                  :url "tel:6472675292"
+                  :icon \uf095}
+                  {:text "hi@tryrookie.com"
+                   :url "mailto:hi@tryrookie.com"
+                   :icon \uf003}]}}
+
+  "rookie-hero"
+  {:template "hero-middle"
+   :data {:heading {:text "Take your game to the next level"
+                    :color "#fff"}
+          :sub-heading {:text "One-on-One Video Training from Renowned Skills Development Coaches"
+                        :color "#fff"}
+          :background {:image-url "http://www.tryrookie.com/assets/images/backgrounds/background.jpg"
+                       :color "#ccc"
+                       :size "cover"}
+          :form {:prompt-text "Sign up for early access and be notified when we launch"
+                 :placeholder "super.baller@example.com"
+                 :button {:text "Sign Me Up"
+                          :colors {:text "#fff"
+                                   :bg "#FF8043"
+                                   :bg-hover "#FF8060"
+                                   :bg-active "#FF89143"}}}}}
+
+  "rookie-step-1"
+  {:template "feature-highlight"
+   :data {:heading {:text "Pick a world-class skills development trainer"
+                    :color "#444"
+                    :step 1}
+          :background {:color "#FFF"}
+          :description {:text "Browse through hundreds of renowned basketball skills-development trainers in order to see their experience as well as what other athletes have to say about them"
+                        :color "#777"}
+          :image {:image-url "http://www.tryrookie.com/assets/images/phones/benefits-phone-front1@2x.png"
+                  :position "right"}}}
+
+  "rookie-step-2"
+  {:template "feature-highlight"
+   :data {:heading {:text "Start working with your trainer right away"
+                    :color "#444"
+                    :step 2}
+          :background {:color "#f1f4f5"}
+          :description {:text "Do a professional level skills-assessment and set clear objectives for your training sessions. Send your trainers all the information they need in order to give you the most thorough feedback possible."
+                        :color "#777"}
+          :image {:image-url "http://www.tryrookie.com/assets/images/phones/benefits-phone-front2@2x.png"
+                  :position "left"}}}
+
+
+  "rookie-step-3"
+  {:template "feature-highlight"
+   :data {:heading {:text "Receive professional-level private training"
+                    :color "#444"
+                    :step 3}
+          :background {:color "#FFF"}
+          :description {:text "Get your game and drill film reviewed by professional skills development coaches and receive their world-class feedback en route to becoming a dominant basketball player. Also receive personalized skills development plans, athletic development plans, and much more..."
+                        :color "#777"}
+          :image {:image-url "http://www.tryrookie.com/assets/images/phones/benefits-phone-front3@2x.png"
+                  :position "right"}}}
+
+  "rookie-cta"
+  {:template "cta"
+   :data {:heading {:text "Sign up for early access"}
+          :description {:text "If accepted you will receive an email inviting you to use the site."}
+          :background {:color "#f1f4f5"}
+          :form {:prompt-text "Sign up for early access and be notified when we launch"
+                 :placeholder "super.baller@example.com"
+                 :button {:text "Get Invited"
+                          :color "#fff"
+                          :colors {:text "#fff"
+                                   :bg "#FF8043"
+                                   :bg-hover "#FF8060"
+                                   :bg-active "#FF8143"}}}}}
+
+  "rookie-footer"
+  {:template "footer"
+   :data {:logo-url "http://www.tryrookie.com/assets/images/logos/logo-light@2x.png"
+          :background-color "#000"
+          :text-color "#FFF"
+          :menu [{:text "647-267-5292"
+                  :url "tel:6472675292"
+                  :icon \uf095}
+                  {:text "hi@tryrookie.com"
+                   :url "mailto:hi@tryrookie.com"
+                    :icon \uf003}]}}
 
  }

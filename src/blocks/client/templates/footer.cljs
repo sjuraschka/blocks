@@ -1,20 +1,16 @@
-(ns blocks.client.templates.nav
+(ns blocks.client.templates.footer
   (:require [blocks.client.template :refer [template]]))
 
 (def pad "3rem")
 
 (defn styles [data]
-  [:.header
-   {:position "absolute"
-    :top 0
-    :left 0
-    :z-index 100
-    :width "100%"
-    :margin [[pad 0]]}
+  [:.footer
+   {:padding pad
+    :background (data :background-color)}
 
    [:a.logo
     {:display "inline-block"
-     :color (data :color)}
+     :color (data :text-color)}
 
     [:img
      {:height "2rem"
@@ -44,7 +40,7 @@
      :right 0}
 
     [:a
-     {:color (data :color)
+     {:color (data :text-color)
       :opacity 0.6
       :text-decoration "none"
       :margin-left "2em"
@@ -61,18 +57,17 @@
 
      [:&.button
       {:display "inline-block"
-       :border [["1px" "solid" (data :color)]]
+       :border [["1px" "solid" (data :text-color)]]
        :border-radius "0.25em"
        :height "2em"
        :padding "0 0.5em" }]]]])
 
-(defn nav [data]
-  [:section.header
+(defn view [data]
+  [:section.footer
    [:div.content
     [:a.logo {:href "/"}
      [:img {:src (data :logo-url)}]
-     [:h1 (data :title)]
-     [:span.version (data :version)]]
+     [:h1 (data :title)]]
     [:div.menu
      (for [link (data :menu)]
        [:a {:href (link :url)
@@ -80,6 +75,6 @@
             :data-icon (link :icon)}
         (link :text)])]]])
 
-(defmethod template "nav" [_]
+(defmethod template "footer" [_]
   {:css styles
-   :component nav})
+   :component view})
