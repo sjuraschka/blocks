@@ -157,7 +157,8 @@
           :form {:prompt-text "Sign up for early access and be notified when we launch"
                  :placeholder "super.baller@example.com"
                  :button {:text "Sign Me Up"
-                          :colors {}}}}}
+                          :color "#FFF"
+                          :background-color "#FF8043"}}}}
 
   "rookie-step-1"
   {:template "feature-highlight"
@@ -201,7 +202,7 @@
           :form {:prompt-text "Sign up for early access and be notified when we launch"
                  :placeholder "super.baller@example.com"
                  :button {:text "Get Invited"
-                          :colors "#fff"
+                          :color "#fff"
                           :background-color "#FF8043"}}}}
 
   "rookie-footer"

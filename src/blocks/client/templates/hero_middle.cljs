@@ -1,6 +1,7 @@
 (ns blocks.client.templates.hero-middle
   (:require [blocks.client.template :refer [template]]
-            [blocks.client.templates.mixins :refer [fontawesome-mixin button-mixin]]))
+            [blocks.client.templates.mixins :refer [fontawesome-mixin button-mixin]]
+            [blocks.client.templates.partials.email-field :as email-field]))
 
 (defn styles [data]
     [:section.hero-middle
@@ -34,32 +35,7 @@
         (fontawesome-mixin \uf019)
         {:margin-right "0.5em"}]]
 
-      [:form
-        [:input
-          {:padding "0 0.75em"
-           :border "none"
-           :box-sizing "border-box"
-           :height "3rem"
-           :vertical-align "top"
-           :line-height "3rem"}
-
-           ["&[type=email]"
-            {:border-radius "0.5em 0 0 0.5em"
-            :font-size "1.25em"
-             :min-width "15em"}
-
-          ["&::-moz-placeholder"
-            {:color "#ccc"}]
-
-          ["&::-webkit-input-placeholder"
-            {:color "#ccc"}]]
-
-          ["&[type=submit]"
-            {:border-radius "0 0.5em 0.5em 0"
-             :border "none"
-             :font-size "1em"
-             :text-transform "uppercase"
-             :cursor "pointer"}]]]])
+      (email-field/styles data)])
 
 (defn hero [data]
   [:section.hero-middle
@@ -69,9 +45,7 @@
     (when (data :button)
       [:a.button {:href ""} (get-in data [:button :text])])
     (when (data :form)
-      [:form
-        [:input {:type "email" :placeholder (get-in data [:form :placeholder])}]
-        [:input {:type "submit" :value (get-in data [:form :button :text])}]])]])
+      [email-field/component data])]])
 
   (defmethod template "hero-middle" [_]
     {:css styles

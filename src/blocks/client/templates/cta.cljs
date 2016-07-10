@@ -1,5 +1,6 @@
 (ns blocks.client.templates.cta
-  (:require [blocks.client.template :refer [template]]))
+  (:require [blocks.client.template :refer [template]]
+            [blocks.client.templates.partials.email-field :as email-field]))
 
   (def pad "3em")
 
@@ -20,34 +21,7 @@
         {:color (get-in data [:description :color])}
         {:margin-bottom "2em"}]
 
-      [:form
-        [:input
-          {:padding "0 0.75em"
-           :border "none"
-           :box-sizing "border-box"
-           :height "3rem"
-           :vertical-align "top"
-           :line-height "3rem"}
-
-           ["&[type=email]"
-            {:border-radius "0.5em 0 0 0.5em"
-            :font-size "1.25em"
-             :min-width "15em"}
-
-          ["&::-moz-placeholder"
-            {:color "#ccc"}]
-
-          ["&::-webkit-input-placeholder"
-            {:color "#ccc"}]]
-
-          ["&[type=submit]"
-            {:border-radius "0 0.5em 0.5em 0"
-             :border "none"
-             :font-size "1em"
-             :text-transform "uppercase"
-             :cursor "pointer"
-             :color (get-in data [:form :button :colors])
-             :background (get-in data [:form :button :background-color])}]]]]])
+      (email-field/styles data)]])
 
   (defn component [data]
     [:section.cta
@@ -55,9 +29,7 @@
         [:div.text
           [:h1 (get-in data [:heading :text])]
           [:p  (get-in data [:description :text])]]
-          [:form
-            [:input {:type "email" :placeholder (get-in data [:form :placeholder])}]
-            [:input {:type "submit" :value (get-in data [:form :button :text])}]]]])
+        [email-field/component data]]])
 
   (defmethod template "cta" [_]
     {:css styles
