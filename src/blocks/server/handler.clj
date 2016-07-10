@@ -1,7 +1,7 @@
 (ns blocks.server.handler
   (:require
     [hiccup.core :refer [html]]
-    [compojure.core :refer [defroutes GET]]
+    [compojure.core :refer [defroutes GET routes]]
     [compojure.route :refer [not-found]]
     [ring.middleware.resource :refer [wrap-resource]]
     [ring.middleware.not-modified :refer [wrap-not-modified]]
@@ -30,6 +30,13 @@
                                      (= (page :domain) domain))))
                          first)]
       page)))
+
+(defroutes api-routes
+  (GET "/api/domains/:domain/pages/*" {{domain :domain url :*} :params}
+    (when-let [page (path->page domain (str "/" url))]
+      {:status 200
+       :headers {"Content-Type" "application/edn"}
+       :body (pr-str (get-page-data page))})))
 
 (defroutes dev-routes
   (GET ["/:domain/*"] {{domain :domain url :*} :params}
@@ -65,12 +72,12 @@
                   (for [page pages]
                     [:li
                      [:a {:href (str "/" (page :domain) (page :url))}
-                      (str (page :domain) (page :url))]])]]])}))
-
-  (not-found "404; Thank you visitor! But our page is in another castle!"))
-
+                      (str (page :domain) (page :url))]])]]])})))
 (def app
-  (-> dev-routes
+  (-> (routes
+        dev-routes
+        api-routes
+        (not-found "404; Thank you visitor! But our page is in another castle!"))
       (wrap-resource "public")
       (wrap-content-type)
       (wrap-not-modified)))
