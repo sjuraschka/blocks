@@ -10,7 +10,8 @@
 
     [:.content
     {:display "flex"
-    :justify-content "space-between"
+    :justify-content "center"
+    :flex-wrap "wrap"
     :align-items "center"}
 
     [:&.right
@@ -23,7 +24,9 @@
      {:margin-left "6em"}]]]
 
    [:.text
-     {:min-width "50%"
+     {:min-width "15em"
+      :max-width "30em"
+      :flex-basis "50%"
       :margin-left "2em"}]
 
     [:h1
