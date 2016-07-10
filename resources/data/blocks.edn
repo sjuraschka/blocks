@@ -193,6 +193,17 @@
           :image {:image-url "http://www.tryrookie.com/assets/images/phones/benefits-phone-front3@2x.png"
                   :position "right"}}}
 
+  "rookie-cta"
+  {:template "cta"
+   :data {:heading {:text "Sign up for early access"}
+          :description {:text "If accepted you will receive an email inviting you to use the site."}
+          :background {:color "#f1f4f5"}
+          :form {:prompt-text "Sign up for early access and be notified when we launch"
+                 :placeholder "super.baller@example.com"
+                 :button {:text "Get Invited"
+                          :colors "#fff"
+                          :background-color "#FF8043"}}}}
+
   "rookie-footer"
   {:template "footer"
    :data {:logo-url "http://www.tryrookie.com/assets/images/logos/logo-light@2x.png"
