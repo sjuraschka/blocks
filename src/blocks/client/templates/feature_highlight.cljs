@@ -1,5 +1,6 @@
 (ns blocks.client.templates.feature-highlight
-  (:require [blocks.client.template :refer [template]]))
+  (:require [blocks.client.template :refer [template]]
+            [garden.stylesheet :refer [at-media]]))
 
 (def pad "3em")
 
@@ -7,6 +8,8 @@
   [:.feature-highlight
     {:padding pad
      :background (get-in data [:background :color])}
+
+
 
     [:.content
     {:display "flex"
@@ -16,18 +19,18 @@
 
     [:&.right
      [:.text
-     {:margin-right "3em"}]]
+      {:margin-right "3em"}]]
 
     [:&.left
      {:flex-direction "row-reverse"}
      [:.text
-     {:margin-left "6em"}]]]
+      {:margin-left "6em"}]]]
 
    [:.text
      {:min-width "15em"
       :max-width "30em"
       :flex-basis "50%"
-      :margin-left "2em"}]
+      :margin "3em 0"}]
 
     [:h1
       {:color (get-in data [:heading :color])
@@ -56,9 +59,17 @@
       {:color (get-in data [:description :color])}]
 
     [:img
-      {:max-height "80vh"}]
+      {:max-height "50vh"
+       :max-width "20em"}]
 
-  ])
+
+  (at-media {:max-width "575px"}
+    [:.content.left :.content.right
+      [:.text
+       {:margin-left 0
+        :margin-right 0}
+        [:h1
+         {:font-size "1.5em"}]]])])
 
 (defn component [data]
   [:section.feature-highlight
