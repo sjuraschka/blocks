@@ -1,10 +1,9 @@
 (ns blocks.server.figwheel
-  (:require
-    [figwheel-sidecar.components.figwheel-server :as server]
-    [figwheel-sidecar.components.file-system-watcher :as fsw]
-    [figwheel-sidecar.system :as sys]
-    [figwheel-sidecar.utils :as utils]
-    [com.stuartsierra.component :as component]))
+  (:require [com.stuartsierra.component :as component]
+            [figwheel-sidecar.components.figwheel-server :as server]
+            [figwheel-sidecar.components.file-system-watcher :as fsw]
+            [figwheel-sidecar.system :as sys]
+            [figwheel-sidecar.utils :as utils]))
 
 (def figwheel-config
   {:figwheel-options {:server-port 3434}
@@ -40,25 +39,11 @@
       (doseq [f sendable-files]
         (println "sending changed EDN file:" (:file f))))))
 
-(def system
-  (atom
-    (component/system-map
-      ;:http-server
-      :figwheel-server (sys/figwheel-system figwheel-config)
-      :file-watch (component/using
-                    (fsw/file-system-watcher {:watcher-name "EDN Watcher"
-                                              :watch-paths ["resources/data"]
-                                              :notification-handler handle-notification})
-                    [:figwheel-server]))))
 
-(defn start! []
-  (swap! system component/start))
+(defn figwheel-server []
+  (sys/figwheel-system figwheel-config))
 
-(defn stop! []
-  (swap! system component/stop))
-
-(defn reload! []
-  (stop!)
-  (start!))
-
-
+(defn file-watcher []
+  (fsw/file-system-watcher {:watcher-name "EDN Watcher"
+                            :watch-paths ["resources/data"]
+                            :notification-handler handle-notification}))
