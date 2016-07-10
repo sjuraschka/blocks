@@ -7,14 +7,8 @@ lein repl
 ```
 Then in the REPL:
 ```
-(start-server! 6543)
+(start! 6543)
 ```
-
-In another terminal:
-```
-lein figwheel
-```
-
 Then visit:
 ```
 http://localhost:6543/
@@ -36,17 +30,15 @@ Images are in:
 
 
 
-Changes to templates are updated immediately.
+Changes to templates, blocks and pages are updated immediately.
 
-Changes to blocks or pages require a refresh.
-
-Changes to the server require another `start-server!` and refresh.
+Changes to the server require another `start!` and refresh.
 
 
 ## Export
 
 `lein repl`
-`(start-server! 6543)`
+`(start! 6543)`
 
 turn off figwheel
 `rm resources/public/js/blocks.js`

@@ -18,7 +18,9 @@
             blocks.client.templates.cta
             blocks.client.templates.feature-highlight
             [garden.core :refer [css]]
-            [garden.stylesheet :refer [at-import]]))
+            [garden.stylesheet :refer [at-import]]
+            [figwheel.client :as fig]
+            [ajax.core :refer [GET]]))
 
 (def styles
   [(at-import "//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
@@ -37,9 +39,20 @@
      :margin "0 auto"}]]])
 
 (register-handler
-  :initialize
+  :set-data
+  (fn [state [_ data]]
+    data))
+
+(register-handler
+  :fetch-data
   (fn [state _]
-    (cljs.reader/read-string (.-innerHTML (js/document.getElementById "data")))))
+    (GET (str "/api/domains/" (get-in state [:page :domain])
+              "/pages" (get-in state [:page :url]))
+      {:handler (fn [data]
+                  (println "Reloading EDN")
+                  (println data)
+                  (dispatch [:set-data (cljs.reader/read-string data)]))})
+    state))
 
 (register-sub
   :page
@@ -66,12 +79,21 @@
            [:div {:id (block :id)}
             [(:component (template (block :template))) (block :data)]])]))))
 
-(defn ^:export run
-  []
-  (dispatch-sync [:initialize])
+(defn render []
   (reagent/render [app-view]
                   (js/document.getElementById "app")))
 
+(defn ^:export run
+  []
+  (dispatch-sync [:set-data (cljs.reader/read-string (.-innerHTML (js/document.getElementById "data")))])
+  (render))
+
+(fig/add-message-watch
+  :edn-watcher
+  (fn [{:keys [msg-name] :as msg}]
+    (when (= msg-name :edn-files-changed)
+      (dispatch [:fetch-data]))))
+
 (defn ^:export reload
   []
-  (run))
+  (render))

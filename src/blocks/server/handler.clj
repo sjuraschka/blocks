@@ -1,19 +1,46 @@
 (ns blocks.server.handler
   (:require
     [hiccup.core :refer [html]]
+    [compojure.core :refer [defroutes GET routes]]
+    [compojure.route :refer [not-found]]
     [ring.middleware.resource :refer [wrap-resource]]
     [ring.middleware.not-modified :refer [wrap-not-modified]]
     [ring.middleware.content-type :refer [wrap-content-type]]))
 
-(defn render-page [domain url]
-  (let [blocks (read-string (slurp (clojure.java.io/resource "data/blocks.edn")))
-        pages (read-string (slurp (clojure.java.io/resource "data/pages.edn")))]
+(defn read-pages-edn []
+  (read-string (slurp (clojure.java.io/resource "data/pages.edn"))))
+
+(defn read-blocks-edn []
+  (read-string (slurp (clojure.java.io/resource "data/blocks.edn"))))
+
+(defn get-page-data [page]
+  (let [blocks (read-blocks-edn)]
+    {:page (-> page
+               (update-in [:blocks]
+                          (fn [bs]
+                            (vec (map (fn [block-id]
+                                        (blocks block-id)) bs)))))}))
+
+(defn path->page [domain url]
+  (let [pages (read-pages-edn)]
     (when-let [page (->> pages
                          (filter (fn [page]
                                    (and
                                      (= (page :url) url)
                                      (= (page :domain) domain))))
                          first)]
+      page)))
+
+(defroutes api-routes
+  (GET "/api/domains/:domain/pages/*" {{domain :domain url :*} :params}
+    (when-let [page (path->page domain (str "/" url))]
+      {:status 200
+       :headers {"Content-Type" "application/edn"}
+       :body (pr-str (get-page-data page))})))
+
+(defroutes dev-routes
+  (GET ["/:domain/*"] {{domain :domain url :*} :params}
+    (when-let [page (path->page domain (str "/" url))]
       {:status 200
        :headers {"Content-Type" "text/html"}
        :body (html
@@ -29,44 +56,28 @@
                 [:body
                  [:div {:id "app"}]
                  [:script {:type "text/edn" :id "data"}
-                  (pr-str {:page (-> page
-                                     (update-in [:blocks]
-                                                (fn [bs]
-                                                  (vec (map (fn [block-id]
-                                                              (blocks block-id)) bs)))))})]
+                  (pr-str (get-page-data page))]
                  [:script {:src "/js/blocks.js" :type "text/javascript"}]
                  [:script {:type "text/javascript"}
-                  "blocks.client.core.run()"]]])})))
+                  "blocks.client.core.run()"]]])}))
 
-(defn index-page []
- (let [pages (read-string (slurp (clojure.java.io/resource "data/pages.edn")))]
-   {:status 200
-    :headers {"Content-Type" "text/html"}
-    :body (html
-            [:html
-             [:body
-              [:ul
-               (for [page pages]
-                 [:li
-                  [:a {:href (str "/" (page :domain) (page :url))}
-                  (str (page :domain) (page :url))]])]]])}))
-
-(defn page-handler [request]
-  (let [{:keys [url domain]} (if (= "localhost" (request :server-name))
-                               (let [[_ domain url] (re-find #"/(.+?)/(.*)?" (request :uri))]
-                                 {:domain domain
-                                  :url (str "/" url)})
-                               {:domain (request :server-name)
-                                :url (request :uri)})]
-    (if (nil? domain)
-      (index-page)
-      (if-let [page (render-page domain url)]
-        page
-        {:status 404
-         :body "404; Thank you visitor! But our page is in another castle!"}))))
-
+  (GET "/" _
+    (let [pages (read-pages-edn)]
+      {:status 200
+       :headers {"Content-Type" "text/html"}
+       :body (html
+               [:html
+                [:body
+                 [:ul
+                  (for [page pages]
+                    [:li
+                     [:a {:href (str "/" (page :domain) (page :url))}
+                      (str (page :domain) (page :url))]])]]])})))
 (def app
-  (-> page-handler
+  (-> (routes
+        dev-routes
+        api-routes
+        (not-found "404; Thank you visitor! But our page is in another castle!"))
       (wrap-resource "public")
       (wrap-content-type)
       (wrap-not-modified)))
