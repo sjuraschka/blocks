@@ -4,7 +4,7 @@
 (def pad "3rem")
 
 (defn styles [data]
-  [:.footer
+  [:footer
    {:padding pad
     :background (data :background-color)}
 
@@ -63,7 +63,7 @@
        :padding "0 0.5em" }]]]])
 
 (defn view [data]
-  [:section.footer
+  [:footer
    [:div.content
     [:a.logo {:href "/"}
      [:img {:src (data :logo-url)}]
