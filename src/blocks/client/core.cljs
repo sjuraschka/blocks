@@ -16,21 +16,40 @@
             [figwheel.client :as fig]
             [ajax.core :refer [GET]]))
 
-(def styles
+(defn google-fonts-import [data]
+   (when-let [google-fonts (->> (get-in data [:styles :fonts])
+                                vals
+                                (filter (fn [font]
+                                          (= "google" (font :source))))
+                                not-empty)]
+     (at-import (str "//fonts.googleapis.com/css?family="
+                     (->> google-fonts
+                          (map (fn [font]
+                                 (str (string/replace (font :name) #" " "+")
+                                      ":" (font :weight))))
+                          (string/join "|"))))))
+
+(defn styles [data]
   [(at-import "//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
-   (at-import "//fonts.googleapis.com/css?family=Montserrat:700|Lato")
 
-  [:body
-   {:font-family "Lato"
-    :line-height "1.25"}]
+   (google-fonts-import data)
 
-  [:.block
-   {:overflow "hidden"}
+   [:body :input
+    {:font-family [(str "\"" (get-in data [:styles :fonts :body :name]) "\"") "sans-serif"]
+     :font-weight (get-in data [:styles :fonts :body :weight])
+     :line-height "1.25" }]
 
-   [:.content
-    {:max-width "1000px"
-     :position "relative"
-     :margin "0 auto"}]]])
+   [:h1 :h2 :h3 :h4 :h5
+    {:font-family [(str "\"" (get-in data [:styles :fonts :headings :name]) "\"") "sans-serif"]
+     :font-weight (get-in data [:styles :fonts :headings :weight])}]
+
+   [:.block
+    {:overflow "hidden"}
+
+    [:.content
+     {:max-width "1000px"
+      :position "relative"
+      :margin "0 auto"}]]])
 
 (register-handler
   :set-data
@@ -65,7 +84,7 @@
          [:div.styles
           [:style {:type "text/css"
                    :dangerouslySetInnerHTML
-                   {:__html (css styles)}}]
+                   {:__html (css (styles @page))}}]
           (for [block blocks]
             ^{:key (block :id)}
             [:style {:type "text/css"

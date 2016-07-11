@@ -12,7 +12,6 @@
     :font-weight "bold"
     :cursor "pointer"
     :outline "none"
-    :font-family "Lato"
     :text-decoration "none"
     :display "inline-block"
     :color (colors :text)

@@ -14,7 +14,7 @@
 
        ["&[type=email]"
         {:border-radius "0.5em 0 0 0.5em"
-        :font-size "1.25em"
+         :font-size "1.25em"
          :min-width "15em"}
 
       ["&::-moz-placeholder"

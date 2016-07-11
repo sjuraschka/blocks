@@ -6,6 +6,12 @@
          :image "url()"}
   :colors ["#abcdef"
            "#000000"]
+  :styles {:fonts {:body {:name "Lato"
+                          :source "google"
+                          :weight 400}
+                   :headings {:name "Montserrat"
+                              :source "google"
+                              :weight 700}}}
   :blocks ["fetch-header"
            "fetch-hero"
            "fetch-footer"]}
@@ -17,6 +23,12 @@
          :image "url()"}
   :colors ["#abcdef"
            "#000000"]
+  :styles {:fonts {:body {:name "Lato"
+                          :source "google"
+                          :weight 400}
+                   :headings {:name "Montserrat"
+                              :source "google"
+                              :weight 700}}}
   :blocks ["braid-com-header"
            "braid-com-hero-middle"
            "braid-com-features"
@@ -29,16 +41,28 @@
          :image "url()"}
   :colors ["#abcdef"
            "#000000"]
+  :styles {:fonts {:body {:name "Lato"
+                          :source "google"
+                          :weight 400}
+                   :headings {:name "Montserrat"
+                              :source "google"
+                              :weight 700}}}
   :blocks ["braid-org-header"
            "braid-org-hero"
            "braid-com-features"
            "braid-com-footer"]}
 
-{:domain "tryrookie.com"
+ {:domain "tryrookie.com"
   :url "/"
   :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
          :description "rooke is..."
          :image "url ()"}
+  :styles {:fonts {:body {:name "Source Sans Pro"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Source Sans Pro"
+                              :source "google"
+                              :weight 200}}}
   :blocks ["rookie-header"
            "rookie-hero"
            "rookie-step-1"
