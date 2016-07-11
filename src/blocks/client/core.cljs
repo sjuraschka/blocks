@@ -30,7 +30,7 @@
    {:font-family "Lato"
     :line-height "1.25"}]
 
-  [:section
+  [:.block
    {:overflow "hidden"}
 
    [:.content
@@ -81,7 +81,7 @@
                                  ((:css (template (block :template))) (block :data))])}}])]
          (for [block blocks]
            ^{:key (block :id)}
-           [:div {:id (block :id)}
+           [:div {:id (block :id) :class "block"}
             [(:component (template (block :template))) (block :data)]])]))))
 
 (defn render []
