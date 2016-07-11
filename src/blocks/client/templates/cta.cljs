@@ -6,20 +6,20 @@
 
   (defn styles [data]
     [:.cta
-      {:padding pad
-       :background (get-in data [:background :color])
-       :text-align "center"}
+     {:padding pad
+      :background (get-in data [:background :color])
+      :text-align "center"}
 
-    [:.content
+     [:.content
 
       [:h1
-        {:color (get-in data [:heading :color])
-         :font-size "2.2em"
-         :margin-bottom "0.5em"}]
+       {:color (get-in data [:heading :color])
+        :font-size "2.2em"
+        :margin-bottom "0.5em"}]
 
       [:p
-        {:color (get-in data [:description :color])}
-        {:margin-bottom "2em"}]
+       {:color (get-in data [:description :color])}
+       {:margin-bottom "2em"}]
 
       (email-field/styles data)]])
 
