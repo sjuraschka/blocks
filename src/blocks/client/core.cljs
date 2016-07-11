@@ -10,7 +10,7 @@
                                    dispatch-sync
                                    subscribe]]
             [blocks.client.template :refer [template]]
-            blocks.client.templates.nav
+            blocks.client.templates.header
             blocks.client.templates.hero
             blocks.client.templates.hero-middle
             blocks.client.templates.features-grid
