@@ -26,9 +26,9 @@
   :styles {:fonts {:body {:name "Lato"
                           :source "google"
                           :weight 400}
-                   :headings {:name "Montserrat"
+                   :headings {:name "Lato"
                               :source "google"
-                              :weight 700}}}
+                              :weight 400}}}
   :blocks ["braid-com-header"
            "braid-com-hero-middle"
            "braid-com-features"
@@ -44,9 +44,9 @@
   :styles {:fonts {:body {:name "Lato"
                           :source "google"
                           :weight 400}
-                   :headings {:name "Montserrat"
+                   :headings {:name "Lato"
                               :source "google"
-                              :weight 700}}}
+                              :weight 400}}}
   :blocks ["braid-org-header"
            "braid-org-hero"
            "braid-com-features"
