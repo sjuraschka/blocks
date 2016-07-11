@@ -71,6 +71,13 @@
             [:style {:type "text/css"
                      :dangerouslySetInnerHTML
                      {:__html (css
+                                {:auto-prefix #{:transition
+                                                :flex-direction
+                                                :flex-shrink
+                                                :align-items
+                                                :animation
+                                                :flex-grow}
+                                 :vendors ["webkit" "moz"]}
                                 [(str "#" (block :id))
                                  ((:css (template (block :template))) (block :data))])}}])]
          (for [block blocks]
