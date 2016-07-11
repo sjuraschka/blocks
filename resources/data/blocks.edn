@@ -156,6 +156,7 @@
                        :size "cover"}
           :form {:prompt-text "Sign up for early access and be notified when we launch"
                  :placeholder "super.baller@example.com"
+                 :autofocus true
                  :button {:text "Sign Me Up"
                           :colors {:text "#fff"
                                    :bg "#FF8043"
@@ -203,6 +204,7 @@
           :background {:color "#f1f4f5"}
           :form {:prompt-text "Sign up for early access and be notified when we launch"
                  :placeholder "super.baller@example.com"
+                 :autofocus true
                  :button {:text "Get Invited"
                           :color "#fff"
                           :colors {:text "#fff"

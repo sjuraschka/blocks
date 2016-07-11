@@ -32,5 +32,9 @@
 
 (defn component [data]
   [:form
-    [:input {:type "email" :placeholder (get-in data [:form :placeholder])}]
-    [:input {:type "submit" :value (get-in data [:form :button :text])}]])
+   [:input {:type "email"
+            :name "email"
+            :placeholder (get-in data [:form :placeholder])
+            :autofocus (when (get-in data [:form :autofocus]) "autofocus")}]
+   [:input {:type "submit"
+            :value (get-in data [:form :button :text])}]])
