@@ -65,17 +65,22 @@
   (let [page (subscribe [:page])]
     (fn []
       (let [blocks (->> (@page :blocks)
-                        (map (fn [b]
-                               (assoc b :id (gensym "block")))))]
+                        (map-indexed (fn [index b]
+                                       (assoc b :id (str "block-" index)))))]
         [:div.app
-         [:style {:type "text/css"
-                  :dangerouslySetInnerHTML
-                  {:__html (css
-                             styles
-                             (for [block blocks]
-                               [(str "#" (block :id))
-                                ((:css (template (block :template))) (block :data))]))}}]
+         [:div.styles
+          [:style {:type "text/css"
+                   :dangerouslySetInnerHTML
+                   {:__html (css styles)}}]
+          (for [block blocks]
+            ^{:key (block :id)}
+            [:style {:type "text/css"
+                     :dangerouslySetInnerHTML
+                     {:__html (css
+                                [(str "#" (block :id))
+                                 ((:css (template (block :template))) (block :data))])}}])]
          (for [block blocks]
+           ^{:key (block :id)}
            [:div {:id (block :id)}
             [(:component (template (block :template))) (block :data)]])]))))
 
