@@ -9,7 +9,8 @@
        :box-sizing "border-box"
        :height "3rem"
        :vertical-align "top"
-       :line-height "3rem"}
+       :line-height "3rem"
+       :outline "none"}
 
        ["&[type=email]"
         {:border-radius "0.5em 0 0 0.5em"
