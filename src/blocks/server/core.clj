@@ -26,7 +26,7 @@
 
 (defn reload! []
   (stop!)
-  (start!))
+  (swap! system component/start))
 
 (defn -main  [& args]
   (let [port (Integer/parseInt (first args))]
