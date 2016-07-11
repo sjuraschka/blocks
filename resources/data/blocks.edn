@@ -1,7 +1,7 @@
 {
 
- "fetch-nav"
- {:template "nav"
+ "fetch-header"
+ {:template "header"
   :data {:title "Fetch"
          :logo-url "http://placehold.it/50x50"
          :color "#fff"
@@ -31,8 +31,8 @@
                   :url "#"
                   :style "button"}]}}
 
- "braid-com-nav"
- {:template "nav"
+ "braid-com-header"
+ {:template "header"
   :data {:title "Braid"
          :version "beta"
          :logo-url "/images/braid-logo-bw.svg"
@@ -107,8 +107,8 @@
                  :url "https://braid.chat/"
                  :style "button"}]}}
 
- "braid-org-nav"
- {:template "nav"
+ "braid-org-header"
+ {:template "header"
   :data {:title "Braid"
          :version "open source"
          :color "#fff"
@@ -134,8 +134,8 @@
                            :border "white"}}}}
 
 
-  "rookie-nav"
-  {:template "nav"
+  "rookie-header"
+  {:template "header"
    :data {:color "#fff"
           :logo-url "http://www.tryrookie.com/assets/images/logos/logo-light@2x.png"
           :menu [{:text "647-267-5292"

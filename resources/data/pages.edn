@@ -6,7 +6,7 @@
          :image "url()"}
   :colors ["#abcdef"
            "#000000"]
-  :blocks ["fetch-nav"
+  :blocks ["fetch-header"
            "fetch-hero"
            "fetch-footer"]}
 
@@ -17,7 +17,7 @@
          :image "url()"}
   :colors ["#abcdef"
            "#000000"]
-  :blocks ["braid-com-nav"
+  :blocks ["braid-com-header"
            "braid-com-hero-middle"
            "braid-com-features"
            "braid-com-footer"]}
@@ -29,7 +29,7 @@
          :image "url()"}
   :colors ["#abcdef"
            "#000000"]
-  :blocks ["braid-org-nav"
+  :blocks ["braid-org-header"
            "braid-org-hero"
            "braid-com-features"
            "braid-com-footer"]}
@@ -39,7 +39,7 @@
   :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
          :description "rooke is..."
          :image "url ()"}
-  :blocks ["rookie-nav"
+  :blocks ["rookie-header"
            "rookie-hero"
            "rookie-step-1"
            "rookie-step-2"

@@ -1,10 +1,10 @@
-(ns blocks.client.templates.nav
+(ns blocks.client.templates.header
   (:require [blocks.client.template :refer [template]]))
 
 (def pad "3rem")
 
 (defn styles [data]
-  [:.header
+  [:header
    {:position "absolute"
     :top 0
     :left 0
@@ -38,7 +38,7 @@
       :text-transform "uppercase"
       :letter-spacing "0.1em"}]]
 
-   [:.menu
+   [:nav
     {:display "inline-block"
      :position "absolute"
      :right 0}
@@ -66,20 +66,21 @@
        :height "2em"
        :padding "0 0.5em" }]]]])
 
-(defn nav [data]
-  [:section.header
+(defn component [data]
+  [:header
    [:div.content
     [:a.logo {:href "/"}
      [:img {:src (data :logo-url)}]
      [:h1 (data :title)]
-     [:span.version (data :version)]]
-    [:div.menu
+     (when (data :version)
+       [:span.version (data :version)])]
+    [:nav
      (for [link (data :menu)]
        [:a {:href (link :url)
             :class (link :style)
             :data-icon (link :icon)}
         (link :text)])]]])
 
-(defmethod template "nav" [_]
+(defmethod template "header" [_]
   {:css styles
-   :component nav})
+   :component component})
