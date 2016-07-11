@@ -15,7 +15,7 @@
        :background-image (str "url(" (get-in data [:background :image-url]) ")")
        :background-size (get-in data [:background :size])
        :background-repeat "no-repeat"
-       :background-position "center bottom"}
+       :background-position (get-in data [:background :position] "center bottom")}
 
       [:h1
        {:font-size "3.5em"

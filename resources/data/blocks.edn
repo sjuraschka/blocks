@@ -153,7 +153,8 @@
                         :color "#fff"}
           :background {:image-url "http://www.tryrookie.com/assets/images/backgrounds/background.jpg"
                        :color "#ccc"
-                       :size "cover"}
+                       :size "cover"
+                       :position "center top"}
           :form {:prompt-text "Sign up for early access and be notified when we launch"
                  :placeholder "super.baller@example.com"
                  :autofocus true
