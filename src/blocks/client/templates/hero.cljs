@@ -24,8 +24,7 @@
      {:max-width "30rem"}
 
      [:h1
-      {:font-family "Montserrat"
-       :font-size (get-in data [:heading :size] "3em")
+      {:font-size (get-in data [:heading :size] "3em")
        :text-shadow "0 0.05em 0.1em rgba(0,0,0,0.1)"
        :white-space "pre-wrap"}]
 
