@@ -114,6 +114,36 @@
                      :title "Emoji"
                      :description "..."}]}}
 
+ "braid-com-pricing"
+ {:template "raw"
+  :data {:options [{:title "Community"
+                    :subtitle "For Open Communities and Projects"
+                    :features ["Open"]
+                    :price "Free"}
+                   {:title "Startup"
+                    :features ["Private"]
+                    :price "Suggested
+                           $ 6 / user / month
+                           Pay what you think it's worth"}
+                   {:title "Enterprise"
+                    :features ["Private"]
+                    :price "Email Us"}]
+         :notes "Want it self hosted? Email us, or, go to braidchat.org" }}
+
+"braid-com-cta"
+{:template "cta"
+ :data {:heading {:text ""}
+
+        :form {:prompt-text "Sign up for early access and be notified when we launch"
+               :placeholder "super.baller@example.com"
+               :autofocus true
+               :button {:text "Create Your Group"
+                        :color "#fff"
+                        :colors {:text "#fff"
+                                 :bg "#FF8043"
+                                 :bg-hover "#FF8060"
+                                 :bg-active "#FF8143"}}}}}
+
  "braid-com-footer"
  {:template "footer"
   :data {:logo-url "/images/braid-logo-bw.svg"

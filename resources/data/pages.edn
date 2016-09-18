@@ -38,6 +38,8 @@
            "braid-com-benefit-focus"
            "braid-com-benefit-deep-integrations"
            "braid-com-other-benefits"
+           "braid-com-pricing"
+           "braid-com-cta"
            "braid-com-footer"]}
 
  {:domain "www.braidchat.org"
