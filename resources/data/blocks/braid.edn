@@ -1,0 +1,103 @@
+{
+ "braid-com-header"
+ {:template "header"
+  :data {:title "Braid"
+         :version "beta"
+         :logo-url "/images/braid-logo-bw.svg"
+         :color "#fff"
+         :menu [{:text "Open Source"
+                 :url "https://www.braidchat.org/"}
+                {:text "Sign In"
+                 :url "https://braid.chat/"
+                 :style "button"}]}}
+
+ "braid-com-hero"
+ {:template "hero"
+  :data {:heading {:text "work better\ntogether"}
+         :text "a new approach to team chat\ndesigned for teams who care about flow"
+         :background {:image-url "/images/hero-bg-flip.jpg"
+                      :color "#000225"}
+         :featured-image {:url "/images/braid-screenshot-archer.png"}
+         :button {:url "https://braid.chat/try"
+                  :text "Try Braid Now"
+                  :colors {:text "#FFFFFF"
+                           :bg "#0D6C7F"
+                           :bg-hover "#014F75"
+                           :bg-active "#012156"
+                           :border nil}
+                  :sub-text "Or, read about how Braid is different"
+                  :sub-url "#"}}}
+
+ "braid-com-hero-middle"
+ {:template "hero-middle"
+  :data {:heading {:text "Work Better Together"
+                   :color "#444"}
+         :sub-heading {:text "A new approach to team chat designed for teams who care about flow."
+                       :color "#777"}
+         :background {:image-url "https://hipchat-magnolia-cdn.atlassian.com/assets/img/hipchat/homepage-hero-meeple-group.png"
+                      :color "#ccc"
+                      :size "40em"}
+         :button {:url "https://braid.chat/try"
+                  :text "Try Braid Now"
+                  :colors {:text "#fff"
+                           :bg "#0D6C7F"
+                           :bg-hover "#014F75"
+                           :bg-active "#012156"}}}}
+
+ "braid-com-features"
+ {:template "features-grid"
+  :data {:columns 3
+         :styles {:background-color "#EEE"
+                  :heading-color "#0D6C7F"
+                  :description-color "#333"}
+         :features [{:icon \uf092
+                     :title "Security and Privacy"
+                     :description "Security is #1. HipChat's secure conversations are transferred in 256-bit SSL encryption – the same security protocol as online banks."}
+                    {:icon \uf092
+                     :title "Easy Sharing"
+                     :description "For when you need to show, not tell. Share your desktop with your colleagues on any device to collaborate in real time"}
+                    {:icon \uf092
+                     :title "Security and Privacy"
+                     :description "Security is #1. HipChat's secure conversations are transferred in 256-bit SSL encryption – the same security protocol as online banks."}
+                    {:icon \uf092
+                     :title "Easy Sharing"
+                     :description "For when you need to show, not tell. Share your desktop with your colleagues on any device to collaborate in real time"}]}}
+
+ "braid-com-footer"
+ {:template "footer"
+  :data {:logo-url "/images/braid-logo-bw.svg"
+         :background-color "#000"
+         :text-color "#FFF"
+         :title "Braid"
+         :menu [{:text "Open Source"
+                 :url "https://www.braidchat.org/"}
+                {:text "Sign In"
+                 :url "https://braid.chat/"
+                 :style "button"}]}}
+
+ "braid-org-header"
+ {:template "header"
+  :data {:title "Braid"
+         :version "open source"
+         :color "#fff"
+         :logo-url "/images/braid-logo-bw.svg"
+         :menu [{:text "Github"
+                 :url "https://github.com/braidchat/braid"
+                 :icon \uf092}]}}
+
+ "braid-org-hero"
+ {:template "hero"
+  :data {:heading {:text "Help us create a new way for groups to work together"
+                   :size "2em"}
+         :text "Braid is an open-source group messaging platform that goes beyond chatrooms to help teams work better together"
+         :background {:image-url "/images/hero-bg.png"
+                      :color "#80abc1"}
+         :featured-image {:url "/images/braid-screenshot-archer.png"}
+         :button {:url "https://github.com/braidchat/braid"
+                  :text "Learn More"
+                  :colors {:text "#659ECA"
+                           :bg "rgba(255,255,255,1.0)"
+                           :bg-hover "rgba(255,255,255,0.8)"
+                           :bg-active "rgba(255,255,255,0.6)"
+                           :border "white"}}}}
+}
