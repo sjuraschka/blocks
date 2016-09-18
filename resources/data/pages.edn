@@ -32,6 +32,12 @@
   :blocks ["braid-com-header"
            "braid-com-hero-middle"
            "braid-com-features"
+           "braid-com-why"
+           "braid-com-how-it-works"
+           "braid-com-benefit-better-conversations"
+           "braid-com-benefit-focus"
+           "braid-com-benefit-deep-integrations"
+           "braid-com-other-benefits"
            "braid-com-footer"]}
 
  {:domain "www.braidchat.org"

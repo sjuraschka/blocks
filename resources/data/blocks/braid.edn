@@ -44,24 +44,75 @@
                            :bg-hover "#014F75"
                            :bg-active "#012156"}}}}
 
+ "braid-com-why"
+ {:template "raw"
+  :data {:content ""}}
+
+ "braid-com-how-it-works"
+ {:template "raw"
+  :data {:title "Beyond Chatrooms"
+         :content ""
+         :video {:id "pa2bUsChFqM"
+                 :provider :youtube}}}
+
+ "braid-com-benefit-better-conversations"
+ {:template "raw"
+  :data {:title "Better Conversations"
+         :content ""}}
+
+ "braid-com-benefit-focus"
+ {:template "raw"
+  :data {:title "Stay in Flow"
+         :content ""}}
+
+ "braid-com-benefit-deep-integrations"
+ {:template "raw"
+  :data {:title "Deep Integrations"
+         :content ""}}
+
+ "braid-com-other-benefits"
+ {:template "raw"
+  :data {:columns [{:title "Fast"}
+                   {:title "Open Source"}
+                   {:title "..."}]}}
+
  "braid-com-features"
  {:template "features-grid"
-  :data {:columns 3
+  :data {:title "Plus, all the features you expect..."
+         :columns 3
          :styles {:background-color "#EEE"
                   :heading-color "#0D6C7F"
                   :description-color "#333"}
          :features [{:icon \uf092
                      :title "Security and Privacy"
-                     :description "Security is #1. HipChat's secure conversations are transferred in 256-bit SSL encryption – the same security protocol as online banks."}
+                     :description "..."}
                     {:icon \uf092
-                     :title "Easy Sharing"
-                     :description "For when you need to show, not tell. Share your desktop with your colleagues on any device to collaborate in real time"}
+                     :title "Drag and Drop File Sharing"
+                     :description "..."}
                     {:icon \uf092
-                     :title "Security and Privacy"
-                     :description "Security is #1. HipChat's secure conversations are transferred in 256-bit SSL encryption – the same security protocol as online banks."}
+                     :title "Searchable Chat History"
+                     :description "..."}
                     {:icon \uf092
-                     :title "Easy Sharing"
-                     :description "For when you need to show, not tell. Share your desktop with your colleagues on any device to collaborate in real time"}]}}
+                     :title "Desktop and Mobile Apps"
+                     :description "..."}
+                    {:icon \uf092
+                     :title "Private Conversations"
+                     :description "..."}
+                    {:icon \uf092
+                     :title "Notifications"
+                     :description "..."}
+                    {:icon \uf092
+                     :title "Email Digests"
+                     :description "..."}
+                    {:icon \uf092
+                     :title "Code Snippets"
+                     :description "..."}
+                    {:icon \uf092
+                     :title "Rich Text Formatting"
+                     :description "..."}
+                    {:icon \uf092
+                     :title "Emoji"
+                     :description "..."}]}}
 
  "braid-com-footer"
  {:template "footer"
