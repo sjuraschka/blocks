@@ -75,6 +75,9 @@
                           :bg "#0D6C7F"
                           :bg-hover "#014F75"
                           :bg-active "#012156"}}}}
+ "braid-com-conversations"
+ {:template "braid-conversations"
+  :data {:background {:color "#f2f2f2"}}}
 
 "braid-com-features"
 {:template "features-grid"
