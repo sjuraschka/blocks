@@ -3,8 +3,8 @@
  "fetch-header"
  {:template "header"
   :data {:title "Fetch"
-         :logo-url "http://placehold.it/50x50"
-         :color "#fff"
+         :logo {:logo-url "http://placehold.it/50x50"
+                :color "#fff"}
          :menu [{:text "Products"
                  :url "#"}
                 {:text "Contact"
@@ -35,8 +35,9 @@
  {:template "header"
   :data {:title "Braid"
          :version "beta"
-         :logo-url "/images/braid-logo-bw.svg"
-         :color "#fff"
+         :logo {:logo-url "/images/braid-logo-444.svg"
+                :color "#444"}
+         :color "#444"
          :menu [{:text "Open Source"
                  :url "https://www.braidchat.org/"}
                 {:text "Sign In"
@@ -140,7 +141,7 @@
   "rookie-header"
   {:template "header"
    :data {:color "#fff"
-          :logo-url "http://www.tryrookie.com/assets/images/logos/logo-light@2x.png"
+          :logo {:logo-url "http://www.tryrookie.com/assets/images/logos/logo-light@2x.png"}
           :menu [{:text "647-267-5292"
                   :url "tel:6472675292"
                   :icon \uf095}

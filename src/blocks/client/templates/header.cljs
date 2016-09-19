@@ -14,13 +14,13 @@
 
    [:a.logo
     {:display "inline-block"
-     :color (data :color)}
+     :color (get-in data [:logo :color])}
 
     [:img
      {:height "2rem"
       :display "inline-block"
       :vertical-align "middle"
-      :margin-right "0.5em" }]
+      :margin-right "0.5em"}]
 
     [:h1
      {:display "inline-block"
@@ -70,7 +70,7 @@
   [:header
    [:div.content
     [:a.logo {:href "/"}
-     [:img {:src (data :logo-url)}]
+     [:img {:src (get-in data [:logo :logo-url])}]
      [:h1 (data :title)]
      (when (data :version)
        [:span.version (data :version)])]
