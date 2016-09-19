@@ -1,0 +1,33 @@
+{
+
+ "fetch-header"
+ {:template "header"
+  :data {:title "Fetch"
+         :logo {:logo-url "http://placehold.it/50x50"
+                :color "#fff"}
+         :menu [{:text "Products"
+                 :url "#"}
+                {:text "Contact"
+                 :url "#"}
+                {:text "About"
+                  :url "#"
+                  :style "button"}]}}
+
+ "fetch-hero"
+ {:template "hero"
+  :data {:heading {:text "Customer surveys that use TEXT for massive customer engagement."}}}
+
+ "fetch-footer"
+ {:template "footer"
+  :data {:logo-url "http://placehold.it/50x50"
+         :background-color "#000"
+         :text-color "#FFF"
+         :title "Fetch"
+         :menu [{:text "Products"
+                 :url "#"}
+                {:text "Contact"
+                 :url "#"}
+                {:text "About"
+                  :url "#"
+                  :style "button"}]}}
+}
