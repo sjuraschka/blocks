@@ -6,3 +6,4 @@ target
 export/
 .lein-env
 profiles.clj
+*.jar
