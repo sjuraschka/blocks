@@ -139,16 +139,15 @@
 "braid-com-cta"
 {:template "cta"
  :data {:heading {:text ""}
-
+        :background {:color "#f2f2f2"}
         :form {:prompt-text "Sign up for early access and be notified when we launch"
-               :placeholder "super.baller@example.com"
-               :autofocus true
+               :placeholder "you@yourgroup.com"
                :button {:text "Create Your Group"
                         :color "#fff"
                         :colors {:text "#fff"
-                                 :bg "#FF8043"
-                                 :bg-hover "#FF8060"
-                                 :bg-active "#FF8143"}}}}}
+                                 :bg "#208456"
+                                 :bg-hover "#10613c"
+                                 :bg-active "#19a766"}}}}}
 
  "braid-com-footer"
  {:template "footer"
