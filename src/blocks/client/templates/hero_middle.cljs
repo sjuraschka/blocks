@@ -24,8 +24,9 @@
 
       [:h2
        {:font-size "2em"
-        :margin "0.75em"
+        :margin [["0.75em" "0.75em" "1.25em"]]
         :max-width "20em"
+        :white-space "pre"
         :color (get-in data [:sub-heading :color])}]
 
       [:a.button

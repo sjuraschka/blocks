@@ -55,8 +55,8 @@
                   :text "Try Braid Now"
                   :colors {:text "#FFFFFF"
                            :bg "#0D6C7F"
-                           :bg-hover "#014F75"
-                           :bg-active "#012156"
+                           :bg-hover "#10613c"
+                           :bg-active "#19a766"
                            :border nil}
                   :sub-text "Or, read about how Braid is different"
                   :sub-url "#"}}}
@@ -65,17 +65,19 @@
 {:template "hero-middle"
  :data {:heading {:text "Work Better Together"
                   :color "#444"}
-        :sub-heading {:text "A new approach to team chat designed for teams who care about flow."
+        :sub-heading {:text "A new approach to group chat,\n designed for teams who care about flow."
                       :color "#777"}
-        :background {:image-url "https://hipchat-magnolia-cdn.atlassian.com/assets/img/hipchat/homepage-hero-meeple-group.png"
-                     :color "#ccc"
-                     :size "40em"}
-        :button {:url "https://braid.chat/try"
-                 :text "Try Braid Now"
-                 :colors {:text "#fff"
-                          :bg "#0D6C7F"
-                          :bg-hover "#014F75"
-                          :bg-active "#012156"}}}}
+        :background {:color "#f2f2f2"}
+        :form {:prompt-text "Sign up for early access and be notified when we launch"
+               :placeholder "you@yourgroup.com"
+               :autofocus true
+               :button {:text "Create Your Group"
+                        :color "#fff"
+                        :colors {:text "#fff"
+                                 :bg "#208456"
+                                 :bg-hover "#10613c"
+                                 :bg-active "#19a766"}}}}}
+
  "braid-com-conversations"
  {:template "braid-conversations"
   :data {:background {:color "#f2f2f2"}}}
@@ -102,7 +104,7 @@
 "braid-com-footer"
 {:template "footer"
   :data {:logo-url "/images/braid-logo-bw.svg"
-         :background-color "#000"
+         :background-color "#444"
          :text-color "#FFF"
          :title "Braid"
          :menu [{:text "Open Source"
@@ -116,7 +118,7 @@
   :data {:title "Braid"
          :version "open source"
          :color "#fff"
-         :logo-url "/images/braid-logo-bw.svg"
+         :logo {:logo-url "/images/braid-logo-bw.svg"}
          :menu [{:text "Github"
                  :url "https://github.com/braidchat/braid"
                  :icon \uf092}]}}
