@@ -87,7 +87,7 @@
   :data {:title "Plus, all the features you expect..."
          :columns 3
          :styles {:background-color "#EEE"
-                  :heading-color "#0D6C7F"
+                  :heading-color "#208456"
                   :description-color "#333"}
          :features [{:icon \uf092
                      :title "Security and Privacy"
