@@ -121,20 +121,35 @@
                      :description "..."}]}}
 
  "braid-com-pricing"
- {:template "raw"
-  :data {:options [{:title "Community"
+ {:template "pricing"
+  :data {:title-color "#208456"
+         :options [{:title "Community"
                     :subtitle "For Open Communities and Projects"
-                    :features ["Open"]
-                    :price "Free"}
-                   {:title "Startup"
-                    :features ["Private"]
-                    :price "Suggested
-                           $ 6 / user / month
-                           Pay what you think it's worth"}
+                    :features ["Open"
+
+                               "Moderation Tools"
+                               "Public Sign-Up Page"
+
+                               "Unlimited Integrations"
+                               "Unlimited Users"
+                               "Unlimited Tags"
+                               "Unlimited History"]
+                    :price {:amount 0}}
+                   {:title "Team"
+                    :highlight true
+                    :features ["Private"
+                               "Unlimited Integrations"
+                               "Unlimited Users"
+                               "Unlimited Tags"
+                               "Unlimited History"]
+                    :price {:amount 5
+                            :text "per active user, per month"
+                            :pwyc true}}
                    {:title "Enterprise"
-                    :features ["Private"]
-                    :price "Email Us"}]
-         :notes "Want it self hosted? Email us, or, go to braidchat.org" }}
+                    :features ["Self-Hosted"
+                               "SAML Single Sign-on"]
+                    :price {:button {:text "Contact Us"}}}]
+         :notes "14 Day Trial" }}
 
 "braid-com-cta"
 {:template "cta"

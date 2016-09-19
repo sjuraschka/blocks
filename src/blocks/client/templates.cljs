@@ -6,6 +6,7 @@
     blocks.client.templates.hero-middle
     blocks.client.templates.braid-conversations
     blocks.client.templates.features-grid
+    blocks.client.templates.pricing
     blocks.client.templates.footer
     blocks.client.templates.cta
     blocks.client.templates.feature-highlight))
