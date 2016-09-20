@@ -89,36 +89,36 @@
          :styles {:background-color "#EEE"
                   :heading-color "#208456"
                   :description-color "#333"}
-         :features [{:icon \uf092
+         :features [{:icon \uf023
                      :title "Security and Privacy"
-                     :description "..."}
-                    {:icon \uf092
+                     :description "Braid's conversations receive a 256-bit SSL encryption."}
+                    {:icon \uf1c5
                      :title "Drag and Drop File Sharing"
-                     :description "..."}
-                    {:icon \uf092
+                     :description "Drop a file into any chat and it's instantly uploaded and easy to tag so you can find it later."}
+                    {:icon \uf002
                      :title "Searchable Chat History"
-                     :description "..."}
-                    {:icon \uf092
+                     :description "Every chat is searchable by tag, and go even deeper and search by text or files."}
+                    {:icon \uf10b
                      :title "Desktop and Mobile Apps"
-                     :description "..."}
-                    {:icon \uf092
+                     :description "On the go? Never miss important messages with apps available for iOS and Android."}
+                    {:icon \uf0e5
                      :title "Private Conversations"
-                     :description "..."}
-                    {:icon \uf092
+                     :description "Sometimes you only need to talk to one person."}
+                    {:icon \uf024
                      :title "Notifications"
-                     :description "..."}
-                    {:icon \uf092
+                     :description "Be alerted when you've been messaged with browser notifications"}
+                    {:icon \uf003
                      :title "Email Digests"
-                     :description "..."}
-                    {:icon \uf092
+                     :description "See how your conversation progresses with email updates."}
+                    {:icon \uf121
                      :title "Code Snippets"
-                     :description "..."}
-                    {:icon \uf092
+                     :description "Braid makes is easy to share code with your team."}
+                    {:icon \uf044
                      :title "Rich Text Formatting"
-                     :description "..."}
-                    {:icon \uf092
+                     :description "Adding text formatting to your chat is simple."}
+                    {:icon \uf118
                      :title "Emoji"
-                     :description "..."}]}}
+                     :description "What would chat be without emojis."}]}}
 
  "braid-com-pricing"
  {:template "pricing"
