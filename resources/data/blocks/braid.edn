@@ -51,10 +51,15 @@
   :data {:background {:color "#f2f2f2"}}}
 
  "braid-com-why"
- {:template "raw"
-  :data {:content ""}}
+ {:template "one-feature"
+  :data {:heading {:text "More productive group communication"
+                   :color "#fff"}
+         :background {:color "#208456"}
+         :description {:text "Don't let your chat platform be a never-ending meeting."
+                       :color "#fff"}}}
 
- "braid-com-how-it-works"
+
+"braid-com-how-it-works"
  {:template "raw"
   :data {:title "Beyond Chatrooms"
          :content ""
@@ -77,10 +82,10 @@
          :content ""}}
 
  "braid-com-other-benefits"
- {:template "raw"
+ {:template "three-features"
   :data {:columns [{:title "Fast"}
                    {:title "Open Source"}
-                   {:title "..."}]}}
+                   {:title "Organized"}]}}
 
  "braid-com-features"
  {:template "features-grid"

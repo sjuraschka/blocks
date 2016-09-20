@@ -9,4 +9,6 @@
     blocks.client.templates.pricing
     blocks.client.templates.footer
     blocks.client.templates.cta
-    blocks.client.templates.feature-highlight))
+    blocks.client.templates.feature-highlight
+    blocks.client.templates.one-feature
+    blocks.client.templates.three-features))
