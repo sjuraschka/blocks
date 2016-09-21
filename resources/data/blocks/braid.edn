@@ -3,7 +3,7 @@
  {:template "header"
   :data {:title "Braid"
          :version "beta"
-         :color "#444"
+         :color "#384d51"
          :logo {:logo-url "/images/braid-logo-444.svg"
                 :color "#444"}
          :menu [{:text "Open Source"
@@ -17,14 +17,14 @@
   :data {:heading {:text "work better\ntogether"}
          :text "a new approach to team chat\ndesigned for teams who care about flow"
          :background {:image-url "/images/hero-bg-flip.jpg"
-                      :color "#000225"}
+                      :color "#cbe8ec"}
          :featured-image {:url "/images/braid-screenshot-archer.png"}
          :button {:url "https://braid.chat/try"
                   :text "Try Braid Now"
-                  :colors {:text "#FFFFFF"
-                           :bg "#0D6C7F"
-                           :bg-hover "#014F75"
-                           :bg-active "#012156"
+                  :colors {:text "#fff"
+                           :bg "#f17130"
+                           :bg-hover "#d4460f"
+                           :bg-active "#d6490c"
                            :border nil}
                   :sub-text "Or, read about how Braid is different"
                   :sub-url "#"}}}
@@ -32,29 +32,29 @@
  "braid-com-hero-middle"
  {:template "hero-middle"
   :data {:heading {:text "Work Better Together"
-                   :color "#444"}
+                   :color "#384d51"}
          :sub-heading {:text "A new approach to group chat\n designed for teams who care about flow."
-                       :color "#777"}
-         :background {:color "#f2f2f2"}
+                       :color "#384251"}
+         :background {:color "#cbe8ec"}
          :form {:prompt-text "Sign up for early access and be notified when we launch"
                 :placeholder "you@yourgroup.com"
                 :autofocus false
                 :button {:text "Create Your Group"
                          :color "#fff"
                          :colors {:text "#fff"
-                                  :bg "#208456"
-                                  :bg-hover "#10613c"
-                                  :bg-active "#19a766"}}}}}
+                                  :bg "#f17130"
+                                  :bg-hover "#d4460f"
+                                  :bg-active "#d6490c"}}}}}
 
  "braid-com-conversations"
  {:template "braid-conversations"
-  :data {:background {:color "#f2f2f2"}}}
+  :data {:background {:color "#cbe8ec"}}}
 
  "braid-com-why"
  {:template "one-feature"
   :data {:heading {:text "More productive group communication"
                    :color "#fff"}
-         :background {:color "#208456"}
+         :background {:color "#65a8b6"}
          :description {:text "Don't let your chat platform be a never-ending meeting."
                        :color "#fff"}}}
 
@@ -117,8 +117,9 @@
   :data {:title "Plus, all the features you expect..."
          :columns 3
          :styles {:background-color "#EEE"
-                  :heading-color "#208456"
-                  :description-color "#333"}
+                  :heading-color "#65A8B6"
+                  :description-color "#5f6c73"
+                  :icon-color "#384d51"}
          :features [{:icon \uf023
                      :title "Security and Privacy"
                      :description "Braid's conversations receive a 256-bit SSL encryption."}
@@ -152,7 +153,8 @@
 
  "braid-com-pricing"
  {:template "pricing"
-  :data {:title-color "#208456"
+  :data {:title-color "#65A8B6"
+         :description-color "#5f6c73"
          :options [{:title "Community"
                     :subtitle "For Open Communities and Projects"
                     :features ["Open"
@@ -182,28 +184,28 @@
                     :price {:button {:text "Contact Us"
                                      :color "#fff"
                                      :colors {:text "#fff"
-                                              :bg "#208456"
-                                              :bg-hover "#10613c"
-                                              :bg-active "#19a766"}}}}]
+                                              :bg "#f17130"
+                                              :bg-hover "#d4460f"
+                                              :bg-active "#d6490c"}}}}]
          :notes "14 Day Trial" }}
 
 "braid-com-cta"
 {:template "cta"
  :data {:heading {:text ""}
-        :background {:color "#f2f2f2"}
+        :background {:color "#f7f8f9"}
         :form {:prompt-text "Sign up for early access and be notified when we launch"
                :placeholder "you@yourgroup.com"
                :button {:text "Create Your Group"
                         :color "#fff"
                         :colors {:text "#fff"
-                                 :bg "#208456"
-                                 :bg-hover "#10613c"
-                                 :bg-active "#19a766"}}}}}
+                                 :bg "#f17130"
+                                 :bg-hover "#d4460f"
+                                 :bg-active "#d6490c"}}}}}
 
  "braid-com-footer"
  {:template "footer"
   :data {:logo-url "/images/braid-logo-bw.svg"
-         :background-color "#444"
+         :background-color  "#384d51"
          :text-color "#FFF"
          :title "Braid"
          :menu [{:text "Open Source"

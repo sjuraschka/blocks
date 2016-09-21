@@ -23,10 +23,10 @@
          :image "url()"}
   :colors ["#abcdef"
            "#000000"]
-  :styles {:fonts {:body {:name "Lato"
+  :styles {:fonts {:body {:name "Muli"
                           :source "google"
                           :weight 400}
-                   :headings {:name "Lato"
+                   :headings {:name "Muli"
                               :source "google"
                               :weight 400}}}
   :blocks ["braid-com-header"

@@ -8,7 +8,8 @@
     {:display         "flex"
      :justify-content "space-between"
      :padding         "3em"
-     :align-items     "stretch"}
+     :align-items     "stretch"
+     :color (get-in data [:description-color])}
 
     [:.option
      {:background     "#fff"
@@ -26,7 +27,7 @@
       {:margin-right 0}]
 
      [:&.highlight
-      {:border "3px solid #208456"}]
+      {:border "3px solid #65a8b6"}]
 
      [:.about
       {:height "15%"
@@ -42,17 +43,16 @@
      [:.price
 
       [:.amount
-       {:color     "#444"
+       {:color     "#384d51"
         :font-size "2.5em;"}
 
        [:&::before
         {:content "\"$\""}]]
 
       [:button
-       {:background "#208456"
+       {:background "#f17130"
         :font-size "1em"
-        :font-weight "bolder"
-        :padding "0.25em"
+        :padding "0.3em"
         :border-radius "0.25em"
         :margin "1em"
         :border "none"
@@ -77,26 +77,30 @@
     (for [option (data :options)]
       [:div.option {:class (when (option :highlight) "highlight")
                     :style {:width (str (/ 100 (count (data :options))) "%")}}
-       [:h1 (option :title)]
-       [:h2 (option :subtitle)]
-       (let [price (option :price)]
-         (cond
-           (price :button)
-           [:div.price
-            [:button (get-in price [:button :text])]]
+       [:div.about
+        [:h1 (option :title)]
+        [:h2 (option :subtitle)]
+        (let [price (option :price)]
+          (cond
+            (price :button)
+            [:div.price
+             [:button (get-in price [:button :text])]
+             [:div.text (price :text)]]
 
-           (price :pwyc)
-           [:div.price
-            [:div.amount
-             [:input {:value (price :amount)}]]]
+            (price :pwyc)
+            [:div.price
+             [:div.amount
+              [:input {:value (price :amount)}]]
+              [:div.text (price :text)]]
 
-           :else
-           [:div.price
-            [:div.amount (price :amount)]]))
-       [:div.features
-        (for [feature (option :features)]
-          [:div.feature feature])]])]])
+            :else
+            [:div.price
+             [:div.amount (price :amount)]
+             [:div.text (price :text)]]))]
+        [:div.features
+         (for [feature (option :features)]
+           [:div.feature feature])]])]])
 
 (defmethod template "pricing" [_]
-  {:css styles
+  {:css       styles
    :component component})
