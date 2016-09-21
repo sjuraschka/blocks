@@ -31,7 +31,7 @@
        {:content "attr(data-icon)"
         :font-family "FontAwesome"
         :font-size "3em"
-        :color (get-in data [:styles :description-color])}]]]]))
+        :color (get-in data [:styles :icon-color])}]]]]))
 
 (defn section [data]
   [:section.features-grid
