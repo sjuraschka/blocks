@@ -19,7 +19,8 @@
       :font-weight "bolder"}]
     [:h2
      {:color (get-in data [:description :color])
-      :padding "1em"}]]])
+      :font-size "1.25em"
+      :padding "0.5em"}]]])
 
 (defn component [data]
   [:div.one-feature

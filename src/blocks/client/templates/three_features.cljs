@@ -5,9 +5,9 @@
 
 (defn styles [data]
   [:.three-features
-   {:background "#eee"
+   {:background (data :background)
     :box-sizing "border-box"
-    :border-bottom "1px solid #d6d6d6"}
+    :color (get-in data [:heading :color])}
    [:.content
     {:padding "2em"}
     [:.columns
@@ -17,10 +17,7 @@
       :align-items "center"
       :font-size "1.25em"}
      [:.column
-      {:background "#fff"
-       :box-shadow     [[0 "1px" "2px" 0 "#ccc"]]
-       :border-radius "0.25em"
-       :text-align "center"
+      {:text-align "center"
        :height "14em"
        :width "14em"}
       [:h2
