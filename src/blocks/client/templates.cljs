@@ -6,5 +6,6 @@
     blocks.client.templates.hero-middle
     blocks.client.templates.features-grid
     blocks.client.templates.footer
+    blocks.client.templates.roadmap
     blocks.client.templates.cta
     blocks.client.templates.feature-highlight))

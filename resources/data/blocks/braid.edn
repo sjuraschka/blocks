@@ -144,6 +144,30 @@
                                  :bg-hover "#FF8060"
                                  :bg-active "#FF8143"}}}}}
 
+ "braid-com-roadmap"
+{:template "roadmap"
+ :data {:tasks [["Recently Completed"
+                 [{:name "link embed sections" :complete? true}
+                  {:name "email digests" :complete? true}
+                  {:name "release website" :complete? true}]]
+
+                ["In Progress"
+                 [{:name "polish user experience"}
+                  {:name "mobile clients"}
+                  {:name "improve developer experience"}
+                  {:name "integrations API"}]]
+
+                ["Upcoming"
+                 [{:name "keyboard shortcuts"}
+                  {:name "integrations"}
+                  {:name "reactions"}]]
+
+                ["Future"
+                 [{:name "encryption"}
+                  {:name "federation"}
+                  {:name "voice, video and screensharing"}]]]}}
+
+
  "braid-com-footer"
  {:template "footer"
   :data {:logo-url "/images/braid-logo-bw.svg"
@@ -155,6 +179,7 @@
                 {:text "Sign In"
                  :url "https://braid.chat/"
                  :style "button"}]}}
+
 
  "braid-org-header"
  {:template "header"
