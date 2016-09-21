@@ -12,7 +12,7 @@
     :box-sizing "border-box"}
 
    [:.content
-    {:padding "1em"}
+    {:padding "3em"}
     [:h1
      {:color (get-in data [:heading :color])
       :font-size "2.5em"
