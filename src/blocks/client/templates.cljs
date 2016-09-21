@@ -9,6 +9,7 @@
     blocks.client.templates.features-grid
     blocks.client.templates.pricing
     blocks.client.templates.footer
+    blocks.client.templates.roadmap
     blocks.client.templates.cta
     blocks.client.templates.feature-highlight
     blocks.client.templates.one-feature
