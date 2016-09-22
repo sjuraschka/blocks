@@ -49,8 +49,9 @@
        [:&::before
         {:content "\"$\""}]]
 
-      [:button
-       {:background "#f17130"
+      [:a.button
+       (button-mixin (get-in data [:button-colors]))
+       #_{:background "#f17130"
         :font-size "1em"
         :padding "0.3em"
         :border-radius "0.25em"
@@ -84,7 +85,7 @@
           (cond
             (price :button)
             [:div.price
-             [:button (get-in price [:button :text])]
+             [:a.button (get-in price [:button :text])]
              [:div.text (price :text)]]
 
             (price :pwyc)

@@ -173,6 +173,10 @@
  {:template "pricing"
   :data {:title-color "#65A8B6"
          :description-color "#5f6c73"
+         :button-colors {:text "#fff"
+                         :bg "#f17130"
+                         :bg-hover "#d4460f"
+                         :bg-active "#d6490c"}
          :options [{:title "Community"
                     :subtitle "For Open Communities and Projects"
                     :features ["Open"
@@ -199,12 +203,7 @@
                     :subtitle "Our premium version with unlimited support"
                     :features ["Self-Hosted"
                                "SAML Single Sign-on"]
-                    :price {:button {:text "Contact Us"
-                                     :color "#fff"
-                                     :colors {:text "#fff"
-                                              :bg "#f17130"
-                                              :bg-hover "#d4460f"
-                                              :bg-active "#d6490c"}}}}]
+                    :price {:button {:text "Contact Us"}}}]
          :notes "14 Day Trial" }}
 
 "braid-com-cta"
