@@ -85,11 +85,13 @@
 
 
 "braid-com-how-it-works"
- {:template "feature-highlight"
+ {:template "video"
   :data {:title "Beyond Chatrooms"
+         :subtitle "Our Secret? Short conversations & tags (instead of rooms)"
          :content ""
          :video {:id "pa2bUsChFqM"
-                 :provider :youtube}}}
+                 :provider
+                 :youtube }}}
 
  "braid-com-benefit-better-conversations"
  {:template "feature-highlight"

@@ -5,6 +5,7 @@
     blocks.client.templates.hero
     blocks.client.templates.hero-middle
     blocks.client.templates.letter
+    blocks.client.templates.video
     blocks.client.templates.braid-conversations
     blocks.client.templates.features-grid
     blocks.client.templates.pricing
