@@ -101,7 +101,7 @@
          :description {:text "Most chat windows rob you of our focus. If you don't stay active"
                        :color "#777"}
          :image {:image-url "https://d13yacurqjgara.cloudfront.net/users/321965/screenshots/2350646/annoyingsmall.gif"
-                 :position "right"}}}
+                 :position "left"}}}
  "braid-com-benefit-focus"
  {:template "feature-highlight"
   :data {:heading {:text "Stay In Flow"
@@ -110,7 +110,7 @@
          :description {:text "Most chat windows rob you of our focus. If you don't stay active"
                        :color "#777"}
          :image {:image-url "https://d13yacurqjgara.cloudfront.net/users/35682/screenshots/2648323/psy_yai_yai-01_copy_1x.jpg"
-                 :position "left"}}}
+                 :position "right"}}}
 
  "braid-com-benefit-deep-integrations"
  {:template "feature-highlight"
@@ -120,7 +120,7 @@
          :description {:text "We've built Braid so it is easy to integrate the tools that are most important to you."
                        :color "#777"}
          :image {:image-url "https://d13yacurqjgara.cloudfront.net/users/511295/screenshots/2629099/octocat-wave-dribbble.gif"
-                 :position "right"}}}
+                 :position "left"}}}
 
  "braid-com-other-benefits"
  {:template "three-features"
