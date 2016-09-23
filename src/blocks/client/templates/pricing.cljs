@@ -1,22 +1,39 @@
 (ns blocks.client.templates.pricing
   (:require [blocks.client.template :refer [template]]
-            [blocks.client.templates.mixins :refer [button-mixin]]))
+            [blocks.client.templates.mixins :refer [button-mixin]]
+            [garden.stylesheet :refer [at-media]]))
 
 (defn styles [data]
   [:section.pricing
+   {:display "flex"
+    :flex-direction "column"
+    :justify-content "center"
+    :align-items "center"
+    :background-color (data :background)}
+   [:.section-title
+    {:padding-top "3em"
+     :font-size "2.2em"
+     :font-weight "bolder"
+     :color (get-in data [:heading :title :color])}]
+   [:.section-subtitle
+    {:font-size "1.25em"
+     :color (get-in data [:heading :subtitle :color])}]
    [:.options
     {:display         "flex"
      :justify-content "space-between"
-     :padding         "3em"
-     :align-items     "stretch"
+     :align-items "center"
+     :padding         "2rem"
+     ;:align-items     "stretch"
      :color (get-in data [:description-color])}
 
     [:.option
      {:background     "#fff"
       :box-shadow     [[0 "1px" "2px" 0 "#ccc"]]
-      :border-radius  "5px"
+      :border-radius  "3px"
       :border         "1px solid #eee"
       :box-sizing     "border-box"
+      :min-width      "18em"
+      :height         "25em"
       :margin-right   "2em"
       :text-align     "center"
       :display        "flex"
@@ -27,7 +44,16 @@
       {:margin-right 0}]
 
      [:&.highlight
-      {:border "3px solid #65a8b6"}]
+      {:border "2px solid #f17130"
+       :height "30em"}
+
+      [:.featured
+       {:background "#f17130"
+        :width "100%"
+        :padding "0.25em"
+        :box-sizing "border-box"
+        :color "#fff"}]]
+
 
      [:.about
       {:height "15%"
@@ -38,46 +64,79 @@
        :font-weight "bolder"
        :font-size   "1.25em"}]
       [:h2
-       {:font-weight "bolder"}]
+       {}]
 
      [:.price
+      {:margin-top "1em"}
 
       [:.amount
        {:color     "#384d51"
         :font-size "2.5em;"}
 
        [:&::before
-        {:content "\"$\""}]]
+        {:content "\"$\""
+         :font-size "0.5em"
+         :line-height "1.5em"
+         :vertical-align "top"}]]
+
+      [:input {:border-radius "0.25em"
+               :background "#f4f8fb"
+               :margin "0 0.25em 0.25em 0.25em"
+               :border "1px solid #ccc"
+               :font-size "2.25rem"
+               :color "#384d51"
+               :width "7rem"
+               :box-sizing "border-box"
+               :text-align "center"}]
+
 
       [:a.button
        (button-mixin (get-in data [:button-colors]))
-       #_{:background "#f17130"
-        :font-size "1em"
-        :padding "0.3em"
-        :border-radius "0.25em"
-        :margin "1em"
-        :border "none"
-        :color "#fff"}]
+       [:&
+        {:border-radius "0.25em"
+         :font-size "1em"
+         :padding "0.5em 1em"
+         :margin "10px"
+         :text-transform "uppercase"}]]
 
       [:.text
-       {:color "#ccc"}]]]
+       {:color "#5f6c73"
+        :font-size "0.8em"}]]]
 
      [:.features
-
       {:width       "100%"
-       :padding-top "1em"}
+       :padding-top "2em"
+       :font-size "0.9em"}
+      [:h1
+       {:color "#5f6c73"
+        :font-weight "bolder"
+        }]
+
       [:.feature
-       {:border-top "1px solid #eee"
+       {:padding-top "0.25em"
         :left       0
-        :right      0}]]]]])
+        :right      0}]]]]
+
+   (at-media {:max-width "950px"}
+             [:section.pricing
+              {:display "flex"
+               :flex-direction "column"
+               :flex-wrap "wrap"}
+              [:.options
+               {:display "flex"
+                :flex-direction "column"
+                :flex-wrap "wrap"}]])])
 
 
 (defn component [data]
   [:section.pricing
+   [:div.section-title (get-in data [:heading :title :text])]
+   [:div.section-subtitle(get-in data [:heading :subtitle :text])]
    [:div.options
     (for [option (data :options)]
       [:div.option {:class (when (option :highlight) "highlight")
                     :style {:width (str (/ 100 (count (data :options))) "%")}}
+       [:div.featured (option :featured-text)]
        [:div.about
         [:h1 (option :title)]
         [:h2 (option :subtitle)]
@@ -99,8 +158,11 @@
              [:div.amount (price :amount)]
              [:div.text (price :text)]]))]
         [:div.features
+         [:h1.features-title (option :features-title)]
          (for [feature (option :features)]
-           [:div.feature feature])]])]])
+           [:div.feature feature])]
+       ;[:a.button "Start Trial"]
+       ])]])
 
 (defmethod template "pricing" [_]
   {:css       styles

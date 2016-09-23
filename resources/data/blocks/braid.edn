@@ -172,14 +172,23 @@
 
  "braid-com-pricing"
  {:template "pricing"
-  :data {:title-color "#65A8B6"
-         :description-color "#5f6c73"
+  :data {:background "#f7f8f9"
+         :heading {:title {:text "We have a plan for your team"
+                           :color "#384d51"
+                           :font-size "2.2em"}
+
+                   :subtitle {:text "Start your team on Braid, try it out it's free! No credit card required."
+                              :color "#777"
+                              :font-size "1.25em"}}
+         :title-color "#384d51"
+         :description-color "#777"
          :button-colors {:text "#fff"
                          :bg "#f17130"
-                         :bg-hover "#d4460f"
+                         :bg-hover "#f36027"
                          :bg-active "#d6490c"}
          :options [{:title "Community"
-                    :subtitle "For Open Communities and Projects"
+                    :subtitle "Good for open communities and projects"
+                    :features-title "Core community features"
                     :features ["Open"
                                "Moderation Tools"
                                "Public Sign-Up Page"
@@ -188,20 +197,30 @@
                                "Unlimited Tags"
                                "Unlimited History"]
                     :price {:amount 0
-                            :text "free forever"}}
+                            :text "free & unlimited"}
+                    :trial {:url "https://braid.chat/try"
+                             :text "Start Trial"
+                             :colors {:text "#fff"
+                                      :bg "#f17130"
+                                      :bg-hover "#d4460f"
+                                      :bg-active "#d6490c"
+                                      :border nil}}
                    {:title "Team"
-                    :subtitle "For Small Teams and Agencies"
+                    :subtitle "Great for growing teams and agencies"
+                    :features-title "Everything in Community, plus"
                     :highlight true
+                    :featured-text "Most Popular Plan"
                     :features ["Private"
                                "Unlimited Integrations"
                                "Unlimited Users"
                                "Unlimited Tags"
                                "Unlimited History"]
                     :price {:amount 5
-                            :text "per active user, per month"
+                            :text "user/month"
                             :pwyc true}}
                    {:title "Enterprise"
-                    :subtitle "Our premium version with unlimited support"
+                    :subtitle "Perfect for large scale companies"
+                    :features-title "Everything in Team, plus"
                     :features ["Self-Hosted"
                                "SAML Single Sign-on"]
                     :price {:button {:text "Contact Us"}}}]
