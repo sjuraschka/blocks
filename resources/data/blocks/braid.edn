@@ -241,7 +241,13 @@
 
  "braid-com-roadmap"
 {:template "roadmap"
- :data {:tasks [["Recently Completed"
+ :data {:background "#65A8B6"
+        :heading {:title {:text "Braid keeps getting better"
+                          :color "#fff"}
+
+                  :subtitle {:text "Check out our public roadmap, Braid is constantly evolving."
+                             :color "#fff"}}
+        :tasks [["Recently Completed"
                  [{:name "link embed sections" :complete? true}
                   {:name "email digests" :complete? true}
                   {:name "release website" :complete? true}]]
