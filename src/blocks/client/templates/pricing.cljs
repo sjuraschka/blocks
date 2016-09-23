@@ -11,13 +11,14 @@
     :align-items "center"
     :background-color (data :background)}
    [:.section-title
-    {:padding-top "3em"
+    {:padding-top "4rem"
      :font-size "2.2em"
      :font-weight "bolder"
      :color (get-in data [:heading :title :color])}]
    [:.section-subtitle
     {:font-size "1.25em"
-     :color (get-in data [:heading :subtitle :color])}]
+     :color (get-in data [:heading :subtitle :color])
+     :padding-bottom "2rem"}]
    [:.options
     {:display         "flex"
      :justify-content "space-between"
