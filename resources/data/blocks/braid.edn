@@ -229,14 +229,14 @@
 "braid-com-cta"
 {:template "cta"
  :data {:heading {:text ""}
-        :background {:color "#f7f8f9"}
+        :background {:color "#ebeef0"}
         :form {:prompt-text "Sign up for early access and be notified when we launch"
                :placeholder "you@yourgroup.com"
                :button {:text "Create Your Group"
                         :color "#fff"
                         :colors {:text "#fff"
                                  :bg "#f17130"
-                                 :bg-hover "#d4460f"
+                                 :bg-hover "#f36027"
                                  :bg-active "#d6490c"}}}}}
 
  "braid-com-roadmap"
