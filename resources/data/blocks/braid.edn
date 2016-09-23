@@ -6,7 +6,9 @@
          :color "#384d51"
          :logo {:logo-url "/images/braid-logo-444.svg"
                 :color "#444"}
-         :menu [{:text "Open Source"
+         :menu [{:text "Pricing"
+                 :url "https://www.braidchat.com/pricing"}
+                {:text "Open Source"
                  :url "https://www.braidchat.org/"}
                 {:text "Sign In"
                  :url "https://braid.chat/"
