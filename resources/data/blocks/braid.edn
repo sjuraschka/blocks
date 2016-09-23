@@ -135,10 +135,12 @@
  "braid-com-features"
  {:template "features-grid"
   :data {:title "Plus, all the features you expect..."
+         :subtitle "You don't need to make trade-off's to have a more productive chat tool."
          :columns 3
-         :styles {:background-color "#EEE"
-                  :heading-color "#65A8B6"
-                  :description-color "#5f6c73"
+         :styles {:main-color "#384d51"
+                  :background-color ""
+                  :heading-color "#384d51"
+                  :description-color "#777"
                   :icon-color "#384d51"}
          :features [{:icon \uf023
                      :title "Security and Privacy"
@@ -167,9 +169,15 @@
                     {:icon \uf044
                      :title "Rich Text Formatting"
                      :description "Adding text formatting to your chat is simple."}
+                    {:icon \uf08a
+                     :title "Gif Response"
+                     :description "Can't think of what to say, not to worry giphybot always has a response."}
                     {:icon \uf118
                      :title "Emoji"
-                     :description "What would chat be without emojis."}]}}
+                     :description "What would chat be without emojis."}
+                    {:icon \uf0c0
+                     :title "Multiple Groups"
+                     :description "You can create and join as many groups as your heart desires."}]}}
 
  "braid-com-pricing"
  {:template "pricing"
@@ -231,7 +239,7 @@
 "braid-com-cta"
 {:template "cta"
  :data {:heading {:text ""}
-        :background {:color "#ebeef0"}
+        :background {:color "#d9e8ea;"}
         :form {:prompt-text "Sign up for early access and be notified when we launch"
                :placeholder "you@yourgroup.com"
                :button {:text "Create Your Group"
