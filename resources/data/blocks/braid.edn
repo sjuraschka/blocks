@@ -204,7 +204,7 @@
                                       :bg "#f17130"
                                       :bg-hover "#d4460f"
                                       :bg-active "#d6490c"
-                                      :border nil}}
+                                      :border nil}}}
                    {:title "Team"
                     :subtitle "Great for growing teams and agencies"
                     :features-title "Everything in Community, plus"
