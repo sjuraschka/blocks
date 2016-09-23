@@ -103,6 +103,7 @@
                        :color "#777"}
          :image {:image-url "https://d13yacurqjgara.cloudfront.net/users/321965/screenshots/2350646/annoyingsmall.gif"
                  :position "left"}}}
+
  "braid-com-benefit-focus"
  {:template "feature-highlight"
   :data {:heading {:text "Stay In Flow"
@@ -218,6 +219,7 @@
                     :price {:amount 5
                             :text "user/month"
                             :pwyc true}}
+
                    {:title "Enterprise"
                     :subtitle "Perfect for large scale companies"
                     :features-title "Everything in Team, plus"
