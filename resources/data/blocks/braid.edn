@@ -88,10 +88,11 @@
 
 "braid-com-how-it-works"
  {:template "video"
-  :data {:heading {:title "Beyond Chatrooms"
-                   :color "#384d51"}
+  :data {:styles {:background "#384d51"}
+         :heading {:title "Beyond Chatrooms"
+                   :color "#fff"}
          :subtitle {:text "Our Secret? Short conversations & tags (instead of rooms)"
-                    :color "#5f6c73"}
+                    :color "#fff"}
          :video {:id "pa2bUsChFqM"
                  :provider
                  :youtube }}}
