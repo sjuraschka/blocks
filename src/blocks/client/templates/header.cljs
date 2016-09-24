@@ -10,7 +10,7 @@
     :left 0
     :z-index 100
     :width "100%"
-    :margin [[pad 0]]}
+    :margin "3em 1em"}
 
    [:a.logo
     {:display "inline-block"
