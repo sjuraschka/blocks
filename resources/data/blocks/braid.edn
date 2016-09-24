@@ -129,11 +129,20 @@
 
  "braid-com-other-benefits"
  {:template "three-features"
-  :data {:background "#65A8B6"
+  :data {:styles {:background "#65A8B6"}
          :heading {:color "#fff"}
-         :columns [{:title "Fast"}
-                   {:title "Open Source"}
-                   {:title "Organized"}]}}
+         :column 3
+         :columns [{:title "Fast"
+                    :description "Built with Clojure - so you know it's not going to be holding you back."}
+
+                   {:title "Open Source"
+                    :description "Braid is an Open Source project built with Clojure.
+                                  Everything from the fonts we use to the documentation are made by the
+                                  community."}
+
+                   {:title "Organized"
+                    :description "Small tagged conversations makes it easy to find what you looking for.
+                                  No more scrolling through chat histories to find an article or document."}]}}
 
  "braid-com-features"
  {:template "features-grid"
