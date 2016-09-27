@@ -27,7 +27,8 @@
    [:.content
     {:display "flex"
      :justify-content "space-between"
-     :align-items "flex-end"}
+     ;:align-items "flex-end"
+     }
 
     [:.conversation
      {:text-align "left"
@@ -40,14 +41,14 @@
       }
 
      [:.tags
-
       [:.tag
-       (blokk-text-mixin)]]
-
+       (blokk-text-mixin)
+       {:border-radius "0.15em"}]]
 
      [:.message
       {:display "flex"
-       :margin-bottom "1em"}
+       :margin-bottom "1em"
+       :margin-top "1em"}
 
      [:.avatar
       {:width "2em"
@@ -55,7 +56,7 @@
        :flex-shrink 0
        :margin-right "1em"
        :border-radius "50%"
-       :background "black"}]
+       :background "rgba(90, 97, 107, 0.8)"}]
 
      [:.text
       {:line-height "1.25em"
@@ -66,31 +67,35 @@
 
 (def conversations
   [{:tags [{:name "standup"
-            :color "blue"}]
+            :color "#3c7784"}]
     :messages [{:user-name "Raf"
-               :text "how are people doing today how are people doing today?"}
+               :text "how are people doing today how are people doing today,
+                      I'm launching new landing page this week!"}
                {:user-name "James"
-                :text "how are people doing today?"}
-               {:user-name "Bob"
-                :text "how are people doing today?"}
+                :text "Yes! What logo did we decide on?
+                       I'm working on Rookie this week."}
+               {:user-name "Sammyjwalk"
+                :text "That's geat @Raf - I'm working on the video for the landing page!"}
                {:user-name "Bob"
                 :text "how are people doing today?"}]}
    {:tags [{:name "watercooler"
-            :color "blue"}]
+            :color "#6a8a90"}]
     :messages [{:user-name "Samantha"
-                :text "how are people doing today?"}
-               {:user-name "Bob"
-                :text "how are people doing today?"}
-               {:user-name "Bob"
-                :text "how are people doing today?"}
+                :text "What are you up to this weekend?"}
+               {:user-name "Heather"
+                :text "I've never gone to the CN tower! I'm going to check it out and watch the jays game."}
+               {:user-name "Jamie"
+                :text "I'm super boring, I'm working! Really want to learn php and work on Braid."}
                {:user-name "James"
-                :text "how are people doing today?"}]}
-   {:tags [{:name "watercooler"
-            :color "red"}]
-    :messages [{:user-name "Bob"
-                :text "how are people doing today?"}
-               {:user-name "Bob"
-                :text "how are people doing today?"}]}])
+                :text "Good for you, message me if you need any help."}]}
+   {:tags [{:name "clojure nation"
+            :color "#384251"}]
+    :messages [{:user-name "lindsay"
+                :text "Have you seen James giphybot he built?"}
+               {:user-name "brittany"
+                :text "Yes!!! It is slightly addicting."}
+               {:user-name "Mike"
+                :text "I've been wanting to build an integration for Braid, something to help me read my gmail messages in Braid"}]}])
 
 
 (defn component [data]
