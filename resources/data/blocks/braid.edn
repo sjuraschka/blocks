@@ -250,9 +250,12 @@
 
 "braid-com-cta"
 {:template "cta"
- :data {:heading {:text ""}
+ :data {:heading {:text "Get started by creating a team"
+                  :color "#384d51"}
+        :description {:text "No credit card or long term commitment to get started."
+                      :color "#384d51"}
         :background {:color "#d9e8ea;"}
-        :form {:prompt-text "Sign up for early access and be notified when we launch"
+        :form {:prompt-text ""
                :placeholder "you@yourgroup.com"
                :button {:text "Create Your Group"
                         :color "#fff"
