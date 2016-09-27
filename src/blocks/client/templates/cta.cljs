@@ -14,12 +14,13 @@
 
       [:h1
        {:color (get-in data [:heading :color])
-        :font-size "2.2em"
-        :margin-bottom "0.5em"}]
+        :font-weight "bolder"
+        :font-size "2.2em"}]
 
       [:p
-       {:color (get-in data [:description :color])}
-       {:margin-bottom "2em"}]
+       {:color (get-in data [:description :color])
+        :font-size "1.24rem"
+        :margin-bottom "2em"}]
 
       (email-field/styles data)]])
 
