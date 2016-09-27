@@ -3,7 +3,7 @@
 
 (defn styles [data]
   [:.one-feature
-   {:background (data :background)
+   {:background "65A8B6"
     :display "flex"
     :flex-direction "column"
     :justify-content "center"
