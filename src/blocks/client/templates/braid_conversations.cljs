@@ -5,119 +5,143 @@
 
 (def pad "3em")
 
-(defn blokk-text-mixin []
-  {:background "#ccc"
-   :color "#ccc"
+(defn blokk-text-mixin [color]
+  {:background color
+   :color color
    :font-size "0.75em"
+   :line-height "1.25em"
    :display "inline"
    :vertical-align "bottom"
    :overflow "hidden"})
 
 (defn styles [data]
   [:&
-   {
-    :margin-top "-5em"
-    }
-  [:.braid-conversations
-   {:padding [[0 pad]]
-    :background (get-in data [:background :color])
-    :text-align "center"
-    :min-width "60em"}
+   {:margin-top "-5em"}
 
-   [:.content
-    {:display "flex"
-     :justify-content "space-between"
-     ;:align-items "flex-end"
-     }
+   [:.braid-conversations
+    {:padding [[0 pad]]
+     :background (get-in data [:background :color])
+     :text-align "center"
+     :min-width "60em"}
 
-    [:.conversation
-     {:text-align "left"
-      :background "#fff"
-      :width "18em"
-      :border-radius "3px 3px 0 0"
-      :box-shadow [[0 "1px" "2px" 0 "#ccc"]]
-      :padding "1.5em"
-      :box-sizing "border-box"
-      }
+    [:.content
+     {:display "flex"
+      :justify-content "space-between"
+      :align-items "flex-end"}
 
-     [:.tags
-      [:.tag
-       (blokk-text-mixin)
-       {:border-radius "0.15em"}]]
+     [:.conversation
+      {:text-align "left"
+       :background "#fff"
+       :width "18em"
+       :border-radius "3px 3px 0 0"
+       :padding "1.5em"
+       :box-sizing "border-box"}
 
-     [:.message
-      {:display "flex"
-       :margin-bottom "1em"
-       :margin-top "1em"}
+      [:.header
+       {:opacity 0.25}
 
-     [:.avatar
-      {:width "2em"
-       :height "2em"
-       :flex-shrink 0
-       :margin-right "1em"
-       :border-radius "50%"
-       :background "rgba(90, 97, 107, 0.8)"}]
+       [:.tags
+        {:margin-bottom "1.5em"}
 
-     [:.text
-      {:line-height "1.25em"
-       :vertical-align "top"}
+        [:.tag
+         (blokk-text-mixin "#f7f8f9")
+         {:border-radius "0.15em"
+          :margin-right "1em"}]]]
 
-      [:span.word
-       (blokk-text-mixin)]]]]]]])
+      [:.messages
+       {:opacity 0.25}
+
+       [:.message
+        {:margin-bottom "1em"}
+
+        [:&:last-child
+         {:margin-bottom 0}]
+
+        [:.main
+         {:display "flex"}
+
+         [:.avatar
+          {:width "2em"
+           :height "2em"
+           :flex-shrink 0
+           :margin-right "1em"
+           :border-radius "50%"
+           :background "rgba(90, 97, 107, 0.8)"}]
+
+         [:.name
+          [:span
+           (blokk-text-mixin "#999")]]
+
+         [:.text
+          {:vertical-align "top"}
+
+          [:span.word
+           (blokk-text-mixin "#ccc")]]]
+
+        [:.embed
+         {:margin-top "1em"
+          :margin-left "-1.5em"
+          :margin-right "-1.5em"
+          :padding "0 1.5em"
+          :width "100%"
+          :height "7em"
+          :background "#384d51"}]]]]]]])
+
+(def tag->color
+  {"#watercooler" "#6a8a90"
+   "#standup" "#3c7784"
+   "#braid" "#384251"
+   "@rafd" "#999"})
 
 (def conversations
-  [{:tags [{:name "standup"
-            :color "#3c7784"}]
-    :messages [{:user-name "Raf"
-               :text "how are people doing today how are people doing today,
-                      I'm launching new landing page this week!"}
-               {:user-name "James"
-                :text "Yes! What logo did we decide on?
-                       I'm working on Rookie this week."}
-               {:user-name "Sammyjwalk"
-                :text "That's geat @Raf - I'm working on the video for the landing page!"}
-               {:user-name "Bob"
-                :text "how are people doing today?"}]}
-   {:tags [{:name "watercooler"
-            :color "#6a8a90"}]
-    :messages [{:user-name "Samantha"
-                :text "What are you up to this weekend?"}
-               {:user-name "Heather"
-                :text "I've never gone to the CN tower! I'm going to check it out and watch the jays game."}
-               {:user-name "Jamie"
-                :text "I'm super boring, I'm working! Really want to learn php and work on Braid."}
-               {:user-name "James"
-                :text "Good for you, message me if you need any help."}]}
-   {:tags [{:name "clojure nation"
-            :color "#384251"}]
-    :messages [{:user-name "lindsay"
-                :text "Have you seen James giphybot he built?"}
-               {:user-name "brittany"
-                :text "Yes!!! It is slightly addicting."}
-               {:user-name "Mike"
-                :text "I've been wanting to build an integration for Braid, something to help me read my gmail messages in Braid"}]}])
-
+  [{:tags ["#watercooler"]
+    :messages [{:user-name "samj"
+                :text "#watercooler I'm going to watch the Jays game this Sunday @ 5pm. Anyone want to join?"}
+               {:user-name "rafd"
+                :text "Count me in!"}
+               {:user-name "jamesnvc"
+                :text "Can't. Family thing."}]}
+   {:tags ["#standup" "#braid" "@rafd"]
+    :messages [{:user-name "samj"
+                :text "#standup Finished the intro video script. Will be recording today. Blockers: @rafd can you get me the latest logo?"}
+               {:user-name "rd"
+                :text "Sure, I've added it to the repo."}]}
+   {:tags ["#standup" "#braid"]
+    :messages [{:user-name "rafd"
+                :text "#standup Made good progress on the #braid landing page. Will continue on it today. Should be up for tomorrow. Blockers: none."
+                :embed true}
+               {:user-name "jamesnvc"
+                :text "Sweet. Looking good."}]}])
 
 (defn component [data]
   [:section.braid-conversations
    [:div.content
     (for [conversation conversations]
-      [:div.conversation {:style {:height "15em"}}
+      [:div.conversation
        [:div.header
         [:div.tags
          (for [tag (conversation :tags)]
-           [:div.tag {:style {:color (tag :color)
-                              :background-color (tag :color)}}
-            (tag :name)])]]
+           [:div.tag {:style {:color (tag->color tag)
+                              :background-color (tag->color tag)}}
+            tag])]]
        [:div.messages
         (for [message (conversation :messages)]
           [:div.message
-           [:div.avatar ]
-           [:div.text
-            (for [word (split (message :text) " ")]
-              [:span
-               [:span.word word]
-               [:span.space " "]])]])]])]])
+           [:div.main
+            [:div.avatar]
+            [:div
+             [:div.name [:span (message :user-name)]]
+             [:div.text
+              (for [word (split (message :text) " ")]
+                [:span
+                 [:span.word
+                  {:style (when (re-matches #"^(@|#).+" word)
+                            {:color (tag->color word)
+                             :background-color (tag->color word)})}
+                  word]
+                 [:span.space " "]])]]]
+           (when (message :embed)
+             [:div.embed])])]])]])
 
 (defmethod template "braid-conversations" [_]
   {:css styles
