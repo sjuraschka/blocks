@@ -40,7 +40,7 @@
          :background {:color "#d9e8ea"}
          :form {:prompt-text "Sign up for early access and be notified when we launch"
                 :placeholder "you@yourgroup.com"
-                :autofocus false
+                :autofocus true
                 :button {:text "Create Your Group"
                          :color "#fff"
                          :colors {:text "#fff"
