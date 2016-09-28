@@ -22,10 +22,10 @@
          :min-width "15em"}
 
       ["&::-moz-placeholder"
-        {:color "#ccc"}]
+        {:color "#eee"}]
 
       ["&::-webkit-input-placeholder"
-        {:color "#ccc"}]]
+        {:color "#eee"}]]
 
       ["&[type=submit]"
         (button-mixin (get-in data [:form :button :colors] {}))
