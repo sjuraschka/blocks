@@ -32,6 +32,7 @@
       [:a.button
        {:margin-bottom "5em"}
        (button-mixin (get-in data [:button :colors] {}))
+
        [:&.download:before
         (fontawesome-mixin \uf019)
         {:margin-right "0.5em"}]]
