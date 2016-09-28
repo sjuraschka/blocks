@@ -4,8 +4,8 @@
   :data {:title "Braid"
          :version "beta"
          :color "#384d51"
-         :logo {:logo-url "/images/braid-logo-444.svg"
-                :color "#444"}
+         :logo {:logo-url "/images/braid-logo-dark.svg"
+                :color "#354d51"}
          :menu [{:text "Pricing"
                  :url "https://www.braidchat.com/pricing"}
                 {:text "Open Source"
@@ -296,7 +296,7 @@
 
  "braid-com-footer"
  {:template "footer"
-  :data {:logo-url "/images/braid-logo-bw.svg"
+  :data {:logo-url "/images/braid-logo-light.svg"
          :background-color  "#384d51"
          :text-color "#FFF"
          :title "Braid"

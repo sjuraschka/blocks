@@ -37,12 +37,12 @@
      [:.version
       {:display "inline-block"
        :opacity "0.5"
-       :font-size "0.75em"
+       :font-size "0.5em"
        :line-height "2rem"
        :vertical-align "sub"
        :margin-left "0.5em"
        :text-transform "uppercase"
-       :letter-spacing "0.1em"}]]
+       :letter-spacing "0.05em"}]]
 
     [:nav
 
