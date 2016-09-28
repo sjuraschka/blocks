@@ -25,7 +25,7 @@
            "#000000"]
   :styles {:fonts {:body {:name "Muli"
                           :source "google"
-                          :weight 400}
+                          :weight 300}
                    :headings {:name "Muli"
                               :source "google"
                               :weight 400}}}
