@@ -59,6 +59,8 @@
                  [:meta {:name "generator" :content "blocks"}]
                  [:style {:type "text/css"}
                   (slurp (clojure.java.io/resource "public/css/reset.css"))]
+                 (when-let [favicon (get-in page [:favicon])]
+                   [:link {:rel "icon" :type "image/png" :href favicon}])
                  [:title (get-in page [:meta :title])]]
                 [:body
                  [:div {:id "app"}]
