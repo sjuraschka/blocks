@@ -33,6 +33,7 @@
           {:border-radius 0
            :font-size "1em"
            :padding "0 1em"
+           :letter-spacing "0.05em"
            :text-transform "uppercase"}]]]])
 
 (defn component [data]
