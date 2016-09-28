@@ -19,7 +19,7 @@
   :data {:heading {:text "Work Better Together"
                    :color "#384d51"}
          :sub-heading {:text "A new approach to group chat\n designed for teams who care about flow."
-                       :color "#384251"}
+                       :color "#777777"}
          :background {:color "#d9e8ea"}
          :form {:prompt-text "Sign up for early access and be notified when we launch"
                 :placeholder "you@yourgroup.com"
