@@ -3,7 +3,7 @@
 
 (defn styles [data]
   [:form
-   {:box-shadow [[0 "1px" "2px" 0 "#ccc"]]
+   {:box-shadow [[0 "1px" "2px" 0 "rgba(0,0,0,0.1)"]]
     :display "inline-block"
     :border-radius "0.5em"
     :overflow "hidden"}
