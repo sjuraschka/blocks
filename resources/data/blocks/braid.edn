@@ -287,15 +287,9 @@
          :background-color  "#384d51"
          :text-color "#FFF"
          :title "Braid"
-         :menu [{:text "Pricing"
-                 :url "./pricing"}
-                {:text "Downloads"
-                 :url "./downloads"}
-                {:text "Open Source"
-                 :url "https://www.braidchat.org/"}
-                {:text "Sign In"
-                 :url "https://braid.chat/"
-                 :style "button"}]}}
+         :menu [{:text "hi@braidchat.com"
+                 :url "mailto:hi@braidchat.com"
+                 :icon \uf003}]}}
 
 "braid-com-downloads"
 {:template "downloads"
