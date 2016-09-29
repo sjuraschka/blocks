@@ -22,13 +22,18 @@
  {:template "hero-middle"
   :data {:heading {:text "Work Better Together"
                    :color "#384d51"}
-         :sub-heading {:text "A new approach to group chat\n designed for teams who care about flow."
+         :padding "3em"
+         :sub-heading {:text "Braid is a new kind of group collaboration tool,\ndesigned for teams that hate interruptions\nand actually want to get things done.\n\nSay goodbye to chatrooms, and say hello to Braid!"
                        :color "#777777"}
          :background {:color "#d9e8ea"}
-         :form {:prompt-text "Sign up for early access and be notified when we launch"
-                :placeholder "you@yourgroup.com"
-                :autofocus true
-                :button {:text "Create Your Group"
+         :form {:placeholder "you@yourgroup.com"
+                :before {:text "Get a free Braid group for your team, and have it up and running in seconds:"
+                         :color "#777777"}
+                :after {:text "\n\n\n\n\n\nIntrigued, but want to learn more?\nKeep scrolling to discover how Braid is different."
+                        :icon \uf107
+                        :color "#777777"}
+                ;:autofocus true
+                :button {:text "Create A Group"
                          :color "#fff"
                          :colors {:text "#fff"
                                   :bg "#f17130"

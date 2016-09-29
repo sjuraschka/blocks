@@ -16,7 +16,7 @@
 
 (defn styles [data]
   [:&
-   {:margin-top "0em"}
+   {:margin-top "-10em"}
 
    [:.braid-conversations
     {:padding [[0 pad]]

@@ -5,7 +5,7 @@
 
 (defn styles [data]
   [:section.hero-middle
-   {:padding [["4em" 0]]
+   {:padding [[(get data :padding "4em") 0]]
     :text-align "center"
     :display "flex"
     :flex-direction "column"
@@ -23,9 +23,9 @@
      :color (get-in data [:heading :color])}]
 
    [:h2
-    {:font-size "2em"
+    {:font-size "1.4em"
      :margin [["0.75em" "0.75em" "1.25em"]]
-     :max-width "20em"
+     :text-align "center"
      :white-space "pre"
      :color (get-in data [:sub-heading :color])}]
 
@@ -37,7 +37,7 @@
      (fontawesome-mixin \uf019)
      {:margin-right "0.5em"}]]
 
-   (email-field/styles data)])
+   (email-field/styles (data :form))])
 
 (defn hero [data]
   [:section.hero-middle
@@ -47,7 +47,7 @@
     (when (data :button)
       [:a.button {:href ""} (get-in data [:button :text])])
     (when (data :form)
-      [email-field/component data])]])
+      [email-field/component (data :form)])]])
 
   (defmethod template "hero-middle" [_]
     {:css styles
