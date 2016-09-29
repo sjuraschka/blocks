@@ -5,22 +5,24 @@
 
 (defn styles [data]
   [:header
-   {:position "absolute"
-    :top 0
-    :left 0
-    :right 0
-    :z-index 100}
+   (when (data :overlay?)
+     {:position "absolute"
+      :top 0
+      :left 0
+      :right 0
+      :z-index 100})
 
    [:.content
     {:display "flex"
      :width "100%"
      :max-width "100%"
-     :padding "3em"
+     :padding pad
      :box-sizing "border-box"
      :justify-content "space-between"}
 
     [:a.logo
-     {:color (get-in data [:logo :color])}
+     {:color (get-in data [:logo :color])
+      :white-space "nowrap"}
 
      [:img
       {:height "2rem"
@@ -42,9 +44,10 @@
        :vertical-align "sub"
        :margin-left "0.5em"
        :text-transform "uppercase"
-       :letter-spacing "0.05em"}]]
+       :letter-spacing "0.1em"}]]
 
     [:nav
+     {:text-align "right"}
 
      [:a
       {:color (data :color)
@@ -72,8 +75,8 @@
 (defn component [data]
   [:header
    [:div.content
-    [:a.logo {:href "/"}
-     [:img {:src (get-in data [:logo :logo-url])}]
+    [:a.logo {:href (get-in data [:logo :url])}
+     [:img {:src (get-in data [:logo :image-url])}]
      [:h1 (data :title)]
      (when (data :version)
        [:span.version (data :version)])]
