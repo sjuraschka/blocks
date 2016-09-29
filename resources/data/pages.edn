@@ -29,7 +29,7 @@
                               :source "google"
                               :weight 400}}}
   :blocks ["braid-com-header"
-           "braid-com-hero-middle"
+           "braid-com-hero"
            "braid-com-conversations"
            "braid-com-how-it-works"
            "braid-com-benefit-better-conversations"

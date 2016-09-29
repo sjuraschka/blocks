@@ -18,7 +18,7 @@
                  :url "https://braid.chat/"
                  :style "button"}]}}
 
- "braid-com-hero-middle"
+ "braid-com-hero"
  {:template "hero-middle"
   :data {:heading {:text "Work Better Together"
                    :color "#384d51"}
