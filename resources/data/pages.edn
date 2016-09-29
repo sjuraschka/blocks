@@ -19,8 +19,8 @@
  {:domain "www.braidchat.com"
   :url "/"
   :meta {:title "Braid - Work Better Together"
-         :description "Braid is a..."
-         :image "url()"}
+         :description "Braid is a group chat application that promotes productive team communication, while still respecting each individual's need for focus. Instead of chatrooms, Braid takes a new approach: discrete conversations and tags."
+         :image "url(/images/braid-icon-256.png)"}
   :favicon "/images/braid-favicon.png"
   :colors ["#abcdef"
            "#000000"]
