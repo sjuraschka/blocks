@@ -133,37 +133,41 @@
   [:section.pricing
    [:div.section-title (get-in data [:heading :title :text])]
    [:div.section-subtitle(get-in data [:heading :subtitle :text])]
-   [:div.options
-    (for [option (data :options)]
-      [:div.option {:class (when (option :highlight) "highlight")
-                    :style {:width (str (/ 100 (count (data :options))) "%")}}
-       [:div.featured (option :featured-text)]
-       [:div.about
-        [:h1 (option :title)]
-        [:h2 (option :subtitle)]
-        (let [price (option :price)]
-          (cond
-            (price :button)
-            [:div.price
-             [:a.button (get-in price [:button :text])]
-             [:div.text (price :text)]]
-
-            (price :pwyc)
-            [:div.price
-             [:div.amount
-              [:input {:value (price :amount)}]]
+   (into
+     [:div.options]
+     (for [option (data :options)]
+       [:div.option {:class (when (option :highlight) "highlight")
+                     :style {:width (str (/ 100 (count (data :options))) "%")}}
+        [:div.featured (option :featured-text)]
+        [:div.about
+         [:h1 (option :title)]
+         [:h2 (option :subtitle)]
+         (let [price (option :price)]
+           (cond
+             (price :button)
+             [:div.price
+              [:a.button (get-in price [:button :text])]
               [:div.text (price :text)]]
 
-            :else
-            [:div.price
-             [:div.amount (price :amount)]
-             [:div.text (price :text)]]))]
+             (price :pwyc)
+             [:div.price
+              [:div.amount
+               [:input {:value (price :amount)}]]
+              [:div.text (price :text)]]
+
+             :else
+             [:div.price
+              [:div.amount (price :amount)]
+              [:div.text (price :text)]]))]
+
         [:div.features
          [:h1.features-title (option :features-title)]
-         (for [feature (option :features)]
-           [:div.feature feature])]
-       ;[:a.button "Start Trial"]
-       ])]])
+         (into
+           [:div]
+           (for [feature (option :features)]
+             [:div.feature feature]))]
+        ;[:a.button "Start Trial"]
+        ]))])
 
 (defmethod template "pricing" [_]
   {:css       styles

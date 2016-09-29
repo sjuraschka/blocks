@@ -57,7 +57,8 @@
 (defn component [data]
   [:div.three-features
    [:div.content
-     [:div.columns
+    (into
+      [:div.columns]
       (for [column (data :columns)]
         [:div.column
          (when (column :icon)
@@ -65,7 +66,7 @@
          (when (column :image)
            [:img {:src (column :image)}])
          [:h2 (column :title)]
-         [:p (column :description)]])]]])
+         [:p (column :description)]]))]])
 
 (defmethod template "three-features" [_]
   {:css       styles

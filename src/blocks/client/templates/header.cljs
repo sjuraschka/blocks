@@ -81,12 +81,13 @@
      [:h1 (data :title)]
      (when (data :version)
        [:span.version (data :version)])]
-    [:nav
-     (for [link (data :menu)]
-       [:a {:href (link :url)
-            :class (link :style)
-            :data-icon (link :icon)}
-        (link :text)])]]])
+    (into
+      [:nav]
+      (for [link (data :menu)]
+        [:a {:href (link :url)
+             :class (link :style)
+             :data-icon (link :icon)}
+         (link :text)]))]])
 
 (defmethod template "header" [_]
   {:css styles

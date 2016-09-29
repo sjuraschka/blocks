@@ -56,13 +56,13 @@
     [:h1 (data :title)]
     [:h2.subtitle (data :subtitle)]
 
-    [:div.grid
-
-    (for [feature (data :features)]
-     [:div.feature
-       [:div.icon {:data-icon (feature :icon)}]
-       [:h2 (feature :title)]
-       [:p (feature :description)]])]]])
+    (into
+      [:div.grid]
+      (for [feature (data :features)]
+        [:div.feature
+         [:div.icon {:data-icon (feature :icon)}]
+         [:h2 (feature :title)]
+         [:p (feature :description)]]))]])
 
 (defmethod template "features-grid" [_]
   {:css styles

@@ -73,12 +73,13 @@
     [:a.logo {:href (get-in data [:logo :url])}
      [:img {:src (get-in data [:logo :image-url])}]
      [:h1 (data :title)]]
-    [:nav
-     (for [link (data :menu)]
-       [:a {:href (link :url)
-            :class (link :style)
-            :data-icon (link :icon)}
-        (link :text)])]]])
+    (into
+      [:nav]
+      (for [link (data :menu)]
+        [:a {:href (link :url)
+             :class (link :style)
+             :data-icon (link :icon)}
+         (link :text)]))]])
 
 (defmethod template "footer" [_]
   {:css styles

@@ -116,33 +116,37 @@
 
 (defn component [data]
   [:section.braid-conversations
-   [:div.content
-    (for [conversation conversations]
-      [:div.conversation
-       [:div.header
-        [:div.tags
-         (for [tag (conversation :tags)]
-           [:div.tag {:style {:color (tag->color tag)
-                              :background-color (tag->color tag)}}
-            tag])]]
-       [:div.messages
-        (for [message (conversation :messages)]
-          [:div.message
-           [:div.main
-            [:div.avatar]
-            [:div
-             [:div.name [:span (message :user-name)]]
-             [:div.text
-              (for [word (split (message :text) " ")]
-                [:span
-                 [:span.word
-                  {:style (when (re-matches #"^(@|#).+" word)
-                            {:color (tag->color word)
-                             :background-color (tag->color word)})}
-                  word]
-                 [:span.space " "]])]]]
-           (when (message :embed)
-             [:div.embed])])]])]])
+   (into
+     [:div.content]
+     (for [conversation conversations]
+       [:div.conversation
+        [:div.header
+         (into
+           [:div.tags]
+           (for [tag (conversation :tags)]
+             [:div.tag {:style {:color (tag->color tag)
+                                :background-color (tag->color tag)}}
+              tag]))]
+        (into
+          [:div.messages]
+          (for [message (conversation :messages)]
+            [:div.message
+             [:div.main
+              [:div.avatar]
+              [:div
+               [:div.name [:span (message :user-name)]]
+               (into
+                 [:div.text]
+                 (for [word (split (message :text) " ")]
+                   [:span
+                    [:span.word
+                     {:style (when (re-matches #"^(@|#).+" word)
+                               {:color (tag->color word)
+                                :background-color (tag->color word)})}
+                     word]
+                    [:span.space " "]]))]]
+             (when (message :embed)
+               [:div.embed])]))]))])
 
 (defmethod template "braid-conversations" [_]
   {:css styles

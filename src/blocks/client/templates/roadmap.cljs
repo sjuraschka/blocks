@@ -69,13 +69,15 @@
    [:div.content
     [:h1 (get-in data [:heading :title :text])]
     [:h2 (get-in data [:heading :subtitle :text])]
-    [:div.kanban
-     (for [[phase tasks] (data :tasks)]
-       [:div.phase
-        [:h3 phase]
-        [:div.tasks
-         (for [task tasks]
-           [:div.task {:class (when (task :complete?) "complete")} (task :name)])]])]]])
+    (into
+      [:div.kanban]
+      (for [[phase tasks] (data :tasks)]
+        [:div.phase
+         [:h3 phase]
+         (into
+           [:div.tasks]
+           (for [task tasks]
+             [:div.task {:class (when (task :complete?) "complete")} (task :name)]))]))]])
 
 (defmethod template "roadmap" [_]
   {:css styles
