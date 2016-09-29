@@ -4,6 +4,7 @@
   :data {:title "Braid"
          :version "beta"
          :color "#384d51"
+         :background {:color "#d9e8ea"}
          :logo {:image-url "/images/braid-logo-dark.svg"
                 :color "#354d51"
                 :url "./"}
@@ -67,7 +68,12 @@
                           some rough edges, it's already become our go-to chat app (and for a bunch of other folks too)
 
                           We call it Braid and we'd love for you to join us in making it better.
-                          Raf & James"
+                          Raf & James
+
+
+                         Small tagged conversations makes it easy to find what you looking for. No more scrolling through chat histories to find an article or document.
+
+                         "
 
                    :color "#5f6c73"}}}
 

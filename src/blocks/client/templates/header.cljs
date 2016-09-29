@@ -18,6 +18,7 @@
      :max-width "100%"
      :padding pad
      :box-sizing "border-box"
+     :background (get-in data [:background :color])
      :justify-content "space-between"}
 
     [:a.logo

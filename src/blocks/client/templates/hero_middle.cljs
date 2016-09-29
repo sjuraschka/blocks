@@ -5,7 +5,7 @@
 
 (defn styles [data]
     [:section.hero-middle
-      {:padding [["12em" 0]]
+      {:padding [["4em" 0]]
        :text-align "center"
        :display "flex"
        :flex-direction "column"
