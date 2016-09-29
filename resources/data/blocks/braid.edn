@@ -174,12 +174,6 @@
                     {:icon \uf044
                      :title "Rich Text Formatting"
                      :description "Adding text formatting to your chat is simple."}
-                    {:icon \uf08a
-                     :title "Gif Response"
-                     :description "Can't think of what to say, not to worry giphybot always has a response."}
-                    {:icon \uf118
-                     :title "Emoji"
-                     :description "What would chat be without emojis."}
                     {:icon \uf0c0
                      :title "Multiple Groups"
                      :description "You can create and join as many groups as your heart desires."}]}}
