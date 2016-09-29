@@ -115,17 +115,20 @@
   :data {:styles {:background "#65A8B6"}
          :heading {:color "#fff"}
          :column 3
-         :columns [{:title "Fast"
+         :columns [{:icon \uf0e7
+                    :title "Fast"
                     :description "Built with Clojure - so you know it's not going to be holding you back."}
 
-                   {:title "Open Source"
+                   {:image "/images/open-source.svg"
+                    :title "Open Source"
                     :description "Braid is an Open Source project built with Clojure.
                                   Everything from the fonts we use to the documentation are made by the
                                   community."}
 
-                   {:title "Organized"
-                    :description "Small tagged conversations makes it easy to find what you looking for.
-                                  No more scrolling through chat histories to find an article or document."}]}}
+                   {:icon \uf023
+                    :title "Secure"
+                    :description "Braid's conversations receive a 256-bit SSL encryption."
+          }]}}
 
  "braid-com-features"
  {:template "features-grid"
@@ -137,9 +140,7 @@
                   :heading-color "#384d51"
                   :description-color "#777"
                   :icon-color "#384d51"}
-         :features [{:icon \uf023
-                     :title "Security and Privacy"
-                     :description "Braid's conversations receive a 256-bit SSL encryption."}
+         :features [
                     {:icon \uf1c5
                      :title "Drag and Drop File Sharing"
                      :description "Drop a file into any chat and it's instantly uploaded and easy to tag so you can find it later."}
