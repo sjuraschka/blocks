@@ -46,6 +46,33 @@
            "braid-com-cta"
            "braid-com-footer"]}
 
+ {:domain "www.braidchat.com"
+  :url "/pricing"
+  :favicon "/images/braid-favicon.png"
+  :styles {:fonts {:body {:name "Muli"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Muli"
+                              :source "google"
+                              :weight 400}}}
+  :blocks ["braid-com-header"
+           "braid-com-pricing"
+           "braid-com-footer"]}
+
+ {:domain "www.braidchat.com"
+  :url "/downloads"
+  :favicon "/images/braid-favicon.png"
+  :styles {:fonts {:body {:name "Muli"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Muli"
+                              :source "google"
+                              :weight 400}}}
+  :blocks ["braid-com-header"
+           "braid-com-downloads"
+           "braid-com-footer"]}
+
+
  {:domain "www.braidchat.org"
   :url "/"
   :meta {:title "Braid - Work Better Together"

@@ -4,10 +4,13 @@
   :data {:title "Braid"
          :version "beta"
          :color "#384d51"
-         :logo {:logo-url "/images/braid-logo-dark.svg"
-                :color "#354d51"}
+         :logo {:image-url "/images/braid-logo-dark.svg"
+                :color "#354d51"
+                :url "./"}
          :menu [{:text "Pricing"
-                 :url "https://www.braidchat.com/pricing"}
+                 :url "./pricing"}
+                {:text "Downloads"
+                 :url "./downloads"}
                 {:text "Open Source"
                  :url "https://www.braidchat.org/"}
                 {:text "Sign In"
@@ -280,14 +283,25 @@
 
  "braid-com-footer"
  {:template "footer"
-  :data {:logo-url "/images/braid-logo-light.svg"
+  :data {:logo {:image-url "/images/braid-logo-light.svg"
+                :url "./"}
          :background-color  "#384d51"
          :text-color "#FFF"
          :title "Braid"
-         :menu [{:text "Open Source"
+         :menu [{:text "Pricing"
+                 :url "./pricing"}
+                {:text "Downloads"
+                 :url "./downloads"}
+                {:text "Open Source"
                  :url "https://www.braidchat.org/"}
                 {:text "Sign In"
                  :url "https://braid.chat/"
                  :style "button"}]}}
 
-}
+"braid-com-downloads"
+{:template "downloads"
+ :data {:platforms {:linux ""
+                    :mac ""
+                    :windows ""
+                    :ios ""
+                    :android ""}}}}
