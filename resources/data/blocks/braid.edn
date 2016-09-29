@@ -149,8 +149,7 @@
                   :heading-color "#384d51"
                   :description-color "#777"
                   :icon-color "#384d51"}
-         :features [
-                    {:icon \uf1c5
+         :features [{:icon \uf1c5
                      :title "Drag and Drop File Sharing"
                      :description "Drop a file into any chat and it's instantly uploaded and easy to tag so you can find it later."}
                     {:icon \uf002
