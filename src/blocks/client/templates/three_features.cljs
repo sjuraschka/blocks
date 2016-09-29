@@ -10,7 +10,7 @@
     :color (get-in data [:heading :color])}
 
    [:.content
-    {:padding "2em"}
+    {:padding "6em 3em"}
 
     [:.columns
      {:display "flex"
@@ -21,19 +21,21 @@
       {:text-align "center"
        :flex-basis (str (/ 100 (data :column)) "%")
        :min-width "14em"
-       :padding "0 1em"
-       :box-sizing "border-box"}
+       :margin-right "6em"}
+
+      [:&:last-child
+       {:margin-right 0}]
 
       [:img
        {:padding "0.5em 0"
         :height "3rem"}]
 
       [:.icon::before
- {:content (str "attr(data-icon)")
-  :font-family "FontAwesome"
-  :font-size "3em"
-  :height "4rem"
-  :line-height "4rem"}]
+       {:content (str "attr(data-icon)")
+        :font-family "FontAwesome"
+        :font-size "3em"
+        :height "4rem"
+        :line-height "4rem"}]
 
       [:h2
        {:font-weight "bolder"
