@@ -23,7 +23,7 @@
   :data {:heading {:text "Work Better Together"
                    :color "#384d51"}
          :padding "3em"
-         :sub-heading {:text "Braid is a new kind of group collaboration tool,\ndesigned for teams that hate interruptions\nand actually want to get things done.\n\nSay goodbye to chatrooms, and say hello to Braid!"
+         :sub-heading {:text "Braid is a new kind of group collaboration tool,\ndesigned for teams that <em>hate</em> interruptions\nand just want to <em>get shit done</em>.\n\nSay goodbye to chatrooms, and say hello to Braid!"
                        :color "#777777"}
          :background {:color "#d9e8ea"}
          :form {:placeholder "you@yourgroup.com"
@@ -146,8 +146,7 @@
 
  "braid-com-features"
  {:template "features-grid"
-  :data {:title "Plus, all the features you expect..."
-         :subtitle "You don't need to make trade-off's to have a more productive chat tool."
+  :data {:title "Plus, all the features you expect:"
          :columns 3
          :styles {:main-color "#384d51"
                   :background-color ""
@@ -180,7 +179,11 @@
                      :description "Adding text formatting to your chat is simple."}
                     {:icon \uf0c0
                      :title "Multiple Groups"
-                     :description "You can create and join as many groups as your heart desires."}]}}
+                     :description "You can create and join as many groups as your heart desires."}
+
+                    ; emoji
+                    ; link embeds
+                    ]}}
 
  "braid-com-pricing"
  {:template "pricing"
@@ -217,6 +220,7 @@
                                       :bg-hover "#d4460f"
                                       :bg-active "#d6490c"
                                       :border nil}}}
+
                    {:title "Team"
                     :subtitle "Great for growing teams and agencies"
                     :features-title "Everything in Community, plus"
@@ -235,7 +239,10 @@
                     :subtitle "Perfect for large scale companies"
                     :features-title "Everything in Team, plus"
                     :features ["Self-Hosted"
-                               "SAML Single Sign-on"]
+                               "SAML Single Sign-on"
+                               "Custom Integrations"
+                               ; TODO
+                               ]
                     :price {:button {:text "Contact Us"}}}]
          :notes "14 Day Trial" }}
 
@@ -264,25 +271,24 @@
                   :subtitle {:text "Check out our public roadmap, Braid is constantly evolving."
                              :color "#fff"}}
         :tasks [["Recently Completed"
-                 [{:name "link embed sections" :complete? true}
-                  {:name "email digests" :complete? true}
-                  {:name "release website" :complete? true}]]
+                 [{:name "link embeds" :complete? true}
+                  {:name "mobile clients" :complete? true}
+                  {:name "faster search" :complete? true}
+                  {:name "onboarding improvements" :complete? true}]]
 
                 ["In Progress"
-                 [{:name "polish user experience"}
-                  {:name "mobile clients"}
-                  {:name "improve developer experience"}
+                 [
+                  {:name "voice, video and screensharing"}
                   {:name "integrations API"}]]
 
-                ["Upcoming"
-                 [{:name "keyboard shortcuts"}
-                  {:name "integrations"}
+                ["Next Up"
+                 [{:name "improved developer experience"}
+                  {:name "keyboard shortcuts"}
                   {:name "reactions"}]]
 
-                ["Future"
-                 [{:name "encryption"}
-                  {:name "federation"}
-                  {:name "voice, video and screensharing"}]]]}}
+                ["Coming Soon"
+                 [{:name "E2E encryption"}
+                  {:name "Matrix.org integration"}]]]}}
 
 
  "braid-com-footer"

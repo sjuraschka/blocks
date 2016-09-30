@@ -27,7 +27,10 @@
      :margin [["0.75em" "0.75em" "1.25em"]]
      :text-align "center"
      :white-space "pre"
-     :color (get-in data [:sub-heading :color])}]
+     :color (get-in data [:sub-heading :color])}
+
+    [:em
+     {:font-weight "bold"}]]
 
    [:a.button
     {:margin-bottom "5em"}
@@ -43,7 +46,8 @@
   [:section.hero-middle
    [:div.content
     [:h1 (get-in data [:heading :text])]
-    [:h2 (get-in data [:sub-heading :text])]
+    [:h2 {:dangerouslySetInnerHTML
+          {:__html (get-in data [:sub-heading :text])}}]
     (when (data :button)
       [:a.button {:href ""} (get-in data [:button :text])])
     (when (data :form)
