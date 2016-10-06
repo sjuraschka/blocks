@@ -22,7 +22,7 @@
         :font-size "1.25rem"
         :margin-bottom "2em"}]
 
-      (email-field/styles data)]])
+      (email-field/styles (data :form))]])
 
   (defn component [data]
     [:section.cta
@@ -30,7 +30,7 @@
         [:div.text
           [:h1 (get-in data [:heading :text])]
           [:p  (get-in data [:description :text])]]
-        [email-field/component data]]])
+        [email-field/component (data :form)]]])
 
   (defmethod template "cta" [_]
     {:css styles
