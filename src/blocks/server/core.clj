@@ -22,7 +22,8 @@
                             component/start))))
 
 (defn stop! []
-  (swap! system component/stop))
+  (swap! system (fn [s] (-> s
+                            component/stop))))
 
 (defn reload! []
   (stop!)
