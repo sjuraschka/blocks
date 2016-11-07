@@ -10,7 +10,6 @@
      :background (get-in data [:background :color])}
 
 
-
     [:.content
     {:display "flex"
     :justify-content "center"

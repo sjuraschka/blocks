@@ -5,12 +5,29 @@
   (let [padding "1.5em"]
 
    [:.features-grid
-
+    {:padding-top "3em"}
     [:.content
      {:display "flex"
-      :flex-wrap "wrap"
+      :flex-direction "column"
       :justify-content "center"
-      :padding padding}]
+      :align-items "center"
+      :padding padding}
+
+     [:h1
+      {:font-size "2.2em"
+       :font-weight "bolder"
+       :color (get-in data [:styles :main-color])}]
+     [:h2.subtitle
+      {:font-size "1.25em"
+       :color (get-in data [:styles :description-color])
+       :padding-bottom "2em"}]
+
+
+    [:.grid
+     {:display "flex"
+      :flex-wrap "wrap"
+      :justify-content "center"}]
+
 
      [:.feature
       {:padding padding
@@ -31,16 +48,21 @@
        {:content "attr(data-icon)"
         :font-family "FontAwesome"
         :font-size "3em"
-        :color (get-in data [:styles :description-color])}]]]]))
+        :color (get-in data [:styles :icon-color])}]]]]]))
 
 (defn section [data]
   [:section.features-grid
    [:div.content
+    [:h1 (data :title)]
+    [:h2.subtitle (data :subtitle)]
+
+    [:div.grid
+
     (for [feature (data :features)]
      [:div.feature
        [:div.icon {:data-icon (feature :icon)}]
        [:h2 (feature :title)]
-       [:p (feature :description)]])]])
+       [:p (feature :description)]])]]])
 
 (defmethod template "features-grid" [_]
   {:css styles

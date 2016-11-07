@@ -11,7 +11,14 @@
   (read-string (slurp (clojure.java.io/resource "data/pages.edn"))))
 
 (defn read-blocks-edn []
-  (read-string (slurp (clojure.java.io/resource "data/blocks.edn"))))
+  (->> (clojure.java.io/resource "data/blocks")
+       clojure.java.io/file
+       file-seq
+       (filter (fn [f]
+                 (.isFile f)))
+       (map slurp)
+       (map read-string)
+       (apply merge)))
 
 (defn get-page-data [page]
   (let [blocks (read-blocks-edn)]

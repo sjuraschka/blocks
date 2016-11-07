@@ -5,7 +5,7 @@
 
 (defn styles [data]
     [:section.hero-middle
-      {:padding [["8em" 0]]
+      {:padding [["14em" 0]]
        :text-align "center"
        :display "flex"
        :flex-direction "column"
@@ -24,8 +24,9 @@
 
       [:h2
        {:font-size "2em"
-        :margin "0.75em"
+        :margin [["0.75em" "0.75em" "1.25em"]]
         :max-width "20em"
+        :white-space "pre"
         :color (get-in data [:sub-heading :color])}]
 
       [:a.button

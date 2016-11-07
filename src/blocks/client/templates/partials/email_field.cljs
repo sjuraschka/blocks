@@ -3,6 +3,11 @@
 
 (defn styles [data]
   [:form
+   {:box-shadow [[0 "1px" "2px" 0 "#ccc"]]
+    :display "inline-block"
+    :border-radius "0.5em"
+    :overflow "hidden"}
+
     [:input
       {:padding "0 0.75em"
        :border "none"
@@ -13,8 +18,7 @@
        :outline "none"}
 
        ["&[type=email]"
-        {:border-radius "0.5em 0 0 0.5em"
-         :font-size "1.25em"
+        {:font-size "1.25em"
          :min-width "15em"}
 
       ["&::-moz-placeholder"
@@ -26,7 +30,7 @@
       ["&[type=submit]"
         (button-mixin (get-in data [:form :button :colors] {}))
         [:&
-          {:border-radius "0 0.5em 0.5em 0"
+          {:border-radius 0
            :font-size "1em"
            :padding "0 1em"
            :text-transform "uppercase"}]]]])
@@ -36,6 +40,6 @@
    [:input {:type "email"
             :name "email"
             :placeholder (get-in data [:form :placeholder])
-            :autofocus (when (get-in data [:form :autofocus]) "autofocus")}]
+            :auto-focus (when (get-in data [:form :autofocus]) "autofocus")}]
    [:input {:type "submit"
             :value (get-in data [:form :button :text])}]])

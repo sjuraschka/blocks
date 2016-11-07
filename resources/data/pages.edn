@@ -23,15 +23,26 @@
          :image "url()"}
   :colors ["#abcdef"
            "#000000"]
-  :styles {:fonts {:body {:name "Lato"
+  :styles {:fonts {:body {:name "Muli"
                           :source "google"
                           :weight 400}
-                   :headings {:name "Lato"
+                   :headings {:name "Muli"
                               :source "google"
                               :weight 400}}}
   :blocks ["braid-com-header"
            "braid-com-hero-middle"
+           "braid-com-conversations"
+           ;"braid-com-why"
+           ;"braid-com-letter"
+           "braid-com-how-it-works"
+           "braid-com-benefit-better-conversations"
+           "braid-com-benefit-focus"
+           "braid-com-benefit-deep-integrations"
+           "braid-com-other-benefits"
            "braid-com-features"
+           "braid-com-roadmap"
+           "braid-com-pricing"
+           "braid-com-cta"
            "braid-com-footer"]}
 
  {:domain "www.braidchat.org"
