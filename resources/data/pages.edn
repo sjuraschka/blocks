@@ -19,21 +19,18 @@
  {:domain "www.braidchat.com"
   :url "/"
   :meta {:title "Braid - Work Better Together"
-         :description "Braid is a..."
-         :image "url()"}
-  :colors ["#abcdef"
-           "#000000"]
+         :description "Braid is a group chat application that promotes productive team communication, while still respecting each individual's need for focus. Instead of chatrooms, Braid takes a new approach: discrete conversations and tags."
+         :image "url(/images/braid-icon-256.png)"}
+  :favicon "/images/braid-favicon.png"
   :styles {:fonts {:body {:name "Muli"
                           :source "google"
-                          :weight 400}
+                          :weight 300}
                    :headings {:name "Muli"
                               :source "google"
                               :weight 400}}}
   :blocks ["braid-com-header"
-           "braid-com-hero-middle"
+           "braid-com-hero"
            "braid-com-conversations"
-           ;"braid-com-why"
-           ;"braid-com-letter"
            "braid-com-how-it-works"
            "braid-com-benefit-better-conversations"
            "braid-com-benefit-focus"
@@ -44,6 +41,33 @@
            "braid-com-pricing"
            "braid-com-cta"
            "braid-com-footer"]}
+
+ {:domain "www.braidchat.com"
+  :url "/pricing"
+  :favicon "/images/braid-favicon.png"
+  :styles {:fonts {:body {:name "Muli"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Muli"
+                              :source "google"
+                              :weight 400}}}
+  :blocks ["braid-com-header"
+           "braid-com-pricing"
+           "braid-com-footer"]}
+
+ {:domain "www.braidchat.com"
+  :url "/downloads"
+  :favicon "/images/braid-favicon.png"
+  :styles {:fonts {:body {:name "Muli"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Muli"
+                              :source "google"
+                              :weight 400}}}
+  :blocks ["braid-com-header"
+           "braid-com-downloads"
+           "braid-com-footer"]}
+
 
  {:domain "www.braidchat.org"
   :url "/"

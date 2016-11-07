@@ -4,10 +4,14 @@
   :data {:title "Braid"
          :version "beta"
          :color "#384d51"
-         :logo {:logo-url "/images/braid-logo-444.svg"
-                :color "#444"}
+         :background {:color "#d9e8ea"}
+         :logo {:image-url "/images/braid-logo-dark.svg"
+                :color "#354d51"
+                :url "./"}
          :menu [{:text "Pricing"
-                 :url "https://www.braidchat.com/pricing"}
+                 :url "./pricing"}
+                {:text "Downloads"
+                 :url "./downloads"}
                 {:text "Open Source"
                  :url "https://www.braidchat.org/"}
                 {:text "Sign In"
@@ -15,33 +19,21 @@
                  :style "button"}]}}
 
  "braid-com-hero"
- {:template "hero"
-  :data {:heading {:text "work better\ntogether"}
-         :text "a new approach to team chat\ndesigned for teams who care about flow"
-         :background {:image-url "/images/hero-bg-flip.jpg"
-                      :color "#d9e8ea"}
-         :featured-image {:url "/images/braid-screenshot-archer.png"}
-         :button {:url "https://braid.chat/try"
-                  :text "Try Braid Now"
-                  :colors {:text "#fff"
-                           :bg "#f17130"
-                           :bg-hover "#d4460f"
-                           :bg-active "#d6490c"
-                           :border nil}
-                  :sub-text "Or, read about how Braid is different"
-                  :sub-url "#"}}}
-
- "braid-com-hero-middle"
  {:template "hero-middle"
   :data {:heading {:text "Work Better Together"
                    :color "#384d51"}
-         :sub-heading {:text "A new approach to group chat\n designed for teams who care about flow."
-                       :color "#384251"}
+         :padding "3em"
+         :sub-heading {:text "Braid is a new kind of group collaboration tool,\ndesigned for teams that <em>hate</em> interruptions\nand just want to <em>get shit done</em>.\n\nSay goodbye to chatrooms, and say hello to Braid!"
+                       :color "#777777"}
          :background {:color "#d9e8ea"}
-         :form {:prompt-text "Sign up for early access and be notified when we launch"
-                :placeholder "you@yourgroup.com"
-                :autofocus false
-                :button {:text "Create Your Group"
+         :form {:placeholder "you@yourgroup.com"
+                :before {:text "Get a free Braid group for your team, and have it up and running in seconds:"
+                         :color "#777777"}
+                :after {:text "\n\n\n\n\n\nIntrigued, but want to learn more?\nKeep scrolling to discover how Braid is different."
+                        :icon \uf107
+                        :color "#777777"}
+                ;:autofocus true
+                :button {:text "Create A Group"
                          :color "#fff"
                          :colors {:text "#fff"
                                   :bg "#f17130"
@@ -81,7 +73,12 @@
                           some rough edges, it's already become our go-to chat app (and for a bunch of other folks too)
 
                           We call it Braid and we'd love for you to join us in making it better.
-                          Raf & James"
+                          Raf & James
+
+
+                         Small tagged conversations makes it easy to find what you looking for. No more scrolling through chat histories to find an article or document.
+
+                         "
 
                    :color "#5f6c73"}}}
 
@@ -93,9 +90,8 @@
                    :color "#fff"}
          :subtitle {:text "Our Secret? Short conversations & tags (instead of rooms)"
                     :color "#fff"}
-         :video {:id "pa2bUsChFqM"
-                 :provider
-                 :youtube }}}
+         :video {:id "YeH-8_PUXPk"
+                 :thumbnail "/images/video-player.png"}}}
 
  "braid-com-benefit-better-conversations"
  {:template "feature-highlight"
@@ -132,32 +128,31 @@
   :data {:styles {:background "#65A8B6"}
          :heading {:color "#fff"}
          :column 3
-         :columns [{:title "Fast"
+         :columns [{:icon \uf0e7
+                    :title "Fast"
                     :description "Built with Clojure - so you know it's not going to be holding you back."}
 
-                   {:title "Open Source"
+                   {:image "/images/open-source.svg"
+                    :title "Open Source"
                     :description "Braid is an Open Source project built with Clojure.
                                   Everything from the fonts we use to the documentation are made by the
                                   community."}
 
-                   {:title "Organized"
-                    :description "Small tagged conversations makes it easy to find what you looking for.
-                                  No more scrolling through chat histories to find an article or document."}]}}
+                   {:icon \uf023
+                    :title "Secure"
+                    :description "Braid's conversations receive a 256-bit SSL encryption."
+          }]}}
 
  "braid-com-features"
  {:template "features-grid"
-  :data {:title "Plus, all the features you expect..."
-         :subtitle "You don't need to make trade-off's to have a more productive chat tool."
+  :data {:title "Plus, all the features you expect:"
          :columns 3
          :styles {:main-color "#384d51"
                   :background-color ""
                   :heading-color "#384d51"
                   :description-color "#777"
                   :icon-color "#384d51"}
-         :features [{:icon \uf023
-                     :title "Security and Privacy"
-                     :description "Braid's conversations receive a 256-bit SSL encryption."}
-                    {:icon \uf1c5
+         :features [{:icon \uf1c5
                      :title "Drag and Drop File Sharing"
                      :description "Drop a file into any chat and it's instantly uploaded and easy to tag so you can find it later."}
                     {:icon \uf002
@@ -181,15 +176,13 @@
                     {:icon \uf044
                      :title "Rich Text Formatting"
                      :description "Adding text formatting to your chat is simple."}
-                    {:icon \uf08a
-                     :title "Gif Response"
-                     :description "Can't think of what to say, not to worry giphybot always has a response."}
-                    {:icon \uf118
-                     :title "Emoji"
-                     :description "What would chat be without emojis."}
                     {:icon \uf0c0
                      :title "Multiple Groups"
-                     :description "You can create and join as many groups as your heart desires."}]}}
+                     :description "You can create and join as many groups as your heart desires."}
+
+                    ; emoji
+                    ; link embeds
+                    ]}}
 
  "braid-com-pricing"
  {:template "pricing"
@@ -226,6 +219,7 @@
                                       :bg-hover "#d4460f"
                                       :bg-active "#d6490c"
                                       :border nil}}}
+
                    {:title "Team"
                     :subtitle "Great for growing teams and agencies"
                     :features-title "Everything in Community, plus"
@@ -244,7 +238,10 @@
                     :subtitle "Perfect for large scale companies"
                     :features-title "Everything in Team, plus"
                     :features ["Self-Hosted"
-                               "SAML Single Sign-on"]
+                               "SAML Single Sign-on"
+                               "Custom Integrations"
+                               ; TODO
+                               ]
                     :price {:button {:text "Contact Us"}}}]
          :notes "14 Day Trial" }}
 
@@ -273,63 +270,41 @@
                   :subtitle {:text "Check out our public roadmap, Braid is constantly evolving."
                              :color "#fff"}}
         :tasks [["Recently Completed"
-                 [{:name "link embed sections" :complete? true}
-                  {:name "email digests" :complete? true}
-                  {:name "release website" :complete? true}]]
+                 [{:name "link embeds" :complete? true}
+                  {:name "mobile clients" :complete? true}
+                  {:name "faster search" :complete? true}
+                  {:name "onboarding improvements" :complete? true}]]
 
                 ["In Progress"
-                 [{:name "polish user experience"}
-                  {:name "mobile clients"}
-                  {:name "improve developer experience"}
+                 [
+                  {:name "voice, video and screensharing"}
                   {:name "integrations API"}]]
 
-                ["Upcoming"
-                 [{:name "keyboard shortcuts"}
-                  {:name "integrations"}
+                ["Next Up"
+                 [{:name "improved developer experience"}
+                  {:name "keyboard shortcuts"}
                   {:name "reactions"}]]
 
-                ["Future"
-                 [{:name "encryption"}
-                  {:name "federation"}
-                  {:name "voice, video and screensharing"}]]]}}
+                ["Coming Soon"
+                 [{:name "E2E encryption"}
+                  {:name "Matrix.org integration"}]]]}}
 
 
  "braid-com-footer"
  {:template "footer"
-  :data {:logo-url "/images/braid-logo-bw.svg"
+  :data {:logo {:image-url "/images/braid-logo-light.svg"
+                :url "./"}
          :background-color  "#384d51"
          :text-color "#FFF"
          :title "Braid"
-         :menu [{:text "Open Source"
-                 :url "https://www.braidchat.org/"}
-                {:text "Sign In"
-                 :url "https://braid.chat/"
-                 :style "button"}]}}
+         :menu [{:text "hi@braidchat.com"
+                 :url "mailto:hi@braidchat.com"
+                 :icon \uf003}]}}
 
-
- "braid-org-header"
- {:template "header"
-  :data {:title "Braid"
-         :version "open source"
-         :color "#fff"
-         :logo {:logo-url "/images/braid-logo-bw.svg"}
-         :menu [{:text "Github"
-                 :url "https://github.com/braidchat/braid"
-                 :icon \uf092}]}}
-
- "braid-org-hero"
- {:template "hero"
-  :data {:heading {:text "Help us create a new way for groups to work together"
-                   :size "2em"}
-         :text "Braid is an open-source group messaging platform that goes beyond chatrooms to help teams work better together"
-         :background {:image-url "/images/hero-bg.png"
-                      :color "#80abc1"}
-         :featured-image {:url "/images/braid-screenshot-archer.png"}
-         :button {:url "https://github.com/braidchat/braid"
-                  :text "Learn More"
-                  :colors {:text "#659ECA"
-                           :bg "rgba(255,255,255,1.0)"
-                           :bg-hover "rgba(255,255,255,0.8)"
-                           :bg-active "rgba(255,255,255,0.6)"
-                           :border "white"}}}}
-}
+"braid-com-downloads"
+{:template "downloads"
+ :data {:platforms {:linux ""
+                    :mac ""
+                    :windows ""
+                    :ios ""
+                    :android ""}}}}

@@ -6,15 +6,14 @@
 
 (defn styles [data]
   [:.feature-highlight
-    {:padding pad
-     :background (get-in data [:background :color])}
+   {:padding pad
+    :background (get-in data [:background :color])}
 
-
-    [:.content
+   [:.content
     {:display "flex"
-    :justify-content "center"
-    :flex-wrap "wrap"
-    :align-items "center"}
+     :justify-content "center"
+     :flex-wrap "wrap"
+     :align-items "center"}
 
     [:&.right
      [:.text
@@ -26,17 +25,17 @@
       {:margin-left "6em"}]]]
 
    [:.text
-     {:min-width "15em"
-      :max-width "30em"
-      :flex-basis "50%"
-      :margin "3em 0"}]
+    {:min-width "15em"
+     :max-width "30em"
+     :flex-basis "50%"
+     :margin "3em 0"}]
 
-    [:h1
-      {:color (get-in data [:heading :color])
-       :font-size "2.2em"
-       :margin-bottom "0.5em"
-       :position "relative"
-       :z-index 0}
+   [:h1
+    {:color (get-in data [:heading :color])
+     :font-size "2.2em"
+     :margin-bottom "0.5em"
+     :position "relative"
+     :z-index 0}
 
     ["&[data-step]::before"
      {:content "attr(data-step)"
@@ -54,30 +53,30 @@
       :z-index -1
       :opacity 0.5}]]
 
-    [:p
-      {:color (get-in data [:description :color])}]
+   [:p
+    {:color (get-in data [:description :color])}]
 
-    [:img
-      {:max-height "50vh"
-       :max-width "20em"}]
+   [:img
+    {:max-height "50vh"
+     :max-width "20em"}]
 
-
-  (at-media {:max-width "575px"}
-    [:.content.left :.content.right
+   (at-media {:max-width "575px"}
+     [:.content.left :.content.right
       [:.text
        {:margin-left 0
         :margin-right 0}
-        [:h1
-         {:font-size "1.5em"}]]])])
+       [:h1
+        {:font-size "1.5em"}]]])])
 
 (defn component [data]
   [:section.feature-highlight
-    [:div.content {:class (get-in data [:image :position])}
-      [:div.text
-        [:h1 {:data-step (get-in data [:heading :step])} (get-in data [:heading :text])]
-        [:p  (get-in data [:description :text])]]
-        [:div
-      [:img {:src (get-in data [:image :image-url])}]]]])
+   [:div.content {:class (get-in data [:image :position])}
+    [:div.text
+     [:h1 {:data-step (get-in data [:heading :step])}
+      (get-in data [:heading :text])]
+     [:p (get-in data [:description :text])]]
+    [:div
+     [:img {:src (get-in data [:image :image-url])}]]]])
 
 (defmethod template "feature-highlight" [_]
   {:css styles

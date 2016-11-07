@@ -2,7 +2,7 @@
   (:require [blocks.client.template :refer [template]]
             [blocks.client.templates.partials.email-field :as email-field]))
 
-  (def pad "3em")
+  (def pad "6em")
 
   (defn styles [data]
     [:.cta
@@ -19,10 +19,10 @@
 
       [:p
        {:color (get-in data [:description :color])
-        :font-size "1.24rem"
+        :font-size "1.25rem"
         :margin-bottom "2em"}]
 
-      (email-field/styles data)]])
+      (email-field/styles (data :form))]])
 
   (defn component [data]
     [:section.cta
@@ -30,7 +30,7 @@
         [:div.text
           [:h1 (get-in data [:heading :text])]
           [:p  (get-in data [:description :text])]]
-        [email-field/component data]]])
+        [email-field/component (data :form)]]])
 
   (defmethod template "cta" [_]
     {:css styles
