@@ -16,19 +16,20 @@
     {:display "flex"
      :width "100%"
      :max-width "100%"
-     :padding pad
+     :padding (data :padding)
      :box-sizing "border-box"
      :background (get-in data [:background :color])
-     :justify-content "space-between"}
+     :justify-content "space-between"
+     :align-items "center"}
 
-    [:a.logo
+    [:.logo
      {:color (get-in data [:logo :color])
       :white-space "nowrap"}
 
      [:img
-      {:height "2rem"
-       :display "inline-block"
+      {:display "inline-block"
        :vertical-align "middle"
+       :height (get-in data [:logo :height])
        :margin-right "0.5em"}]
 
      [:h1

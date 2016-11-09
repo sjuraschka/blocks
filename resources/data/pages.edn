@@ -92,14 +92,15 @@
   :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
          :description "rooke is..."
          :image "url ()"}
-  :styles {:fonts {:body {:name "Source Sans Pro"
+  :styles {:fonts {:body {:name "Hind"
                           :source "google"
-                          :weight 300}
-                   :headings {:name "Source Sans Pro"
+                          :weight 400}
+                   :headings {:name "Hind"
                               :source "google"
-                              :weight 200}}}
+                              :weight 700}}}
   :blocks ["rookie-header"
            "rookie-hero"
+           "rookie-values-text"
            "rookie-step-1"
            "rookie-step-2"
            "rookie-step-3"

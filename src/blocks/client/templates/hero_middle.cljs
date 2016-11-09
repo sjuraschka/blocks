@@ -18,9 +18,11 @@
     :background-position (get-in data [:background :position] "center bottom")}
 
    [:h1
-    {:font-size "3.5em"
-     :font-weight "bold"
-     :color (get-in data [:heading :color])}]
+    {:font-size (get-in data [:heading :size])
+     :font-weight (get-in data [:heading :weight])
+     :color (get-in data [:heading :color])
+     :white-space "pre"
+     :text-transform (get-in data [:heading :title-type])}]
 
    [:h2
     {:font-size "1.4em"

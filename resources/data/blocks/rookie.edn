@@ -2,10 +2,13 @@
 
  "rookie-header"
  {:template "header"
-  :data {:color "#fff"
+  :data {:color "#b3b3b3"
+         :padding "1.15em"
          :overlay? true
-         :logo {:image-url "http://www.tryrookie.com/assets/images/logos/logo-light@2x.png"
-                :url "./"}
+         :logo {:image-url "/images/rookie-navy-logo.svg"
+                :url "./"
+                :height "1.25rem"}
+         :background {:color "#fff"}
          :menu [{:text "647-267-5292"
                  :url "tel:6472675292"
                  :icon \uf095}
@@ -16,22 +19,43 @@
  "rookie-hero"
  {:template "hero-middle"
   :data {:padding "12em"
-         :heading {:text "Take your game to the next level"
-                   :color "#fff"}
-         :sub-heading {:text "One-on-One Video Training from Renowned Skills Development Coaches"
-                       :color "#fff"}
-         :background {:image-url "http://www.tryrookie.com/assets/images/backgrounds/background.jpg"
-                      :color "#ccc"
+         :heading {:text "Grow your online\ncoaching business"
+                   :color "#232B69"
+                   :size "2.3em"
+                   :weight "bold"
+                   :title-type "uppercase"}
+         :sub-heading {}
+         :background {:image-url "/images/rookie-landing-page-hero.png"
+                      :color "#EAFAFC"
                       :size "cover"
                       :position "center top"}
          :form {:prompt-text "Sign up for early access and be notified when we launch"
-                :placeholder "super.baller@example.com"
+                :placeholder "coach@example.com"
                 :autofocus true
-                :button {:text "Sign Me Up"
+                :button {:text "Get Started"
                          :colors {:text "#fff"
-                                  :bg "#FF8043"
-                                  :bg-hover "#FF8060"
-                                  :bg-active "#FF89143"}}}}}
+                                  :bg "#232B69"
+                                  :bg-hover "#454d87"
+                                  :bg-active "#3D50CF"}}}}}
+
+ "rookie-gradient"
+ {:template "rookie-gradient"
+  :data {:images {:left {:url "/images/phone-value-1.png"}}}}
+
+ "rookie-values-text"
+ {:template "rookie-three-values-text"
+  :data {:columns [{:url "/images/rookie-phone-1.png"
+                    :title "Expand Your Clientele"
+                    :subtitle "Learn how our coaches expanded their business to offer services worldwide + train more athletes per week"}
+
+                   {:url "/images/rookie-phone-2.png"
+                    :title "Analyze Video"
+                    :subtitle "Use video tools and capture your feedback to give your athelets a full analysis"}
+
+                   {:url "/images/rookie-phone-3.png"
+                    :title "Grow Your Business"
+                    :subtitle "See how our trainers grew their monthly profits and doubled their client base"}]}}
+
 
  "rookie-step-1"
  {:template "feature-highlight"
@@ -84,7 +108,7 @@
  "rookie-footer"
  {:template "footer"
   :data {:logo {:image-url "http://www.tryrookie.com/assets/images/logos/logo-light@2x.png"}
-         :background-color "#000"
+         :background-color "#00175a"
          :text-color "#FFF"
          :menu [{:text "647-267-5292"
                  :url "tel:6472675292"
