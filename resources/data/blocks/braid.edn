@@ -8,6 +8,7 @@
          :logo {:image-url "/images/braid-logo-dark.svg"
                 :color "#354d51"
                 :url "./"}
+         :height "2em"
          :menu [{:text "Pricing"
                  :url "./pricing"}
                 {:text "Downloads"
@@ -299,6 +300,7 @@
          :background-color  "#384d51"
          :text-color "#FFF"
          :title "Braid"
+         :height "2em"
          :menu [{:text "hi@braidchat.com"
                  :url "mailto:hi@braidchat.com"
                  :icon \uf003}]}}

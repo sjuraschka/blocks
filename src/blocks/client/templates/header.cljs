@@ -29,7 +29,7 @@
      [:img
       {:display "inline-block"
        :vertical-align "middle"
-       :height (get-in data [:logo :height])
+       :height (data :height)
        :margin-right "0.5em"}]
 
      [:h1

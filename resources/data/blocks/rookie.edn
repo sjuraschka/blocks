@@ -6,8 +6,8 @@
          :padding "1.15em"
          :overlay? true
          :logo {:image-url "/images/rookie-navy-logo.svg"
-                :url "./"
-                :height "1.25rem"}
+                :url "./"}
+         :height "1.25rem"
          :background {:color "#fff"}
          :menu [{:text "647-267-5292"
                  :url "tel:6472675292"
@@ -107,7 +107,8 @@
 
  "rookie-footer"
  {:template "footer"
-  :data {:logo {:image-url "http://www.tryrookie.com/assets/images/logos/logo-light@2x.png"}
+  :data {:logo {:image-url "/images/rookie-white-logo.svg"}
+         :height "1em"
          :background-color "#00175a"
          :text-color "#FFF"
          :menu [{:text "647-267-5292"

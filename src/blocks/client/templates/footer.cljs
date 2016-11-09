@@ -20,7 +20,7 @@
       :white-space "nowrap"}
 
      [:img
-      {:height "2rem"
+      {:height (data :height)
        :display "inline-block"
        :vertical-align "middle"
        :margin-right "0.5em" }]
