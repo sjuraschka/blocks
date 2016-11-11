@@ -95,15 +95,31 @@
  {:template "cta"
   :data {:heading {:text "Sign up for early access"}
          :description {:text "If accepted you will receive an email inviting you to use the site."}
-         :background {:color "#f1f4f5"}
+         :background {:color "#f1f2fd"}
          :form {:prompt-text "Sign up for early access and be notified when we launch"
-                :placeholder "super.baller@example.com"
+                :placeholder "coachr@example.com"
                 :button {:text "Get Invited"
                          :color "#fff"
                          :colors {:text "#fff"
                                   :bg "#FF8043"
                                   :bg-hover "#FF8060"
                                   :bg-active "#FF8143"}}}}}
+
+
+ "rookie-pre-footer"
+ {:template "pre-footer-menu"
+  :data {:columns [{:title "About"
+                    :categories [{:name "Our Story"}
+                                 {:name "The Team"}]}
+
+                   {:title "Support"
+                    :categories [{:name "Help"}
+                                 {:name "FAQ"}]}
+
+                   {:title "Advice"
+                    :categories [{:name "Newsletter"}
+                                 {:name "Blog"}]}]}}
+
 
  "rookie-footer"
  {:template "footer"

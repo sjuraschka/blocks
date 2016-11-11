@@ -16,4 +16,5 @@
     blocks.client.templates.feature-highlight
     blocks.client.templates.one-feature
     blocks.client.templates.three-features
-    blocks.client.templates.rookie-three-values-text))
+    blocks.client.templates.rookie-three-values-text
+    blocks.client.templates.pre-footer-menu))
