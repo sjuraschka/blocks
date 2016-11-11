@@ -4,7 +4,9 @@
 (defn styles []
   [:.three-values-text
    {:background    "#fff"
-    :border-bottom "1px solid #eee"}
+    :padding-bottom "1em"
+    :border-bottom "1px solid #eee"
+    :border-top "10px solid #red"}
 
    [:&::before
     {:content          "\"\""
@@ -16,7 +18,7 @@
      :z-index          1}]
 
    [:.content
-    {:margin-top "-22em"
+    {:margin-top "-22.05em"
      :z-index    100
      :padding    "1.5em 4em 0em 4em"
      :box-sizing "border-box"
@@ -33,7 +35,8 @@
        :text-align "center"}]]
 
     [:h1
-     {:color          "#232B69"
+     {:padding-top "1em"
+      :color          "#232B69"
       :text-transform "uppercase"}]
 
     [:p
