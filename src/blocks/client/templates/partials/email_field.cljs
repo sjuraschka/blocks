@@ -23,13 +23,14 @@
    [:fieldset
     {:box-shadow [[0 "1px" "2px" 0 "rgba(0,0,0,0.1)"]]
      :display "inline-block"
-     :border-radius "0.5em"
+     :border-radius "5px"
      :overflow "hidden"}
 
     [:input
      {:padding "0 0.75em"
       :border "none"
       :box-sizing "border-box"
+      :background "#eee"
       :height "3rem"
       :vertical-align "top"
       :line-height "3rem"

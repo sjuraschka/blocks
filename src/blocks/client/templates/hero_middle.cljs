@@ -10,12 +10,13 @@
     :display "flex"
     :flex-direction "column"
     :justify-content "center"
+    :align-items "center"
     :box-sizing "border-box"
     :background-color (get-in data [:background :color])
     :background-image (str "url(" (get-in data [:background :image-url]) ")")
     :background-size (get-in data [:background :size])
     :background-repeat "no-repeat"
-    :background-position (get-in data [:background :position] "center bottom")}
+    :background-position (get-in data [:background :position] "right bottom")}
 
    [:h1
     {:font-size (get-in data [:heading :size])
@@ -24,9 +25,10 @@
      :white-space "pre"
      :text-transform (get-in data [:heading :title-type])}]
 
-   [:h2
+   [:p
     {:font-size "1.4em"
      :margin [["0.75em" "0.75em" "1.25em"]]
+     :width (get-in data [:sub-heading :width])
      :text-align "center"
      :white-space "pre"
      :color (get-in data [:sub-heading :color])}
@@ -48,7 +50,7 @@
   [:section.hero-middle
    [:div.content
     [:h1 (get-in data [:heading :text])]
-    [:h2 {:dangerouslySetInnerHTML
+    [:p {:dangerouslySetInnerHTML
           {:__html (get-in data [:sub-heading :text])}}]
     (when (data :button)
       [:a.button {:href ""} (get-in data [:button :text])])
