@@ -107,4 +107,23 @@
            "rookie-cta"
            "rookie-pre-footer"
            "rookie-footer"]}
+
+
+ {:domain "courtney.tryrookie.com"
+  :url "/"
+  :meta {:title "Rookie - One-on-One Video Training from Renowned Skills Development Coaches."
+         :description "Train with Courtney on Rookie"
+         :image "url ()"}
+  :styles {:fonts {:body {:name "Abel"
+                          :source "google"
+                          :weight 400}
+                   :headings {:name "Abel"
+                              :source "google"
+                              :weight 700}}}
+
+  :blocks ["client-rookie-header"
+           "client-rookie-hero"
+           "client-rookie-values-text"
+           "client-rookie-quote"
+           "client-rookie-footer"]}
  ]

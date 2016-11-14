@@ -1,0 +1,121 @@
+(ns blocks.client.templates.multiple-logo-footer
+  (:require [blocks.client.template :refer [template]]))
+
+(def pad "3rem")
+
+(defn styles [data]
+  [:footer
+   {:background (data :background-color)}
+
+   [:.content
+    {:display "flex"
+     :flex-direction "column"
+    :justify-content "center"
+     ;:align-items "center"
+     :width "100%"
+     :max-width "100%"
+     :padding pad
+     :box-sizing "border-box"}
+
+    [:.upper
+     {:display "flex"
+      :justify-content "space-between"
+      :align-items "center"}
+
+     [:h1.sub-text
+      {:display "inline-block"
+       :text-transform "uppercase"
+       :color "#fff"
+       :font-size "0.65em"
+       :line-height "2rem"
+       :margin-right "5px"
+       :vertical-align "middle"}]
+
+    [:a.client
+     {:color (data :text-color)
+      :white-space "nowrap"}
+
+     [:img
+      {:height (data :height)
+       :display "inline-block"
+       :vertical-align "middle"
+       :margin-right "0.5em" }]]
+
+
+     [:a.logo
+     {:color (data :text-color)
+      :white-space "nowrap"
+      :display "flex"
+      :flex-direction "column"
+      :justify-content "center"
+      :align-items "center"}
+
+     [:img
+      {:height (data :height)
+       :display "inline-block"
+       :vertical-align "middle"
+       :margin-right "0.5em" }]]
+
+    [:.payment-area
+     {:display "flex"
+      :flex-direction "column"
+      :justify-content "center"
+      :align-items "center"}
+     [:.payment
+      {:height "1em"
+       :display "inline-block"
+       :vertical-align "middle"}]]]
+
+    [:.lower
+    [:nav
+     {:text-align "center"
+      :padding-top "1em"}
+
+     [:a
+      {:color (data :text-color)
+       :opacity 0.6
+       :text-decoration "none"
+       :margin-left "2em"
+       :transition "opacity 0.1s ease-in-out"
+       :line-height "2em"}
+
+      [:&:hover
+       {:opacity 1}]
+
+      ["&[data-icon]:before"
+       {:content "attr(data-icon)"
+        :font-family "FontAwesome"
+        :margin-right "0.25em"}]
+
+      [:&.button
+       {:display "inline-block"
+        :border [["1px" "solid" (data :text-color)]]
+        :border-radius "0.25em"
+        :height "2em"
+        :padding "0 0.5em" }]]]]]])
+
+(defn view [data]
+  [:footer
+   [:div.content
+    [:div.upper
+    [:img.client {:src (get-in data [:client :image])}]
+    [:a.logo {:href (get-in data [:logo :url])}
+     [:h1.sub-text (data :title)]
+     [:img {:src (get-in data [:logo :image-url])}]]
+
+    [:div.payment-area
+     [:h1.sub-text "We Accept"]
+     [:img.payment {:src "/images/payment.png"}]]]
+
+     [:div.lower
+    (into
+      [:nav]
+      (for [link (data :menu)]
+        [:a {:href (link :url)
+             :class (link :style)
+             :data-icon (link :icon)}
+         (link :text)]))]]])
+
+(defmethod template "multiple-logo-footer" [_]
+  {:css styles
+   :component view})

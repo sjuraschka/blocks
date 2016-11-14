@@ -38,22 +38,22 @@
                                   :bg-hover "#454d87"
                                   :bg-active "#3D50CF"}}}}}
 
- "rookie-gradient"
- {:template "rookie-gradient"
-  :data {:images {:left {:url "/images/phone-value-1.png"}}}}
-
  "rookie-values-text"
  {:template "rookie-three-values-text"
-  :data {:columns [{:url "/images/rookie-phone-1.png"
-                    :title "Expand Your Clientele"
+  :data {:background "radial-gradient(50% -16%, #4B4EC2 3%, #232B69 100%)"
+         :columns [{:url "/images/rookie-phone-1.png"
+                    :title {:name "Expand Your Clientele"
+                            :color "#"}
                     :subtitle "Learn how our coaches expanded their business to offer services worldwide + train more athletes per week"}
 
                    {:url "/images/rookie-phone-2.png"
-                    :title "Analyze Video"
+                    :title {:name "Analyze Video"
+                            :color "#"}
                     :subtitle "Use video tools and capture your feedback to give your athelets a full analysis"}
 
                    {:url "/images/rookie-phone-3.png"
-                    :title "Grow Your Business"
+                    :title  {:name "Grow Your Business"
+                             :color "#"}
                     :subtitle "See how our trainers grew their monthly profits and doubled their client base"}]}}
 
 
