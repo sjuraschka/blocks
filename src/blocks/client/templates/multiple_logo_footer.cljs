@@ -1,5 +1,6 @@
 (ns blocks.client.templates.multiple-logo-footer
-  (:require [blocks.client.template :refer [template]]))
+  (:require [blocks.client.template :refer [template]]
+            [garden.stylesheet :refer [at-media]]))
 
 (def pad "3rem")
 
@@ -10,8 +11,7 @@
    [:.content
     {:display "flex"
      :flex-direction "column"
-    :justify-content "center"
-     ;:align-items "center"
+     :justify-content "center"
      :width "100%"
      :max-width "100%"
      :padding pad
@@ -66,33 +66,16 @@
        :display "inline-block"
        :vertical-align "middle"}]]]
 
-    [:.lower
-    [:nav
-     {:text-align "center"
-      :padding-top "1em"}
+    [:.lower]
 
-     [:a
-      {:color (data :text-color)
-       :opacity 0.6
-       :text-decoration "none"
-       :margin-left "2em"
-       :transition "opacity 0.1s ease-in-out"
-       :line-height "2em"}
 
-      [:&:hover
-       {:opacity 1}]
+    (at-media {:max-width "600px"}
 
-      ["&[data-icon]:before"
-       {:content "attr(data-icon)"
-        :font-family "FontAwesome"
-        :margin-right "0.25em"}]
-
-      [:&.button
-       {:display "inline-block"
-        :border [["1px" "solid" (data :text-color)]]
-        :border-radius "0.25em"
-        :height "2em"
-        :padding "0 0.5em" }]]]]]])
+              [:.upper
+               {:flex-direction "column"
+                :justify-content "center"}
+               [:.logo
+                {:padding "1.5em 0"}]])]])
 
 (defn view [data]
   [:footer
