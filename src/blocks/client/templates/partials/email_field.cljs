@@ -1,5 +1,6 @@
 (ns blocks.client.templates.partials.email-field
-  (:require [blocks.client.templates.mixins :refer [button-mixin fontawesome-mixin]]))
+  (:require [blocks.client.templates.mixins :refer [button-mixin fontawesome-mixin]]
+            [garden.stylesheet :refer [at-media]]))
 
 (defn styles [data]
   [:form
@@ -38,7 +39,7 @@
 
      ["&[type=email]"
       {:font-size "1.25em"
-       :min-width "15em"}
+       :min-width "13em"}
 
       ["&::-moz-placeholder"
        {:color "#ddd"}]
@@ -53,7 +54,19 @@
         :font-size "1em"
         :padding "0 1em"
         :letter-spacing "0.05em"
-        :text-transform "uppercase"}]]]]])
+        :text-transform "uppercase"}]]]]
+
+   (at-media {:max-width "450px"}
+             [:fieldset
+              {:display "flex"
+               :flex-direction "column"}
+              {}
+             [:input
+              {:width "100%"}]
+
+              ["&[type=email]"
+               {:font-size "1em"
+                :min-width "9em"}]])])
 
 (defn component [data]
   [:form
