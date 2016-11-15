@@ -48,15 +48,22 @@
    (email-field/styles (data :form))
 
    (at-media {:max-width "800px"}
-
              [:&
-              {:background-image (str "url(" (get-in data [:background :mobile-url]) ")")}
+              {:background-image (str "url(" (get-in data [:background :mobile-url]) ")")
+               :width "100vw"}
               [:.content
-               {:width "20em"}
+               {:width "100vw"
+                :box-sizing "border-box"
+                :display "flex"
+                :flex-direction "column"
+                :justify-content "center"
+                :align-items "center"}
                 [:h1
                  {:font-size "1.5em"}]
                 [:p
-                 {:font-size "1.25em"}]]])])
+                 {:font-size "1.15em"
+                  :color "black"
+                  :width "20em"}]]])])
 
 (defn hero [data]
   [:section.hero-middle

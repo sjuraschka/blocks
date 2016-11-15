@@ -24,7 +24,7 @@
                            :weight     "bold"
                            :title-type "title-case"}
 
-             :sub-heading {:text      "Professional video analysis of your big lifts.\nSign up to have Courtney personally review and\nassess your form and bar path to ensure you're\nprogressing properly and safely with\npowerlifting and strength training."
+             :sub-heading {:text      "Professional video analysis of your big lifts.\nSign up to have Courtney personally review and\nassess your form and bar path to ensure\nyou're progressing properly and safely with\npowerlifting and strength training."
                            :font-size "1em"
                            :color     "#9c9c9c"
                            :weight    "light"
