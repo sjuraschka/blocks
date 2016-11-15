@@ -1,7 +1,8 @@
 (ns blocks.client.templates.hero-middle
   (:require [blocks.client.template :refer [template]]
             [blocks.client.templates.mixins :refer [fontawesome-mixin button-mixin]]
-            [blocks.client.templates.partials.email-field :as email-field]))
+            [blocks.client.templates.partials.email-field :as email-field]
+            [garden.stylesheet :refer [at-media]]))
 
 (defn styles [data]
   [:section.hero-middle
@@ -44,7 +45,18 @@
      (fontawesome-mixin \uf019)
      {:margin-right "0.5em"}]]
 
-   (email-field/styles (data :form))])
+   (email-field/styles (data :form))
+
+   (at-media {:max-width "800px"}
+
+             [:&
+              {:background-image (str "url(" (get-in data [:background :mobile-url]) ")")}
+              [:.content
+               {:width "20em"}
+                [:h1
+                 {:font-size "1.5em"}]
+                [:p
+                 {:font-size "1.25em"}]]])])
 
 (defn hero [data]
   [:section.hero-middle

@@ -31,15 +31,17 @@
                        :width "20em"}
 
          :background {:image-url "/images/courtney-hero-background-3.png"
+                      :mobile-url "/images/courtney-hero-mobile.png"
                       :color "#EAFAFC"
                       :size "cover"
                       :position "right bottom"}
+
          :form {:prompt-text "Sign up for elite\nprogramming + coaching!"
                 :sub-text "The best video analysis offered by any online powerlifting coach."
                 :border "#ccc"
                 :placeholder "athlete@example.com"
                 :autofocus true
-                :button {:text "Get Started"
+                :button {:text "Reserve Spot"
                          :colors {:text "#fff"
                                   :bg "#f79501"
                                   :bg-hover "#f78b00"
