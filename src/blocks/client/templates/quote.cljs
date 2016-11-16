@@ -20,7 +20,7 @@
     {:font-size "1.2em"
      :letter-spacing "0.05em"
      :font-weight "900"
-     :color "#ec881b"
+     :color (get-in data [:title :color])
      :text-transform "uppercase"}]
 
     [:.quote
@@ -35,7 +35,7 @@
 (defn component [data]
   [:div.quote
    [:div.content
-    [:div.title (data :title)]
+    [:div.title (get-in data [:title :text])]
     [:div.quote (data :quote)]
     [:div.customer (data :name)]]])
 
