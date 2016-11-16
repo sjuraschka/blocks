@@ -12,7 +12,7 @@
    [{:id "dev"
      :figwheel {:on-jsload "blocks.client.core/reload"}
      :source-paths ["src/blocks/client"]
-     :compiler {:main 'blocks.client.core
+     :compiler {:main 'blocks.client.core-dev
                 :asset-path "/js/dev"
                 :output-to "resources/public/js/blocks.js"
                 :output-dir "resources/public/js/dev"

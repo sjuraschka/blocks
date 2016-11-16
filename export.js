@@ -13,7 +13,7 @@ if (system.args.length !== 5) {
 }
 console.log("Starting...");
 
-var address = appDomain + siteDomain + sitePath;
+var address = appDomain + "export/" + siteDomain + sitePath;
 var siteDirectory = directory + siteDomain + "/";
 
 if(fs.exists(siteDirectory)){
@@ -32,7 +32,7 @@ fs.copyTree("./resources/public/css/", siteDirectory + "/css/");
 fs.copyTree("./resources/public/images/", siteDirectory + "/images/");
 fs.copy("./resources/public/js/blocks.js", siteDirectory + "/js/blocks.js");
 
-console.log("Saving page");
+console.log("Saving page:", address);
 page.open(address, function(status) {
   if (status !== 'success') {
     console.log('FAIL to load the address');

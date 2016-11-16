@@ -1,20 +1,25 @@
 (ns blocks.client.core
-  (:require-macros [reagent.ratom :refer [reaction]])
-  (:require [reagent.core :as reagent]
-            [garden.core :as garden]
-            [clojure.string :as string]
-            [re-frame.core :refer [register-handler
-                                   path
-                                   register-sub
-                                   dispatch
-                                   dispatch-sync
-                                   subscribe]]
-            [blocks.client.template :refer [template]]
-            [blocks.client.templates]
-            [garden.core :refer [css]]
-            [garden.stylesheet :refer [at-import]]
-            [figwheel.client :as fig]
-            [ajax.core :refer [GET]]))
+  (:require
+    [clojure.string :as string]
+    [reagent.core :as reagent]
+    [re-frame.core :refer [reg-event-db
+                           reg-sub
+                           dispatch-sync
+                           subscribe]]
+    [garden.core :refer [css]]
+    [garden.stylesheet :refer [at-import]]
+    [blocks.client.template :refer [template]]
+    [blocks.client.templates]))
+
+(reg-event-db
+  :set-data
+  (fn [_ [_ data]]
+    data))
+
+(reg-sub
+  :page
+  (fn [state _]
+    (state :page)))
 
 (defn google-fonts-import [data]
    (when-let [google-fonts (->> (get-in data [:styles :fonts])
@@ -50,29 +55,6 @@
      {:max-width "1000px"
       :position "relative"
       :margin "0 auto"}]]])
-
-(register-handler
-  :set-data
-  (fn [state [_ data]]
-    data))
-
-(register-handler
-  :fetch-data
-  (fn [state _]
-    (GET (str "/api/domains/" (get-in state [:page :domain])
-              "/pages" (get-in state [:page :url]))
-      {:handler (fn [data]
-                  (println "Reloading EDN")
-                  (println data)
-                  (dispatch [:set-data (cljs.reader/read-string data)]))})
-    state))
-
-(register-sub
-  :page
-  (fn [state _]
-    (reaction (@state :page))))
-
-(enable-console-print!)
 
 (defn app-view []
   (let [page (subscribe [:page])]
@@ -113,12 +95,3 @@
   (dispatch-sync [:set-data (cljs.reader/read-string (.-innerHTML (js/document.getElementById "data")))])
   (render))
 
-(fig/add-message-watch
-  :edn-watcher
-  (fn [{:keys [msg-name] :as msg}]
-    (when (= msg-name :edn-files-changed)
-      (dispatch [:fetch-data]))))
-
-(defn ^:export reload
-  []
-  (render))

@@ -30,7 +30,7 @@
               [{:id "prod"
                 :source-paths ["src/blocks/client"]
                 :compiler {:main blocks.client.core
-                           :output-to "resources/public/js/blocks.js"
+                           :output-to "resources/public/js/blocks.min.js"
                            :output-dir "resources/public/js/prod"
                            :optimizations :advanced
                            :verbose true}}]})
