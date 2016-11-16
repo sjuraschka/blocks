@@ -15,7 +15,7 @@
 
 (reg-event-fx
   :fetch-data
-  (fn [state _]
+  (fn [{state :db} _]
     (GET (str "/api/domains/" (get-in state [:page :domain])
               "/pages" (get-in state [:page :url]))
       {:handler (fn [data]
