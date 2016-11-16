@@ -27,6 +27,7 @@
              :sub-heading {:text      "Professional video analysis of your big lifts.\nSign up to have Courtney personally review and\nassess your form and bar path to ensure\nyou're progressing properly and safely with\npowerlifting and strength training."
                            :font-size "1em"
                            :color     "#9c9c9c"
+                           :mobile-color "#222"
                            :weight    "light"
                            :width     "20em"}
 
@@ -72,7 +73,6 @@
                               phase (approximately every 4-6 weeks)."
                            :border   "none"}]}}
 
-
  "client-rookie-step-2"
  {:template "feature-highlight"
   :data     {:heading     {:text  "Record + Submit your Three Lifts"
@@ -95,7 +95,6 @@
                            :color "#777"}
              :image       {:image-url "http://www.tryrookie.com/assets/images/phones/benefits-phone-front2@2x.png"
                            :position  "right"}}}
-
 
  "client-rookie-step-1"
  {:template "feature-highlight"
@@ -122,16 +121,134 @@
                                                   :bg-hover  "#FF8060"
                                                   :bg-active "#FF8143"}}}}}
 
-
  "client-rookie-quote"
  {:template "quote"
-  :data     {:title "Online Training Success"
+  :data     {:title {:text "Online Training Success"
+                     :color "#f79501"}
              :quote "I found Courtney's positivity and lust for life to be completely infectious. Her training protocols are
                 thorough and balanced and helped heal my body of all the imbalances I had from teaching various
                 fad exercise methods."
              :name  "Christine, San Francisco"}}
 
  "client-rookie-footer"
+ {:template "multiple-logo-footer"
+  :data     {:title            "powered by"
+             :logo             {:image-url "/images/rookie-white-logo.svg"}
+             :height           "1em"
+             :background-color "#222"
+             :text-color       "#FFF"
+             :client           {:image "/images/courtney-white-logo.png"}
+             :menu             [{:text ""
+                                 :url  ""
+                                 :icon ""}
+                                {:text ""
+                                 :url  ""
+                                 :icon ""}]}}
+
+ ;======================================================================================================================
+ ;in-tech training
+ ;======================================================================================================================
+
+
+ "intech-rookie-header"
+ {:template "header"
+  :data     {:color      "#FFF"
+             :padding    "1.15em"
+             :overlay?   true
+             :height     "2.5em"
+             :logo       {:image-url "/images/in-tech-logo-white.png"
+                          :url       "./"}
+             :background {:color ""}
+             :menu       [{:text ""
+                           :url  ""}
+                          {:text "Email In-Tech"
+                           :url  "mailto:derrell.levy@intechskills.com"
+                           :icon \uf003}]}}
+
+ "intech-rookie-hero"
+ {:template "hero-middle"
+  :data     {:padding     "12em"
+             :heading     {:text       "Are you truly dedicated to becoming great?"
+                           :color      "#fff"
+                           :size       "2.3em"
+                           :weight     "bold"
+                           :title-type "title-case"}
+
+             :sub-heading {:text      "Get pro one on one coaching with In-Tech no matter\nwhere you are in the world."
+                           :font-size "1em"
+                           :color     "#fff"
+                           :mobile-color "#fff"
+                           :weight    "light"
+                           :width     "20em"}
+
+             :background  {:image-url  "/images/in-tech-hero-background.jpg"
+                           :mobile-url "/images/in-tech-hero-background.jpg"
+                           :color      "#fff"
+                           :size       "cover"
+                           :position   "left bottom"}
+
+             :form        {:prompt-text "Sign up for elite\nprogramming + coaching!"
+                           :sub-text    "The best video analysis offered by any online powerlifting coach."
+                           :border      "#ccc"
+                           :placeholder "athlete@example.com"
+                           :autofocus   true
+                           :button      {:text   "Reserve Spot"
+                                         :colors {:text      "#fff"
+                                                  :bg        "#7cbee9"
+                                                  :bg-hover  "#f78b00"
+                                                  :bg-active "#d87d08"}}}}}
+
+ "intech-rookie-values-text"
+ {:template "rookie-three-values-text"
+  :data     {:background "radial-gradient(50% -16%, #ec881b 3%, #7cbee9 100%)"
+             :columns    [{:url      "/images/rookie-phone-1.png"
+                           :title    {:name  "Commit to Powerlifting Coaching"
+                                      :color "#222"}
+                           :subtitle "Before we begin anything, we want to make sure your form and bath path are correct to
+                              prevent any possible injuries or setbacks. Let's start at the beginning!"
+                           :border   "1px solid rgba(155, 170, 170, 0.5)"}
+
+                          {:url      "/images/rookie-phone-2.png"
+                           :title    {:name  "Record + Submit your Three Lifts"
+                                      :color "#222"}
+                           :subtitle "Let's check out your movement patterns for your squat, bench press and deadlift
+                              (sumo or conventional)."
+                           :border   "1px solid rgba(155, 170, 170, 0.5)"}
+
+                          {:url      "/images/rookie-phone-3.png"
+                           :title    {:name  "Get Feedback + Improve"
+                                      :color "#222"}
+                           :subtitle "Because this method of coaching is online, using Rookie will allow me to make sure that
+                              you're moving correctly. We will follow up with video reviews at the end of each training
+                              phase (approximately every 4-6 weeks)."
+                           :border   "none"}]}}
+
+
+
+ "intech-rookie-cta"
+ {:template "cta"
+  :data     {:heading     {:text "Sign up for early access"}
+             :description {:text "If accepted you will receive an email inviting you to use the site."}
+             :background  {:color "#fff"}
+             :form        {:prompt-text "Sign up for early access and be notified when we launch"
+                           :placeholder "coachr@example.com"
+                           :button      {:text   "Get Invited"
+                                         :color  "#fff"
+                                         :colors {:text      "#fff"
+                                                  :bg        "#FF8043"
+                                                  :bg-hover  "#FF8060"
+                                                  :bg-active "#FF8143"}}}}}
+
+ "intech-rookie-quote"
+ {:template "quote"
+  :data    {:title {:text "Online Training Success"
+                    :color "#7cbee9"}
+             :quote "I found Courtney's positivity and lust for life to be completely infectious. Her training protocols are
+                thorough and balanced and helped heal my body of all the imbalances I had from teaching various
+                fad exercise methods."
+             :name  "Christine, San Francisco"}}
+
+ "intech-rookie-footer"
  {:template "multiple-logo-footer"
   :data     {:title            "powered by"
              :logo             {:image-url "/images/rookie-white-logo.svg"}
