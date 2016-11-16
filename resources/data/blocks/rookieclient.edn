@@ -221,8 +221,6 @@
                            :subtitle "Get detailed feedback and personalized workouts from your trainers"
                            :border   "none"}]}}
 
-
-
  "intech-rookie-cta"
  {:template "cta"
   :data     {:heading     {:text "Sign up for early access"}
