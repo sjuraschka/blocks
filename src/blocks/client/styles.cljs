@@ -2,7 +2,7 @@
   (:require
     [clojure.string :as string]
     [garden.core :refer [css]]
-    [garden.stylesheet :refer [at-import]]))
+    [garden.stylesheet :refer [at-import at-font-face]]))
 
 (defn google-fonts-import [data]
    (when-let [google-fonts (->> (get-in data [:styles :fonts])
@@ -17,9 +17,22 @@
                                       ":" (font :weight))))
                           (string/join "|"))))))
 
+(def fa-at-font-face
+  (let [version "4.7.0"
+        fa-cdn-url (str "https://maxcdn.bootstrapcdn.com/font-awesome/" version)]
+    (at-font-face
+      {:font-family "FontAwesome"
+       :src [(str "local('FontAwesome')")
+             (str "url('" fa-cdn-url "/fonts/fontawesome-webfont.eot?#iefix&v=" version "') format('embedded-opentype')")
+             (str "url('" fa-cdn-url "/fonts/fontawesome-webfont.woff2?v=" version "') format('woff2')")
+             (str "url('" fa-cdn-url "/fonts/fontawesome-webfont.woff?v=" version "') format('woff')")
+             (str "url('" fa-cdn-url "/fonts/fontawesome-webfont.ttf?v=" version "') format('truetype')")
+             (str "url('" fa-cdn-url "/fonts/fontawesome-webfont.svg?v=" version "#fontawesomeregular') format('svg')")]
+       :font-weight "normal"
+       :font-style "normal"})))
 
 (defn page-styles [data]
-  [(at-import "//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+  [fa-at-font-face
 
    (google-fonts-import data)
 
