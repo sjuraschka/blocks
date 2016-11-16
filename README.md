@@ -40,7 +40,7 @@ Changes to the server require another `start!` and refresh.
 `lein repl`
 `(start! 6543)`
 `lein cljsbuild once prod`
-`phantomjs export.js http://localhost:6543/ www.braidchat.com / ./export/`
+`phantomjs export.js http://localhost:6543/ www.braidchat.com / braid ./export/`
 
 
 ## Upload to S3
