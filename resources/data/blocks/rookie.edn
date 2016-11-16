@@ -41,12 +41,14 @@
  "rookie-values-text"
  {:template "rookie-three-values-text"
   :data {:background "radial-gradient(50% -16%, #4B4EC2 3%, #232B69 100%)"
-         :title-color ""
-         :columns [{:url "/images/rookie-phone-1.png"
+         :header "How you'll use Rookie with your Athletes"
+         :title-color "#232B69"
+
+         :columns [{:url "/images/coach-phone-1.png"
                     :title {:name "Expand Your Clientele"}
                     :subtitle "Learn how our coaches expanded their business to offer services worldwide + train more athletes per week"}
 
-                   {:url "/images/rookie-phone-2.png"
+                   {:url "/images/coach-phone-2.png"
                     :title {:name "Analyze Video"}
                     :subtitle "Use video tools and capture your feedback to give your athelets a full analysis"}
 
