@@ -10,7 +10,7 @@
    :build-ids ["dev"]
    :all-builds
    [{:id "dev"
-     :figwheel {:on-jsload "blocks.client.core/reload"}
+     :figwheel {:on-jsload "blocks.client.core_dev/reload"}
      :source-paths ["src/blocks/client"]
      :compiler {:main 'blocks.client.core-dev
                 :asset-path "/js/dev"
