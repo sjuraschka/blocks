@@ -52,7 +52,9 @@
  "client-rookie-values-text"
  {:template "rookie-three-values-text"
   :data     {:background "radial-gradient(50% -16%, #ec881b 3%, #ec881b 100%)"
-             :title-color "#222"
+             :header "How Courtney will work with you through Rookie"
+             :title-color "#222222"
+
              :columns    [{:url      "/images/coach-phone.png"
                            :title    {:name  "Commit to Powerlifting Coaching"}
                            :subtitle "Before we begin anything, we want to make sure your form and bath path are correct to
@@ -168,13 +170,13 @@
  "intech-rookie-hero"
  {:template "hero-middle"
   :data     {:padding     "12em"
-             :heading     {:text       "Are you truly dedicated to becoming great?"
+             :heading     {:text       "Are you truly dedicated\nto becoming great?"
                            :color      "#fff"
                            :size       "2.3em"
                            :weight     "bold"
                            :title-type "title-case"}
 
-             :sub-heading {:text      "Get pro one on one coaching with In-Tech no matter\nwhere you are in the world."
+             :sub-heading {:text      "Get pro one on one coaching with In-Tech\nno matter where you are in the world."
                            :font-size "1em"
                            :color     "#fff"
                            :mobile-color "#fff"
