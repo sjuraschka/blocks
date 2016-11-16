@@ -41,19 +41,17 @@
  "rookie-values-text"
  {:template "rookie-three-values-text"
   :data {:background "radial-gradient(50% -16%, #4B4EC2 3%, #232B69 100%)"
+         :title-color ""
          :columns [{:url "/images/rookie-phone-1.png"
-                    :title {:name "Expand Your Clientele"
-                            :color "#"}
+                    :title {:name "Expand Your Clientele"}
                     :subtitle "Learn how our coaches expanded their business to offer services worldwide + train more athletes per week"}
 
                    {:url "/images/rookie-phone-2.png"
-                    :title {:name "Analyze Video"
-                            :color "#"}
+                    :title {:name "Analyze Video"}
                     :subtitle "Use video tools and capture your feedback to give your athelets a full analysis"}
 
                    {:url "/images/rookie-phone-3.png"
-                    :title  {:name "Grow Your Business"
-                             :color "#"}
+                    :title  {:name "Grow Your Business"}
                     :subtitle "See how our trainers grew their monthly profits and doubled their client base"}]}}
 
 

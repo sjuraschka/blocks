@@ -40,7 +40,7 @@
 
     [:h1
      {:padding-top "1em"
-      :color (get-in data [:title :color])
+      :color (data :title-color)
       :text-transform "uppercase"}]
 
 
