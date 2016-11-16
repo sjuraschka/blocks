@@ -244,10 +244,8 @@
  {:template "quote"
   :data    {:title {:text "Online Training Success"
                     :color "#7cbee9"}
-             :quote "I found Courtney's positivity and lust for life to be completely infectious. Her training protocols are
-                thorough and balanced and helped heal my body of all the imbalances I had from teaching various
-                fad exercise methods."
-             :name  "Christine, San Francisco"}}
+             :quote "Levs taught me how to lift properly and helped me gain muscle. The on-ice training allowed me to take my game to the next level."
+             :name  "Givani Smith, Detroit Red Wings Draft Pick"}}
 
  "intech-rookie-footer"
  {:template "multiple-logo-footer"
