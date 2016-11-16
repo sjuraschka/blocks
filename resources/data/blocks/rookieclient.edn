@@ -52,19 +52,19 @@
  {:template "rookie-three-values-text"
   :data     {:background "radial-gradient(50% -16%, #ec881b 3%, #ec881b 100%)"
              :title-color "#222"
-             :columns    [{:url      "/images/rookie-phone-1.png"
+             :columns    [{:url      "/images/coach-phone.png"
                            :title    {:name  "Commit to Powerlifting Coaching"}
                            :subtitle "Before we begin anything, we want to make sure your form and bath path are correct to
                               prevent any possible injuries or setbacks. Let's start at the beginning!"
                            :border   "1px solid rgba(155, 170, 170, 0.5)"}
 
-                          {:url      "/images/rookie-phone-2.png"
+                          {:url      "/images/coach-phone-1.png"
                            :title    {:name  "Record + Submit your Three Lifts"}
                            :subtitle "Let's check out your movement patterns for your squat, bench press and deadlift
                               (sumo or conventional)."
                            :border   "1px solid rgba(155, 170, 170, 0.5)"}
 
-                          {:url      "/images/rookie-phone-3.png"
+                          {:url      "/images/coach-phone-2.png"
                            :title    {:name  "Get Feedback + Improve"}
                            :subtitle "Because this method of coaching is online, using Rookie will allow me to make sure that
                               you're moving correctly. We will follow up with video reviews at the end of each training
@@ -201,17 +201,17 @@
  {:template "rookie-three-values-text"
   :data     {:background "radial-gradient(70% 90%, #7cbee9 7%, #273461 100%)"
              :title-color "#273461"
-             :columns    [{:url      "/images/rookie-phone-1.png"
+             :columns    [{:url      "/images/coach-phone.png"
                            :title    {:name  "Request a session"}
                            :subtitle "Tell your In-Tech trainers exactly what you are looking to improve"
                            :border   "1px solid rgba(155, 170, 170, 0.5)"}
 
-                          {:url      "/images/rookie-phone-2.png"
+                          {:url      "/images/coach-phone-1.png"
                            :title    {:name  "Record + Submit a Workout"}
                            :subtitle "Send your trainers game tape or workout footage."
                            :border   "1px solid rgba(155, 170, 170, 0.5)"}
 
-                          {:url      "/images/rookie-phone-3.png"
+                          {:url      "/images/coach-phone-2.png"
                            :title    {:name  "Get Feedback + Improve Your Game"}
                            :subtitle "Get detailed feedback and personalized workouts from your trainers"
                            :border   "none"}]}}
