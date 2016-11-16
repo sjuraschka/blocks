@@ -22,6 +22,21 @@
       :justify-content "space-between"
       :align-items "center"}
 
+
+     [:a.client
+      {:color (data :text-color)
+       :white-space "nowrap"
+       :height "1em"}
+
+      [:img
+       {:height (get-in data [:client :height])
+        :display "inline-block"
+        :vertical-align "middle"
+        :margin-right "0.5em" }]]
+
+
+
+
      [:h1.sub-text
       {:display "inline-block"
        :text-transform "uppercase"
@@ -31,15 +46,7 @@
        :margin-right "5px"
        :vertical-align "middle"}]
 
-    [:a.client
-     {:color (data :text-color)
-      :white-space "nowrap"}
 
-     [:img
-      {:height (data :height)
-       :display "inline-block"
-       :vertical-align "middle"
-       :margin-right "0.5em" }]]
 
 
      [:a.logo
@@ -81,7 +88,8 @@
   [:footer
    [:div.content
     [:div.upper
-    [:img.client {:src (get-in data [:client :image])}]
+    [:a.client
+     [:img.client {:src (get-in data [:client :image])}]]
     [:a.logo {:href (get-in data [:logo :url])}
      [:h1.sub-text (data :title)]
      [:img {:src (get-in data [:logo :image-url])}]]

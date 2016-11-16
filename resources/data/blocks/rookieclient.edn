@@ -137,7 +137,8 @@
              :height           "1em"
              :background-color "#222"
              :text-color       "#FFF"
-             :client           {:image "/images/courtney-white-logo.png"}
+             :client           {:image "/images/courtney-white-logo.png"
+                                :height ""}
              :menu             [{:text ""
                                  :url  ""
                                  :icon ""}
@@ -255,7 +256,8 @@
              :height           "1em"
              :background-color "#222"
              :text-color       "#FFF"
-             :client           {:image "/images/courtney-white-logo.png"}
+             :client           {:image "/images/in-tech-logo-white.png"
+                                :height "2rem"}
              :menu             [{:text ""
                                  :url  ""
                                  :icon ""}
