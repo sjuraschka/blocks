@@ -62,7 +62,7 @@
                  {:font-size "1.5em"}]
                 [:p
                  {:font-size "1.15em"
-                  :color "black"
+                  :color (get-in data [:sub-heading :mobile-color])
                   :width "20em"}]]])])
 
 (defn hero [data]
