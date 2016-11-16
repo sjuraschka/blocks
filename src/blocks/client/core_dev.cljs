@@ -1,7 +1,12 @@
 (ns blocks.client.core-dev
   (:require
+    [reagent.core :as reagent]
     [re-frame.core :refer [reg-event-fx
-                           dispatch]]
+                           reg-sub
+                           reg-event-db
+                           dispatch-sync
+                           dispatch
+                           subscribe]]
     [figwheel.client :as fig]
     [ajax.core :refer [GET]]
     [blocks.client.core :as core]))
@@ -19,16 +24,37 @@
                   (dispatch [:set-data (cljs.reader/read-string data)]))})
     {}))
 
+(reg-event-db
+  :set-data
+  (fn [_ [_ data]]
+    data))
+
+(reg-sub
+  :page
+  (fn [state _]
+    (state :page)))
+
 (fig/add-message-watch
   :edn-watcher
   (fn [{:keys [msg-name] :as msg}]
     (when (= msg-name :edn-files-changed)
       (dispatch [:fetch-data]))))
 
+
+(defn app-view []
+  (let [page (subscribe [:page])]
+    (fn []
+      [core/page-view @page])))
+
+(defn render []
+  (reagent/render [app-view]
+                  (js/document.getElementById "app")))
+
 (defn ^:export reload
   []
-  (core/render))
+  (render))
 
 (defn ^:export run
   []
-  (core/run))
+  (dispatch-sync [:set-data (core/get-data)])
+  (render))
