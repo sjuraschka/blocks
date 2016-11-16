@@ -211,12 +211,12 @@
                            :subtitle "Tell your In-Tech trainers exactly what you are looking to improve"
                            :border   "1px solid rgba(155, 170, 170, 0.5)"}
 
-                          {:url      "/images/coach-phone-1.png"
+                          {:url      "/images/hockey-phone-upload.png"
                            :title    {:name  "Record + Submit a Workout"}
                            :subtitle "Send your trainers game tape or workout footage."
                            :border   "1px solid rgba(155, 170, 170, 0.5)"}
 
-                          {:url      "/images/coach-phone-2.png"
+                          {:url      "/images/hockey-phone-review.png"
                            :title    {:name  "Get Feedback + Improve Your Game"}
                            :subtitle "Get detailed feedback and personalized workouts from your trainers"
                            :border   "none"}]}}
