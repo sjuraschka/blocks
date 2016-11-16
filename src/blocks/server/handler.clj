@@ -115,5 +115,6 @@
         prod-routes
         (not-found "404; Thank you visitor! But our page is in another castle!"))
       (wrap-resource "public")
+      (wrap-resource "data/assets")
       (wrap-content-type)
       (wrap-not-modified)))

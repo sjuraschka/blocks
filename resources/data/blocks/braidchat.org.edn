@@ -4,7 +4,7 @@
   :data {:title "Braid"
          :version "open source"
          :color "#fff"
-         :logo {:logo-url "/images/braid-logo-light.svg"
+         :logo {:logo-url "/braid/images/braid-logo-light.svg"
                 :color "#fff"}
          :menu [{:text "Github"
                  :url "https://github.com/braidchat/braid"
@@ -15,9 +15,9 @@
   :data {:heading {:text "Help us create a new way for groups to work together"
                    :size "2em"}
          :text "Braid is an open-source group messaging platform that goes beyond chatrooms to help teams work better together"
-         :background {:image-url "/images/hero-bg.png"
+         :background {:image-url "/braid/images/hero-bg.png"
                       :color "#80abc1"}
-         :featured-image {:url "/images/braid-screenshot-archer.png"}
+         :featured-image {:url "/braid/images/braid-screenshot-archer.png"}
          :button {:url "https://github.com/braidchat/braid"
                   :text "Learn More"
                   :colors {:text "#659ECA"

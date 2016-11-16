@@ -20,8 +20,8 @@
   :url "/"
   :meta {:title "Braid - Work Better Together"
          :description "Braid is a group chat application that promotes productive team communication, while still respecting each individual's need for focus. Instead of chatrooms, Braid takes a new approach: discrete conversations and tags."
-         :image "url(/images/braid-icon-256.png)"}
-  :favicon "/images/braid-favicon.png"
+         :image "url(/braid/images/braid-icon-256.png)"}
+  :favicon "/braid/images/braid-favicon.png"
   :colors {
            ;#d9e8ea  teal light    section-bg
            ;#65A8B6  teal          logo, section-bg
@@ -56,7 +56,7 @@
 
  {:domain "www.braidchat.com"
   :url "/pricing"
-  :favicon "/images/braid-favicon.png"
+  :favicon "/braid/images/braid-favicon.png"
   :styles {:fonts {:body {:name "Muli"
                           :source "google"
                           :weight 300}
@@ -69,7 +69,7 @@
 
  {:domain "www.braidchat.com"
   :url "/downloads"
-  :favicon "/images/braid-favicon.png"
+  :favicon "/braid/images/braid-favicon.png"
   :styles {:fonts {:body {:name "Muli"
                           :source "google"
                           :weight 300}
