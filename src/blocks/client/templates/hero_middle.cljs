@@ -65,9 +65,9 @@
                 :justify-content "center"
                 :align-items "center"}
                 [:h1
-                 {:font-size "1.5em"}]
+                 {:font-size "1.75em"}]
                 [:p
-                 {:font-size "1.15em"
+                 {:font-size "1.25em"
                   :color (get-in data [:sub-heading :mobile-color])
                   :width "20em"}]]])])
 
