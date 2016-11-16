@@ -22,6 +22,18 @@
          :description "Braid is a group chat application that promotes productive team communication, while still respecting each individual's need for focus. Instead of chatrooms, Braid takes a new approach: discrete conversations and tags."
          :image "url(/images/braid-icon-256.png)"}
   :favicon "/images/braid-favicon.png"
+  :colors {
+           ;#d9e8ea  teal light    section-bg
+           ;#65A8B6  teal          logo, section-bg
+           ;#384d51  teal dark     hero-h1, logo, section-bg
+           ;#5f6c73  teal dark     hero-h2
+           ;#f17130  orange        button
+           ;#dff600  orange        button hover
+           ;#f7f8f9  gray light
+           ;#ebeef0  gray darker
+           ;#777777  gray darkest  section-text
+           ;#ffffff  white         section-text, logo
+           }
   :styles {:fonts {:body {:name "Muli"
                           :source "google"
                           :weight 300}
