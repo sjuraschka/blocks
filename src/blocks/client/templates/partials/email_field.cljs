@@ -22,7 +22,7 @@
        {:display "block"}])]
 
    [:fieldset
-    {:box-shadow [[0 "1px" "2px" 0 "rgba(0,0,0,0.1)"]]
+    {:box-shadow [[0 "2px" "5px" 0 "rgba(167,167,167,0.45)"]]
      :display "inline-block"
      :border-radius "5px"
      :overflow "hidden"}
@@ -31,7 +31,7 @@
      {:padding "0 0.75em"
       :border "none"
       :box-sizing "border-box"
-      :background "#eee"
+      :background (get-in data [:form :background])
       :height "3rem"
       :vertical-align "top"
       :line-height "3rem"

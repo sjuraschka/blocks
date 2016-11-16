@@ -45,7 +45,7 @@
      (fontawesome-mixin \uf019)
      {:margin-right "0.5em"}]]
 
-   (email-field/styles (data :form))
+   (email-field/styles (data :form))]
 
    (at-media {:max-width "800px"}
              [:&

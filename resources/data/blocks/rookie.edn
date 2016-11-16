@@ -32,6 +32,7 @@
          :form {:prompt-text "Sign up for early access and be notified when we launch"
                 :placeholder "coach@example.com"
                 :autofocus true
+                :background "#fff"
                 :button {:text "Get Started"
                          :colors {:text "#fff"
                                   :bg "#232B69"

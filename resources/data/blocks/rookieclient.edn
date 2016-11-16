@@ -41,6 +41,7 @@
                            :sub-text    "The best video analysis offered by any online powerlifting coach."
                            :border      "#ccc"
                            :placeholder "athlete@example.com"
+                           :background "#eee"
                            :autofocus   true
                            :button      {:text   "Reserve Spot"
                                          :colors {:text      "#fff"
@@ -191,15 +192,17 @@
                            :border      "#ccc"
                            :placeholder "athlete@example.com"
                            :autofocus   true
+                           :background "#fff"
                            :button      {:text   "Reserve Spot"
                                          :colors {:text      "#fff"
                                                   :bg        "#7cbee9"
-                                                  :bg-hover  "#f78b00"
-                                                  :bg-active "#d87d08"}}}}}
+                                                  :bg-hover  "#273461"
+                                                  :bg-active "#273461"}}}}}
 
  "intech-rookie-values-text"
  {:template "rookie-three-values-text"
   :data     {:background "radial-gradient(70% 90%, #7cbee9 7%, #273461 100%)"
+             :header "How Derrell will work with you through Rookie"
              :title-color "#273461"
              :columns    [{:url      "/images/coach-phone.png"
                            :title    {:name  "Request a session"}
