@@ -19,6 +19,12 @@
     :background-repeat "no-repeat"
     :background-position (get-in data [:background :position] "right bottom")}
 
+   [:.content
+    {:display "flex"
+     :flex-direction "column"
+     :justify-content "center"
+     :align-items "center"}
+
    [:h1
     {:font-size (get-in data [:heading :size])
      :font-weight (get-in data [:heading :weight])
