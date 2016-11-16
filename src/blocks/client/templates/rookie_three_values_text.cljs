@@ -4,10 +4,9 @@
 
 (defn styles [data]
   [:.three-values-text
-   {:background     "#fff"
-    :box-sizing     "border-box"
-    :padding-bottom "1em"
-    :border-bottom  "1px solid #eee"}
+   {:background    "#fff"
+    :box-sizing    "border-box"
+    :border-bottom "1px solid #eee"}
 
    [:&::before
     {:content          "\"\""
@@ -28,10 +27,11 @@
      :flex-direction "column"
      :align-items    "center"}
 
-    [:.title {:font-size      "1.75em"
-              :box-sizing     "border-box"
-              :color          "#fff"
-              :padding-bottom "1.5em"}]
+    [:.title
+     {:font-size      "1.75em"
+      :box-sizing     "border-box"
+      :color          "#fff"
+      :padding-bottom "1.5em"}]
 
     [:.columns
      {:display         "flex"
@@ -40,12 +40,13 @@
       :width           "100vw"}
 
      [:.column
-      {:width      "30vw"
+      {:width          "30vw"
        :box-sizing     "border-box"
        :text-align     "center"
        :display        "flex"
        :flex-direction "column"
-       :align-items    "center"}
+       :align-items    "center"
+       :padding-bottom "1em"}
 
       [:h1.section-title
        {:padding-top    "1em"
@@ -53,11 +54,11 @@
         :text-transform "uppercase"}]
 
       [:p
-       {:color     "#696969"
+       {:color      "#696969"
         :box-sizing "border-box"
-        :padding   "1em 2em"
-        :width "28vw"
-        :font-size "0.9rem"}]
+        :padding    "1em 2em"
+        :width      "28vw"
+        :font-size  "0.9rem"}]
 
       [:a
        {:color     "blue"
@@ -73,23 +74,25 @@
               {:margin-top 0}
 
               [:.title
-               {:color       (data :title-color)
-                :text-align  "center"
-                :font-size   "1.3em"
-                :font-weight "bold"}]
+               {:color          (data :title-color)
+                :padding-bottom 0
+                :text-align     "center"
+                :font-size      "1.3em"
+                :font-weight    "bold"}]
 
               [:.columns
                {:flex-direction "column"
                 :width          "100vw"}
 
                [:.column
-                {:width "100vw"
-                 :justify-content "center"}
+                {:width           "100vw"
+                 :justify-content "center"
+                 :border-bottom   "1px solid #eee"
+                 :padding-top     "2em"}
 
                 [:p
-                 {:width "100%"
-                  :padding "1em 2em"
-                  :border-bottom "1px solid #eee"
+                 {:width         "100%"
+                  :padding       "1em 2em"
                   :margin-bottom "1em"}]]]])])
 
 (defn component [data]
