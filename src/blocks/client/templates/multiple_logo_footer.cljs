@@ -96,7 +96,7 @@
 
     [:div.payment-area
      [:h1.sub-text "We Accept"]
-     [:img.payment {:src "/images/payment.png"}]]]
+     [:img.payment {:src "/rookie_shared/images/payment.png"}]]]
 
      [:div.lower
     (into
