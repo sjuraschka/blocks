@@ -21,7 +21,7 @@
      :z-index          1}]
 
    [:.content
-    {:margin-top "-22.05em"
+    {:margin-top "-22.2em"
      :z-index    100
      :padding    "1.5em 4em 0em 4em"
      :box-sizing "border-box"
