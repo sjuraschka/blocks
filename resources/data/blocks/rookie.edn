@@ -19,76 +19,79 @@
  "rookie-hero"
  {:template "hero-middle"
   :data {:padding "12em"
-         :heading {:text "Grow your online\ncoaching business"
+         :heading {:text "A coaching platform\nmade for you"
                    :color "#232B69"
                    :size "2.3em"
                    :weight "bold"
                    :title-type "uppercase"}
-         :sub-heading {}
+         :sub-heading {:text "Train your athletes and grow\nyour business through Rookie"
+                       :color "#232B96"}
          :background {:image-url "/rookie/images/rookie-landing-page-hero.png"
+                      :mobile-url "/rookie/images/rookie-mobile-hero.png"
                       :color "#EAFAFC"
                       :size "cover"
                       :position "center top"}
-         :form {:prompt-text "Sign up for early access and be notified when we launch"
+         :form {:before {:text "Sign up for early access and be notified when we launch"}
                 :placeholder "coach@example.com"
                 :autofocus true
+                :background "#fff"
+                :post-submit-message "Thank you for signing up to Rookie. Check your email!"
                 :button {:text "Get Started"
                          :colors {:text "#fff"
                                   :bg "#232B69"
                                   :bg-hover "#454d87"
                                   :bg-active "#3D50CF"}}}}}
 
- "rookie-gradient"
- {:template "rookie-gradient"
-  :data {:images {:left {:url "/rookie/images/phone-value-1.png"}}}}
-
  "rookie-values-text"
  {:template "rookie-three-values-text"
-  :data {:columns [{:url "/rookie/images/rookie-phone-1.png"
-                    :title "Expand Your Clientele"
-                    :subtitle "Learn how our coaches expanded their business to offer services worldwide + train more athletes per week"}
+  :data {:background "radial-gradient(50% -16%, #4B4EC2 3%, #232B69 100%)"
+         :header "How you'll use Rookie with your Athletes"
+         :title-color "#232B69"
 
-                   {:url "/rookie/images/rookie-phone-2.png"
-                    :title "Analyze Video"
-                    :subtitle "Use video tools and capture your feedback to give your athelets a full analysis"}
+         :columns [{:url "/rookie_shared/images/coach-phone-1.png"
+                    :title {:name "Your athletes send training videos."}
+                    ;:subtitle "Learn how our coaches expanded their business to offer services worldwide + train more athletes per week"
+                    }
+
+                   {:url "/rookie_shared/images/coach-phone-2.png"
+                    :title {:name "You give them feedback."}
+                    ;:subtitle "Use video tools and capture your feedback to give your athelets a full analysis"
+                    }
 
                    {:url "/rookie/images/rookie-phone-3.png"
-                    :title "Grow Your Business"
-                    :subtitle "See how our trainers grew their monthly profits and doubled their client base"}]}}
-
+                    :title  {:name "You get paid."}
+                    ;:subtitle "See how our trainers grew their monthly profits and doubled their client base"
+                    }]}}
 
  "rookie-step-1"
  {:template "feature-highlight"
-  :data {:heading {:text "Pick a world-class skills development trainer"
-                   :color "#444"
-                   :step 1}
-         :background {:color "#FFF"}
-         :description {:text "Browse through hundreds of renowned basketball skills-development trainers in order to see their experience as well as what other athletes have to say about them"
+  :data {:heading {:text "Improve how you coach your athletes"
+                   :color "#444"}
+         :background {:color "#f1f4f5"}
+         :description {:text "Give thorough video feedback, assign workouts, and communicate with your athletes all through one platform."
                        :color "#777"}
-         :image {:image-url "/rookie/images/benefits-phone-front1@2x.png"
+         :image {:image-url "/rookie/images/rookie-sales-0.png"
                  :position "right"}}}
 
  "rookie-step-2"
  {:template "feature-highlight"
-  :data {:heading {:text "Start working with your trainer right away"
-                   :color "#444"
-                   :step 2}
+  :data {:heading {:text "Keep track of your athletes’ progress"
+                   :color "#444"}
          :background {:color "#f1f4f5"}
-         :description {:text "Do a professional level skills-assessment and set clear objectives for your training sessions. Send your trainers all the information they need in order to give you the most thorough feedback possible."
+         :description {:text "View detailed performance data about each of your athlete’s lifts and drills progression."
                        :color "#777"}
-         :image {:image-url "/rookie/images/benefits-phone-front2@2x.png"
+         :image {:image-url "/rookie/images/rookie-sales.png"
                  :position "left"}}}
 
 
  "rookie-step-3"
  {:template "feature-highlight"
-  :data {:heading {:text "Receive professional-level private training"
-                   :color "#444"
-                   :step 3}
-         :background {:color "#FFF"}
-         :description {:text "Get your game and drill film reviewed by professional skills development coaches and receive their world-class feedback en route to becoming a dominant basketball player. Also receive personalized skills development plans, athletic development plans, and much more..."
+  :data {:heading {:text "Access an endless client base"
+                   :color "#444"}
+         :background {:color "#f1f4f5"}
+         :description {:text " Attract and train athletes from all over the world."
                        :color "#777"}
-         :image {:image-url "/rookie/images/benefits-phone-front3@2x.png"
+         :image {:image-url "/rookie/images/rookie-sales-3.png"
                  :position "right"}}}
 
  "rookie-cta"

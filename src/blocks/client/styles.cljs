@@ -32,9 +32,9 @@
        :font-style "normal"})))
 
 (defn page-styles [data]
-  [fa-at-font-face
+  [(google-fonts-import data)
 
-   (google-fonts-import data)
+   fa-at-font-face
 
    [:body :input
     {:font-family [(str "\"" (get-in data [:styles :fonts :body :name]) "\"") "sans-serif"]
