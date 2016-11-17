@@ -99,7 +99,7 @@
            "braid-com-features"
            "braid-com-footer"]}
 
- {:domain "tryrookie.com"
+ {:domain "www.getrookie.com"
   :url "/"
   :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
          :description "rooke is..."
@@ -110,6 +110,7 @@
                    :headings {:name "Hind"
                               :source "google"
                               :weight 700}}}
+  :assets ["rookie"]
   :blocks ["rookie-header"
            "rookie-hero"
            "rookie-values-text"
