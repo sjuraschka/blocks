@@ -62,9 +62,10 @@
                          :headers {"X-Auth-Email" (env :cloudflare-email)
                                    "X-Auth-Key" (env :cloudflare-key)
                                    "Content-Type" "application/json"}
-                         :form-params {:type "CNAME"
-                                       :name public-domain
-                                       :content hidden-domain}})
+                         :body (json/write-str
+                                 {:type "CNAME"
+                                  :name public-domain
+                                  :content hidden-domain})})
                      :body
                      (json/read-str :key-fn keyword))]
     (if (not (response :success))
