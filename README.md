@@ -52,6 +52,11 @@ Set the following in `profiles.clj`:
      :cloudflare-key "..."}}}
 ```
 
+#### Install `phantomjs`
+
+Mac: `brew install phantomjs`
+Unix: `apt-get install phantomjs`
+
 #### Install `rsync`
 
 Mac: `brew install rsync`
