@@ -1,6 +1,9 @@
 (ns blocks.client.templates.partials.email-field
-  (:require [blocks.client.templates.mixins :refer [button-mixin fontawesome-mixin]]
-            [garden.stylesheet :refer [at-media]]))
+  (:require
+    [reagent.core :as r]
+    [blocks.client.templates.mixins :refer [button-mixin fontawesome-mixin]]
+    [garden.stylesheet :refer [at-media]]
+    [ajax.core :refer [POST]]))
 
 (defn styles [data]
   [:form
@@ -69,15 +72,32 @@
                 :min-width "9em"}]])])
 
 (defn component [data]
-  [:form
-   (when (get-in data [:before :text])
-     [:p.before (get-in data [:before :text])])
-   [:fieldset
-    [:input {:type "email"
-             :name "email"
-             :placeholder (get-in data [:placeholder])
-             :auto-focus (when (get-in data [:autofocus]) "autofocus")}]
-    [:input {:type "submit"
-             :value (get-in data [:button :text])}]]
-   (when (get-in data [:after :text])
-     [:p.after (get-in data [:after :text])])])
+  (let [email (r/atom "")
+        submitted? (r/atom false)
+        error-message (r/atom nil)]
+    (fn [data]
+      (if-not @submitted?
+        [:form {:on-submit (fn [e]
+                             (.preventDefault e)
+                             (if (re-matches #".*@.*\..*" @email)
+                               (do
+                                 (POST "/somewhere" {:params {:email @email}})
+                                 (reset! submitted? true))
+                               (reset! error-message "That doesn't look like an email. Please try again.")))}
+         (when (get-in data [:before :text])
+           [:p.before (get-in data [:before :text])])
+         [:fieldset
+          [:input {:type "text" ;"email"
+                   :name "email"
+                   :value @email
+                   :placeholder (get-in data [:placeholder])
+                   :auto-focus (when (get-in data [:autofocus]) "autofocus")
+                   :on-change (fn [e]
+                                (reset! email (.. e -target -value)))}]
+          [:input {:type "submit"
+                   :value (get-in data [:button :text])}]]
+         (when (get-in data [:after :text])
+           [:p.after (get-in data [:after :text])])
+         (when @error-message
+           [:p.error @error-message])]
+        [:div (data :post-submit-message)]))))
