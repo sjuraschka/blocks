@@ -66,7 +66,7 @@
  {:template "feature-highlight"
   :data {:heading {:text "Improve how you coach your athletes"
                    :color "#444"}
-         :background {:color "#FFF"}
+         :background {:color "#f1f4f5"}
          :description {:text "Give thorough video feedback, assign workouts, and communicate with your athletes all through one platform."
                        :color "#777"}
          :image {:image-url "/rookie/images/rookie-sales-0.png"
@@ -87,10 +87,10 @@
  {:template "feature-highlight"
   :data {:heading {:text "Access an endless client base"
                    :color "#444"}
-         :background {:color "#FFF"}
+         :background {:color "#f1f4f5"}
          :description {:text " Attract and train athletes from all over the world."
                        :color "#777"}
-         :image {:image-url "/rookie/images/benefits-phone-front3@2x.png"
+         :image {:image-url "/rookie/images/rookie-sales-3.png"
                  :position "right"}}}
 
  "rookie-cta"
