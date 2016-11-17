@@ -110,7 +110,8 @@
                    :headings {:name "Hind"
                               :source "google"
                               :weight 700}}}
-  :assets ["rookie"]
+  :assets ["rookie"
+           "rookie_shared"]
   :blocks ["rookie-header"
            "rookie-hero"
            "rookie-values-text"
