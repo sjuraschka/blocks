@@ -70,8 +70,13 @@ Unix: `apt-get install sshpass`
 
 ### The process:
 
-`lein repl`
-`(start! 6543)`
 `lein cljsbuild once prod`
+
+`lein repl`
+
+`(start! 6543)`
+
 `(require 'blocks.export.core)`
+
 `(blocks.export.core/release! "www.domain.com" "/")`
+
