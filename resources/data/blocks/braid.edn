@@ -109,7 +109,9 @@
  "braid-com-benefit-focus"
  {:template "feature-highlight"
   :data {:heading {:text "Stay In Flow"
-                   :color "#384d51"}
+                   :color "#384d51"
+                   :font-size "2.2em"
+                   :text-transform "none"}
          :background {:color "#FFF"}
          :description {:text "Most chat windows rob you of our focus. If you don't stay active"
                        :color "#777"}
