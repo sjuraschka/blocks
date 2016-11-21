@@ -13,6 +13,7 @@
     :justify-content "center"
     :align-items "center"
     :box-sizing "border-box"
+    :height (data :height)
     :background-color (get-in data [:background :color])
     :background-image (str "url(" (get-in data [:background :image-url]) ")")
     :background-size (get-in data [:background :size])
