@@ -19,4 +19,5 @@
     blocks.client.templates.rookie-three-values-text
     blocks.client.templates.pre-footer-menu
     blocks.client.templates.multiple-logo-footer
-    blocks.client.templates.quote))
+    blocks.client.templates.quote
+    blocks.client.templates.how-it-works))

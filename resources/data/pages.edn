@@ -112,12 +112,13 @@
                               :weight 700}}}
   :blocks ["rookie-header"
            "rookie-hero"
-           "rookie-values-text"
+           ;"rookie-values-text"
+           "rookie-how-it-works"
            "rookie-step-1"
            "rookie-step-2"
            "rookie-step-3"
-           "rookie-cta"
-           "rookie-pre-footer"
+
+           ;"rookie-pre-footer"
            "rookie-footer"]}
 
 
