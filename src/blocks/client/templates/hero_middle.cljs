@@ -66,11 +66,14 @@
                 :justify-content "center"
                 :align-items "center"}
                 [:h1
-                 {:font-size "1.75em"}]
+                 {:font-size "1.75em"
+                  :white-space "normal"
+                  :width "20rem"}]
                 [:p
                  {:font-size "1.25em"
                   :color (get-in data [:sub-heading :mobile-color])
-                  :width "20em"}]]])])
+                  :width "17rem"
+                  :white-space "normal"}]]])])
 
 (defn hero [data]
   [:section.hero-middle
