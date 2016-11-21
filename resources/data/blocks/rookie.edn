@@ -21,24 +21,25 @@
  "rookie-hero"
  {:template "hero-middle"
   :data {:padding "12em"
-         :heading {:text "A coaching platform\nmade for you"
+         :height "100vh"
+         :heading {:text "A coaching platform made for you"
                    :color "#232B69"
                    :size "2.3em"
                    :weight "bold"
                    :title-type "uppercase"}
-         :sub-heading {:text "Train your athletes and grow\nyour business through Rookie"
+         :sub-heading {:text "Train your athletes and grow your business through Rookie."
                        :color "#232B96"}
          :background {:image-url "/rookie/images/rookie-landing-page-hero.png"
                       :mobile-url "/rookie/images/rookie-mobile-hero.png"
                       :color "#EAFAFC"
                       :size "cover"
                       :position "center top"}
-         :form {:before {:text "Sign up for early access and be notified when we launch"}
+         :form {:before {:text "Sign up to reserve your spot on Rookie."}
                 :placeholder "coach@example.com"
                 :autofocus true
                 :background "#fff"
                 :post-submit-message "Thank you for signing up to Rookie. Check your email!"
-                :button {:text "Get Started"
+                :button {:text "Reserve Spot"
                          :colors {:text "#fff"
                                   :bg "#232B69"
                                   :bg-hover "#454d87"
@@ -64,6 +65,16 @@
                     :title  {:name "You get paid."}
                     ;:subtitle "See how our trainers grew their monthly profits and doubled their client base"
                     }]}}
+
+ "rookie-how-it-works"
+ {:template "how-it-works"
+  :data {:background "#fff"
+         :columns[{:title "Receive videos from your athletes"
+                   :subtitle "Learn How Athletes use Rookie"}
+                  {:title "Give feedback with our video editor"
+                   :subtitle "Learn about the Coach Editor"}
+                  {:title "Get paid automatically with Rookie"
+                   :subtitle "How Our Coaches Grew Their Business"}]}}
 
  "rookie-step-1"
  {:template "feature-highlight"
