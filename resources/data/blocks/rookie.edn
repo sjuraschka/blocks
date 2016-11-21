@@ -3,12 +3,14 @@
  "rookie-header"
  {:template "header"
   :data {:color "#b3b3b3"
-         :padding "1.15em"
+         :padding "0.75em"
+         :position "fixed"
          :overlay? true
          :logo {:image-url "/rookie/images/rookie-navy-logo.svg"
                 :url "./"}
          :height "1.25rem"
          :background {:color "#fff"}
+         :shadow "0px 0px 10px 0px rgba(0, 0, 0, 0.12)"
          :menu [{:text "647-267-5292"
                  :url "tel:6472675292"
                  :icon \uf095}
