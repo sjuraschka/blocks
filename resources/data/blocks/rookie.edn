@@ -111,7 +111,7 @@
  {:template "cta"
   :data {:heading {:text "Sign up for early access"}
          :description {:text "If accepted you will receive an email inviting you to use the site."}
-         :background {:color "#f1f2fd"}
+         :background {:color "#fff"}
          :form {:prompt-text "Sign up for early access and be notified when we launch"
                 :placeholder "coachr@example.com"
                 :button {:text "Get Invited"
