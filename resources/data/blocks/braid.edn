@@ -119,7 +119,9 @@
  "braid-com-benefit-deep-integrations"
  {:template "feature-highlight"
   :data {:heading {:text "Deep Integrations"
-                   :color "#384d51"}
+                   :color "#384d51"
+                   :font-size "2.2em"
+                   :text-transform "none"}
          :background {:color "#d9e8ea"}
          :description {:text "We've built Braid so it is easy to integrate the tools that are most important to you."
                        :color "#777"}
