@@ -113,19 +113,10 @@
          :image {:image-url "/rookie/images/rookie-sales-3.png"
                  :position "right"}}}
 
- "rookie-cta"
- {:template "cta"
-  :data {:heading {:text "Sign up for early access"}
-         :description {:text "If accepted you will receive an email inviting you to use the site."}
-         :background {:color "#fff"}
-         :form {:prompt-text "Sign up for early access and be notified when we launch"
-                :placeholder "coachr@example.com"
-                :button {:text "Get Invited"
-                         :color "#fff"
-                         :colors {:text "#fff"
-                                  :bg "#FF8043"
-                                  :bg-hover "#FF8060"
-                                  :bg-active "#FF8143"}}}}}
+ "rookie-testimonial"
+ {:template "image-testimonial"
+  :data {:heading ""}}
+
 
 
  "rookie-pre-footer"
