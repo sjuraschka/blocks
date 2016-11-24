@@ -114,12 +114,13 @@
            "rookie_shared"]
   :blocks ["rookie-header"
            "rookie-hero"
-           "rookie-values-text"
+           ;"rookie-values-text"
+           "rookie-how-it-works"
            "rookie-step-1"
            "rookie-step-2"
            "rookie-step-3"
-           "rookie-cta"
-           "rookie-pre-footer"
+           "rookie-testimonial"
+           ;"rookie-pre-footer"
            "rookie-footer"]}
 
 

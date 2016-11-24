@@ -7,7 +7,9 @@
 (defn styles [data]
   [:.feature-highlight
    {:padding pad
-    :background (get-in data [:background :color])}
+    :background (get-in data [:background :color])
+    ;:border-bottom "1px solid #eee"
+    }
 
    [:.content
     {:display "flex"
@@ -27,12 +29,13 @@
    [:.text
     {:min-width "15em"
      :max-width "30em"
-     :flex-basis "50%"
+     :flex-basis "30%"
      :margin "3em 0"}]
 
    [:h1
     {:color (get-in data [:heading :color])
-     :font-size "2.2em"
+     :font-size (get-in data [:heading :font-size])
+     :text-transform (get-in data [:heading :text-transform])
      :margin-bottom "0.5em"
      :position "relative"
      :z-index 0}
@@ -57,8 +60,9 @@
     {:color (get-in data [:description :color])}]
 
    [:img
-    {:max-height "50vh"
-     :max-width "20em"}]
+    {;:max-height "50vh"
+     :max-width "35em"
+     }]
 
    (at-media {:max-width "575px"}
      [:.content.left :.content.right

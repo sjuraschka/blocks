@@ -17,11 +17,13 @@
     {:display         "flex"
      :width           "100%"
      :max-width       "100%"
+     :position        (data :position)
      :padding         (data :padding)
      :box-sizing      "border-box"
      :background      (get-in data [:background :color])
      :justify-content "space-between"
-     :align-items     "center"}
+     :align-items     "center"
+     :box-shadow  (data :shadow)}
 
     [:.logo
      {:color       (get-in data [:logo :color])

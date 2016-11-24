@@ -14,7 +14,8 @@
      :margin "0.5em"}]
 
    [:p.before
-    {:color (get-in data [:before :color])}]
+    {:color (get-in data [:before :color])
+     :font-size "1em"}]
 
    [:p.after
     {:color (get-in data [:after :color])}
@@ -84,10 +85,9 @@
                                  (POST "/somewhere" {:params {:email @email}})
                                  (reset! submitted? true))
                                (reset! error-message "That doesn't look like an email. Please try again.")))}
-         (when (get-in data [:before :text])
-           [:p.before (get-in data [:before :text])])
+
          [:fieldset
-          [:input {:type "text" ;"email"
+          [:input {:type "email"
                    :name "email"
                    :value @email
                    :placeholder (get-in data [:placeholder])
@@ -99,5 +99,7 @@
          (when (get-in data [:after :text])
            [:p.after (get-in data [:after :text])])
          (when @error-message
-           [:p.error @error-message])]
+           [:p.error @error-message])
+         (when (get-in data [:before :text])
+           [:p.before (get-in data [:before :text])])]
         [:div (data :post-submit-message)]))))
