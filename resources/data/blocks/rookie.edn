@@ -39,6 +39,10 @@
                 :autofocus true
                 :background "#fff"
                 :post-submit-message "Thank you for signing up to Rookie. Check your email!"
+                :ajax {:method :put
+                       :action "http://localhost:6789/signup"
+                       :params {:coach-id "e773193b-54c2-4dc1-b946-cd76af371838"}}
+
                 :button {:text "Reserve Spot"
                          :colors {:text "#fff"
                                   :bg "#232B69"
