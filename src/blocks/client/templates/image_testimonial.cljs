@@ -7,60 +7,69 @@
 
 (defn styles [data]
   [:.image-testimonial
-   {:box-sizing    "border-box"
-    :border-bottom "1px solid #eee"
-    :position "relative"
-    :display "flex"
-    :justify-content "flex-end"
+   {:box-sizing       "border-box"
+    :border-bottom    "1px solid #eee"
+    :position         "relative"
+    :display          "flex"
+    :justify-content  "flex-end"
     :background-image "linear-gradient(45deg, #9BFFF3 27%, #AEEAE6 100%)"
-    :width "100vw"
-    :min-height "464px"}
+    :width            "100vw"
+    :min-height       "400px"
+    }
 
-    [:img
-     {:position "absolute"
-      :height "100%"
-      :left 0
-      :bottom 0}]
+   [:.image
+    {:background-image  (str "url(" (get-in data [:background :image-url]) ")")
+     :background-repeat "no-repeat"
+     :position          "absolute"
+     :height            "100%"
+     :width             "700px"
+     :left              0
+     :bottom            0}]
 
 
-    [:.testimonial
-     {:box-sizing "border-box"
-      :position "relative"
-      :width "40vw"
-      :display "flex"
-      :flex-direction "column"
-      :padding "2em"
-      :align-items "flex-start"
-      :justify-content "center"
-      :color "#232b69"}
+   [:.testimonial
+    {:box-sizing      "border-box"
+     :position        "relative"
+     :width           "40vw"
+     :display         "flex"
+     :flex-direction  "column"
+     :padding         "2em"
+     :align-items     "flex-start"
+     :justify-content "center"
+     :color           "#232b69"}
 
-     [:.title
-      {:font-size      "1.75em"
-       :padding-bottom "1.5rem"
-       :text-transform "uppercase"}]
+    [:.title
+     {:font-size      "1.75em"
+      :padding-bottom "1.5rem"
+      :text-transform "uppercase"}]
 
-     [:.subtitle
-      {:max-width "30rem"
-       :font-size "0.8rem"
-       :text-align "left"}]]
+    [:.subtitle
+     {:max-width  "30rem"
+      :font-size  "0.8rem"
+      :text-align "left"}]]
 
    (at-media {:max-width "800px"}
-      [:&
-       [:img]
-       [:.testimonial
-        {:background "rgba(240, 240, 240, 0.55)"
-         :width "100vw"}]])
+             [:&
+              [:.image]
+              [:.testimonial
+               {:background "rgba(240, 240, 240, 0.55)"
+                :width      "100vw"}]])
 
+   (at-media {:max-width "450px"}
+             [:&
 
-   ])
+              [:.image
+               {:background-image (str "url(" (get-in data [:background :mobile-url]) ")")}]
+
+              ])])
 
 (defn component [data]
   [:div.image-testimonial
-    [:img {:src "/rookie/images/derrell-testimonial.png"}]
+   [:div.image]
 
-    [:div.testimonial
-     [:h1.title "\"With my USA hockey combines I now train participants beyond the one weekend a year I see them in person.\""]
-     [:p.subtitle "Derrell Levy, In-Tech High Performance Training"]]])
+   [:div.testimonial
+    [:h1.title "\"With my USA hockey combines I now train participants beyond the one weekend a year I see them in person.\""]
+    [:p.subtitle "Derrell Levy, In-Tech High Performance Training"]]])
 
 
 (defmethod template "image-testimonial" [_]
