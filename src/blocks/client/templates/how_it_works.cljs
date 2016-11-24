@@ -4,13 +4,12 @@
             [blocks.client.templates.partials.email-field :as email-field]
             [garden.stylesheet :refer [at-media]]))
 
-
 (defn styles [data]
   [:.how-it-works
    {:background    "#fff"
     :box-sizing    "border-box"
     :border-bottom "1px solid #eee"
-    :height "115vh"}
+    :height        "115vh"}
 
    [:&::before
     {:content          "\"\""
@@ -23,13 +22,13 @@
 
    [:.content
     {:margin-top     "-55vh"
-     :z-index 2
+     :z-index        2
      :box-sizing     "border-box"
      :width          "100vw"
      :display        "flex"
      :flex-direction "column"
      :align-items    "center"
-     :color "#fff"}
+     :color          "#fff"}
 
     [:.title
      {:font-size      "1.75em"
@@ -39,17 +38,17 @@
       :text-transform "uppercase"}]
 
     [:.subtitle
-     {:max-width "30em"
+     {:max-width  "30em"
       :text-align "center"}]
 
     [:.button
-     {:background "#232B69"
-      :box-shadow "0px 0px 10px 0px rgba(223,222,222,0.09)"
-      :border-radius "5px"
-      :margin "1.5rem"
-      :padding "0.75rem 3rem"
-      :font-weight "bolder"
-      :font-size "0.75rem"
+     {:background     "#232B69"
+      :box-shadow     "0px 0px 10px 0px rgba(223,222,222,0.09)"
+      :border-radius  "5px"
+      :margin         "1.5rem"
+      :padding        "0.75rem 3rem"
+      :font-weight    "bolder"
+      :font-size      "0.75rem"
       :text-transform "uppercase"}]
 
     [:img
@@ -66,6 +65,7 @@
      [:.column
       {:width          "30vw"
        :box-sizing     "border-box"
+       :margin         "0 0.5em"
        :text-align     "center"
        :display        "flex"
        :flex-direction "column"
@@ -73,30 +73,42 @@
        :padding-bottom "1em"}
 
       [:.step
-       {:font-size "0.8em"
-        :color "#616161"
+       {:font-size      "0.8em"
+        :color          "#616161"
         :text-transform "uppercase"
-        :border-radius "5px"
-        :border "1px solid #dfdfdf"
-        :padding "0.75rem"}]
+        :border-radius  "5px"
+        :border         "1px solid #dfdfdf"
+        :padding        "0.75rem"}]
 
-      [:.subtitle {:color "#616161"
+      [:.subtitle {:color     "#616161"
                    :font-size "0.75em"
-                   :padding "1em"}
+                   :padding   "1em"}
        [:&::after
         (fontawesome-mixin \uf105)
         {:padding-left "0.5em"
-         :font-size "0.65em"}]]]]]
+         :font-size    "0.65em"}]]]]]
 
-   (at-media {:max-width "900px"}
+   (at-media {:max-width "840px"}
 
-             [:&::before]
+             [:&
+              {:height "100vh"}]
+
+             [:&::before
+              {:height "100vh"}]
 
              [:.content
-              {}
+              {:margin-top "-80vh"}
 
-              [:img {:width "80vw"
-                    :height "initial"}]
+              [:.title
+               {:max-width "16em"}]
+
+              [:.subtitle
+               {:max-width "20em"}]
+
+              [:img {:width      "80vw"
+                     :height     "initial"
+                     :min-width  "368px"
+                     :min-height "208.55px"}]
 
               [:.title
                {:padding-bottom 0
@@ -108,22 +120,10 @@
               [:p.subtitle
                {:color "#blue"}]
 
-
               [:.columns
-               {:flex-direction "column"
-                :width          "100vw"}
-
-               [:.column
-                {:width           "100vw"
-                 :justify-content "center"
-                 :border-bottom   "1px solid #eee"
-                 :padding-top     "2em"}
-
-
-                [:p
-                 {:width         "100%"
-                  :padding       "1em 2em"
-                  :margin-bottom "1em"}]]]])])
+               {:display "none"
+                :width   "100vw"
+                :height  "100vh"}]])])
 
 (defn component [data]
   [:div.how-it-works
@@ -133,17 +133,13 @@
     [:div.button "Learn How It Works"]
     [:img {:src "/rookie/images/macbook-rookie-home.png"}]
 
-     (into
-       [:div.columns]
-       (for [column (data :columns)]
-         [:div.column
-          [:h1.step (column :title)]
-          [:p.subtitle (column :subtitle)]]))]])
-
+    (into
+      [:div.columns]
+      (for [column (data :columns)]
+        [:div.column
+         [:h1.step (column :title)]
+         [:p.subtitle (column :subtitle)]]))]])
 
 (defmethod template "how-it-works" [_]
   {:css       styles
    :component component})
-
-
-
