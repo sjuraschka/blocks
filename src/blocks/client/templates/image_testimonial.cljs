@@ -8,7 +8,6 @@
 (defn styles [data]
   [:.image-testimonial
    {:box-sizing       "border-box"
-    :border-bottom    "1px solid #eee"
     :position         "relative"
     :display          "flex"
     :justify-content  "flex-end"
