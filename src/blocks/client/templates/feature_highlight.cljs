@@ -7,9 +7,7 @@
 (defn styles [data]
   [:.feature-highlight
    {:padding pad
-    :background (get-in data [:background :color])
-    ;:border-bottom "1px solid #eee"
-    }
+    :background (get-in data [:background :color])}
 
    [:.content
     {:display "flex"
@@ -19,12 +17,12 @@
 
     [:&.right
      [:.text
-      {:margin-right "3em"}]]
+      {:margin-right "1em"}]]
 
     [:&.left
      {:flex-direction "row-reverse"}
      [:.text
-      {:margin-left "6em"}]]]
+      {:margin-left "1em"}]]]
 
    [:.text
     {:min-width "15em"
@@ -60,9 +58,7 @@
     {:color (get-in data [:description :color])}]
 
    [:img
-    {;:max-height "50vh"
-     :max-width "35em"
-     }]
+    {:max-width "32em"}]
 
    (at-media {:max-width "575px"}
      [:.content.left :.content.right
