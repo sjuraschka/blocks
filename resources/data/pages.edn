@@ -22,7 +22,7 @@
          :description "Braid is a group chat application that promotes productive team communication, while still respecting each individual's need for focus. Instead of chatrooms, Braid takes a new approach: discrete conversations and tags."
          :image "url(/braid/images/braid-icon-256.png)"}
   :favicon "/braid/images/braid-favicon.png"
-  :colors {
+  :colors {}
            ;#d9e8ea  teal light    section-bg
            ;#65A8B6  teal          logo, section-bg
            ;#384d51  teal dark     hero-h1, logo, section-bg
@@ -33,7 +33,7 @@
            ;#ebeef0  gray darker
            ;#777777  gray darkest  section-text
            ;#ffffff  white         section-text, logo
-           }
+
   :styles {:fonts {:body {:name "Muli"
                           :source "google"
                           :weight 300}
@@ -162,8 +162,8 @@
            "intech-rookie-quote"
            "intech-rookie-footer"]}
 
- {:domain "tryrookie.com"
-  :url "/how-it-works"
+ {:domain "www.getrookie.com"
+  :url "/how-it-works/"
   :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
          :description "rooke is..."
          :image "url ()"}
@@ -181,8 +181,8 @@
            "rookie-product-feature-3"
            "rookie-product-feature-5"
            "how-rookie-testimonial"
-           "how-it-works-rookie-footer"]}
+           "how-it-works-rookie-footer"]}]
 
 
 
- ]
+

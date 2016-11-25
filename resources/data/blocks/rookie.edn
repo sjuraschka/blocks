@@ -56,19 +56,19 @@
              :title-color "#232B69"
 
              :columns     [{:url   "/rookie_shared/images/coach-phone-1.png"
-                            :title {:name "Your athletes send training videos."}
+                            :title {:name "Your athletes send training videos."}}
                             ;:subtitle "Learn how our coaches expanded their business to offer services worldwide + train more athletes per week"
-                            }
+
 
                            {:url   "/rookie_shared/images/coach-phone-2.png"
-                            :title {:name "You give them feedback."}
+                            :title {:name "You give them feedback."}}
                             ;:subtitle "Use video tools and capture your feedback to give your athelets a full analysis"
-                            }
+
 
                            {:url   "/rookie/images/rookie-phone-3.png"
-                            :title {:name "You get paid."}
+                            :title {:name "You get paid."}}]}}
                             ;:subtitle "See how our trainers grew their monthly profits and doubled their client base"
-                            }]}}
+
 
  "rookie-how-it-works"
  {:template "how-it-works"
@@ -267,6 +267,6 @@
                                  :icon \uf095}
                                 {:text "hi@tryrookie.com"
                                  :url  "mailto:hi@tryrookie.com"
-                                 :icon \uf003}]}}
+                                 :icon \uf003}]}}}
 
- }
+

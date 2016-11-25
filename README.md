@@ -72,7 +72,7 @@ Unix: `apt-get install sshpass`
 
 `lein cljsbuild once prod`
 
-`lein repl`
+`lein with-profiles +bloom repl`
 
 `(start! 6543)`
 

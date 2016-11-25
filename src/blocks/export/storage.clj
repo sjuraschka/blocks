@@ -74,9 +74,10 @@
                      "-e" (str "sshpass -p " password " ssh -l " user)
                      directory
                      (str user "@" host ":/www/"))]
+      (println result)
       (-> result
           :out
           (string/split #"\n")
-          (->> (map (fn [f]
-                         (last (re-matches #"<.* (.*)" f))))
+          (->> (map (fn [f
+                         (last (re-matches #"<.* (.*)" f))]))
                (remove nil?))))))
