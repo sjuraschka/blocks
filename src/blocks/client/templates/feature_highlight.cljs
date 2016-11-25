@@ -17,12 +17,12 @@
 
     [:&.right
      [:.text
-      {:margin-right "1em"}]]
+      {:margin-right (get-in data [:spacing :right])}]]
 
     [:&.left
      {:flex-direction "row-reverse"}
      [:.text
-      {:margin-left "1em"}]]]
+      {:margin-left (get-in data [:spacing :left])}]]]
 
    [:.text
     {:min-width "15em"

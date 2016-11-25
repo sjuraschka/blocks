@@ -112,13 +112,11 @@
                               :weight 700}}}
   :blocks ["rookie-header"
            "rookie-hero"
-           ;"rookie-values-text"
            "rookie-how-it-works"
            "rookie-step-1"
            "rookie-step-2"
            "rookie-step-3"
            "rookie-testimonial"
-           ;"rookie-pre-footer"
            "rookie-footer"]}
 
 
@@ -157,4 +155,28 @@
            "intech-rookie-values-text"
            "intech-rookie-quote"
            "intech-rookie-footer"]}
+
+ {:domain "tryrookie.com"
+  :url "/how-it-works"
+  :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
+         :description "rooke is..."
+         :image "url ()"}
+  :styles {:fonts {:body {:name "Hind"
+                          :source "google"
+                          :weight 400}
+                   :headings {:name "Hind"
+                              :source "google"
+                              :weight 700}}}
+
+  :blocks ["how-rookie-header"
+           "title-section-rookie"
+           "rookie-product-feature-1"
+           "rookie-product-feature-2"
+           "rookie-product-feature-3"
+           "rookie-product-feature-5"
+           "how-rookie-testimonial"
+           "how-it-works-rookie-footer"]}
+
+
+
  ]
