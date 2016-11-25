@@ -1,5 +1,6 @@
 (ns blocks.client.templates.footer
-  (:require [blocks.client.template :refer [template]]))
+  (:require [blocks.client.template :refer [template]]
+            [garden.stylesheet :refer [at-media]]))
 
 (def pad "3rem")
 
@@ -42,7 +43,8 @@
        :letter-spacing "0.1em"}]]
 
     [:nav
-     {:text-align "right"}
+     {:text-align "right"
+      :display "flex"}
 
      [:a
       {:color (data :text-color)
@@ -65,7 +67,12 @@
         :border [["1px" "solid" (data :text-color)]]
         :border-radius "0.25em"
         :height "2em"
-        :padding "0 0.5em" }]]]]])
+        :padding "0 0.5em" }]]]]
+
+   (at-media {:max-width "500px"}
+             [:nav
+              {:flex-direction "column"
+               :align-items "flex-start"}])])
 
 (defn view [data]
   [:footer
