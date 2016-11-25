@@ -35,7 +35,8 @@
       :box-sizing     "border-box"
       :color          "#fff"
       :padding-bottom "1.5rem"
-      :text-transform "uppercase"}]
+      :text-transform "uppercase"
+      :text-decoration "none"}]
 
     [:.subtitle
      {:max-width  "30em"
@@ -47,9 +48,14 @@
       :border-radius  "5px"
       :margin         "1.5rem"
       :padding        "0.75rem 3rem"
+      :color "#fff"
+      :text-decoration "none"
       :font-weight    "bolder"
       :font-size      "0.75rem"
-      :text-transform "uppercase"}]
+      :text-transform "uppercase"}
+
+     [:&:hover
+      {:background (get-in data [:button :bg-hover])}]]
 
     [:img
      {:height "60vh"}]
@@ -72,7 +78,15 @@
        :align-items    "center"
        :padding-bottom "1em"}
 
-      [:.step
+      [:a
+       {:text-decoration "none"
+        :color "#616161"}
+
+       [:&:hover
+        {:background (get-in data [:detail-button :bg-hover])}]
+
+
+       [:.step
        {:font-size      "0.8em"
         :color          "#616161"
         :text-transform "uppercase"
@@ -86,7 +100,7 @@
        [:&::after
         (fontawesome-mixin \uf105)
         {:padding-left "0.5em"
-         :font-size    "0.65em"}]]]]]
+         :font-size    "0.65em"}]]]]]]
 
    (at-media {:max-width "840px"}
 
@@ -130,15 +144,15 @@
    [:div.content
     [:h1.title "How you'll use Rookie with your athletes"]
     [:p.subtitle "Whether your clients are in the local gym, on social media,\nor across the globe, Rookie will help you train them."]
-    [:div.button "Learn How It Works"]
+    [:a.button {:href "./how-it-works"} "Learn How It Works"]
     [:img {:src "/rookie/images/macbook-rookie-home.png"}]
 
     (into
       [:div.columns]
       (for [column (data :columns)]
         [:div.column
-         [:h1.step (column :title)]
-         [:p.subtitle (column :subtitle)]]))]])
+         [:a {:href (column :url)} [:h1.step (column :title)]
+             [:p.subtitle (column :subtitle)]]]))]])
 
 (defmethod template "how-it-works" [_]
   {:css       styles
