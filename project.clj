@@ -10,7 +10,9 @@
                  [compojure "1.5.1"]
 
                  ; export
+                 [me.raynes/fs "1.4.6"]
                  [environ "1.0.3"]
+                 [org.clojure/data.json "0.2.6"]
 
                  ; client-side
                  [org.clojure/clojurescript "1.9.293"]

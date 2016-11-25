@@ -99,7 +99,7 @@
            "braid-com-features"
            "braid-com-footer"]}
 
- {:domain "tryrookie.com"
+ {:domain "www.getrookie.com"
   :url "/"
   :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
          :description "rooke is..."
@@ -110,6 +110,8 @@
                    :headings {:name "Hind"
                               :source "google"
                               :weight 700}}}
+  :assets ["rookie"
+           "rookie_shared"]
   :blocks ["rookie-header"
            "rookie-hero"
            "rookie-how-it-works"
@@ -120,7 +122,7 @@
            "rookie-footer"]}
 
 
- {:domain "courtney.tryrookie.com"
+ {:domain "courtney.getrookie.com"
   :url "/"
   :meta {:title "Rookie - One-on-One Video Training from Renowned Skills Development Coaches."
          :description "Train with Courtney on Rookie"
@@ -131,14 +133,16 @@
                    :headings {:name "Abel"
                               :source "google"
                               :weight 700}}}
-
+  :assets ["rookie_courtney"
+           "rookie_shared"
+           "rookie"]
   :blocks ["client-rookie-header"
            "client-rookie-hero"
            "client-rookie-values-text"
            "client-rookie-quote"
            "client-rookie-footer"]}
 
- {:domain "intech.tryrookie.com"
+ {:domain "intech.getrookie.com"
   :url "/"
   :meta {:title "Rookie - One-on-One Video Training from Renowned Skills Development Coaches."
          :description "Train with INTECH on Rookie"
@@ -149,7 +153,9 @@
                    :headings {:name "Roboto"
                               :source "google"
                               :weight 700}}}
-
+  :assets ["rookie_intech"
+           "rookie_shared"
+           "rookie"]
   :blocks ["intech-rookie-header"
            "intech-rookie-hero"
            "intech-rookie-values-text"
