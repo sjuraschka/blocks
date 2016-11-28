@@ -80,7 +80,7 @@
       (if-not @submitted?
         [:form {:on-submit (fn [e]
                              (.preventDefault e)
-                             (if (not (re-matches #".*@.*\..*" @email))
+                             (if (not (re-matches #".+@.+\..+" @email))
                                (reset! error-message "That doesn't look like an email. Please try again.")
                                (ajax-request {:method (get-in data [:ajax :method])
                                               :uri (get-in data [:ajax :action])
