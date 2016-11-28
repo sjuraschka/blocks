@@ -19,7 +19,7 @@
 
 (def fa-at-font-face
   (let [version "4.7.0"
-        fa-cdn-url (str "https://maxcdn.bootstrapcdn.com/font-awesome/" version)]
+        fa-cdn-url (str "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/" version)]
     (at-font-face
       {:font-family "FontAwesome"
        :src [(str "local('FontAwesome')")
