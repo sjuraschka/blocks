@@ -43,7 +43,7 @@
                            :placeholder "athlete@example.com"
                            :background "#eee"
                            :autofocus   true
-                           :button      {:text   "Reserve Spot"
+                           :button      {:text   "Reserve Your Spot"
                                          :colors {:text      "#fff"
                                                   :bg        "#f79501"
                                                   :bg-hover  "#f78b00"
