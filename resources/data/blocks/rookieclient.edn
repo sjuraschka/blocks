@@ -43,6 +43,9 @@
                            :placeholder "athlete@example.com"
                            :background "#eee"
                            :autofocus   true
+                           :ajax        {:method :put
+                                         :action "https://athlete.getrookie.com/signup"
+                                         :params {:coach-id "TODO"}}
                            :button      {:text   "Reserve Your Spot"
                                          :colors {:text      "#fff"
                                                   :bg        "#f79501"
@@ -195,6 +198,9 @@
                            :placeholder "athlete@example.com"
                            :autofocus   true
                            :background "#fff"
+                           :ajax        {:method :put
+                                         :action "https://athlete.getrookie.com/signup"
+                                         :params {:coach-id "TODO"}}
                            :button      {:text   "Reserve Spot"
                                          :colors {:text      "#fff"
                                                   :bg        "#7cbee9"
