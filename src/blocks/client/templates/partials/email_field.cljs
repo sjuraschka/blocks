@@ -113,8 +113,7 @@
         (if @submitted?
           [:div (data :post-submit-message)]
           [:form {:class (str (when @loading? "loading") " "
-                              (when @error-message "error") " "
-                              "loading")
+                              (when @error-message "error") " ")
                   :on-submit (fn [e]
                                (.preventDefault e)
                                (if (not (re-matches #".+@.+\..+" @email))
