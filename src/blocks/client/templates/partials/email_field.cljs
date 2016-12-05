@@ -3,7 +3,9 @@
     [reagent.core :as r]
     [blocks.client.templates.mixins :refer [button-mixin fontawesome-mixin]]
     [garden.stylesheet :refer [at-media]]
-    [ajax.core :refer [ajax-request keyword-request-format keyword-response-format]]))
+    [ajax.core :refer [ajax-request keyword-request-format keyword-response-format]])
+  (:import
+    [goog.string]))
 
 (defn styles [data]
   [:form
@@ -80,13 +82,13 @@
       (if-not @submitted?
         [:form {:on-submit (fn [e]
                              (.preventDefault e)
-                             (if (not (re-matches #".*@.*\..*" @email))
+                             (if (not (re-matches #".+@.+\..+" @email))
                                (reset! error-message "That doesn't look like an email. Please try again.")
                                (ajax-request {:method (get-in data [:ajax :method])
                                               :uri (get-in data [:ajax :action])
                                               :params (merge
                                                         (get-in data [:ajax :params])
-                                                        {:email @email})
+                                                        {:email (goog.string.urlEncode @email)})
                                               ; allowed formats: transit, json, text, raw, url
                                               :format (keyword-request-format (get-in data [:ajax :request-format] :raw) {})
                                               ; allowed formats: transit, json, text, raw, detect
