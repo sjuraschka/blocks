@@ -71,7 +71,7 @@
                      "--delete"
                      "--delete-excluded"
                      "--exclude" "*.DS_Store"
-                     "-e" (str "sshpass -p " password " ssh -l " user)
+                     "-e" (str "sshpass -p " password " ssh -o PubkeyAuthentication=no -l " user )
                      directory
                      (str user "@" host ":/www/"))]
       (println result)
