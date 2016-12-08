@@ -101,8 +101,8 @@
 
  {:domain "www.getrookie.com"
   :url "/"
-  :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
-         :description "rooke is..."
+  :meta {:title "Rookie - One-on-One Video Training from Renowned Skills Development Coaches."
+         :description "We're not just an video coaching platform, Rookie is the best online coaching platform that has everything you need to build an online coaching business."
          :image "url ()"}
   :styles {:fonts {:body {:name "Hind"
                           :source "google"
@@ -122,10 +122,10 @@
            "rookie-footer"]}
 
 
- {:domain "courtney.getrookie.com"
+ {:domain "courtneyforlife.getrookie.com"
   :url "/"
-  :meta {:title "Rookie - One-on-One Video Training from Renowned Skills Development Coaches."
-         :description "Train with Courtney on Rookie"
+  :meta {:title "Rookie - Build your online coaching business."
+         :description "Athletes and coaches love our video coaching platform, it's simple and easy to use."
          :image "url ()"}
   :styles {:fonts {:body {:name "Abel"
                           :source "google"
