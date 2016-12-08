@@ -78,6 +78,6 @@
       (-> result
           :out
           (string/split #"\n")
-          (->> (map (fn [f
-                         (last (re-matches #"<.* (.*)" f))]))
+          (->> (map (fn [f]
+                      (last (re-matches #"<.* (.*)" f))))
                (remove nil?))))))
