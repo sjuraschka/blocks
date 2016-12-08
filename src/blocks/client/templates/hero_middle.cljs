@@ -26,33 +26,33 @@
      :justify-content "center"
      :align-items "center"}
 
-   [:h1
-    {:font-size (get-in data [:heading :size])
-     :font-weight (get-in data [:heading :weight])
-     :color (get-in data [:heading :color])
-     :white-space "pre"
-     :text-transform (get-in data [:heading :title-type])}]
+    [:h1
+     {:font-size (get-in data [:heading :size])
+      :font-weight (get-in data [:heading :weight])
+      :color (get-in data [:heading :color])
+      :white-space "pre"
+      :text-transform (get-in data [:heading :title-type])}]
 
-   [:p
-    {:font-size "1.4em"
-     :margin [["0.75em" "0.75em" "1.25em"]]
-     :width (get-in data [:sub-heading :width])
-     :text-align "center"
-     :white-space "pre"
-     :color (get-in data [:sub-heading :color])}
+    [:p
+     {:font-size "1.4em"
+      :margin [["0.75em" "0.75em" "1.25em"]]
+      :width (get-in data [:sub-heading :width])
+      :text-align "center"
+      :white-space "pre"
+      :color (get-in data [:sub-heading :color])}
 
-    [:em
-     {:font-weight "bold"}]]
+     [:em
+      {:font-weight "bold"}]]
 
-   [:a.button
-    {:margin-bottom "5em"}
-    (button-mixin (get-in data [:button :colors] {}))
+    [:a.button
+     {:margin-bottom "5em"}
+     (button-mixin (get-in data [:button :colors] {}))
 
-    [:&.download:before
-     (fontawesome-mixin \uf019)
-     {:margin-right "0.5em"}]]
+     [:&.download:before
+      (fontawesome-mixin \uf019)
+      {:margin-right "0.5em"}]]
 
-   (email-field/styles (data :form))]
+    (email-field/styles (data :form))]
 
    (at-media {:max-width "800px"}
              [:&
@@ -65,15 +65,16 @@
                 :flex-direction "column"
                 :justify-content "center"
                 :align-items "center"}
-                [:h1
-                 {:font-size "1.75em"
-                  :white-space "normal"
-                  :width "20rem"}]
-                [:p
-                 {:font-size "1.25em"
-                  :color (get-in data [:sub-heading :mobile-color])
-                  :width "17rem"
-                  :white-space "normal"}]]])])
+               [:h1
+                {:font-size "1.75em"
+                 :white-space "normal"
+                 :width "20rem"}]
+               [:p
+                {:font-size "1.25em"
+                 :color (get-in data [:sub-heading :mobile-color])
+                 :width "17rem"
+                 :white-space "normal"}]]])])
+
 
 (defn hero [data]
   [:section.hero-middle
@@ -86,6 +87,6 @@
     (when (data :form)
       [email-field/component (data :form)])]])
 
-  (defmethod template "hero-middle" [_]
-    {:css styles
-     :component hero})
+(defmethod template "hero-middle" [_]
+  {:css styles
+   :component hero})
