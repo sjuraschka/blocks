@@ -38,6 +38,7 @@
                            :sub-text    "The best video analysis offered by any online powerlifting coach."
                            :border      "#ccc"
                            :placeholder "athlete@example.com"
+                           :post-submit-message "Your name has been successfully submitted! Please check your email to get started with Courtney.!"
                            :background "#eee"
                            :autofocus   true
                            :ajax        {:method :put
