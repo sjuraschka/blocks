@@ -7,3 +7,5 @@ target
 .lein-env
 profiles.clj
 *.jar
+/.idea/
+*.iml
