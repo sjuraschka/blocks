@@ -1,0 +1,107 @@
+{
+
+ "intech-rookie-header"
+ {:template "header"
+  :data     {:color      "#FFF"
+             :padding    "1.15em"
+             :overlay?   true
+             :height     "2.5em"
+             :logo       {:image-url "/rookie_intech/images/in-tech-logo-white.png"
+                          :url       "./"}
+             :background {:color ""}
+             :menu       [{:text ""
+                           :url  ""}
+                          {:text "Email In-Tech"
+                           :url  "mailto:derrell.levy@intechskills.com"
+                           :icon \uf003}]}}
+
+ "intech-rookie-hero"
+ {:template "hero-middle"
+  :data     {:padding     "12em"
+             :heading     {:text       "Are you truly dedicated\nto becoming great?"
+                           :color      "#fff"
+                           :size       "2.3em"
+                           :weight     "bold"
+                           :title-type "title-case"}
+             :sub-heading {:text      "Get pro one on one coaching with In-Tech\nno matter where you are in the world."
+                           :font-size "1em"
+                           :color     "#fff"
+                           :mobile-color "#fff"
+                           :weight    "light"
+                           :width     "20em"}
+             :background  {:image-url  "/rookie_intech/images/in-tech-hero-background.jpg"
+                           :mobile-url "/rookie_intech/images/in-tech-hero-background.jpg"
+                           :color      "#fff"
+                           :size       "cover"
+                           :position   "left bottom"}
+             :form        {:prompt-text "Sign up for elite\nprogramming + coaching!"
+                           :sub-text    "The best video analysis offered by any online powerlifting coach."
+                           :border      "#ccc"
+                           :placeholder "athlete@example.com"
+                           :autofocus   true
+                           :background "#fff"
+                           :ajax        {:method :put
+                                         :action "https://athlete.getrookie.com/signup"
+                                         :params {:coach-id "TODO"}}
+                           :button      {:text   "Reserve Spot"
+                                         :colors {:text      "#fff"
+                                                  :bg        "#7cbee9"
+                                                  :bg-hover  "#273461"
+                                                  :bg-active "#273461"}}}}}
+
+ "intech-rookie-values-text"
+ {:template "rookie-three-values-text"
+  :data     {:background "radial-gradient(70% 90%, #7cbee9 7%, #273461 100%)"
+             :header "How Derrell will work with you through Rookie"
+             :title-color "#273461"
+             :columns    [{:url      "/rookie_shared/images/coach-phone.png"
+                           :title    {:name  "Request a session"}
+                           :subtitle "Tell your In-Tech trainers exactly what you are looking to improve"
+                           :border   "1px solid rgba(155, 170, 170, 0.5)"}
+                          {:url      "/rookie_intech/images/hockey-phone-upload.png"
+                           :title    {:name  "Record + Submit a Workout"}
+                           :subtitle "Send your trainers game tape or workout footage."
+                           :border   "1px solid rgba(155, 170, 170, 0.5)"}
+                          {:url      "/rookie_intech/images/hockey-phone-review.png"
+                           :title    {:name  "Get Feedback + Improve Your Game"}
+                           :subtitle "Get detailed feedback and personalized workouts from your trainers"
+                           :border   "none"}]}}
+
+ "intech-rookie-cta"
+ {:template "cta"
+  :data     {:heading     {:text "Sign up for early access"}
+             :description {:text "If accepted you will receive an email inviting you to use the site."}
+             :background  {:color "#fff"}
+             :form        {:prompt-text "Sign up for early access and be notified when we launch"
+                           :placeholder "coachr@example.com"
+                           :button      {:text   "Get Invited"
+                                         :color  "#fff"
+                                         :colors {:text      "#fff"
+                                                  :bg        "#FF8043"
+                                                  :bg-hover  "#FF8060"
+                                                  :bg-active "#FF8143"}}}}}
+
+ "intech-rookie-quote"
+ {:template "quote"
+  :data     {:title {:text "Online Training Success"
+                    :color "#7cbee9"}
+             :quote "Levs taught me how to lift properly and helped me gain muscle. The on-ice training allowed me to take my game to the next level."
+             :name  "Givani Smith, Detroit Red Wings Draft Pick"}}
+
+ "intech-rookie-footer"
+ {:template "multiple-logo-footer"
+  :data     {:title            "powered by"
+             :logo             {:image-url "/rookie/images/rookie-white-logo.svg"}
+             :height           "1em"
+             :background-color "#222"
+             :text-color       "#FFF"
+             :client           {:image "/rookie_intech/images/in-tech-logo-white.png"
+                                :height "2rem"}
+             :menu             [{:text ""
+                                 :url  ""
+                                 :icon ""}
+                                {:text ""
+                                 :url  ""
+                                 :icon ""}]}}
+
+ }

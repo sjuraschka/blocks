@@ -2,7 +2,7 @@
   (:require
     [clojure.string :as string]
     [garden.core :refer [css]]
-    [garden.stylesheet :refer [at-import at-font-face]]))
+    [garden.stylesheet :refer [at-import at-font-face at-keyframes]]))
 
 (defn google-fonts-import [data]
    (when-let [google-fonts (->> (get-in data [:styles :fonts])
@@ -19,7 +19,7 @@
 
 (def fa-at-font-face
   (let [version "4.7.0"
-        fa-cdn-url (str "https://maxcdn.bootstrapcdn.com/font-awesome/" version)]
+        fa-cdn-url (str "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/" version)]
     (at-font-face
       {:font-family "FontAwesome"
        :src [(str "local('FontAwesome')")
@@ -33,6 +33,10 @@
 
 (defn page-styles [data]
   [(google-fonts-import data)
+
+   (at-keyframes :anim-spin
+     ["0%" {:transform "rotate(0deg)"}]
+     ["100%" {:transform "rotate(359deg)"}])
 
    fa-at-font-face
 

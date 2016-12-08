@@ -136,11 +136,11 @@
   :assets ["rookie_courtney"
            "rookie_shared"
            "rookie"]
-  :blocks ["client-rookie-header"
-           "client-rookie-hero"
-           "client-rookie-values-text"
-           "client-rookie-quote"
-           "client-rookie-footer"]}
+  :blocks ["courtney-rookie-header"
+           "courtney-rookie-hero"
+           "courtney-rookie-values-text"
+           "courtney-rookie-quote"
+           "courtney-rookie-footer"]}
 
  {:domain "intech.getrookie.com"
   :url "/"
