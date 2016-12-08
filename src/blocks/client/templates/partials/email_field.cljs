@@ -79,7 +79,7 @@
      [:fieldset
       {:display "flex"
        :flex-direction "column"}
-      {}
+
       [:input
        {:width "100%"}]
 
