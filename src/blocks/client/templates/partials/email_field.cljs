@@ -29,8 +29,8 @@
 
    [:fieldset
     {:box-shadow [[0 "2px" "5px" 0 "rgba(167,167,167,0.45)"]]
-     :display "inline-block"
      :border-radius "5px"
+     :display "inline-block"
      :overflow "hidden"}
 
     [:input
@@ -58,6 +58,7 @@
 
     [:button
      (button-mixin (get-in data [:button :colors] {}))
+
      [:&
       {:border-radius 0
        :font-size "1em"
@@ -65,6 +66,7 @@
        :padding "0 1em"
        :letter-spacing "0.05em"
        :text-transform "uppercase"}]
+
      [:&::after
       (fontawesome-mixin \uf054) ; chevron-right
       {:margin-left "0.5em"}]]]
@@ -73,12 +75,14 @@
     [:button::after
      (fontawesome-mixin \uf110) ; spinner
      (spin-mixin)]]
+
    (at-media {:max-width "450px"}
      [:fieldset
       {:display "flex"
        :flex-direction "column"}
-      {}
+
       [:input
+       :button
        {:width "100%"}]
 
       ["&[type=email]"
