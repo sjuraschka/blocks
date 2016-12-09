@@ -42,7 +42,7 @@
                            :autofocus   true
                            :ajax        {:method :put
                                          :action "https://athlete.getrookie.com/signup"
-                                         :params {:coach-id "TODO"}}
+                                         :params {:coach-id "c845151c-9779-4f54-9837-40edaed00aad"}}
                            :button      {:text   "Reserve Your Spot"
                                          :colors {:text      "#fff"
                                                   :bg        "#f79501"

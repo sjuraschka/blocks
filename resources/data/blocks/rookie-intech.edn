@@ -42,7 +42,8 @@
                            :background "#fff"
                            :ajax        {:method :put
                                          :action "https://athlete.getrookie.com/signup"
-                                         :params {:coach-id "TODO"}}
+                                         :params {:coach-id "a3571c5f-dd1a-474b-8f89-4602e51023eb"}}
+
                            :button      {:text   "Reserve Spot"
                                          :colors {:text      "#fff"
                                                   :bg        "#7cbee9"
