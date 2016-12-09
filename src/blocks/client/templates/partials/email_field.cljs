@@ -39,7 +39,9 @@
       :height "3rem"
       :vertical-align "top"
       :line-height "3rem"
-      :outline "none"}]
+      :outline "none"
+      :-webkit-appearance "none"
+      :-webkit-border-radius "0px"}]
 
     [:input
      {:border "none"
