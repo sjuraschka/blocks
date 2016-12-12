@@ -33,7 +33,7 @@
                            :mobile-url "/rookie_intech/images/in-tech-hero-background.jpg"
                            :color      "#fff"
                            :size       "cover"
-                           :position   "left bottom"}
+                           :position   "center bottom"}
              :form        {:prompt-text "Sign up for elite\nprogramming + coaching!"
                            :sub-text    "The best video analysis offered by any online powerlifting coach."
                            :post-submit-message "Thank you. You'll hear from me soon."
