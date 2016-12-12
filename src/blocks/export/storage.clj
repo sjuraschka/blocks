@@ -68,8 +68,6 @@
         domain (env :cdn77-storage-location)]
     (let [result (sh "rsync"
                      "-aic"
-                     "--delete"
-                     "--delete-excluded"
                      "--exclude" "*.DS_Store"
                      "-e" (str "sshpass -p " password " ssh -o PubkeyAuthentication=no -l " user )
                      directory
