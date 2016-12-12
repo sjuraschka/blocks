@@ -36,6 +36,7 @@
                            :position   "right bottom"}
              :form        {:prompt-text "Sign up for elite\nprogramming + coaching!"
                            :sub-text    "The best video analysis offered by any online powerlifting coach."
+                           :post-submit-message "Thank you. You'll hear from me soon."
                            :border      "#ccc"
                            :placeholder "athlete@example.com"
                            :background "#eee"
