@@ -74,7 +74,7 @@
  {:template "how-it-works"
   :data     {:background "#fff"
              :button {:text "Learn how it works"
-                       :url "./how-it-works"
+                       :url "./how-it-works/"
                        :color "#fff"
                        :background "#232B69"
                        :bg-hover "#454d87"}
@@ -82,13 +82,13 @@
              :columns    [
                           {:title    "Receive videos from your athletes"
                            :subtitle "Learn How Athletes use Rookie"
-                           :url "./how-it-works"}
+                           :url "./how-it-works/"}
                           {:title    "Give feedback with our video editor"
                            :subtitle "Learn about the Coach Editor"
-                           :url "./how-it-works"}
+                           :url "./how-it-works/"}
                           {:title    "Get paid automatically with Rookie"
                            :subtitle "How Our Coaches Grew Their Business"
-                           :url "./how-it-works"}]}}
+                           :url "./how-it-works/"}]}}
 
  "rookie-step-1"
  {:template "feature-highlight"
