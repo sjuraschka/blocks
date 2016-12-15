@@ -52,6 +52,7 @@
      [:a.logo
      {:color (data :text-color)
       :white-space "nowrap"
+      :text-decoration "none"
       :display "flex"
       :flex-direction "column"
       :justify-content "center"
@@ -88,7 +89,7 @@
   [:footer
    [:div.content
     [:div.upper
-    [:a.client
+    [:a.client {:href  (data :website)}
      [:img.client {:src (get-in data [:client :image])}]]
     [:a.logo {:href (get-in data [:logo :url])}
      [:h1.sub-text (data :title)]

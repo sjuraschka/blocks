@@ -91,10 +91,12 @@
  "intech-rookie-footer"
  {:template "multiple-logo-footer"
   :data     {:title            "powered by"
-             :logo             {:image-url "/rookie/images/rookie-white-logo.svg"}
+             :logo             {:image-url "/rookie/images/rookie-white-logo.svg"
+                                :url "https://www.getrookie.com"}
              :height           "1em"
              :background-color "#222"
              :text-color       "#FFF"
+             :website          "http://intechgym.com"
              :client           {:image "/rookie_intech/images/in-tech-logo-white.png"
                                 :height "2rem"}
              :menu             [{:text ""
