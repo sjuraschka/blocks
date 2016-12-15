@@ -31,6 +31,7 @@
       :font-weight (get-in data [:heading :weight])
       :color (get-in data [:heading :color])
       :white-space "pre"
+      :line-height "0.9em"
       :text-transform (get-in data [:heading :title-type])}]
 
     [:p
@@ -54,7 +55,7 @@
 
     (email-field/styles (data :form))]
 
-   (at-media {:max-width "800px"}
+   (at-media {:max-width "700px"}
              [:&
               {:background-image (str "url(" (get-in data [:background :mobile-url]) ")")
                :width "100vw"}
@@ -67,16 +68,16 @@
                 :justify-content "center"
                 :align-items "center"}
 
-                [:h1
-                 {:font-size "1.75em"
-                  :white-space "normal"
-                  :width "20rem"}]
+               [:h1
+                {:font-size "1.65em"
+                 :white-space "normal"
+                 :width "20rem"}]
 
-                ["> p"
-                 {:font-size "1.25em"
-                  :color (get-in data [:sub-heading :mobile-color])
-                  :width "17rem"
-                  :white-space "normal"}]]])])
+               ["> p"
+                {:font-size "1.15em"
+                 :color (get-in data [:sub-heading :mobile-color])
+                 :width "17rem"
+                 :white-space "normal"}]]])])
 
 
 (defn hero [data]

@@ -41,8 +41,8 @@
 
  "rookie-hero"
  {:template "hero-middle"
-  :data {:padding "12em"
-         :height "100vh"
+  :data {:padding "10em"
+         ;:height "100vh"
          :heading {:text "A coaching platform made for you"
                    :color "#232B69"
                    :size "2.3em"
@@ -50,12 +50,12 @@
                    :title-type "uppercase"}
          :sub-heading {:text "Train your athletes and grow your business through Rookie."
                        :color "#232B96"}
-         :background {:image-url "/rookie/images/rookie-landing-page-hero.png"
-                      :mobile-url "/rookie/images/rookie-mobile-hero.png"
+         :background {:image-url "/rookie/images/rookie-large-hero-blurred.png"
+                      :mobile-url "/rookie/images/rookie-mobile-hero-blurred.png"
                       :color "#EAFAFC"
                       :size "cover"
                       :position "center top"}
-         :form {:before {:text "Sign up to reserve your spot on Rookie."}
+         :form {:before {:text "Enter your email to reserve a spot on Rookie."}
                 :placeholder "coach@example.com"
                 :autofocus true
                 :background "#fff"
@@ -108,7 +108,7 @@
                            :subtitle "Learn about the Coach Editor"
                            :url "./how-it-works/"}
                           {:title    "Get paid automatically with Rookie"
-                           :subtitle "How Our Coaches Grew Their Business"
+                           :subtitle "Learn how payments work"
                            :url "./how-it-works/"}]}}
 
  "rookie-step-1"
@@ -235,8 +235,8 @@
              :description {:text  "Rookie deposits your money directly into your account."
                            :color "#777"}
              :image       {:image-url "/rookie/images/rookie-training-payments.png"
-                           :position  "left"}}}
+                           :position  "left"}}}}
 
-}
+
 
 
