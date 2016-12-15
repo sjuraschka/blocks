@@ -5,7 +5,8 @@
     [compojure.route :refer [not-found]]
     [ring.middleware.resource :refer [wrap-resource]]
     [ring.middleware.not-modified :refer [wrap-not-modified]]
-    [ring.middleware.content-type :refer [wrap-content-type]]))
+    [ring.middleware.content-type :refer [wrap-content-type]]
+    [blocks.server.crypto :refer [sha256-file]]))
 
 (defn read-pages-edn []
   (read-string (slurp (clojure.java.io/resource "data/pages.edn"))))
@@ -83,6 +84,10 @@
                      [:a {:href (str "/" (page :domain) (page :url))}
                       (str (page :domain) (page :url))]])]]])})))
 
+
+(defn file-integrity [path]
+  (str "sha256-" (sha256-file path)))
+
 (defroutes prod-routes
  (GET ["/export/:domain/*"] {{domain :domain url :*} :params}
     (when-let [page (path->page domain (str "/" url))]
@@ -104,7 +109,12 @@
                  [:div {:id "app"}]
                  [:script {:type "text/edn" :id "data"}
                   (pr-str (get-page-data page))]
-                 [:script {:src "/js/blocks.min.js" :type "text/javascript"}]
+                 [:script {:type "text/javascript"
+                           :src (str "/js/blocks.min.js"
+                                     "?cb="
+                                     (file-integrity (clojure.java.io/resource "public/js/blocks.min.js")))
+                           :integrity (file-integrity (clojure.java.io/resource "public/js/blocks.min.js"))
+                           :crossorigin "anonymous"}]
                  [:script {:type "text/javascript"}
                   "blocks.client.core.run()"]]])})))
 

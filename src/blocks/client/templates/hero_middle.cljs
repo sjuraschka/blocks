@@ -58,6 +58,7 @@
              [:&
               {:background-image (str "url(" (get-in data [:background :mobile-url]) ")")
                :width "100vw"}
+              
               [:.content
                {:width "100vw"
                 :box-sizing "border-box"
@@ -65,15 +66,17 @@
                 :flex-direction "column"
                 :justify-content "center"
                 :align-items "center"}
-               [:h1
-                {:font-size "1.75em"
-                 :white-space "normal"
-                 :width "20rem"}]
-               [:p
-                {:font-size "1.25em"
-                 :color (get-in data [:sub-heading :mobile-color])
-                 :width "17rem"
-                 :white-space "normal"}]]])])
+
+                [:h1
+                 {:font-size "1.75em"
+                  :white-space "normal"
+                  :width "20rem"}]
+
+                ["> p"
+                 {:font-size "1.25em"
+                  :color (get-in data [:sub-heading :mobile-color])
+                  :width "17rem"
+                  :white-space "normal"}]]])])
 
 
 (defn hero [data]
