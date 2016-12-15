@@ -85,8 +85,8 @@
 
  "intech-rookie-quote"
  {:template "quote"
-  :data     {:title {:text "Online Training Success"
-                    :color "#7cbee9"}
+  :data     {:title {:text "Online Training Success"}
+                    :color "#7cbee9"
              :quote "Levs taught me how to lift properly and helped me gain muscle. The on-ice training allowed me to take my game to the next level."
              :name  "Givani Smith, Detroit Red Wings Draft Pick"}}
 
@@ -106,6 +106,6 @@
                                  :icon ""}
                                 {:text ""
                                  :url  ""
-                                 :icon ""}]}}
+                                 :icon ""}]}}}
 
- }
+

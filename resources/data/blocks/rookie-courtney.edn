@@ -39,7 +39,6 @@
                            :post-submit-message "Thank you. You'll hear from me soon."
                            :border      "#ccc"
                            :placeholder "athlete@example.com"
-                           :post-submit-message "Your name has been successfully submitted! Please check your email to get started with Courtney.!"
                            :background "#eee"
                            :autofocus   true
                            :ajax        {:method :put
