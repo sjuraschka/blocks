@@ -33,17 +33,19 @@
                            :mobile-url "/rookie_intech/images/in-tech-hero-background.jpg"
                            :color      "#fff"
                            :size       "cover"
-                           :position   "left bottom"}
+                           :position   "center bottom"}
              :form        {:prompt-text "Sign up for elite\nprogramming + coaching!"
                            :sub-text    "The best video analysis offered by any online powerlifting coach."
+                           :post-submit-message "Thank you. You'll hear from me soon."
                            :border      "#ccc"
                            :placeholder "athlete@example.com"
                            :autofocus   true
                            :background "#fff"
                            :ajax        {:method :put
                                          :action "https://athlete.getrookie.com/signup"
-                                         :params {:coach-id "TODO"}}
-                           :button      {:text   "Reserve Spot"
+                                         :params {:coach-id "a3571c5f-dd1a-474b-8f89-4602e51023eb"}}
+
+                           :button      {:text   "Reserve Your Spot"
                                          :colors {:text      "#fff"
                                                   :bg        "#7cbee9"
                                                   :bg-hover  "#273461"

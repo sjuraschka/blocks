@@ -19,7 +19,7 @@
       (fs/delete-dir site-directory))
 
     (println "EXP: Creating export directory" site-directory)
-    (fs/mkdirs site-directory)
+    (fs/mkdirs (str site-directory page-path))
 
     (doseq [asset-folder asset-folders]
       (println "EXP: Copying asset folder" asset-folder)
@@ -34,4 +34,4 @@
     (let [html (sh "phantomjs" "export.js" scrape-url)]
       (if (= 1 (:exit html))
         (println "EXP: Could not load site. Did you start the server?")
-        (spit (str site-directory page-path "/index.html") (:out html))))))
+        (spit (str site-directory page-path "index.html") (:out html))))))

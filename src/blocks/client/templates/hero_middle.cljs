@@ -58,7 +58,7 @@
              [:&
               {:background-image (str "url(" (get-in data [:background :mobile-url]) ")")
                :width "100vw"}
-              
+
               [:.content
                {:width "100vw"
                 :box-sizing "border-box"
