@@ -104,12 +104,14 @@
   :assets ["rookie"
            "rookie_shared"]
   :blocks ["rookie-header"
-           "rookie-hero"
+           "rookie-launch-hero"
+           ;"rookie-hero"
+           "rookie-testimonial"
            "rookie-how-it-works"
            "rookie-step-1"
            "rookie-step-2"
            "rookie-step-3"
-           "rookie-testimonial"
+
            "rookie-footer"]}
 
  {:domain "www.getrookie.com"
