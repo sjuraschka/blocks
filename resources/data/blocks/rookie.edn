@@ -6,14 +6,14 @@
 
  "rookie-header"
  {:template "header"
-  :data     {:color      "#b3b3b3"
+  :data     {:color      "#fff"
              :padding    "0.75em"
              :position   "fixed"
              :overlay?   true
-             :logo       {:image-url "/rookie/images/rookie-navy-logo.svg"
+             :logo       {:image-url "/rookie/images/rookie-white-logo.svg"
                           :url       "/"}
              :height     "1.25rem"
-             :background {:color "#fff"}
+             :background {:color "rgba(0, 21, 132, 0.35)"}
              :shadow     "0px 0px 10px 0px rgba(0, 0, 0, 0.12)"
              :menu       [{:text "647-267-5292"
                            :url  "tel:6472675292"
@@ -21,6 +21,7 @@
                           {:text "hi@getrookie.com"
                            :url  "mailto:hi@getrookie.com"
                            :icon \uf003}]}}
+
 
  "rookie-footer"
  {:template "footer"
@@ -44,12 +45,15 @@
   :data {:padding "10em"
          ;:height "100vh"
          :heading {:text "A coaching platform made for you"
-                   :color "#232B69"
+                   :color "#fff"
                    :size "2.3em"
                    :weight "bold"
                    :title-type "uppercase"}
          :sub-heading {:text "Train your athletes and grow your business through Rookie."
                        :color "#232B96"}
+         :featured-image {:url "/rookie/images/rookie-phone.png"
+                          :height "15em"}
+         ;:video-gif {:url ""}
          :background {:image-url "/rookie/images/rookie-backgroud-image.png"
                       :mobile-url "/rookie/images/rookie-mobile-background.png"
                       :color "#EAFAFC"
@@ -276,4 +280,24 @@
                                  :bg "#232B69"
                                  :bg-hover "#454d87"
                                  :bg-active "#3D50CF"}}}}}
+
+;"rookie-header"
+ ; [{:template "header"
+ ;     :data     {:color      "#b3b3b3"
+  ;               :padding    "0.75em"
+   ;              :position   "fixed"
+    ;             :overlay?   true
+     ;            :logo       {:image-url "/rookie/images/rookie-navy-logo.svg"
+      ;                        :url       "/"}
+       ;          :height     "1.25rem"
+        ;         :background {:color "#fff"}
+         ;        :shadow     "0px 0px 10px 0px rgba(0, 0, 0, 0.12)"
+          ;       :menu       [{:text "647-267-5292"
+           ;                    :url  "tel:6472675292"
+            ;                   :icon \uf095}
+             ;                {:text "hi@getrookie.com"
+              ;                :url  "mailto:hi@getrookie.com"
+               ;               :icon \uf003}]}}]
+
+
 

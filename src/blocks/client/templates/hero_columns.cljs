@@ -6,7 +6,7 @@
 
 (defn styles [data]
   [:section.hero-columns
-   {:padding [[(get data :padding "4em") 0]]
+   {:padding [[(get data :padding "2em") 0]]
     :text-align "center"
     :display "flex"
     :flex-direction "column"
@@ -20,47 +20,64 @@
     :background-repeat "no-repeat"
     :background-position (get-in data [:background :position] "right bottom")}
 
-   [:.content
-    {:display "flex"
-     :flex-direction "column"
-     :justify-content "center"
-     :align-items "center"}
+   [:.page-content
+    {:display "flex"}
 
-    [:h1
-     {:font-size (get-in data [:heading :size])
-      :font-weight (get-in data [:heading :weight])
-      :color (get-in data [:heading :color])
-      :white-space "pre"
-      :line-height "0.9em"
-      :text-transform (get-in data [:heading :title-type])}]
 
-    [:p
-     {:font-size "1.4em"
-      :margin [["0.75em" "0.75em" "1.25em"]]
-      :width (get-in data [:sub-heading :width])
-      :text-align "center"
-      :white-space "pre"
-      :color (get-in data [:sub-heading :color])}
+    [:div.right
+     {:position "relative"}
 
-     [:em
-      {:font-weight "bold"}]]
 
-    [:a.button
-     {:margin-bottom "5em"}
-     (button-mixin (get-in data [:button :colors] {}))
 
-     [:&.download:before
-      (fontawesome-mixin \uf019)
-      {:margin-right "0.5em"}]]
+     [:img
+      {:height "650px"
+       :position "relative"
+       :margin-bottom "-8em"}]]
 
-    (email-field/styles (data :form))]
+
+
+    [:.left
+     {:display "flex"
+      :flex-direction "column"
+      :justify-content "center"
+      :align-items "center"}
+
+     [:h1
+      {:font-size (get-in data [:heading :size])
+       :font-weight (get-in data [:heading :weight])
+       :color (get-in data [:heading :color])
+       :white-space "pre"
+       :line-height "0.9em"
+       :text-transform (get-in data [:heading :title-type])}]
+
+     [:p
+      {:font-size "1.4em"
+       :margin [["0.75em" "0.75em" "1.25em"]]
+       :width (get-in data [:sub-heading :width])
+       :text-align "center"
+       :white-space "pre"
+       :color (get-in data [:sub-heading :color])}
+
+      [:em
+       {:font-weight "bold"}]]
+
+     [:a.button
+      {:margin-bottom "5em"}
+      (button-mixin (get-in data [:button :colors] {}))
+
+      [:&.download:before
+       (fontawesome-mixin \uf019)
+       {:margin-right "0.5em"}]]
+
+     (email-field/styles (data :form))]]
+
 
    (at-media {:max-width "700px"}
              [:&
               {:background-image (str "url(" (get-in data [:background :mobile-url]) ")")
                :width "100vw"}
 
-              [:.content
+              [:.content.left
                {:width "100vw"
                 :box-sizing "border-box"
                 :display "flex"
@@ -82,14 +99,19 @@
 
 (defn hero [data]
   [:section.hero-columns
-   [:div.content
-    [:h1 (get-in data [:heading :text])]
-    [:p {:dangerouslySetInnerHTML
-          {:__html (get-in data [:sub-heading :text])}}]
-    (when (data :button)
-      [:a.button {:href ""} (get-in data [:button :text])])
-    (when (data :form)
-      [email-field/component (data :form)])]])
+   [:div.page-content
+    [:div.content.left
+     [:h1 (get-in data [:heading :text])]
+     [:p {:dangerouslySetInnerHTML
+           {:__html (get-in data [:sub-heading :text])}}]
+     (when (data :button)
+       [:a.button {:href ""} (get-in data [:button :text])])
+     (when (data :form)
+       [email-field/component (data :form)])]
+    [:div.content.right
+     [:img.image {:src (get-in data [:featured-image :url])}]]]])
+
+
 
 (defmethod template "hero-columns" [_]
   {:css styles
