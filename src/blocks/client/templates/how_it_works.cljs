@@ -8,14 +8,14 @@
   [:.how-it-works
    {:background    "#fff"
     :box-sizing    "border-box"
-    :border-bottom "1px solid #eee"
-    :height        "115vh"}
+    :border-bottom "1px solid #eee"}
+    ;:height        "115vh"}
 
    [:&::before
     {:content          "\"\""
      :display          "block"
      :background-image "linear-gradient(-45deg, #4B4EC2 0%, #373D96 50%, #232B69 100%)"
-     :height           "68vh"
+     :height           "62vh"
      :position         "relative"
      :width            "100vw"
      :z-index          1}]
@@ -62,7 +62,7 @@
 
 
     [:.columns
-     {:padding-top     "0.5rem"
+     {:padding-top     ""
       :display         "flex"
       :text-align      "center"
       :justify-content "space-between"
@@ -71,7 +71,6 @@
      [:.column
       {:width          "30vw"
        :box-sizing     "border-box"
-       :margin         "0 0.5em"
        :text-align     "center"
        :display        "flex"
        :flex-direction "column"
@@ -86,12 +85,10 @@
         {:background (get-in data [:detail-button :bg-hover])}]
 
 
-       [:.step
+       [:.step]
        {:font-size      "0.8em"
         :color          "#616161"
         :text-transform "uppercase"
-        :border-radius  "5px"
-        :border         "1px solid #dfdfdf"
         :padding        "0.75rem"}]
 
       [:.subtitle {:color     "#616161"
@@ -100,7 +97,7 @@
        [:&::after
         (fontawesome-mixin \uf105)
         {:padding-left "0.5em"
-         :font-size    "0.65em"}]]]]]]
+         :font-size    "0.65em"}]]]]]
 
    (at-media {:max-width "840px"}
 

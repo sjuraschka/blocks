@@ -58,9 +58,13 @@
     {:color (get-in data [:description :color])}]
 
    [:img
-    {:max-width "32em"}]
+    {:max-width "32em"
+     :margin-top "-5em"}]
 
    (at-media {:max-width "575px"}
+
+     [:img
+      {:max-width "25em"}]
      [:.content.left :.content.right
       [:.text
        {:margin-left 0

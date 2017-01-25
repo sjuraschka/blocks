@@ -32,7 +32,7 @@
        {:height (get-in data [:client :height])
         :display "inline-block"
         :vertical-align "middle"
-        :margin-right "0.5em" }]]
+        :margin-right "0.5em"}]]
 
 
 
@@ -49,9 +49,10 @@
 
 
 
-     [:a.logo
+     [:a.logo]
      {:color (data :text-color)
       :white-space "nowrap"
+      :text-decoration "none"
       :display "flex"
       :flex-direction "column"
       :justify-content "center"
@@ -61,7 +62,7 @@
       {:height (data :height)
        :display "inline-block"
        :vertical-align "middle"
-       :margin-right "0.5em" }]]
+       :margin-right "0.5em"}]]
 
     [:.payment-area
      {:display "flex"
@@ -71,7 +72,7 @@
      [:.payment
       {:height "1em"
        :display "inline-block"
-       :vertical-align "middle"}]]]
+       :vertical-align "middle"}]]
 
     [:.lower]
 
@@ -87,8 +88,8 @@
 (defn view [data]
   [:footer
    [:div.content
-    [:div.upper
-    [:a.client
+    [:div.upper]
+    [:a.client {:href  (data :website)}
      [:img.client {:src (get-in data [:client :image])}]]
     [:a.logo {:href (get-in data [:logo :url])}
      [:h1.sub-text (data :title)]
@@ -96,16 +97,16 @@
 
     [:div.payment-area
      [:h1.sub-text "We Accept"]
-     [:img.payment {:src "/rookie_shared/images/payment.png"}]]]
+     [:img.payment {:src "/rookie_shared/images/payment.png"}]
 
-     [:div.lower
+     [:div.lower]]
     (into
       [:nav]
       (for [link (data :menu)]
         [:a {:href (link :url)
              :class (link :style)
              :data-icon (link :icon)}
-         (link :text)]))]]])
+         (link :text)]))]])
 
 (defmethod template "multiple-logo-footer" [_]
   {:css styles

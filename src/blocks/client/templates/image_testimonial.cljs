@@ -13,8 +13,8 @@
     :justify-content  "flex-end"
     :background-image "linear-gradient(45deg, #9BFFF3 27%, #AEEAE6 100%)"
     :width            "100vw"
-    :min-height       "400px"
-    }
+    :min-height       "400px"}
+
 
    [:.image
     {:background-image  (str "url(" (get-in data [:background :image-url]) ")")
@@ -58,16 +58,16 @@
              [:&
 
               [:.image
-               {:background-image (str "url(" (get-in data [:background :mobile-url]) ")")}]
+               {:background-image (str "url(" (get-in data [:background :mobile-url]) ")")}]])])
 
-              ])])
+
 
 (defn component [data]
   [:div.image-testimonial
    [:div.image]
 
    [:div.testimonial
-    [:h1.title "\"With my USA hockey combines I now train participants beyond the one weekend a year I see them in person.\""]
+    [:h1.title "\"With my USA hockey combines I can now train participants beyond the one weekend a year I see them in person.\""]
     [:p.subtitle "Derrell Levy, In-Tech High Performance Training"]]])
 
 

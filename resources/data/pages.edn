@@ -92,8 +92,8 @@
 
  {:domain "www.getrookie.com"
   :url "/"
-  :meta {:title "Rookie - One-on-One Video Training from Renowned Skills Development Coaches."
-         :description "We're not just an video coaching platform, Rookie is the best online coaching platform that has everything you need to build an online coaching business."
+  :meta {:title "Coaching and Personal Trainer Software - Best Online Coaching Platform Made for You"
+         :description "We're not just a video coaching platform, Rookie is the best online coaching platform that has everything you need to build an online coaching business."
          :image "url ()"}
   :styles {:fonts {:body {:name "Hind"
                           :source "google"
@@ -114,8 +114,8 @@
 
  {:domain "www.getrookie.com"
   :url "/how-it-works/"
-  :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
-         :description "rooke is..."
+  :meta {:title "Coaching and Personal Trainer Software - Best Online Coaching Platform Made for You"
+         :description "We're not just a video coaching platform, Rookie is the best online coaching platform that has everything you need to build an online coaching business."
          :image "url ()"}
   :styles {:fonts {:body {:name "Hind"
                           :source "google"
@@ -123,6 +123,7 @@
                    :headings {:name "Hind"
                               :source "google"
                               :weight 700}}}
+
   :blocks ["rookie-header"
            "title-section-rookie"
            "rookie-product-feature-1"
@@ -133,11 +134,11 @@
            "rookie-footer"]}
 
 
+
  {:domain "courtneyforlife.getrookie.com"
   :url "/"
-  :meta {:title "Train with Courtney Ustrzycki online through Rookie"
-         :description "Through Rookie, Courtney will personally review and
-         assess your powerlifting and strength training."
+  :meta {:title "Train with Courtney Ustrzycki online with Rookie"
+         :description "Use Rookie and Courtney will personally review and assess your powerlifting and strength training."
          :image "url ()"}
   :styles {:fonts {:body {:name "Abel"
                           :source "google"
@@ -156,8 +157,8 @@
 
  {:domain "intech.getrookie.com"
   :url "/"
-  :meta {:title "Rookie - One-on-One Video Training from Renowned Skills Development Coaches."
-         :description "Train with INTECH on Rookie"
+  :meta {:title "Train online with Derrell Levy and the INTECH team with Rookie"
+         :description "Use Rookie to work one on one with the worlds best Hockey and strength development coaches."
          :image "url ()"}
   :styles {:fonts {:body {:name "Roboto"
                           :source "google"
@@ -172,9 +173,9 @@
            "intech-rookie-hero"
            "intech-rookie-values-text"
            "intech-rookie-quote"
-           "intech-rookie-footer"]}
+           "intech-rookie-footer"]}]
 
-]
+
 
 
 
