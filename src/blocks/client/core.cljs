@@ -1,124 +1,29 @@
 (ns blocks.client.core
-  (:require-macros [reagent.ratom :refer [reaction]])
-  (:require [reagent.core :as reagent]
-            [garden.core :as garden]
-            [clojure.string :as string]
-            [re-frame.core :refer [register-handler
-                                   path
-                                   register-sub
-                                   dispatch
-                                   dispatch-sync
-                                   subscribe]]
-            [blocks.client.template :refer [template]]
-            [blocks.client.templates]
-            [garden.core :refer [css]]
-            [garden.stylesheet :refer [at-import]]
-            [figwheel.client :as fig]
-            [ajax.core :refer [GET]]))
+  (:require
+    [reagent.core :as reagent]
+    [blocks.client.styles :refer [styles-view page-styles]]
+    [blocks.client.template :refer [template]]
+    [blocks.client.templates]))
 
-(defn google-fonts-import [data]
-   (when-let [google-fonts (->> (get-in data [:styles :fonts])
-                                vals
-                                (filter (fn [font]
-                                          (= "google" (font :source))))
-                                not-empty)]
-     (at-import (str "//fonts.googleapis.com/css?family="
-                     (->> google-fonts
-                          (map (fn [font]
-                                 (str (string/replace (font :name) #" " "+")
-                                      ":" (font :weight))))
-                          (string/join "|"))))))
+(defn page-view [page]
+  (let [blocks (->> (page :blocks)
+                    (map-indexed (fn [index b]
+                                   (assoc b :id (str "block-" index)))))]
+    [:div.app
+     [:div.styles
+      [styles-view (page-styles page)]
+      (for [block blocks]
+        ^{:key (block :id)}
+        [styles-view [(str "#" (block :id))
+                      ((:css (template (block :template))) (block :data))]])]
+     (for [block blocks]
+       ^{:key (block :id)}
+       [:div {:id (block :id) :class "block"}
+        [(:component (template (block :template))) (block :data)]])]))
 
-(defn styles [data]
-  [(at-import "//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+(defn get-data []
+  (cljs.reader/read-string (.-innerHTML (js/document.getElementById "data"))))
 
-   (google-fonts-import data)
-
-   [:body :input
-    {:font-family [(str "\"" (get-in data [:styles :fonts :body :name]) "\"") "sans-serif"]
-     :font-weight (get-in data [:styles :fonts :body :weight])
-     :line-height "1.25" }]
-
-   [:h1 :h2 :h3 :h4 :h5
-    {:font-family [(str "\"" (get-in data [:styles :fonts :headings :name]) "\"") "sans-serif"]
-     :font-weight (get-in data [:styles :fonts :headings :weight])}]
-
-   [:.block
-    {:overflow "hidden"}
-
-    [:.content
-     {:max-width "1000px"
-      :position "relative"
-      :margin "0 auto"}]]])
-
-(register-handler
-  :set-data
-  (fn [state [_ data]]
-    data))
-
-(register-handler
-  :fetch-data
-  (fn [state _]
-    (GET (str "/api/domains/" (get-in state [:page :domain])
-              "/pages" (get-in state [:page :url]))
-      {:handler (fn [data]
-                  (println "Reloading EDN")
-                  (println data)
-                  (dispatch [:set-data (cljs.reader/read-string data)]))})
-    state))
-
-(register-sub
-  :page
-  (fn [state _]
-    (reaction (@state :page))))
-
-(enable-console-print!)
-
-(defn app-view []
-  (let [page (subscribe [:page])]
-    (fn []
-      (let [blocks (->> (@page :blocks)
-                        (map-indexed (fn [index b]
-                                       (assoc b :id (str "block-" index)))))]
-        [:div.app
-         [:div.styles
-          [:style {:type "text/css"
-                   :dangerouslySetInnerHTML
-                   {:__html (css (styles @page))}}]
-          (for [block blocks]
-            ^{:key (block :id)}
-            [:style {:type "text/css"
-                     :dangerouslySetInnerHTML
-                     {:__html (css
-                                {:auto-prefix #{:transition
-                                                :flex-direction
-                                                :flex-shrink
-                                                :align-items
-                                                :animation
-                                                :flex-grow}
-                                 :vendors ["webkit" "moz"]}
-                                [(str "#" (block :id))
-                                 ((:css (template (block :template))) (block :data))])}}])]
-         (for [block blocks]
-           ^{:key (block :id)}
-           [:div {:id (block :id) :class "block"}
-            [(:component (template (block :template))) (block :data)]])]))))
-
-(defn render []
-  (reagent/render [app-view]
+(defn ^:export run []
+  (reagent/render [page-view (:page (get-data))]
                   (js/document.getElementById "app")))
-
-(defn ^:export run
-  []
-  (dispatch-sync [:set-data (cljs.reader/read-string (.-innerHTML (js/document.getElementById "data")))])
-  (render))
-
-(fig/add-message-watch
-  :edn-watcher
-  (fn [{:keys [msg-name] :as msg}]
-    (when (= msg-name :edn-files-changed)
-      (dispatch [:fetch-data]))))
-
-(defn ^:export reload
-  []
-  (render))

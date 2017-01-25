@@ -26,3 +26,7 @@
 
    [:&:active
     {:background (colors :bg-active)}]])
+
+(defn spin-mixin []
+  {:animation [["anim-spin" "1s" "infinite" "steps(8)"]]
+   :display "inline-block"})

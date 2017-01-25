@@ -26,8 +26,7 @@ Pages are in:
 `/resources/data/pages.edn`
 
 Images are in:
-`/resources/public/images`
-
+`/resources/data/assets`
 
 
 Changes to templates, blocks and pages are updated immediately.
@@ -35,31 +34,49 @@ Changes to templates, blocks and pages are updated immediately.
 Changes to the server require another `start!` and refresh.
 
 
-## Export
+## Deploying a Page
 
-`lein repl`
+### Prerequisites
+
+#### Set your logins and passwords
+
+Set the following in `profiles.clj`:
+
+```
+{:export
+  {:env
+    {:cdn77-login "..."
+     :cdn77-password "..."
+     :cdn77-storage-location "..."
+     :cloudflare-email "..."
+     :cloudflare-key "..."}}}
+```
+
+#### Install `phantomjs`
+
+Mac: `brew install phantomjs`
+Unix: `apt-get install phantomjs`
+
+#### Install `rsync`
+
+Mac: `brew install rsync`
+Unix:  `apt-get install rsync`
+
+#### Install `sshpass`
+
+Mac: `brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb`
+
+Unix: `apt-get install sshpass`
+
+### The process:
+
+`lein cljsbuild once prod`
+
+`lein with-profiles +bloom repl`
+
 `(start! 6543)`
 
-turn off figwheel
-`rm resources/public/js/blocks.js`
-`lein cljsbuild once prod`
-`phantomjs export.js http://localhost:6543/ www.braidchat.com / ./export/`
+`(require 'blocks.export.core)`
 
+`(blocks.export.core/release! "www.domain.com" "/")`
 
-## Upload to S3
-
-export (as above)
-
-set the following in `profiles.clj`:
-
-```
-{:profile_name {:env {:s3-bucket "bucket_name"
-                      :s3-id "S3_ID"
-                      :s3-secret "S3_SECRET"
-                      :s3-endpoint "s3-endpoint"}}}
-```
-
-then:
-
-`lein with-profiles +profile_name repl`
-`(blocks.server.upload/upload!)`

@@ -3,6 +3,9 @@ resources/public/js/
 target
 .lein-repl-history
 .nrepl-port
-export/
+/export/
 .lein-env
 profiles.clj
+*.jar
+/.idea/
+*.iml

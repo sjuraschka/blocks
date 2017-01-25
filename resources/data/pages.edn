@@ -19,20 +19,58 @@
  {:domain "www.braidchat.com"
   :url "/"
   :meta {:title "Braid - Work Better Together"
-         :description "Braid is a..."
-         :image "url()"}
-  :colors ["#abcdef"
-           "#000000"]
-  :styles {:fonts {:body {:name "Lato"
+         :description "Braid is a group chat application that promotes productive team communication, while still respecting each individual's need for focus. Instead of chatrooms, Braid takes a new approach: discrete conversations and tags."
+         :image "url(/braid/images/braid-icon-256.png)"}
+  :favicon "/braid/images/braid-favicon.png"
+  :colors {}
+
+
+  :styles {:fonts {:body {:name "Muli"
                           :source "google"
-                          :weight 400}
-                   :headings {:name "Lato"
+                          :weight 300}
+                   :headings {:name "Muli"
                               :source "google"
                               :weight 400}}}
   :blocks ["braid-com-header"
-           "braid-com-hero-middle"
+           "braid-com-hero"
+           "braid-com-conversations"
+           "braid-com-how-it-works"
+           "braid-com-benefit-better-conversations"
+           "braid-com-benefit-focus"
+           "braid-com-benefit-deep-integrations"
+           "braid-com-other-benefits"
            "braid-com-features"
+           "braid-com-roadmap"
+           "braid-com-pricing"
+           "braid-com-cta"
            "braid-com-footer"]}
+
+ {:domain "www.braidchat.com"
+  :url "/pricing"
+  :favicon "/braid/images/braid-favicon.png"
+  :styles {:fonts {:body {:name "Muli"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Muli"
+                              :source "google"
+                              :weight 400}}}
+  :blocks ["braid-com-header"
+           "braid-com-pricing"
+           "braid-com-footer"]}
+
+ {:domain "www.braidchat.com"
+  :url "/downloads"
+  :favicon "/braid/images/braid-favicon.png"
+  :styles {:fonts {:body {:name "Muli"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Muli"
+                              :source "google"
+                              :weight 400}}}
+  :blocks ["braid-com-header"
+           "braid-com-downloads"
+           "braid-com-footer"]}
+
 
  {:domain "www.braidchat.org"
   :url "/"
@@ -52,22 +90,92 @@
            "braid-com-features"
            "braid-com-footer"]}
 
- {:domain "tryrookie.com"
+ {:domain "www.getrookie.com"
   :url "/"
-  :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
-         :description "rooke is..."
+  :meta {:title "Rookie - One-on-One Video Training from Renowned Skills Development Coaches."
+         :description "We're not just an video coaching platform, Rookie is the best online coaching platform that has everything you need to build an online coaching business."
          :image "url ()"}
-  :styles {:fonts {:body {:name "Source Sans Pro"
+  :styles {:fonts {:body {:name "Hind"
                           :source "google"
-                          :weight 300}
-                   :headings {:name "Source Sans Pro"
+                          :weight 400}
+                   :headings {:name "Hind"
                               :source "google"
-                              :weight 200}}}
+                              :weight 700}}}
+  :assets ["rookie"
+           "rookie_shared"]
   :blocks ["rookie-header"
            "rookie-hero"
+           "rookie-how-it-works"
            "rookie-step-1"
            "rookie-step-2"
            "rookie-step-3"
-           "rookie-cta"
+           "rookie-testimonial"
            "rookie-footer"]}
- ]
+
+ {:domain "www.getrookie.com"
+  :url "/how-it-works/"
+  :meta {:title "Rookie - One-on-One Video Training frome Renowned Skills Development Coaches."
+         :description "rooke is..."
+         :image "url ()"}
+  :styles {:fonts {:body {:name "Hind"
+                          :source "google"
+                          :weight 400}
+                   :headings {:name "Hind"
+                              :source "google"
+                              :weight 700}}}
+  :blocks ["rookie-header"
+           "title-section-rookie"
+           "rookie-product-feature-1"
+           "rookie-product-feature-2"
+           "rookie-product-feature-3"
+           "rookie-product-feature-5"
+           "rookie-testimonial"
+           "rookie-footer"]}
+
+
+ {:domain "courtneyforlife.getrookie.com"
+  :url "/"
+  :meta {:title "Train with Courtney Ustrzycki online through Rookie"
+         :description "Through Rookie, Courtney will personally review and
+         assess your powerlifting and strength training."
+         :image "url ()"}
+  :styles {:fonts {:body {:name "Abel"
+                          :source "google"
+                          :weight 400}
+                   :headings {:name "Abel"
+                              :source "google"
+                              :weight 700}}}
+  :assets ["rookie_courtney"
+           "rookie_shared"
+           "rookie"]
+  :blocks ["courtney-rookie-header"
+           "courtney-rookie-hero"
+           "courtney-rookie-values-text"
+           "courtney-rookie-quote"
+           "courtney-rookie-footer"]}
+
+ {:domain "intech.getrookie.com"
+  :url "/"
+  :meta {:title "Rookie - One-on-One Video Training from Renowned Skills Development Coaches."
+         :description "Train with INTECH on Rookie"
+         :image "url ()"}
+  :styles {:fonts {:body {:name "Roboto"
+                          :source "google"
+                          :weight 400}
+                   :headings {:name "Roboto"
+                              :source "google"
+                              :weight 700}}}
+  :assets ["rookie_intech"
+           "rookie_shared"
+           "rookie"]
+  :blocks ["intech-rookie-header"
+           "intech-rookie-hero"
+           "intech-rookie-values-text"
+           "intech-rookie-quote"
+           "intech-rookie-footer"]}
+
+]
+
+
+
+

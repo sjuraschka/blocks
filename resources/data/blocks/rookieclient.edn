@@ -1,0 +1,51 @@
+{
+
+ "client-rookie-step-2"
+ {:template "feature-highlight"
+  :data     {:heading     {:text  "Record + Submit your Three Lifts"
+                           :color "#222"}
+             :background  {:color "#fff"}
+             :description {:text  "Let's check out your movement patterns for your squat, bench press and deadlift
+                              (sumo or conventional)."
+                           :color "#777"}
+             :image       {:image-url "/rookie/images/benefits-phone-front1@2x.png"
+                           :position  "left"}}}
+
+ "client-rookie-step-3"
+ {:template "feature-highlight"
+  :data     {:heading     {:text  "Get Feedback + Improve"
+                           :color "#222"}
+             :background  {:color "#fff"}
+             :description {:text  "Because this method of coaching is online, using Rookie will allow me to make sure that
+                              you're moving correctly. We will follow up with video reviews at the end of each training
+                              phase (approximately every 4-6 weeks)."
+                           :color "#777"}
+             :image       {:image-url "/rookie/images/benefits-phone-front2@2x.png"
+                           :position  "right"}}}
+
+ "client-rookie-step-1"
+ {:template "feature-highlight"
+  :data     {:heading     {:text  "Commit to Powerlifting Coaching"
+                           :color "#222"}
+             :background  {:color "#FFF"}
+             :description {:text  "Before we begin anything, we want to make sure your form and bath path are correct to
+                              prevent any possible injuries or setbacks. Let's start at the beginning!"
+                           :color "#777"}
+             :image       {:image-url "/rookie/images/benefits-phone-front3@2x.png"
+                           :position  "right"}}}
+
+ "client-rookie-cta"
+ {:template "cta"
+  :data     {:heading     {:text "Sign up for early access"}
+             :description {:text "If accepted you will receive an email inviting you to use the site."}
+             :background  {:color "#fff"}
+             :form        {:prompt-text "Sign up for early access and be notified when we launch"
+                           :placeholder "coachr@example.com"
+                           :button      {:text   "Get Invited"
+                                         :color  "#fff"
+                                         :colors {:text      "#fff"
+                                                  :bg        "#FF8043"
+                                                  :bg-hover  "#FF8060"
+                                                  :bg-active "#FF8143"}}}}}
+
+ }

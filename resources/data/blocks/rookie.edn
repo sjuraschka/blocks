@@ -1,0 +1,242 @@
+{
+
+ ;=========================================================================================
+ ; Rookie - shared
+ ;=========================================================================================
+
+ "rookie-header"
+ {:template "header"
+  :data     {:color      "#b3b3b3"
+             :padding    "0.75em"
+             :position   "fixed"
+             :overlay?   true
+             :logo       {:image-url "/rookie/images/rookie-navy-logo.svg"
+                          :url       "/"}
+             :height     "1.25rem"
+             :background {:color "#fff"}
+             :shadow     "0px 0px 10px 0px rgba(0, 0, 0, 0.12)"
+             :menu       [{:text "647-267-5292"
+                           :url  "tel:6472675292"
+                           :icon \uf095}
+                          {:text "hi@getrookie.com"
+                           :url  "mailto:hi@getrookie.com"
+                           :icon \uf003}]}}
+
+ "rookie-footer"
+ {:template "footer"
+  :data     {:logo             {:image-url "/rookie/images/rookie-white-logo.svg"}
+             :height           "1em"
+             :background-color "#00175a"
+             :text-color       "#FFF"
+             :menu             [{:text "647-267-5292"
+                                 :url  "tel:6472675292"
+                                 :icon \uf095}
+                                {:text "hi@getrookie.com"
+                                 :url  "mailto:hi@getrookie.com"
+                                 :icon \uf003}]}}
+
+ ;=========================================================================================
+ ; Rookie - /
+ ;=========================================================================================
+
+ "rookie-hero"
+ {:template "hero-middle"
+  :data {:padding "12em"
+         :height "100vh"
+         :heading {:text "A coaching platform made for you"
+                   :color "#232B69"
+                   :size "2.3em"
+                   :weight "bold"
+                   :title-type "uppercase"}
+         :sub-heading {:text "Train your athletes and grow your business through Rookie."
+                       :color "#232B96"}
+         :background {:image-url "/rookie/images/rookie-landing-page-hero.png"
+                      :mobile-url "/rookie/images/rookie-mobile-hero.png"
+                      :color "#EAFAFC"
+                      :size "cover"
+                      :position "center top"}
+         :form {:before {:text "Sign up to reserve your spot on Rookie."}
+                :placeholder "coach@example.com"
+                :autofocus true
+                :background "#fff"
+                :post-submit-message "Thank you for your interest in Rookie. We'll be in touch soon."
+                :ajax {:method :put
+                       ;:action "http://localhost:6789/signup"
+                       :action "https://coach.getrookie.com/signup"}
+
+                :button {:text "Reserve Your Spot"
+                         :colors {:text "#fff"
+                                  :bg "#232B69"
+                                  :bg-hover "#454d87"
+                                  :bg-active "#3D50CF"}}}}}
+
+ "rookie-values-text"
+ {:template "rookie-three-values-text"
+  :data     {:background  "radial-gradient(50% -16%, #4B4EC2 3%, #232B69 100%)"
+             :header      "How you'll use Rookie with your Athletes"
+             :title-color "#232B69"
+
+             :columns     [{:url   "/rookie_shared/images/coach-phone-1.png"
+                            :title {:name "Your athletes send training videos."}}
+                            ;:subtitle "Learn how our coaches expanded their business to offer services worldwide + train more athletes per week"
+
+
+                           {:url   "/rookie_shared/images/coach-phone-2.png"
+                            :title {:name "You give them feedback."}}
+                            ;:subtitle "Use video tools and capture your feedback to give your athelets a full analysis"
+
+
+                           {:url   "/rookie/images/rookie-phone-3.png"
+                            :title {:name "You get paid."}}]}}
+                            ;:subtitle "See how our trainers grew their monthly profits and doubled their client base"
+
+
+ "rookie-how-it-works"
+ {:template "how-it-works"
+  :data     {:background "#fff"
+             :button {:text "Learn how it works"
+                       :url "./how-it-works/"
+                       :color "#fff"
+                       :background "#232B69"
+                       :bg-hover "#454d87"}
+             :detail-button {:bg-hover ""}
+             :columns    [
+                          {:title    "Receive videos from your athletes"
+                           :subtitle "Learn How Athletes use Rookie"
+                           :url "./how-it-works/"}
+                          {:title    "Give feedback with our video editor"
+                           :subtitle "Learn about the Coach Editor"
+                           :url "./how-it-works/"}
+                          {:title    "Get paid automatically with Rookie"
+                           :subtitle "How Our Coaches Grew Their Business"
+                           :url "./how-it-works/"}]}}
+
+ "rookie-step-1"
+ {:template "feature-highlight"
+  :data     {:heading     {:text           "Improve how you coach your athletes"
+                           :color          "#232B69"
+                           :font-size      "1.75em"
+                           :text-transform "uppercase"}
+             :background  {:color "#fff"}
+             :description {:text  "Give thorough video feedback, assign workouts, and communicate with your athletes all through one platform."
+                           :color "#777"}
+             :image       {:image-url "/rookie/images/rookie-sales-0.png"
+                           :position  "right"}}}
+
+ "rookie-step-2"
+ {:template "feature-highlight"
+  :data     {:heading     {:text           "Keep track of your athletes’ progress"
+                           :color          "#232B69"
+                           :font-size      "1.75em"
+                           :text-transform "uppercase"}
+             :background  {:color "#fff"}
+             :description {:text  "View detailed performance data about each of your athlete’s lifts and drills progression."
+                           :color "#777"}
+             :image       {:image-url "/rookie/images/rookie-sales.png"
+                           :position  "left"}}}
+
+
+ "rookie-step-3"
+ {:template "feature-highlight"
+  :data     {:heading     {:text           "Access an endless client base"
+                           :color          "#232B69"
+                           :font-size      "1.75em"
+                           :text-transform "uppercase"}
+             :background  {:color "#fff"}
+             :description {:text  " Attract and train athletes from all over the world."
+                           :color "#777"}
+             :image       {:image-url "/rookie/images/rookie-sales-3.png"
+                           :position  "right"}}}
+
+ "rookie-testimonial"
+ {:template "image-testimonial"
+  :data     {:heading    ""
+             :background {:image-url  "/rookie/images/derrell-testimonial.png"
+                          :mobile-url "/rookie/images/derrell-testimonial-small-screen.png"}}}
+
+
+ "rookie-pre-footer"
+ {:template "pre-footer-menu"
+  :data     {:columns [{:title      "About"
+                        :categories [{:name "Our Story"}
+                                     {:name "The Team"}]}
+
+                       {:title      "Support"
+                        :categories [{:name "Help"}
+                                     {:name "FAQ"}]}
+
+                       {:title      "Advice"
+                        :categories [{:name "Newsletter"}
+                                     {:name "Blog"}]}]}}
+
+
+ ;=========================================================================================
+ ; Rookie - how it works
+ ;=========================================================================================
+
+
+ "title-section-rookie"
+ {:template "one-feature"
+  :data {:page-padding {:top "3em"}
+         :heading   {:text "How it works"
+                     :color "#fff"
+                     :transform "uppercase"}
+         :description {:text "Train more athletes, better."
+                       :color "#fff"}
+         :background {:color "linear-gradient(-45deg, #4B4EC2 0%, #373D96 50%, #232B69 100%)"}}}
+
+ "rookie-product-feature-1"
+ {:template "feature-highlight"
+  :data     {:heading     {:text           "Invite your athletes"
+                           :color          "#232B69"
+                           :font-size      "1.75em"
+                           :text-transform "uppercase"}
+             :background  {:color "#fff"}
+             :spacing {:left  "2.5em"
+                       :right "2em"}
+             :description {:text  "Send your athletes an invite through the Rookie app. They’ll automatically be redirected to the app store where they can download the athlete version of the Rookie app."
+                           :color "#777"}
+             :image       {:image-url "/rookie/images/rookie-training-invite.png"
+                           :position  "right"}}}
+
+ "rookie-product-feature-2"
+ {:template "feature-highlight"
+  :data     {:heading     {:text           "Get training video"
+                           :color          "#232B69"
+                           :font-size      "1.75em"
+                           :text-transform "uppercase"}
+             :background  {:color "rgba(240, 240, 240, 0.55)"}
+             :description {:text  " Instruct an athlete to send you workout videos, drill tape, or game tape and automatically get notified when they’ve sent it to you."
+                           :color "#777"}
+             :image       {:image-url "/rookie/images/rookie-training-dash.png"
+                           :position  "left"}}}
+
+
+ "rookie-product-feature-3"
+ {:template "feature-highlight"
+  :data     {:heading     {:text           "Give Feedback"
+                           :color          "#232B69"
+                           :font-size      "1.75em"
+                           :text-transform "uppercase"}
+             :background  {:color "#fff"}
+             :description {:text  "Use Rookie’s video editor to draw, speak, or write over the athlete’s video."
+                           :color "#777"}
+             :image       {:image-url "/rookie/images/rookie-training-video.png"
+                           :position  "right"}}}
+
+
+ "rookie-product-feature-5"
+ {:template "feature-highlight"
+  :data     {:heading     {:text           "Get Paid"
+                           :color          "#232B69"
+                           :font-size      "1.75em"
+                           :text-transform "uppercase"}
+             :background  {:color "rgba(240, 240, 240, 0.55)"}
+             :description {:text  "Rookie deposits your money directly into your account."
+                           :color "#777"}
+             :image       {:image-url "/rookie/images/rookie-training-payments.png"
+                           :position  "left"}}}
+
+}
+
+
