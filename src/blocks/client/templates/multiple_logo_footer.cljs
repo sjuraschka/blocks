@@ -49,30 +49,30 @@
 
 
 
-     [:a.logo]
-     {:color (data :text-color)
-      :white-space "nowrap"
-      :text-decoration "none"
-      :display "flex"
-      :flex-direction "column"
-      :justify-content "center"
-      :align-items "center"}
+     [:a.logo
+      {:color (data :text-color)
+       :white-space "nowrap"
+       :text-decoration "none"
+       :display "flex"
+       :flex-direction "column"
+       :justify-content "center"
+       :align-items "center"}
 
-     [:img
-      {:height (data :height)
-       :display "inline-block"
-       :vertical-align "middle"
-       :margin-right "0.5em"}]]
+      [:img
+       {:height (data :height)
+        :display "inline-block"
+        :vertical-align "middle"
+        :margin-right "0.5em"}]]
 
-    [:.payment-area
-     {:display "flex"
-      :flex-direction "column"
-      :justify-content "center"
-      :align-items "center"}
-     [:.payment
-      {:height "1em"
-       :display "inline-block"
-       :vertical-align "middle"}]]
+     [:.payment-area
+      {:display "flex"
+       :flex-direction "column"
+       :justify-content "center"
+       :align-items "center"}
+      [:.payment
+       {:height "1em"
+        :display "inline-block"
+        :vertical-align "middle"}]]]
 
     [:.lower]
 
@@ -88,16 +88,16 @@
 (defn view [data]
   [:footer
    [:div.content
-    [:div.upper]
-    [:a.client {:href  (data :website)}
-     [:img.client {:src (get-in data [:client :image])}]]
-    [:a.logo {:href (get-in data [:logo :url])}
-     [:h1.sub-text (data :title)]
-     [:img {:src (get-in data [:logo :image-url])}]]
+    [:div.upper
+     [:a.client {:href  (data :website)}
+      [:img.client {:src (get-in data [:client :image])}]]
+     [:a.logo {:href (get-in data [:logo :url])}
+      [:h1.sub-text (data :title)]
+      [:img {:src (get-in data [:logo :image-url])}]]
 
-    [:div.payment-area
-     [:h1.sub-text "We Accept"]
-     [:img.payment {:src "/rookie_shared/images/payment.png"}]
+     [:div.payment-area
+      [:h1.sub-text "We Accept"]
+      [:img.payment {:src "/rookie_shared/images/payment.png"}]]
 
      [:div.lower]]
     (into
