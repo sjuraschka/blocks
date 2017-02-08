@@ -6,7 +6,7 @@
 
 (defn styles [data]
   [:section.hero-columns
-   {:padding [[(get data :padding "2em") 0]]
+   {:padding [[(get data :padding "1em") 0]]
     :text-align "center"
     :display "flex"
     :flex-direction "column"
@@ -15,32 +15,42 @@
     :box-sizing "border-box"
     :height (data :height)
     :background-color (get-in data [:background :color])
-    :background-image (str "url(" (get-in data [:background :image-url]) ")")
+    :background-image "linear-gradient(45deg, #593eef 28%,#593eef 28%,#232b69 100%)"
     :background-size (get-in data [:background :size])
     :background-repeat "no-repeat"
     :background-position (get-in data [:background :position] "right bottom")}
 
    [:.page-content
-    {:display "flex"}
+    {:width "80%"
+     :display "flex"
+     :justify-content "space-between"}
+
 
 
     [:div.right
-     {:position "relative"}
-
-
+     {}
 
      [:img
-      {:height "650px"
+      {:height "660px"
        :position "relative"
-       :margin-bottom "-8em"}]]
+       :z-index 100}]
+
+     [:video
+      {:position "absolute"
+       :left "1.25em"
+       :top "-2em"
+       :border-radius "2em"}]]
 
 
 
     [:.left
      {:display "flex"
       :flex-direction "column"
+      :text-align (get-in data [:heading :alignment])
       :justify-content "center"
-      :align-items "center"}
+      :align-items "flex-start"
+      :-webkit-font-smoothing "antialiased"}
+
 
      [:h1
       {:font-size (get-in data [:heading :size])
@@ -48,14 +58,16 @@
        :color (get-in data [:heading :color])
        :white-space "pre"
        :line-height "0.9em"
+       :letter-spacing "0.1em"
        :text-transform (get-in data [:heading :title-type])}]
 
      [:p
       {:font-size "1.4em"
-       :margin [["0.75em" "0.75em" "1.25em"]]
+       :margin [["0.75em" 0]]
        :width (get-in data [:sub-heading :width])
-       :text-align "center"
+       :text-align "left"
        :white-space "pre"
+       :font-weight (get-in data [:sub-heading :weight])
        :color (get-in data [:sub-heading :color])}
 
       [:em
@@ -109,9 +121,16 @@
      (when (data :form)
        [email-field/component (data :form)])]
     [:div.content.right
-     [:img.image {:src (get-in data [:featured-image :url])}]]]])
-
-
+     [:img.image {:src (get-in data [:featured-image :url])}]
+     [:video {:controls true
+              :auto-play true
+              :preload "auto"
+              :fullscreen false
+              :muted true
+              :loop true
+              :src "/rookie/images/test-video-small.m4v"
+              :width "290"
+              :height "690"}]]]])
 
 (defmethod template "hero-columns" [_]
   {:css styles

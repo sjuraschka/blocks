@@ -20,7 +20,9 @@
      :font-size "1em"}]
 
    [:p.after
-    {:color (get-in data [:after :color])}
+    {:color (get-in data [:after :color])
+     :text-align "center"
+     :margin-top "1em"}
 
     (when (get-in data [:after :icon])
       [:&::after
@@ -29,7 +31,7 @@
 
    [:fieldset
     {:box-shadow [[0 "2px" "5px" 0 "rgba(167,167,167,0.45)"]]
-     :border-radius "5px"
+     :border-radius "100px"
      :display "inline-block"
      :overflow "hidden"}
 
@@ -125,8 +127,6 @@
                                (if (not (re-matches #".+@.+\..+" @email))
                                  (reset! error-message "That doesn't look like an email. Please try again.")
                                  (submit-form!)))}
-           (when (get-in data [:before :text])
-             [:p.before (get-in data [:before :text])])
            [:fieldset
             [:input {:type "email"
                      :name "email"
