@@ -56,7 +56,7 @@
        [:a.coach-link
         {:text-decoration "none"
          :text-transform "uppercase"
-         :color "#7A51B1"}
+         :color "#3D50CF"}
         [:&::after
          (fontawesome-mixin \uf138)
          {:padding-left "0.5em"}]
