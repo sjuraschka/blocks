@@ -21,7 +21,7 @@
 
    [:p.after
     {:color (get-in data [:after :color])
-     :text-align "center"
+     :text-align "left"
      :margin-top "1em"}
 
     (when (get-in data [:after :icon])
@@ -83,6 +83,7 @@
    (at-media {:max-width "450px"}
      [:fieldset
       {:display "flex"
+       :border-radius "5px"
        :flex-direction "column"}
 
       [:input

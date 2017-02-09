@@ -8,13 +8,13 @@
  {:template "header"
   :data     {:color      "#fff"
              :padding    "0.75em"
-             :position   "fixed"
+             ;:position   "fixed"
              :overlay?   true
              :logo       {:image-url "/rookie/images/rookie-white-logo.svg"
                           :url       "/"}
              :height     "1.25rem"
-             :background {:color "rgba(0, 21, 132, 0.15)"}
-             :shadow     "0px 0px 10px 0px rgba(0, 0, 0, 0.12)"
+             :background {:color "rgba(0, 21, 132, 0)"}
+             ;:shadow     "0px 0px 10px 0px rgba(0, 0, 0, 0.12)"
              :menu       [{:text "647-267-5292"
                            :url  "tel:6472675292"
                            :icon \uf095}
@@ -40,10 +40,11 @@
  ; Rookie - /
  ;=========================================================================================
 
- "rookie-launch-hero"
- {:template "hero-columns"
+ "rookie-hero-testimonial"
+ {:template "hero-testimonial"
   :data {:padding "10em"
-         ;:height "100vh"
+         :height "800px"
+         :mobile-height "650px"
          :heading {:text "Online Coaching\nMade Simple."
                    :color "#fff"
                    :size "2.3em"
@@ -53,15 +54,14 @@
          :sub-heading {:text "Meet the tool that has helped  trainers \ngrow their business online. "
                        :color "#fff"
                        :weight "200"}
-         :featured-image {:url "/rookie/images/rookie-phone.png"
-                          :height "15em"}
-         ;:video-gif {:url ""}
-         :background {:gradent "radial-gradient(46% 10%, #232B69 48%, #593EEF 95%)"
-                      :mobile-url "/rookie/images/rookie-mobile-background.png"
+         :featured-image {:url "/rookie/images/intech-hero-image.png"
+                          :mobile-url "/rookie/images/intech-hero-mobile-image.png"}
+         :background {:gradent "radial-gradient(46% 10%, #232B69 48%, #E7E9EA 95%)"
+                      :mobile-url "radial-gradient(46% 10%, #232B69 48%, #E7E9EA 95%)"
                       :color "#EAFAFC"
                       :size "cover"
                       :position "center top"}
-         :form {:after {:text "Enter your email to try Rookie free for 14 days. No risk, and no credit card required."
+         :form {:after {:text "Enter your email to try Rookie free for 14 days.\nNo risk, and no credit card required."
                         :align "center"}
                 :placeholder "coach@example.com"
                 :autofocus true
@@ -73,7 +73,7 @@
 
                 :button {:text "Get Started"
                          :colors {:text "#fff"
-                                  :bg "#232B69"
+                                  :bg "#7A51B1"
                                   :bg-hover "#454d87"
                                   :bg-active "#3D50CF"}}}}}
 
@@ -282,7 +282,7 @@
                         :colors {:text "#fff"
                                  :bg "#232B69"
                                  :bg-hover "#454d87"
-                                 :bg-active "#3D50CF"}}}}}
+                                 :bg-active "#3D50CF"}}}}
 
 ;"rookie-header"
  ; [{:template "header"
@@ -302,5 +302,43 @@
               ;                :url  "mailto:hi@getrookie.com"
                ;               :icon \uf003}]}}]
 
+
+
+ "rookie-video-hero"
+  {:template "hero-columns"
+   :data {:padding "10em"
+          ;:height "100vh"
+          :heading {:text "Online Coaching\nMade Simple."
+                    :color "#fff"
+                    :size "2.3em"
+                    :weight "600"
+                    :alignment "left"
+                    :title-type "uppercase"}
+          :sub-heading {:text "Meet the tool that has helped  trainers \ngrow their business online. "
+                        :color "#fff"
+                        :weight "200"}
+          :featured-image {:url "/rookie/images/rookie-phone.png"
+                           :height "15em"}
+          ;:video-gif {:url ""}
+          :background {:gradent "radial-gradient(46% 10%, #232B69 48%, #593EEF 95%)"
+                       :mobile-url "/rookie/images/rookie-mobile-background.png"
+                       :color "#EAFAFC"
+                       :size "cover"
+                       :position "center top"}
+          :form {:after {:text "Enter your email to try Rookie free for 14 days. No risk, and no credit card required."
+                         :align "center"}
+                 :placeholder "coach@example.com"
+                 :autofocus true
+                 :background "#fff"
+                 :post-submit-message "Thank you for your interest in Rookie. We'll be in touch soon."
+                 :ajax {:method :put
+                        ;:action "http://localhost:6789/signup"
+                        :action "https://coach.getrookie.com/signup"}
+
+                 :button {:text "Get Started"
+                          :colors {:text "#fff"
+                                   :bg "#232B69"
+                                   :bg-hover "#454d87"
+                                   :bg-active "#3D50CF"}}}}}}
 
 
