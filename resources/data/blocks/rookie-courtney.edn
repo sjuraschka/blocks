@@ -23,7 +23,7 @@
                            :size       "2.3em"
                            :weight     "bold"
                            :title-type "title-case"}
-             :sub-heading {:text      "Professional video analysis of your big lifts.\nSign up to have Courtney personally review and\nassess your form and bar path to ensure\nyou're progressing properly and safely with\npowerlifting and strength training."
+             :sub-heading {:text      "Professional video analysis of your big lifts.\nSign up to have Courtney personally review and\nassess your form and bar path to ensure\nyou're progressing properly and safely with strength training."
                            :font-size "1em"
                            :color     "#9c9c9c"
                            :mobile-color "#222"
@@ -35,7 +35,7 @@
                            :size       "cover"
                            :position   "right bottom"}
              :form        {:prompt-text "Sign up for elite\nprogramming + coaching!"
-                           :sub-text    "The best video analysis offered by any online powerlifting coach."
+                           :sub-text    "The best video analysis offered by any online strength coach."
                            :post-submit-message "Thank you. You'll hear from me soon."
                            :border      "#ccc"
                            :placeholder "athlete@example.com"
@@ -56,7 +56,7 @@
              :header "How Courtney will work with you through Rookie"
              :title-color "#222222"
              :columns    [{:url      "/rookie_shared/images/coach-phone.png"
-                           :title    {:name  "Commit to Powerlifting Coaching"}
+                           :title    {:name  "Commit to Strength Training"}
                            :subtitle "Before we begin anything, we want to make sure your form and bath path are correct to
                               prevent any possible injuries or setbacks. Let's start at the beginning!"
                            :border   "1px solid rgba(155, 170, 170, 0.5)"}
