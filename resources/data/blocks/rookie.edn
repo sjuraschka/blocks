@@ -78,14 +78,20 @@
                                   :bg-active "#3D50CF"}}}}}
  "rookie-pitch"
  {:template "feature-highlight"
-  :data  {:heading     {:text           "Improve how you coach your athletes"
-                        :color          "#232B69"
+  :data  {:heading     {:text           "Meet Rookie"
+                        :color          "#2E3944"
                         :font-size      "1.75em"
+                        :spacer "0.15em"
                         :text-transform "uppercase"}
-          :background  {:color "#fff"}
-          :description {:text  "Give thorough video feedback, assign workouts, and communicate with your athletes all through one platform."
-                        :color "#777"}
-          :image       {:image-url "/rookie/images/rookie-sales-0.png"
+          :background  {:color "#F5F5F5"}
+          :spacing {:right "11em"}
+          :description {:text  "Rookie is used by trainers and coaches for\nvirtually every sport you can think of.\n\nTrainers have used Rookie to grow\ntheir online training businesses.\nWe let athletes capture exercises or\ngame footage, so coaches can quickly\ngive video feedback, demonstrations\nand assign workouts."
+                        :color "#2E3944"
+                        :weight "100"
+                        :white-space "pre"
+                        :line-height "1.65em"}
+
+          :image       {:image-url "/rookie/images/rookie-pitch-image.png"
                         :position  "right"}}}
 
 
