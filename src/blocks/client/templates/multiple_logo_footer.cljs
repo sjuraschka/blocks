@@ -9,11 +9,7 @@
    {:background (data :background-color)}
 
    [:.content
-    {:display "flex"
-     :flex-direction "column"
-     :justify-content "center"
-     :width "100%"
-     :max-width "100%"
+    {:width "100%"
      :padding pad
      :box-sizing "border-box"}
 
@@ -97,9 +93,9 @@
 
      [:div.payment-area
       [:h1.sub-text "We Accept"]
-      [:img.payment {:src "/rookie_shared/images/payment.png"}]]
+      [:img.payment {:src "/rookie_shared/images/payment.png"}]]]
 
-     [:div.lower]]
+
     (into
       [:nav]
       (for [link (data :menu)]
