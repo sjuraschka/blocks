@@ -78,7 +78,9 @@
        {:margin-left 0
         :margin-right 0}
        [:h1
-        {:font-size "1.5em"}]]])])
+        {:font-size "1.5em"}]
+       [:p
+        {:white-space "normal"}]]])])
 
 (defn component [data]
   [:section.feature-highlight
@@ -86,7 +88,7 @@
     [:div.text
      [:h1 {:data-step (get-in data [:heading :step])}
       (get-in data [:heading :text])]
-     [:img.underline {:src "/rookie/images/purple-line.png"}]
+     [:img.underline {:src (get-in data [:heading :underline])}]
 
      [:p (get-in data [:description :text])]]
     [:div
