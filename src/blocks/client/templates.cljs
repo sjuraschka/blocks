@@ -3,8 +3,9 @@
     blocks.client.templates.raw
     blocks.client.templates.header
     blocks.client.templates.hero
-    blocks.client.templates.hero-middle
     blocks.client.templates.hero-columns
+    blocks.client.templates.hero-middle
+    blocks.client.templates.hero-testimonial
     blocks.client.templates.letter
     blocks.client.templates.video
     blocks.client.templates.downloads

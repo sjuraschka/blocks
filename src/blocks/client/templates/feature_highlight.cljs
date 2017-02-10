@@ -2,7 +2,7 @@
   (:require [blocks.client.template :refer [template]]
             [garden.stylesheet :refer [at-media]]))
 
-(def pad "3em")
+(def pad "4em")
 
 (defn styles [data]
   [:.feature-highlight
@@ -33,6 +33,7 @@
    [:h1
     {:color (get-in data [:heading :color])
      :font-size (get-in data [:heading :font-size])
+     :letter-spacing (get-in data [:heading :spacer])
      :text-transform (get-in data [:heading :text-transform])
      :margin-bottom "0.5em"
      :position "relative"
@@ -54,12 +55,19 @@
       :z-index -1
       :opacity 0.5}]]
 
-   [:p
-    {:color (get-in data [:description :color])}]
+   [:.underline
+    {:margin-top "-1em"}]
 
-   [:img
+   [:p
+    {:color (get-in data [:description :color])
+     :font-weight (get-in data [:description :weight])
+     :white-space (get-in data [:description :white-space])
+     :line-height (get-in data [:description :line-height])}]
+
+
+   [:img.feature
     {:max-width "32em"
-     :margin-top "-5em"}]
+     :margin-top "2em"}]
 
    (at-media {:max-width "575px"}
 
@@ -70,7 +78,9 @@
        {:margin-left 0
         :margin-right 0}
        [:h1
-        {:font-size "1.5em"}]]])])
+        {:font-size "1.5em"}]
+       [:p
+        {:white-space "normal"}]]])])
 
 (defn component [data]
   [:section.feature-highlight
@@ -78,9 +88,11 @@
     [:div.text
      [:h1 {:data-step (get-in data [:heading :step])}
       (get-in data [:heading :text])]
+     [:img.underline {:src (get-in data [:heading :underline])}]
+
      [:p (get-in data [:description :text])]]
     [:div
-     [:img {:src (get-in data [:image :image-url])}]]]])
+     [:img.feature {:src (get-in data [:image :image-url])}]]]])
 
 (defmethod template "feature-highlight" [_]
   {:css styles

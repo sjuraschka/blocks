@@ -8,13 +8,13 @@
  {:template "header"
   :data     {:color      "#fff"
              :padding    "0.75em"
-             :position   "fixed"
+             ;:position   "fixed"
              :overlay?   true
              :logo       {:image-url "/rookie/images/rookie-white-logo.svg"
                           :url       "/"}
              :height     "1.25rem"
-             :background {:color "rgba(0, 21, 132, 0.35)"}
-             :shadow     "0px 0px 10px 0px rgba(0, 0, 0, 0.12)"
+             :background {:color "rgba(0, 21, 132, 0)"}
+             ;:shadow     "0px 0px 10px 0px rgba(0, 0, 0, 0.12)"
              :menu       [{:text "647-267-5292"
                            :url  "tel:6472675292"
                            :icon \uf095}
@@ -40,26 +40,29 @@
  ; Rookie - /
  ;=========================================================================================
 
- "rookie-launch-hero"
- {:template "hero-columns"
+ "rookie-hero-testimonial"
+ {:template "hero-testimonial"
   :data {:padding "10em"
-         ;:height "100vh"
-         :heading {:text "A coaching platform made for you"
+         :height "800px"
+         :mobile-height "650px"
+         :heading {:text "Online Coaching\nMade Simple."
                    :color "#fff"
                    :size "2.3em"
-                   :weight "bold"
+                   :weight "600"
+                   :alignment "left"
                    :title-type "uppercase"}
-         :sub-heading {:text "Train your athletes and grow your business through Rookie."
-                       :color "#232B96"}
-         :featured-image {:url "/rookie/images/rookie-phone.png"
-                          :height "15em"}
-         ;:video-gif {:url ""}
-         :background {:image-url "/rookie/images/rookie-backgroud-image.png"
-                      :mobile-url "/rookie/images/rookie-mobile-background.png"
+         :sub-heading {:text "Meet the tool that has helped  trainers \ngrow their business online. "
+                       :color "#fff"
+                       :weight "200"}
+         :featured-image {:url "/rookie/images/intech-hero-image.png"
+                          :mobile-url "/rookie/images/intech-hero-mobile-image.png"}
+         :background {:gradent "radial-gradient(46% 10%, #232B69 48%, #E7E9EA 95%)"
+                      :mobile-url "radial-gradient(46% 10%, #232B69 48%, #E7E9EA 95%)"
                       :color "#EAFAFC"
                       :size "cover"
                       :position "center top"}
-         :form {:before {:text "Enter your email to reserve a spot on Rookie."}
+         :form {:after {:text "Enter your email to try Rookie free for 14 days.\nNo risk, and no credit card required."
+                        :align "center"}
                 :placeholder "coach@example.com"
                 :autofocus true
                 :background "#fff"
@@ -68,18 +71,39 @@
                        ;:action "http://localhost:6789/signup"
                        :action "https://coach.getrookie.com/signup"}
 
-                :button {:text "Reserve Your Spot"
+                :button {:text "Get Started"
                          :colors {:text "#fff"
-                                  :bg "#232B69"
-                                  :bg-hover "#454d87"
+                                  :bg "#3D50CF"
+                                  :bg-hover "#3B4AAC"
                                   :bg-active "#3D50CF"}}}}}
+ "rookie-pitch"
+ {:template "feature-highlight"
+  :data  {:heading     {:text           "Meet Rookie"
+                        :color          "#2E3944"
+                        :font-size      "1.75em"
+                        :spacer "0.15em"
+                        :text-transform "uppercase"
+                        :underline "/rookie/images/purple-line.png"}
+          :background  {:color "#F5F5F5"}
+          :spacing {:right "11em"}
+          :description {:text  "Rookie is used by trainers and coaches\nfor virtually every sport you can think of.\n\nTrainers have used Rookie to grow their\nonline training businesses.\n\nWe let athletes capture exercises and\ngame footage, so coaches can quickly\ngive video feedback, demonstrations\nand assign new workouts."
+                        :color "#2E3944"
+                        :weight "100"
+                        :white-space "pre"
+                        :line-height "1.65em"}
+
+
+          :image       {:image-url "/rookie/images/rookie-pitch-image.png"
+                        :position  "right"}}}
+
+
 
 
 
 
  "rookie-values-text"
  {:template "rookie-three-values-text"
-  :data     {:background  "radial-gradient(50% -16%, #4B4EC2 3%, #232B69 100%)"
+  :data     {:background  "radial-gradient(50% -16%, #3D50CF 3%, #232B69 100%)"
              :header      "How you'll use Rookie with your Athletes"
              :title-color "#232B69"
 
@@ -121,24 +145,28 @@
  "rookie-step-1"
  {:template "feature-highlight"
   :data     {:heading     {:text           "Improve how you coach your athletes"
-                           :color          "#232B69"
+                           :color          "#2E3944"
                            :font-size      "1.75em"
-                           :text-transform "uppercase"}
-             :background  {:color "#fff"}
+                           :spacer "0.15em"
+                           :text-transform "uppercase"
+                           :underline "/rookie/images/purple-line.png"}
+             :background  {:color "#F5F5F5"}
              :description {:text  "Give thorough video feedback, assign workouts, and communicate with your athletes all through one platform."
-                           :color "#777"}
+                           :color "#2E3944"}
              :image       {:image-url "/rookie/images/rookie-sales-0.png"
                            :position  "right"}}}
 
  "rookie-step-2"
  {:template "feature-highlight"
   :data     {:heading     {:text           "Keep track of your athletes’ progress"
-                           :color          "#232B69"
+                           :color          "#2E3944"
                            :font-size      "1.75em"
-                           :text-transform "uppercase"}
-             :background  {:color "#fff"}
+                           :spacer "0.15em"
+                           :text-transform "uppercase"
+                           :underline "/rookie/images/purple-line.png"}
+             :background  {:color "#F5F5F5"}
              :description {:text  "View detailed performance data about each of your athlete’s lifts and drills progression."
-                           :color "#777"}
+                           :color "#2E3944"}
              :image       {:image-url "/rookie/images/rookie-sales.png"
                            :position  "left"}}}
 
@@ -146,20 +174,18 @@
  "rookie-step-3"
  {:template "feature-highlight"
   :data     {:heading     {:text           "Access an endless client base"
-                           :color          "#232B69"
+                           :color          "#2E3944"
                            :font-size      "1.75em"
-                           :text-transform "uppercase"}
-             :background  {:color "#fff"}
+                           :spacer "0.15em"
+                           :text-transform "uppercase"
+                           :underline "/rookie/images/purple-line.png"}
+             :background  {:color "#F5F5F5"}
              :description {:text  " Attract and train athletes from all over the world."
-                           :color "#777"}
+                           :color "#2E3944"}
              :image       {:image-url "/rookie/images/rookie-sales-3.png"
                            :position  "right"}}}
 
- "rookie-testimonial"
- {:template "image-testimonial"
-  :data     {:heading    ""
-             :background {:image-url  "/rookie/images/derrell-testimonial.png"
-                          :mobile-url "/rookie/images/derrell-testimonial-small-screen.png"}}}
+
 
 
  "rookie-pre-footer"
@@ -275,11 +301,11 @@
                       ;:action "http://localhost:6789/signup"
                       :action "https://coach.getrookie.com/signup"}
 
-               :button {:text "Reserve Your Spot"
+               :button {:text "Get Started"
                         :colors {:text "#fff"
                                  :bg "#232B69"
                                  :bg-hover "#454d87"
-                                 :bg-active "#3D50CF"}}}}}
+                                 :bg-active "#3D50CF"}}}}
 
 ;"rookie-header"
  ; [{:template "header"
@@ -299,5 +325,49 @@
               ;                :url  "mailto:hi@getrookie.com"
                ;               :icon \uf003}]}}]
 
+
+ "rookie-testimonial"
+ {:template "image-testimonial"
+  :data     {:heading    ""
+             :background {:image-url  "/rookie/images/derrell-testimonial.png"
+                          :mobile-url "/rookie/images/derrell-testimonial-small-screen.png"}}}
+
+
+ "rookie-video-hero"
+  {:template "hero-columns"
+   :data {:padding "10em"
+          ;:height "100vh"
+          :heading {:text "Online Coaching\nMade Simple."
+                    :color "#fff"
+                    :size "2.3em"
+                    :weight "600"
+                    :alignment "left"
+                    :title-type "uppercase"}
+          :sub-heading {:text "Meet the tool that has helped  trainers \ngrow their business online. "
+                        :color "#fff"
+                        :weight "200"}
+          :featured-image {:url "/rookie/images/rookie-phone.png"
+                           :height "15em"}
+          ;:video-gif {:url ""}
+          :background {:gradent "radial-gradient(46% 10%, #232B69 48%, #593EEF 95%)"
+                       :mobile-url "/rookie/images/rookie-mobile-background.png"
+                       :color "#EAFAFC"
+                       :size "cover"
+                       :position "center top"}
+          :form {:after {:text "Enter your email to try Rookie free for 14 days. No risk, and no credit card required."
+                         :align "center"}
+                 :placeholder "coach@example.com"
+                 :autofocus true
+                 :background "#fff"
+                 :post-submit-message "Thank you for your interest in Rookie. We'll be in touch soon."
+                 :ajax {:method :put
+                        ;:action "http://localhost:6789/signup"
+                        :action "https://coach.getrookie.com/signup"}
+
+                 :button {:text "Get Started"
+                          :colors {:text "#fff"
+                                   :bg "#232B69"
+                                   :bg-hover "#454d87"
+                                   :bg-active "#3D50CF"}}}}}}
 
 

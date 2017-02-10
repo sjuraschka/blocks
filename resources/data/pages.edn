@@ -104,9 +104,11 @@
   :assets ["rookie"
            "rookie_shared"]
   :blocks ["rookie-header"
-           "rookie-launch-hero"
+           "rookie-hero-testimonial"
+           "rookie-pitch"
+           ;"rookie-video-hero"
            ;"rookie-hero"
-           "rookie-testimonial"
+           ;"rookie-testimonial"
            "rookie-how-it-works"
            "rookie-step-1"
            "rookie-step-2"

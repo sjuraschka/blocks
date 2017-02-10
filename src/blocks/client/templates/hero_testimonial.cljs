@@ -1,54 +1,75 @@
-(ns blocks.client.templates.hero-columns
+(ns blocks.client.templates.hero-testimonial
   (:require [blocks.client.template :refer [template]]
             [blocks.client.templates.mixins :refer [fontawesome-mixin button-mixin]]
             [blocks.client.templates.partials.email-field :as email-field]
             [garden.stylesheet :refer [at-media]]))
 
 (defn styles [data]
-  [:section.hero-columns
+  [:section.hero-testimonial
    {:padding [[(get data :padding "1em") 0]]
-    :text-align "center"
-    :display "flex"
-    :flex-direction "column"
-    :justify-content "center"
+    :box-sizing       "border-box"
+    :position         "relative"
+    :display          "flex"
+    :justify-content  "flex-end"
     :align-items "center"
-    :box-sizing "border-box"
     :height (data :height)
+    :width            "100vw"
     :background-color (get-in data [:background :color])
-    :background-image "linear-gradient(45deg, #593eef 28%,#593eef 28%,#232b69 100%)"
+    :background-image "linear-gradient(82deg, #A4BAC0 16%, #95C5D2 92%)"
     :background-size (get-in data [:background :size])
     :background-repeat "no-repeat"
     :background-position (get-in data [:background :position] "right bottom")}
 
    [:.page-content
-    {:width "80%"
-     :display "flex"
-     :justify-content "space-between"}
-
-
+    {:width "100vw"}
 
     [:div.right
-     {}
+     {:width "100%"
+      :position "absolute"
+      :right 0
+      :bottom 0
+      :top 0}
 
-     [:img
-      {:height "660px"
-       :position "relative"
-       :z-index 100}]
-
-     [:video
+     [:div.image
       {:position "absolute"
-       :left "1.25em"
-       :top "-2em"
-       :border-radius "2em"}]]
+       :right 0
+       :top 0
+       :bottom 0
+       :background-image  (str "url(" (get-in data [:featured-image :url]) ")")
+       :background-repeat "no-repeat"
+       :height            "100vh"
+       :width "960px"}
+
+      [:.caption
+       {:position "relative"
+        :z-index 50
+        :top "15em"
+        :left "25em"
+        :font-size "9px"
+        :white-space "pre"
+        :opacity "0.5"}
 
 
+       [:div.coach-name
+        {}]
+
+       [:a.coach-link
+        {:text-decoration "none"
+         :text-transform "uppercase"
+         :color "#3D50CF"}
+        [:&::after
+         (fontawesome-mixin \uf138)
+         {:padding-left "0.5em"}]
+        [:&:hover
+         {:font-weight "600"}]]]]]
 
     [:.left
      {:display "flex"
+      :position "relative"
+      :padding "0 3em"
+      :z-index "50"
       :flex-direction "column"
       :text-align (get-in data [:heading :alignment])
-      :justify-content "center"
-      :align-items "flex-start"
       :-webkit-font-smoothing "antialiased"}
 
 
@@ -84,10 +105,10 @@
      (email-field/styles (data :form))]]
 
 
-   (at-media {:max-width "700px"}
+   (at-media {:max-width "600px"}
              [:&
-              {:background-image (str "url(" (get-in data [:background :mobile-url]) ")")
-               :width "100vw"}
+              {:width "100vw"
+               :height (data :mobile-height)}
 
               [:.content.left
                {:width "100vw"
@@ -95,22 +116,46 @@
                 :display "flex"
                 :flex-direction "column"
                 :justify-content "center"
-                :align-items "center"}
+                :align-items "center"
+                :text-align "center"
+                :padding "0 1em"}
 
                [:h1
                 {:font-size "1.65em"
-                 :white-space "normal"
-                 :width "20rem"}]
+                 :white-space "normal"}]
+
 
                ["> p"
                 {:font-size "1.15em"
                  :color (get-in data [:sub-heading :mobile-color])
-                 :width "17rem"
-                 :white-space "normal"}]]])])
+                 :white-space "normal"
+                 :text-align "center"}]]
+
+              [:.content.right
+               [:div.image
+                {:background-image (str "url(" (get-in data [:featured-image :mobile-url]) ")")
+                 :max-width "448px"
+                 :size "cover"}
+                [:.caption
+                 {:display "none"}]]]])
+   (at-media {:max-width "320px"}
+     [:&
+      {:width "100vw"
+       :height "500px"}
+      [:.right
+       [:.image
+        {:width "320px"
+         :height "500px"}]]])])
+
+
+
+
+
+
 
 
 (defn hero [data]
-  [:section.hero-columns
+  [:section.hero-testimonial
    [:div.page-content
     [:div.content.left
      [:h1 (get-in data [:heading :text])]
@@ -120,18 +165,14 @@
        [:a.button {:href ""} (get-in data [:button :text])])
      (when (data :form)
        [email-field/component (data :form)])]
-    [:div.content.right
-     [:img.image {:src (get-in data [:featured-image :url])}]
-     [:video {:controls true
-              :auto-play true
-              :preload "auto"
-              :fullscreen false
-              :muted true
-              :loop true
-              :src "/rookie/images/test-video-small.m4v"
-              :width "290"
-              :height "690"}]]]])
 
-(defmethod template "hero-columns" [_]
+    [:div.content.right
+     [:div.image
+      [:div.caption
+       [:div.coach-name "Derrell Levy\nIn-Tech High Performance Training"]
+       [:a.coach-link {:href "http://intech.getrookie.com"} "See how Intech uses Rookie"]]]]]])
+
+
+(defmethod template "hero-testimonial" [_]
   {:css styles
    :component hero})

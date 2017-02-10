@@ -52,7 +52,7 @@
       [:.microtext
        {:font-size "0.8em"
         :margin-top "0.5rem"
-        :color "#0D6C7F" }
+        :color "#0D6C7F"}
 
        [:a
         {:color "#0D6C7F"
@@ -97,7 +97,7 @@
      (when-let [button (data :button)]
        [:div.cta
         [:a.button.try
-         {:href (button :url)} (button :text) ]
+         {:href (button :url)} (button :text)]
         (when (button :sub-text)
           [:div.microtext
            [:a.learn {:href (button :sub-url)}
