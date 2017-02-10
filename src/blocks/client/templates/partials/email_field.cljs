@@ -31,7 +31,7 @@
 
    [:fieldset
     {:box-shadow [[0 "2px" "5px" 0 "rgba(167,167,167,0.45)"]]
-     :border-radius "100px"
+     :border-radius "7px"
      :display "inline-block"
      :overflow "hidden"}
 
