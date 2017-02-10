@@ -37,7 +37,7 @@
        :bottom 0
        :background-image  (str "url(" (get-in data [:featured-image :url]) ")")
        :background-repeat "no-repeat"
-       :height            "100vh"
+       :height            "100%"
        :width "960px"}
 
       [:.caption

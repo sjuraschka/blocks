@@ -54,7 +54,7 @@
          :sub-heading {:text "Meet the tool that has helped  trainers \ngrow their business online. "
                        :color "#fff"
                        :weight "200"}
-         :featured-image {:url "/rookie/images/intech-hero-image.png"
+         :featured-image {:url "/rookie/images/intech-hero-image-2.png"
                           :mobile-url "/rookie/images/intech-hero-mobile-image.png"}
          :background {:gradent "radial-gradient(46% 10%, #232B69 48%, #E7E9EA 95%)"
                       :mobile-url "radial-gradient(46% 10%, #232B69 48%, #E7E9EA 95%)"
