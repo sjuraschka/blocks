@@ -51,7 +51,7 @@
                    :weight "600"
                    :alignment "left"
                    :title-type "uppercase"}
-         :sub-heading {:text "Meet the tool that has helped  trainers \ngrow their business online. "
+         :sub-heading {:text "Attract and train athletes from\nall over the world with Rookie."
                        :color "#fff"
                        :weight "200"}
          :featured-image {:url "/rookie/images/intech-hero-image-2.png"
@@ -71,7 +71,7 @@
                        ;:action "http://localhost:6789/signup"
                        :action "https://coach.getrookie.com/signup"}
 
-                :button {:text "Get Started"
+                :button {:text "Start my free trial"
                          :colors {:text "#fff"
                                   :bg "#3D50CF"
                                   :bg-hover "#3B4AAC"
@@ -86,7 +86,7 @@
                         :underline "/rookie/images/purple-line.png"}
           :background  {:color "#F5F5F5"}
           :spacing {:right "11em"}
-          :description {:text  "Rookie is used by trainers and coaches\nfor virtually every sport you can think of.\n\nTrainers have used Rookie to grow their\nonline training businesses.\n\nWe let athletes capture exercises and\ngame footage, so coaches can quickly\ngive video feedback, demonstrations\nand assign new workouts."
+          :description {:text  "Rookie is a powerful video coaching app\nthat makes the online coaching process\nsimple, quick, and effective.\n\nInvite athletes and clients from all\nover the world to your Rookie app,\nand start working with your clientele\n within minutes. "
                         :color "#2E3944"
                         :weight "100"
                         :white-space "pre"
