@@ -94,7 +94,7 @@
   :url "/"
   :meta {:title "Online Coaching and Personal Training Software - Get Rookie - Free Trial"
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
-         :image "url (/rookie/images/rookie-coaching-logo.png)"}
+         :image "url(/rookie/images/rookie-coaching-logo.png)"}
   :favicon "/rookie/images/rookie-favicon.png"
   :styles {:fonts {:body {:name "Hind"
                           :source "google"

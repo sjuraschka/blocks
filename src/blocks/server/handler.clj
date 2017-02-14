@@ -98,13 +98,17 @@
                 [:head
                  [:meta {:charset "utf-8"}]
                  [:meta {:http-equiv "x-ua-compatible" :content "ie=edge"}]
+                 [:title (get-in page [:meta :title])]
                  [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
                  [:meta {:name "generator" :content "blocks"}]
+                 (when (get-in page [:meta :description])
+                   [:meta {:name "description" :content (get-in page [:meta :description])}])
+                 (when (get-in page [:meta :image])
+                   [:meta {:name "image" :content (get-in page [:meta :image])}])
                  [:style {:type "text/css"}
                   (slurp (clojure.java.io/resource "public/css/reset.css"))]
                  (when-let [favicon (get-in page [:favicon])]
-                   [:link {:rel "icon" :type "image/png" :href favicon}])
-                 [:title (get-in page [:meta :title])]]
+                   [:link {:rel "icon" :type "image/png" :href favicon}])]
                 [:body
                  [:div {:id "app"}]
                  [:script {:type "text/edn" :id "data"}
