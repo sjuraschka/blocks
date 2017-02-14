@@ -24,11 +24,13 @@
     {:width "100vw"}
 
     [:div.right
-     {:width "100%"
+     {;:width "100%"
       :position "absolute"
       :right 0
       :bottom 0
-      :top 0}
+      :top 0
+      :height            "800px"
+      :width "960px"}
 
      [:div.image
       {:position "absolute"
@@ -37,7 +39,8 @@
        :bottom 0
        :background-image  (str "url(" (get-in data [:featured-image :url]) ")")
        :background-repeat "no-repeat"
-       :height            "100%"
+       :background-size "100%"
+       :height            "800px"
        :width "960px"}
 
       [:.caption
@@ -132,10 +135,15 @@
                  :text-align "center"}]]
 
               [:.content.right
+               {:left 0
+                :right "initial"}
                [:div.image
                 {:background-image (str "url(" (get-in data [:featured-image :mobile-url]) ")")
-                 :max-width "448px"
-                 :size "cover"}
+                 ;:max-width "448px"
+                 :left 0
+                 :right "initial"
+                 :size "cover"
+                 :background-size "100%"}
                 [:.caption
                  {:display "none"}]]]])
    (at-media {:max-width "320px"}
