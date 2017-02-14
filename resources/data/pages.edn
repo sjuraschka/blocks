@@ -115,7 +115,8 @@
            "rookie-step-2"
            "rookie-step-3"
 
-           "rookie-footer"]}
+           "rookie-footer"
+           "rookie-analytics"]}
 
  {:domain "www.getrookie.com"
   :url "/how-it-works/"
@@ -137,7 +138,8 @@
            "rookie-product-feature-3"
            "rookie-product-feature-5"
            "rookie-testimonial"
-           "rookie-footer"]}
+           "rookie-footer"
+           "rookie-analytics"]}
 
 
 

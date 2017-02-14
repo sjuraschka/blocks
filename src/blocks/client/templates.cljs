@@ -1,6 +1,7 @@
 (ns blocks.client.templates
   (:require
     blocks.client.templates.raw
+    blocks.client.templates.analytics
     blocks.client.templates.header
     blocks.client.templates.hero
     blocks.client.templates.hero-columns
