@@ -14,7 +14,6 @@
    [:&::before
     {:content          "\"\""
      :display          "block"
-     :background-image "linear-gradient(-45deg, #4B4EC2 0%, #373D96 50%, #232B69 100%)"
      :height           "62vh"
      :position         "relative"
      :width            "100vw"
@@ -28,12 +27,13 @@
      :display        "flex"
      :flex-direction "column"
      :align-items    "center"
-     :color          "#fff"}
+     :color          "#2E3944"}
 
     [:.title
      {:font-size      "1.75em"
       :box-sizing     "border-box"
-      :color          "#fff"
+      :color          "#2E3944"
+      :letter-spacing "0.1em"
       :padding-bottom "1.5rem"
       :text-transform "uppercase"
       :text-decoration "none"}]
@@ -116,10 +116,10 @@
               [:.subtitle
                {:max-width "20em"}]
 
-              [:img {:width      "80vw"
-                     :height     "initial"
-                     :min-width  "368px"
-                     :min-height "208.55px"}]
+              [:video {:width      "80vw"
+                       :height     "initial"
+                       :min-width  "368px"
+                       :min-height "208.55px"}]
 
               [:.title
                {:padding-bottom 0
@@ -142,7 +142,13 @@
     [:h1.title "How you'll use Rookie with your athletes"]
     [:p.subtitle "Whether your clients are in the local gym, on social media,\nor across the globe, Rookie will help you train them."]
     [:a.button {:href "./how-it-works"} "Learn How It Works"]
-    [:img {:src "/rookie/images/macbook-rookie-home.png"}]
+    [:video {:src "/rookie/videos/how-it-works-small.m4v"
+             :auto-play true
+             :preload "auto"
+             :fullscreen false
+             :muted true
+             :loop true}]
+
 
     (into
       [:div.columns]

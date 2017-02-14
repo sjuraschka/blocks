@@ -127,7 +127,7 @@
   :data     {:background "#fff"
              :button {:text "Learn how it works"
                        :url "./how-it-works/"
-                       :color "#fff"
+                       :color "#2E3944"
                        :background "#232B69"
                        :bg-hover "#454d87"}
              :detail-button {:bg-hover ""}
