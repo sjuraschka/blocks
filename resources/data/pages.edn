@@ -119,7 +119,7 @@
            "rookie-analytics"]}
 
  {:domain "www.getrookie.com"
-  :url "/how-it-works/"
+  :url "/how-it-works"
   :meta {:title "Online Coaching and Personal Training Software - Get Rookie - Free Trial"
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url (/rookie/images/rookie-coaching-logo.png)"}
@@ -137,7 +137,7 @@
            "rookie-product-feature-2"
            "rookie-product-feature-3"
            "rookie-product-feature-5"
-           "rookie-testimonial"
+           ;"rookie-testimonial"
            "rookie-footer"
            "rookie-analytics"]}
 
