@@ -14,9 +14,8 @@
     :align-items "center"
     :box-sizing "border-box"
     :height (data :height)
-    :background-color (get-in data [:background :color])
-    :background-image "linear-gradient(45deg, #593eef 28%,#593eef 28%,#232b69 100%)"
-    :background-size (get-in data [:background :size])
+    :background-image (str "url(" (get-in data [:background :image-url]) ")")
+    :background-size "cover"
     :background-repeat "no-repeat"
     :background-position (get-in data [:background :position] "right bottom")}
 
@@ -24,24 +23,6 @@
     {:width "80%"
      :display "flex"
      :justify-content "space-between"}
-
-
-
-    [:div.right
-     {}
-
-     [:img
-      {:height "660px"
-       :position "relative"
-       :z-index 100}]
-
-     [:video
-      {:position "absolute"
-       :left "1.25em"
-       :top "-2em"
-       :border-radius "2em"}]]
-
-
 
     [:.left
      {:display "flex"
@@ -51,37 +32,55 @@
       :align-items "flex-start"
       :-webkit-font-smoothing "antialiased"}
 
-
      [:h1
       {:font-size (get-in data [:heading :size])
        :font-weight (get-in data [:heading :weight])
        :color (get-in data [:heading :color])
        :white-space "pre"
+       :font-family "-apple-system, BlinkMacSystemFont, Roboto,\"Droid Sans\",\"Helvetica Neue\",Helvetica, Arial, sans-serif"
        :line-height "0.9em"
        :letter-spacing "0.1em"
        :text-transform (get-in data [:heading :title-type])}]
 
      [:p
-      {:font-size "1.4em"
+      {:font-size "1em"
        :margin [["0.75em" 0]]
        :width (get-in data [:sub-heading :width])
        :text-align "left"
        :white-space "pre"
        :font-weight (get-in data [:sub-heading :weight])
        :color (get-in data [:sub-heading :color])}
-
       [:em
        {:font-weight "bold"}]]
 
-     [:a.button
-      {:margin-bottom "5em"}
-      (button-mixin (get-in data [:button :colors] {}))
+     [:.cta
+      {:display "flex"}
 
-      [:&.download:before
-       (fontawesome-mixin \uf019)
-       {:margin-right "0.5em"}]]
+      [:a.button
+       {:text-transform "uppercase"
+        :font-weight "600"
+        :font-family "-apple-system, BlinkMacSystemFont, Roboto,\"Droid Sans\",\"Helvetica Neue\",Helvetica, Arial, sans-serif"}]
 
-     (email-field/styles (data :form))]]
+      [:a.button.signup
+       (button-mixin (get-in data [:button :signup :colors]))
+       {:margin-left "1em"}]
+
+
+      [:a.button.demo
+       (button-mixin (get-in data [:button :demo :colors]))
+
+       [:&:before
+        (fontawesome-mixin \uf01d)
+        {:margin-right "0.5em"}]]
+
+      (email-field/styles (data :form))]]
+
+    [:div.right
+     [:video
+      {:position "absolute"
+       :left "1.25em"
+       :top "-2em"
+       :border-radius "2em"}]]]
 
 
    (at-media {:max-width "700px"}
@@ -115,22 +114,12 @@
     [:div.content.left
      [:h1 (get-in data [:heading :text])]
      [:p {:dangerouslySetInnerHTML
-           {:__html (get-in data [:sub-heading :text])}}]
-     (when (data :button)
-       [:a.button {:href ""} (get-in data [:button :text])])
-     (when (data :form)
-       [email-field/component (data :form)])]
-    [:div.content.right
-     [:img.image {:src (get-in data [:featured-image :url])}]
-     [:video {:controls true
-              :auto-play true
-              :preload "auto"
-              :fullscreen false
-              :muted true
-              :loop true
-              :src "/rookie/images/test-video-small.m4v"
-              :width "290"
-              :height "690"}]]]])
+          {:__html (get-in data [:sub-heading :text])}}]
+     [:div.cta
+      [:a.button.demo {:href ""} (get-in data [:button :demo :text])]
+      [:a.button.signup {:href ""} (get-in data [:button :signup :text])]]]
+    [:div.content.right]]])
+
 
 (defmethod template "hero-columns" [_]
   {:css styles

@@ -6,9 +6,10 @@
 
 (defn button-mixin [colors]
   [:&
-   {:border-radius "0.5rem"
-    :padding "1.5rem 1.75rem"
-    :font-size "1.5rem"
+   {:-webkit-font-smoothing "antialiased"
+    :border-radius "3px"
+    :padding "1rem 1.75rem"
+    :font-size "1.1rem"
     :font-weight "bold"
     :cursor "pointer"
     :outline "none"
@@ -16,7 +17,8 @@
     :display "inline-block"
     :color (colors :text)
     :background-color (colors :bg)
-    :transition "background 0.1s ease-in-out"}
+    :transition "background 0.1s ease-in-out"
+    :box-shadow (colors :shadow)}
    (if (colors :border)
      {:border (str "2px solid " (colors :border))}
      {:border "none"})
