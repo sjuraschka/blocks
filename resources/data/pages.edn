@@ -25,13 +25,14 @@
   :colors {}
 
 
-  :styles {:fonts {:body {:name "Muli"
+  :styles {:fonts {:body {:name "Hind"
                           :source "google"
                           :weight 300}
-                   :headings {:name "Muli"
+                   :headings {:name "Hind"
                               :source "google"
                               :weight 400}}}
   :blocks ["braid-com-header"
+           "braid-com-column-hero"
            "braid-com-hero"
            "braid-com-conversations"
            "braid-com-how-it-works"
@@ -48,10 +49,10 @@
  {:domain "www.braidchat.com"
   :url "/pricing"
   :favicon "/braid/images/braid-favicon.png"
-  :styles {:fonts {:body {:name "Muli"
+  :styles {:fonts {:body {:name "Poppins"
                           :source "google"
                           :weight 300}
-                   :headings {:name "Muli"
+                   :headings {:name "Poppins"
                               :source "google"
                               :weight 400}}}
   :blocks ["braid-com-header"
