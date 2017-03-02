@@ -31,7 +31,7 @@
 
    [:fieldset
     {:box-shadow [[0 "2px" "5px" 0 "rgba(167,167,167,0.45)"]]
-     :border-radius "7px"
+     :border-radius "3px"
      :display "inline-block"
      :overflow "hidden"}
 
@@ -61,7 +61,7 @@
        {:color "#ddd"}]]]
 
     [:button
-     (button-mixin (get-in data [:button :colors] {}))
+     (button-mixin (get-in data [:button :colors]{}))
 
      [:&
       {:border-radius 0
