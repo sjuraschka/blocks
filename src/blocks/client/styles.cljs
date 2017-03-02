@@ -43,7 +43,7 @@
    [:body :input
     {:font-family [(str "\"" (get-in data [:styles :fonts :body :name]) "\"") "sans-serif"]
      :font-weight (get-in data [:styles :fonts :body :weight])
-     :line-height "1.25" }]
+     :line-height "1.25"}]
 
    [:h1 :h2 :h3 :h4 :h5
     {:font-family [(str "\"" (get-in data [:styles :fonts :headings :name]) "\"") "sans-serif"]
