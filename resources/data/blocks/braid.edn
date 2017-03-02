@@ -1,12 +1,14 @@
 {
  "braid-com-header"
  {:template "header"
-  :data     {:title      "Braid"
+  :data     {:color      "#fff"
+             :padding    "0.75em"
+             :title      "Braid"
              :version    "beta"
-             :color      "#384d51"
-             :background {:color "#d9e8ea"}
-             :logo       {:image-url "/braid/images/braid-logo-dark.svg"
-                          :color     "#354d51"
+             :overlay? true
+             :background {:color ""}
+             :logo       {:image-url "/braid/images/braid-logo-grey.png"
+                          :color     "#fff"
                           :url       "./"}
              :height     "2em"
              :menu       [{:text "Pricing"
