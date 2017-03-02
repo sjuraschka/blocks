@@ -19,6 +19,42 @@
                            :url   "https://braid.chat/"
                            :style "button"}]}}
 
+ "braid-com-column-hero"
+ {:template "hero-columns"
+  :data {:padding "10em"
+         :heading {:text "Work better together."
+                   :color "#fff"
+                   :size "2.3em"
+                   :weight "600"
+                   :alignment "left"
+                   :title-type "inherit"}
+         :sub-heading {:text "Braid is a new kind of group collaboration tool,\ndesigned for teams that <em>hate</em> interruptions\nand just want to <em>get shit done</em>.\n\nSay goodbye to chatrooms, and say hello to Braid!"
+                       :color "#fff"
+                       :weight "200"}
+         :featured-image {:url "/rookie/images/rookie-phone.png"
+                          :height "15em"}
+         :background {:image-url "/braid/images/hero-bg-people.jpg"
+                      :mobile-url "/rookie/images/rookie-mobile-background.png"
+                      :size "cover"
+                      :position "center top"}
+
+
+                :button {:demo {:text "Watch the Demo"
+                                :colors {:text "#fff"
+                                         :bg "#FD6275"
+                                         :bg-hover "#E64A5E"
+                                         :bg-active "#E64A5E"
+                                         :shadow "0 1px 2px 0 rgba(152,31,59,.2)"}}
+                         :signup {:text "Create Your Team"
+                                  :colors {:text "#575757"
+                                           :bg "#EDEDED"
+                                           :bg-hover "#D1CBCB"
+                                           :bg-active "#ACA7A7"
+                                           :shadow "0 1px 2px 0 rgba(152,31,59,.2)"}}}}}
+
+
+
+
  "braid-com-hero"
  {:template "hero-middle"
   :data     {:heading     {:text   "Work Better Together"
@@ -28,7 +64,9 @@
              :padding     "3em"
              :sub-heading {:text  "Braid is a new kind of group collaboration tool,\ndesigned for teams that <em>hate</em> interruptions\nand just want to <em>get shit done</em>.\n\nSay goodbye to chatrooms, and say hello to Braid!"
                            :color "#777777"}
-             :background  {:color "#d9e8ea"}
+             :background  {:color "#d9e8ea"
+                           :image-url "/braid/images/hero-bg-people.jpg"
+                           :size "cover"}
              :form        {:placeholder "you@yourgroup.com"
                            :before      {:text  "Get a free Braid group for your team, and have it up and running in seconds:"
                                          :color "#777777"}
@@ -39,7 +77,7 @@
                            :button      {:text   "Create A Group"
                                          :color  "#fff"
                                          :colors {:text      "#fff"
-                                                  :bg        "#f17130"
+                                                  :bg        "#FD6275"
                                                   :bg-hover  "#d4460f"
                                                   :bg-active "#d6490c"}}}}}
 
