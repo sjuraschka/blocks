@@ -96,9 +96,29 @@
           :image       {:image-url "/rookie/images/rookie-pitch-image.png"
                         :position  "right"}}}
 
+ "rookie-three-features"
+ {:template "three-features"
+  :data     {:styles  {:background "#fff"}
+             :title {:copy "How Rookie Works"
+                     :transform "uppercase"
+                     :size  "1.75em"}
 
 
+             :heading {:color "#2E3944"}
+             :column  3
+             :columns [{:number      1
+                        :title       "Fast"
+                        :description "Built with Clojure - so you know it's not going to be holding you back."}
 
+                       {:number      2
+                        :title       "Open Source"
+                        :description "Braid is an Open Source project built with Clojure.
+                                  Everything from the fonts we use to the documentation are made by the
+                                  community."}
+
+                       {:number      3
+                        :title       "Secure"
+                        :description "Braid's conversations receive a 256-bit SSL encryption."}]}}
 
 
  "rookie-values-text"
