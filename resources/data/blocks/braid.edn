@@ -7,7 +7,7 @@
              :version    "beta"
              :overlay? true
              :background {:color ""}
-             :logo       {:image-url "/braid/images/braid-logo-grey.png"
+             :logo       {:image-url "/braid/images/braid-logo-white.svg"
                           :color     "#fff"
                           :url       "./"}
              :height     "2em"
@@ -36,7 +36,7 @@
          :featured-image {:url "/rookie/images/rookie-phone.png"
                           :height "15em"}
          :background {:image-url "/braid/images/hero-bg-people.jpg"
-                      :mobile-url "/rookie/images/rookie-mobile-background.png"
+                      :mobile-url "/braid/images/hero-bg-people.jpg"
                       :size "cover"
                       :position "center top"}
 
