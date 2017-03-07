@@ -21,21 +21,26 @@
    [:.braid-conversations
     {:padding [[0 pad]]
      :background (get-in data [:background :color])
-     :text-align "center"
-     :min-width "60em"}
+     :text-align "center"}
 
     [:.content
      {:display "flex"
       :justify-content "space-between"
-      :align-items "flex-end"}
+      :align-items "flex-end"
+      :width "120vw"
+      :left "-20vw"
+      :right "110vw"}
+
 
      [:.conversation
       {:text-align "left"
        :background "#fff"
+       :margin-right "1em"
        :width "18em"
+       :min-width "18em"
        :border-radius "3px 3px 0 0"
        :padding "1.5em"
-       :box-shadow [[0 "1px" "2px" 0 "rgba(0,0,0,0.1)"]]
+       :box-shadow [[0 "0.2rem" "0.4rem" 0 "rgba(100,100,100,0.25)"]]
        :box-sizing "border-box"}
 
       [:.header
