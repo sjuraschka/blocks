@@ -107,6 +107,18 @@
                 :text "#standup Finished the intro video script. Will be recording today. Blockers: @rafd can you get me the latest logo?"}
                {:user-name "rd"
                 :text "Sure, I've added it to the repo."}]}
+   {:tags ["#watercooler"]
+    :messages [{:user-name "samj"
+                :text "#watercooler I'm going to watch the Jays game this Sunday @ 5pm. Anyone want to join?"}
+               {:user-name "rafd"
+                :text "Count me in!"}
+               {:user-name "jamesnvc"
+                :text "Can't. Family thing."}]}
+   {:tags ["#standup" "#braid" "@rafd"]
+    :messages [{:user-name "samj"
+                :text "#standup Finished the intro video script. Will be recording today. Blockers: @rafd can you get me the latest logo?"}
+               {:user-name "rd"
+                :text "Sure, I've added it to the repo."}]}
    {:tags ["#standup" "#braid"]
     :messages [{:user-name "rafd"
                 :text "#standup Made good progress on the #braid landing page. Will continue on it today. Should be up for tomorrow. Blockers: none."
