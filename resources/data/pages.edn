@@ -33,9 +33,10 @@
                               :weight 400}}}
   :blocks ["braid-com-header"
            "braid-com-column-hero"
-           "braid-com-hero"
            "braid-com-conversations"
+           "braid-com-letter"
            "braid-com-how-it-works"
+           "braid-com-hero"
            "braid-com-benefit-better-conversations"
            "braid-com-benefit-focus"
            "braid-com-benefit-deep-integrations"
