@@ -85,7 +85,7 @@
 
  "braid-com-conversations"
  {:template "braid-conversations"
-  :data     {:background {:color "#d9e8ea"}}}
+  :data     {:background {:color ""}}}
 
  "braid-com-why"
  {:template "one-feature"
