@@ -45,7 +45,7 @@
         {:margin-bottom "1.5em"}
 
         [:.tag
-         (blokk-text-mixin "#f7f8f9")
+         (blokk-text-mixin "#FD6275")
          {:border-radius "0.15em"
           :margin-right "1em"}]]]
 
@@ -71,7 +71,7 @@
 
          [:.name
           [:span
-           (blokk-text-mixin "#999")]]
+           (blokk-text-mixin "#FD6275")]]
 
          [:.text
           {:vertical-align "top"}
