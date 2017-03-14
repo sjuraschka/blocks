@@ -102,23 +102,26 @@
              :title {:copy "How Rookie Works"
                      :transform "uppercase"
                      :size  "1.75em"}
+             :column-title {:size "1.25em"
+                            :transform "uppercase"}
 
-
+             :image {:width "16em"}
              :heading {:color "#2E3944"}
              :column  3
              :columns [{:number      1
-                        :title       "Fast"
-                        :description "Built with Clojure - so you know it's not going to be holding you back."}
+                        :image "/rookie/images/rookie-iphone-invite-athletes.png"
+                        :title       "Invite Athletes"
+                        :description "Get started in minutes and invite your athletes to your own custom app."}
 
                        {:number      2
-                        :title       "Open Source"
-                        :description "Braid is an Open Source project built with Clojure.
-                                  Everything from the fonts we use to the documentation are made by the
-                                  community."}
+                        :image "/rookie/images/rookie-dashboard-video-analysis.png"
+                        :title       "Analyze Athlete Videos"
+                        :description "Use Rookie's video editor to give audio and visual feedback to your athletes."}
 
                        {:number      3
-                        :title       "Secure"
-                        :description "Braid's conversations receive a 256-bit SSL encryption."}]}}
+                        :image "/rookie/images/rookie-payment-iphone.png"
+                        :title       "Get Paid"
+                        :description "Rookie lets you collect payment for sessions and get paid instantly."}]}}
 
 
  "rookie-values-text"
@@ -146,10 +149,10 @@
  {:template "how-it-works"
   :data     {:background "#fff"
              :button {:text "Learn how it works"
-                       :url "./how-it-works/"
-                       :color "#2E3944"
-                       :background "#232B69"
-                       :bg-hover "#454d87"}
+                      :url "./how-it-works/"
+                      :color "#2E3944"
+                      :background "#232B69"
+                      :bg-hover "#454d87"}
              :detail-button {:bg-hover ""}
              :columns    [
                           {:title    "Receive videos from your athletes"
