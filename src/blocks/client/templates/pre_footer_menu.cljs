@@ -15,6 +15,7 @@
       :font-weight "100"
       :font-size "10px"
       :letter-spacing "2px"}]
+
     [:.link
      {:font-weight "100"
       :font-size "15px"
@@ -44,7 +45,6 @@
          :display         "flex"
          :flex-direction  "column"
          :justify-content "space-between"}]]]]
-
 
     [:.social
      [:.icon
@@ -95,8 +95,6 @@
        {:text-transform "uppercase"
         :letter-spacing "0.075em"}]]]]])
 
-
-
 (defn component [data]
   [:div.pre-footer-menu
    [:div.footer-content
@@ -125,6 +123,7 @@
       [:a.icon.facebook  {:target "_blank"
                           :href "https://www.facebook.com/tryrookiehq"}]]]]])
 
+;buttons for appstore or desktop app
 #_[:a.app {:href "#"}
    [:img {:src (get-in data [:button :athlete :image])}]
    [:div.info

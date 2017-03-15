@@ -148,8 +148,6 @@
              :fullscreen false
              :muted true
              :loop true}]
-
-
     (into
       [:div.columns]
       (for [column (data :columns)]
