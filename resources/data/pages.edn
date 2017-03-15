@@ -107,14 +107,15 @@
   :blocks ["rookie-header"
            "rookie-hero-testimonial"
            "rookie-pitch"
+           "rookie-three-features"
            ;"rookie-video-hero"
            ;"rookie-hero"
            ;"rookie-testimonial"
-           "rookie-how-it-works"
-           "rookie-three-features"
+           ;"rookie-how-it-works"
            "rookie-step-1"
            "rookie-step-2"
            "rookie-step-3"
+           "rookie-pre-footer"
            "rookie-footer"
            "rookie-analytics"]}
 
@@ -138,8 +139,32 @@
            "rookie-product-feature-3"
            "rookie-product-feature-5"
            ;"rookie-testimonial"
+           "rookie-pre-footer"
            "rookie-footer"
            "rookie-analytics"]}
+
+
+
+ {:domain "www.getrookie.com"
+  :url "/privacy-policy"
+  :meta {:title "Online Coaching and Personal Training Software - Get Rookie - Free Trial"
+         :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
+         :image "url (/rookie/images/rookie-coaching-logo.png)"}
+  :favicon "/rookie/images/rookie-favicon.png"
+  :styles {:fonts {:body {:name "Hind"
+                          :source "google"
+                          :weight 400}
+                   :headings {:name "Hind"
+                              :source "google"
+                              :weight 700}}}
+
+  :blocks ["rookie-header"
+           "privacy-policy"
+           "rookie-privacy"
+           "rookie-pre-footer"
+           "rookie-footer"
+           "rookie-analytics"]}
+
 
 
 
