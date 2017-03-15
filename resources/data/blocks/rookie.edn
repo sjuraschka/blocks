@@ -316,11 +316,154 @@
                            :position  "left"}}}
 
 
+ ;=========================================================================================
+ ; Rookie - Privacy Policy
+ ;=========================================================================================
+
+ "privacy-policy"
+ {:template "one-feature"
+  :data {:page-padding {:top "3em"}
+         :heading   {:text "Privacy Policy"
+                     :color "#fff"
+                     :transform "uppercase"}
+         :description {:color "#fff"}
+         :background {:color "linear-gradient(-45deg, #4B4EC2 0%, #373D96 50%, #232B69 100%)"}}}
+
+ "rookie-privacy"
+ {:template "text"
+  :data     {:background  {:color "#fff"}
+             :title     {:color          "#232B69"
+                         :font-size      "1.75em"
+                         :text-transform "uppercase"}
+             :revision    {:date "Last Revised: 14/3/2017"}
+             :sections   [{:section "1."
+                           :title "Introduction"
+                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."
+                           :color "#777"}
+                          {:section "2."
+                           :title "Acceptance of Privacy Policy"
+                           :text  "Each time you access, use or browse the Rookie Platform or interact with Rookie, you signify your acceptance of the then-current Privacy Policy. If you do not accept this Privacy Policy, please do not provide information to Rookie, access, use or browse the Rookie Platform or interact with Rookie. \nShould the Privacy Policy be revised, Rookie will post the changes on the Sites and the new Privacy Policy will be effective immediately upon posting. When required by law, any material changes in the manner that we use or share personally identifiable information will apply only to information collected after posting of the revised Privacy Policy, unless we provide you with notice or obtain your consent in accordance with applicable law. You can determine when the Privacy Policy was last revised by referring to the \"Last Revised\" legend at the top of this page."}
+                          {:section "3."
+                           :title "Types of Information we Collect"
+                           :text  "We may collect personally identifiable information and non-personally identifiable information about you.
+                                   Personally identifiable information refers to your name and contact information, and any other information
+                                   that is maintained in a manner that links the information to your name or contact information.
+                                   Non-personally identifiable information refers to information that does not personally identify you as
+                                   the individual to whom the information relates, such as information that is aggregated by Rookie or a
+                                   third party, or information that is not linked to your name or contact information or other information
+                                   that would identify you as the individual to whom the information relates. We may collect information about
+                                    you that you provide to us or the Rookie Platform (e.g., information that you provide in connection with
+                                    your registration for and use of the Rookie Platform and information that you provide in connection with
+                                    your interactions with Rookie, Trainers, Clients or other users of the Rookie Platform). This may include
+                                     information such as first and last name, email address, home address, telephone number, username and password,
+                                     information regarding the Workouts that you schedule, information that you provide relating to participants of
+                                     any Workouts, billing information, credit card or debit card information, bank account and routing numbers, dates
+                                     of birth, transaction history, Workout history, your profile for your account, information about your Workout or
+                                     Workout preferences, the location where you choose to have your Workouts, names and email addresses of third
+                                     parties you invite to split the fees for a Workout with you, your User Content, defined below, and other non-public
+                                     information that you may provide. Trainers may provide Rookie with additional personally identifiable information
+                                     such as years of experience, the geographic location where the Trainer would be willing to conduct a Workout,
+                                     availability for Workouts, and additional information about the Trainer. We also may automatically collect certain
+                                     information about your computer or device hardware and software and your use of the Rookie Platform. This may include
+                                     information such as your IP address(es), usage statistics, browsing and navigational history when accessing or using
+                                     the Rookie Platform, content you access, view, click on or search for when using the Rookie Platform and the length of
+                                     time for which you view same, general geographic location such as the city from which your computer or device is
+                                     connecting to the Internet, precise geographic location of your device if you are using a mobile app, webpages
+                                     requested and visited, timestamps, cursor navigation, sites you visit prior to and after accessing the Rookie Platform,
+                                     type of computer or device from which you access the Rookie Platform, type of operating system you use on your computer
+                                     (e.g., Microsoft Windows or Mac OS) or device (e.g., iOS or Android) to access the Rookie Platform, the type of browser you use
+                                     (e.g., Firefox, Chrome, Internet Explorer, Safari), the domain name of your internet service provider, as well as other information regarding your sharing of content.
+                                     In addition, we may collect information regarding your Internet location if and when you see Rookie ads and whether you click on such ad, and information regarding your
+                                     age, gender, zip code, occupation, preferences, interests, favorites, survey responses, whether a third party has accepted your invitation for them to split fees for a Workout
+                                     with you, and other public or non-public information about you that we may acquire through the collection methods described below. To the extent that any of the above
+                                     information is maintained, used or shared by Rookie in a manner that associates it with your name, contact information or other personally identifiable information,
+                                     it will be treated as personally identifiable information; otherwise, such information will be treated as non-personally identifiable information."}
+                          {:section "4."
+                           :title "How we collect Information"
+                           :text  "We may collect personally identifiable and/or non-personally identifiable information about you during your online and offline interactions with Rookie and the Rookie Platform, such as when you:"
+                           :list [{:li "Access, use or browse the Rookie Platform;"}
+                                  {:li "Register for a Rookie account through the Rookie Platform, modify your account information and create or modify your account profile;"}
+                                  {:li "Schedule a coaching session or subscribe to a monthly membership plan;"}
+                                  {:li "Sign up to receive announcements, emails or newsletters;"}
+                                  {:li "Contact, communicate with or otherwise interact with Rookie or its personnel via email, the Rookie Platform, fax, telephone, or by other means whether online or offline;"}
+                                  {:li "Contact, communicate with or otherwise interact with Clients, Trainers, or other users of the Rookie Platform;"}
+                                  {:li "Invite others to use the platform, or receive an invitation to use the training platform;"}
+                                  {:li "Order or request products, literature, services or other information during your use of the Rookie Platform, via email, fax  or other online or offline means;"}
+                                  {:li "Submit, post or transmit any User Content;"}
+                                  {:li "Apply for a job at Rookie; or Register, enroll or participate in any surveys, questionnaires, promotions, or any other services, events or activities online or
+                                        offline sponsored by Rookie or third parties, or offered in connection with the Rookie Platform (\"Activities\")."}]
+                            :secondary-text {:text "We may obtain personally identifiable and/or non-personally identifiable information from third parties
+                                                   such as the owners or operators of the websites or applications where our advertisements appear
+                                                   (some of which may partner with Rookie or with an advertisement network used by Rookie),
+                                                   our service providers, affiliates, suppliers, vendors, distributors, other users of our
+                                                   Rookie Platform (e.g., Trainers or Clients), Activities partners and sponsors, and other sources
+                                                   (e.g., offline records or publicly available information). Trainers that you schedule Workouts
+                                                   with may also have the ability to record information about you or information relating to your
+                                                   Workout through the Rookie Platform, and to share that information with you. Non-personally
+                                                   identifiable information also may be obtained by these other sources from inferences based upon
+                                                   the sites you visit; third party data; information you share on other sites, social media platforms
+                                                   and applications; or demographics derived from profiles or accounts that you create. We may combine
+                                                   personally identifiable information we collect with information that we obtain from these sources.
+                                                   We will treat any such combined information as personally identifiable information. Rookie automatically
+                                                   receives and records non-personally identifiable information on our server logs from your browser as well
+                                                   as through other analysis of the Rookie Platform. We also may collect information using cookies, web beacons,
+                                                   pixels, gifs, tags or similar technologies (\"Collection Technology\"), or through third parties using similar
+                                                   technologies. Collection Technology may operate as a piece of data stored on your browser or device, or may identify,
+                                                   compile, aggregate and/or collect information through other means. When you access or use the Rookie Platform, your
+                                                   web browser may use Collection Technology to better enable you to navigate the Rookie Platform during your visit
+                                                   and upon your return. You may use the Rookie Platform even if you choose to reject or delete certain Collection
+                                                   Technology. Collection Technology also may be used by other websites for which a link is placed on the Rookie Platform.
+                                                   If you are logged in to your Rookie account certain information regarding your use of the Rookie Platform that would
+                                                   not otherwise be personally identifiable may become personally identifiable. The Rookie Platform may use Google Analytics.
+                                                   Google Analytics uses Collection Technology to collect and store anonymous information about you, which may include
+                                                   non-personally identifiable information described above. You can read Google Analytics’ privacy policy at
+                                                   http://www.google.com/analytics/learn/privacy.html and Google Analytics' Terms of Use at http://www.google.com/analytics/tos.html.
+                                                   You can opt-out from being tracked by Google Analytics in the future by downloading and installing Google Analytics' Opt-out Browser
+                                                   Add-on for your current web browser athttp://tools.google.com/dlpage/gaoptout?hl=en.  The Rookie Platform may use certain features of
+                                                   Google Analytics based on Display Advertising, such as:"
+                                             :secondary-list [{:bullet "Demographics and Interest Reporting: to analyze information regarding the interests and demographics of users of the Rookie Platform. We use such non-personally identifiable information in the same manner as we use other non-personally identifiable information as described below."}
+                                                              {:bullet "Remarketing with Google Analytics: to place ads on other sites directed to people who have accessed the Rookie Platform."}
+                                                              {:bullet "Google Display Network Impression Reporting: to report how people' interactions with our ads relate to their visits to the Rookie Platform."}
+                                                              {:bullet "Integrated services that require Google Analytics to collect data via advertising cookies and identifiers."}]}}
+
+
+                          {:section "5."
+                           :title "How We Use Your Information"
+                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."
+                           :color "#777"}
+                          {:section "6."
+                           :title "Introduction"
+                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}
+                          {:section "7."
+                           :title "Introduction"
+                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}
+                          {:section "8"
+                           :title "Introduction"
+                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}
+                          {:section "9."
+                           :title "Introduction"
+                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."
+                           :color "#777"}
+                          {:section "10."
+                           :title "Introduction"
+                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}
+                          {:section "11."
+                           :title "Introduction"
+                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}
+                          {:section "12."
+                           :title "Introduction"
+                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}]}}
+
+
+
+
+ ;=========================================================================================
+ ; Rookie - Analytics and plugins
+ ;=========================================================================================
+
  "rookie-analytics"
  {:template "analytics"
   :data {:id "UA-91884854-1"}}}
-
-
 
 ;--------------------------------------------------------------------------------------
 ; unused templates
