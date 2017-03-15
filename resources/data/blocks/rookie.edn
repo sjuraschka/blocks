@@ -25,16 +25,18 @@
 
  "rookie-footer"
  {:template "footer"
-  :data     {:logo             {:image-url "/rookie/images/rookie-white-logo.svg"}
-             :height           "1em"
+  :data     {:height           "1em"
              :background-color "#00175a"
              :text-color       "#FFF"
-             :menu             [{:text "647-267-5292"
-                                 :url  "tel:6472675292"
-                                 :icon \uf095}
-                                {:text "hi@getrookie.com"
-                                 :url  "mailto:hi@getrookie.com"
-                                 :icon \uf003}]}}
+             :text-transform   "uppercase"
+             :size             "0.85em"
+             :menu             [{:text "Press Room"
+                                 :url "#"}
+                                {:text "Privacy"
+                                 :url  "./privacy-policy/"}
+                                {:text "Terms"
+                                 :url  "mailto:hi@getrookie.com"}]}}
+
 
  ;=========================================================================================
  ; Rookie - /
@@ -213,17 +215,37 @@
 
  "rookie-pre-footer"
  {:template "pre-footer-menu"
-  :data     {:columns [{:title      "About"
-                        :categories [{:name "Our Story"}
-                                     {:name "The Team"}]}
+  :data     {:logo {:url "getrookie.com/"
+                    :image-url "/rookie/images/rookie-navy-logo.svg"}
+             :title {:description "It’s never been easier to start an online coaching business. Rookie handles everything from client acquisition and payments, to video editing and feedback."}
+             :button {:athlete  {:image "/rookie/images/app-rookie-training-video-capture.png"}
+                      :coach    {:image "/rookie/images/chrome-desktop-app-rookie-training.png"}}
+             :columns [
 
-                       {:title      "Support"
-                        :categories [{:name "Help"}
+                       {:title      "Product"
+                        :categories [{:name "How It Works"
+                                      :url "./how-it-works/"}
+                                     {:name "Coach Login"}
+                                     {:name "Athlete App"}
+                                     {:name "Meet Our Users"}]}
+
+
+                       {:title      "Advice + Support"
+                        :categories [{:name "Trainer Newsletter"}
+                                     {:name "Blog"}
                                      {:name "FAQ"}]}
 
-                       {:title      "Advice"
-                        :categories [{:name "Newsletter"}
-                                     {:name "Blog"}]}]}}
+                       {:title      "Company"
+                        :categories [{:name "Our Story"}
+                                     {:name "Careers"}
+                                     {:name "Get In Touch"}]}
+                       {:title      "Connect"
+                        :categories [{:name "+1-647-267-5292"}
+                                     {:name "hi@getrookie.com"}]}]}}
+
+
+
+
 
 
  ;=========================================================================================
