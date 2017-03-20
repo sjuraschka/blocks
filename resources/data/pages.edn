@@ -166,6 +166,91 @@
            "rookie-analytics"]}
 
 
+ {:domain "www.getrookie.com"
+  :url "/terms-of-service"
+  :meta {:title "Online Coaching and Personal Training Software - Get Rookie - Free Trial"
+         :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
+         :image "url (/rookie/images/rookie-coaching-logo.png)"}
+  :favicon "/rookie/images/rookie-favicon.png"
+  :styles {:fonts {:body {:name "Roboto"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Hind"
+                              :source "google"
+                              :weight 700}}}
+
+  :blocks ["rookie-header"
+           "terms-of-service-title"
+           "rookie-terms-of-service"
+           "rookie-pre-footer"
+           "rookie-footer"
+           "rookie-analytics"]}
+
+ {:domain "www.getrookie.com"
+  :url "/press-room"
+  :meta {:title "Press Room - Online Coaching and Personal Training Software - Get Rookie"
+         :description "Create a worldwide coaching business online in minutes with our Personal Training Software.
+                       Use Rookie’s One on One video coaching platform to train more clients and grow your business."
+         :image "url (/rookie/images/rookie-coaching-logo.png)"}
+  :favicon "/rookie/images/rookie-favicon.png"
+  :styles {:fonts {:body {:name "Roboto"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Hind"
+                              :source "google"
+                              :weight 700}}}
+
+  :blocks ["rookie-header"
+           "press-room-title"
+           "rookie-press-room"
+           "rookie-pre-footer"
+           "rookie-footer"
+           "rookie-analytics"]}
+
+ {:domain "www.getrookie.com"
+  :url "/careers"
+  :meta {:title "Careers - Online Coaching and Personal Training Software - Get Rookie"
+         :description "Create a worldwide coaching business online in minutes with our Personal Training Software.
+                       Use Rookie’s One on One video coaching platform to train more clients and grow your business."
+         :image "url (/rookie/images/rookie-coaching-logo.png)"}
+  :favicon "/rookie/images/rookie-favicon.png"
+  :styles {:fonts {:body {:name "Roboto"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Hind"
+                              :source "google"
+                              :weight 700}}}
+
+  :blocks ["rookie-header"
+           "careers-title"
+           "careers-text"
+           "rookie-testimonial"
+           "rookie-pre-footer"
+           "rookie-footer"
+           "rookie-analytics"]}
+
+ {:domain "www.getrookie.com"
+  :url "/our-story"
+  :meta {:title "Our Story - Online Coaching and Personal Training Software - Get Rookie"
+         :description "Create a worldwide coaching business online in minutes with our Personal Training Software.
+                       Use Rookie’s One on One video coaching platform to train more clients and grow your business."
+         :image "url (/rookie/images/rookie-coaching-logo.png)"}
+  :favicon "/rookie/images/rookie-favicon.png"
+  :styles {:fonts {:body {:name "Roboto"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Hind"
+                              :source "google"
+                              :weight 700}}}
+
+  :blocks ["rookie-header"
+           "about-title"
+           "rookie-about"
+           "rookie-pre-footer"
+           "rookie-footer"
+           "rookie-analytics"]}
+
+
 
 
  {:domain "courtneyforlife.getrookie.com"
