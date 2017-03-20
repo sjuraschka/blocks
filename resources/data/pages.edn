@@ -96,9 +96,9 @@
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url(/rookie/images/rookie-coaching-logo.png)"}
   :favicon "/rookie/images/rookie-favicon.png"
-  :styles {:fonts {:body {:name "Hind"
+  :styles {:fonts {:body {:name "Roboto"
                           :source "google"
-                          :weight 400}
+                          :weight 300}
                    :headings {:name "Hind"
                               :source "google"
                               :weight 700}}}
@@ -125,9 +125,9 @@
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url (/rookie/images/rookie-coaching-logo.png)"}
   :favicon "/rookie/images/rookie-favicon.png"
-  :styles {:fonts {:body {:name "Hind"
+  :styles {:fonts {:body {:name "Roboto"
                           :source "google"
-                          :weight 400}
+                          :weight 300}
                    :headings {:name "Hind"
                               :source "google"
                               :weight 700}}}
@@ -151,9 +151,9 @@
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url (/rookie/images/rookie-coaching-logo.png)"}
   :favicon "/rookie/images/rookie-favicon.png"
-  :styles {:fonts {:body {:name "Hind"
+  :styles {:fonts {:body {:name "Roboto"
                           :source "google"
-                          :weight 400}
+                          :weight 300}
                    :headings {:name "Hind"
                               :source "google"
                               :weight 700}}}
