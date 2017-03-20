@@ -1366,13 +1366,6 @@
                ;               :icon \uf003}]}}]
 
 
- "rookie-testimonial"
- {:template "image-testimonial"
-  :data     {:heading    ""
-             :background {:image-url  "/rookie/images/derrell-testimonial.png"
-                          :mobile-url "/rookie/images/derrell-testimonial-small-screen.png"}}}
-
-
  "rookie-video-hero"
   {:template "hero-columns"
    :data {:padding "10em"
