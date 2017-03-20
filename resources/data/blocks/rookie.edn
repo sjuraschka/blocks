@@ -225,23 +225,32 @@
                        {:title      "Product"
                         :categories [{:name "How It Works"
                                       :url "./how-it-works/"}
-                                     {:name "Coach Login"}
-                                     {:name "Athlete App"}
-                                     {:name "Meet Our Users"}]}
+                                     {:name "Coach Login"
+                                      :url "https://www.coach.getrookie.com"
+                                      :target "_blank"}
+                                     {:name "Athlete App"
+                                      :url "https://www.athlete.getrookie.com"}
+                                     {:name "Pricing"
+                                      :url "./pricing"}]}
 
 
                        {:title      "Advice + Support"
                         :categories [{:name "Trainer Newsletter"}
-                                     {:name "Blog"}
-                                     {:name "FAQ"}]}
+                                     ;{:name "Blog"}
+                                     {:name "FAQ"
+                                      :url "./faq"}]}
 
                        {:title      "Company"
-                        :categories [{:name "Our Story"}
-                                     {:name "Careers"}
-                                     {:name "Get In Touch"}]}
+                        :categories [{:name "Our Story"
+                                      :url "./our-story"}
+                                     {:name "Careers"
+                                      :url "./careers"}]}
+                                     ;{:name "Get In Touch"}]}
                        {:title      "Connect"
-                        :categories [{:name "+1-647-267-5292"}
-                                     {:name "hi@getrookie.com"}]}]}}
+                        :categories [{:name "+1-647-267-5292"
+                                      :url ""}
+                                     {:name "hi@getrookie.com"
+                                      :url "mailto:hi@getrookie.com"}]}]}}
 
 
 

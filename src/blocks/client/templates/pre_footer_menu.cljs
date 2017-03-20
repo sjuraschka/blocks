@@ -2,7 +2,7 @@
   (:require [blocks.client.template :refer [template]]
             [blocks.client.templates.mixins :refer [fontawesome-mixin button-mixin]]))
 
-(defn styles []
+(defn styles [data]
   [:.pre-footer-menu
    [:div.footer-content
     {:background "#fff"
@@ -21,7 +21,11 @@
       :font-size "15px"
       :line-height "25px"
       :color "#BEC8CE"
-      :display "block"}]
+      :display "block"
+      :text-decoration "none"}
+     [:&:hover
+      {:color "#3C50CF"}]]
+
 
     [:div.logo-column
      {:max-width "14em"
@@ -57,9 +61,11 @@
         :text-align "center"
         :display "inline-block"
         :margin-right "0.5em"}]
+
       [:&.facebook:after
        (fontawesome-mixin \uf09a)
        {:background "#4F7AC5"}]
+
       [:&.twitter:after
        (fontawesome-mixin \uf099)
        {:background "#5FCAF3"}]
@@ -110,7 +116,8 @@
           [:h2.title (column :title)]
           [:div.menu
            (for [category (column :categories)]
-             [:a.link (category :name)])]]))]
+             [:a.link {:target (category :target)
+                       :href (category :url)}(category :name)])]]))]
 
     [:div.column.app-info
      [:div.social
