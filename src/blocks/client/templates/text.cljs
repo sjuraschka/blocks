@@ -19,7 +19,8 @@
     [:h2.title
      [:span
       {:padding-right "0.5em"}]]
-    [:p]
+    [:p
+     {:margin-left "0.5em"}]
     [:ul
      {:list-style-type "circle"
       :padding-left "2em"}

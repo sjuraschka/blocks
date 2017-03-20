@@ -27,8 +27,8 @@
 (defn component [data]
   [:div.one-feature
    [:div.content
-   [:h1 (get-in data [:heading :text])]
-   [:p (get-in data [:description :text])]]])
+    [:h1 (get-in data [:heading :text])]
+    [:p (get-in data [:description :text])]]])
 
 (defmethod template "one-feature" [_]
   {:css styles
