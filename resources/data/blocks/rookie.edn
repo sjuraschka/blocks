@@ -332,17 +332,41 @@
  "rookie-privacy"
  {:template "text"
   :data     {:background  {:color "#fff"}
-             :title     {:color          "#232B69"
-                         :font-size      "1.75em"
-                         :text-transform "uppercase"}
+             :title       {:color          "#232B69"
+                           :font-size      "1.75em"
+                           :text-transform "uppercase"}
              :revision    {:date "Last Revised: 14/3/2017"}
              :sections   [{:section "1."
                            :title "Introduction"
-                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."
-                           :color "#777"}
+                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates
+                                   (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from
+                                   you through getrookie.com and Rookie’s other websites, online locations, and mobile applications
+                                   (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and
+                                   from third parties.
+                                   Rookie provides an online coaching platform through the Sites that connects independent personal trainers, fitness experts and other trainers
+                                   (collectively, “Trainers”) who offer classes/sessions (each a “Training Session”)
+                                   with clients who seek online analysis and coaching with Trainers (“Clients”),
+                                   a platform for Trainers to list information about themselves and the Training Sessions they offer
+                                   and for Clients to submit and pay for Training Sessions, and other services offered by Rookie through the Sites
+                                   (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service,
+                                   and all features and functionality available through the Sites, the “Rookie Platform”).
+                                   When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or
+                                   browse the Rookie Platform."}
+
                           {:section "2."
                            :title "Acceptance of Privacy Policy"
-                           :text  "Each time you access, use or browse the Rookie Platform or interact with Rookie, you signify your acceptance of the then-current Privacy Policy. If you do not accept this Privacy Policy, please do not provide information to Rookie, access, use or browse the Rookie Platform or interact with Rookie. \nShould the Privacy Policy be revised, Rookie will post the changes on the Sites and the new Privacy Policy will be effective immediately upon posting. When required by law, any material changes in the manner that we use or share personally identifiable information will apply only to information collected after posting of the revised Privacy Policy, unless we provide you with notice or obtain your consent in accordance with applicable law. You can determine when the Privacy Policy was last revised by referring to the \"Last Revised\" legend at the top of this page."}
+                           :text  "Each time you access, use or browse the Rookie Platform or interact with Rookie, you
+                                   signify your acceptance of the then-current Privacy Policy. If you do not accept this
+                                   Privacy Policy, please do not provide information to Rookie, access, use or browse the
+                                   Rookie Platform or interact with Rookie.
+
+                                   Should the Privacy Policy be revised, Rookie will post the changes on the Sites and
+                                   the new Privacy Policy will be effective immediately upon posting. When required by law,
+                                   any material changes in the manner that we use or share personally identifiable information
+                                   will apply only to information collected after posting of the revised Privacy Policy,
+                                   unless we provide you with notice or obtain your consent in accordance with applicable law.
+                                   You can determine when the Privacy Policy was last revised by referring to the
+                                   \"Last Revised\" legend at the top of this page."}
                           {:section "3."
                            :title "Types of Information we Collect"
                            :text  "We may collect personally identifiable information and non-personally identifiable information about you.
@@ -352,38 +376,38 @@
                                    the individual to whom the information relates, such as information that is aggregated by Rookie or a
                                    third party, or information that is not linked to your name or contact information or other information
                                    that would identify you as the individual to whom the information relates. We may collect information about
-                                    you that you provide to us or the Rookie Platform (e.g., information that you provide in connection with
-                                    your registration for and use of the Rookie Platform and information that you provide in connection with
-                                    your interactions with Rookie, Trainers, Clients or other users of the Rookie Platform). This may include
-                                     information such as first and last name, email address, home address, telephone number, username and password,
-                                     information regarding the Workouts that you schedule, information that you provide relating to participants of
-                                     any Workouts, billing information, credit card or debit card information, bank account and routing numbers, dates
-                                     of birth, transaction history, Workout history, your profile for your account, information about your Workout or
-                                     Workout preferences, the location where you choose to have your Workouts, names and email addresses of third
-                                     parties you invite to split the fees for a Workout with you, your User Content, defined below, and other non-public
-                                     information that you may provide. Trainers may provide Rookie with additional personally identifiable information
-                                     such as years of experience, the geographic location where the Trainer would be willing to conduct a Workout,
-                                     availability for Workouts, and additional information about the Trainer. We also may automatically collect certain
-                                     information about your computer or device hardware and software and your use of the Rookie Platform. This may include
-                                     information such as your IP address(es), usage statistics, browsing and navigational history when accessing or using
-                                     the Rookie Platform, content you access, view, click on or search for when using the Rookie Platform and the length of
-                                     time for which you view same, general geographic location such as the city from which your computer or device is
-                                     connecting to the Internet, precise geographic location of your device if you are using a mobile app, webpages
-                                     requested and visited, timestamps, cursor navigation, sites you visit prior to and after accessing the Rookie Platform,
-                                     type of computer or device from which you access the Rookie Platform, type of operating system you use on your computer
-                                     (e.g., Microsoft Windows or Mac OS) or device (e.g., iOS or Android) to access the Rookie Platform, the type of browser you use
-                                     (e.g., Firefox, Chrome, Internet Explorer, Safari), the domain name of your internet service provider, as well as other information regarding your sharing of content.
-                                     In addition, we may collect information regarding your Internet location if and when you see Rookie ads and whether you click on such ad, and information regarding your
-                                     age, gender, zip code, occupation, preferences, interests, favorites, survey responses, whether a third party has accepted your invitation for them to split fees for a Workout
-                                     with you, and other public or non-public information about you that we may acquire through the collection methods described below. To the extent that any of the above
-                                     information is maintained, used or shared by Rookie in a manner that associates it with your name, contact information or other personally identifiable information,
-                                     it will be treated as personally identifiable information; otherwise, such information will be treated as non-personally identifiable information."}
+                                   you that you provide to us or the Rookie Platform (e.g., information that you provide in connection with
+                                   your registration for and use of the Rookie Platform and information that you provide in connection with
+                                   your interactions with Rookie, Trainers, Clients or other users of the Rookie Platform).
+
+                                   This may include information such as first and last name, email address, home address, telephone number, username and password,
+                                   information regarding the Training Sessions that you submit, information that you provide relating to participants of
+                                   any Training Sessions, billing information, credit card or debit card information, bank account and routing numbers, dates
+                                   of birth, transaction history, Training Session history, your profile for your account and information about your Training Session or
+                                   Training Session preferences. Trainers may provide Rookie with additional personally identifiable information
+                                   such as years of experience, the geographic location where you train, availability for Training sessions, and additional information about the Trainer.
+                                   We also may automatically collect certain information about your computer or device hardware and software and your use of the Rookie Platform.
+
+                                   This may include information such as your IP address(es), usage statistics, browsing and navigational history when accessing or using
+                                   the Rookie Platform, content you access, view, click on or search for when using the Rookie Platform and the length of
+                                   time for which you view same, general geographic location such as the city from which your computer or device is
+                                   connecting to the Internet, precise geographic location of your device if you are using a mobile app, webpages
+                                   requested and visited, timestamps, cursor navigation, sites you visit prior to and after accessing the Rookie Platform,
+                                   type of computer or device from which you access the Rookie Platform, type of operating system you use on your computer
+                                   (e.g., Microsoft Windows or Mac OS) or device (e.g., iOS or Android) to access the Rookie Platform, the type of browser you use
+                                   (e.g., Firefox, Chrome, Internet Explorer, Safari), the domain name of your internet service provider, as well as other information regarding your sharing of content.
+                                   In addition, we may collect information regarding your Internet location if and when you see Rookie ads and whether you click on such ad, and information regarding your
+                                   age, gender, zip code, occupation, preferences, interests, favorites, survey responses,
+                                   and other public or non-public information about you that we may acquire through the collection methods described below.
+                                   To the extent that any of the above information is maintained, used or shared by Rookie in a manner that associates
+                                   it with your name, contact information or other personally identifiable information, it will be treated as personally
+                                   identifiable information; otherwise, such information will be treated as non-personally identifiable information."}
                           {:section "4."
                            :title "How we collect Information"
                            :text  "We may collect personally identifiable and/or non-personally identifiable information about you during your online and offline interactions with Rookie and the Rookie Platform, such as when you:"
                            :list [{:li "Access, use or browse the Rookie Platform;"}
                                   {:li "Register for a Rookie account through the Rookie Platform, modify your account information and create or modify your account profile;"}
-                                  {:li "Schedule a coaching session or subscribe to a monthly membership plan;"}
+                                  {:li "Submit a Training Session or subscribe to a monthly membership plan;"}
                                   {:li "Sign up to receive announcements, emails or newsletters;"}
                                   {:li "Contact, communicate with or otherwise interact with Rookie or its personnel via email, the Rookie Platform, fax, telephone, or by other means whether online or offline;"}
                                   {:li "Contact, communicate with or otherwise interact with Clients, Trainers, or other users of the Rookie Platform;"}
@@ -397,9 +421,9 @@
                                                    (some of which may partner with Rookie or with an advertisement network used by Rookie),
                                                    our service providers, affiliates, suppliers, vendors, distributors, other users of our
                                                    Rookie Platform (e.g., Trainers or Clients), Activities partners and sponsors, and other sources
-                                                   (e.g., offline records or publicly available information). Trainers that you schedule Workouts
+                                                   (e.g., offline records or publicly available information). Trainers that you submit Training Sessions
                                                    with may also have the ability to record information about you or information relating to your
-                                                   Workout through the Rookie Platform, and to share that information with you. Non-personally
+                                                   Training Session through the Rookie Platform, and to share that information with you. Non-personally
                                                    identifiable information also may be obtained by these other sources from inferences based upon
                                                    the sites you visit; third party data; information you share on other sites, social media platforms
                                                    and applications; or demographics derived from profiles or accounts that you create. We may combine
@@ -429,33 +453,847 @@
 
                           {:section "5."
                            :title "How We Use Your Information"
-                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."
-                           :color "#777"}
+                           :text  "We may use the information we collect: "
+                           :list [{:li "To process and respond to your requests and inquiries and provide services to you;"}
+                                  {:li "To process your submitted Training Sessions and relay information sent between users of the Rookie Platform;"}
+                                  {:li "To alert you to new developments, features, terms, products, services or promotions, specials, special events, or other Activities and to plan and administer same;"}
+                                  {:li "To send you announcements, promotions, and newsletters, and to personalize same;"}
+                                  {:li "To monitor and analyze information regarding your browsing and viewing preferences and to diagnose problems with the Rookie Platform;"}
+                                  {:li "To carry out internal operations and to analyze our users’ demographics, interests and purchasing practices;"}
+                                  {:li "To administer and process payments;"}
+                                  {:li "To inform Trainers of a submitted Training Session of the Client’s Training preferences, Training experiences and past Trainers’ observations;"}
+                                  {:li "For administration and improvement of the Rookie Platform and to enhance the user experience and Rookie's services;"}
+                                  {:li "To promote, develop, deliver, and improve our services, products, content, and advertising;"}
+                                  {:li "To send important notices, such as communications about submitted Training Sessions and other transactions through the Rookie Platform and changes to our terms, conditions, and policies;"}
+                                  {:li "For the purposes for which you provided the information;"}
+                                  {:li "For fraud prevention, legal compliance, and other public and security related purposes;"}
+                                  {:li "To enforce the Terms of Service and any supplemental terms and/or policies of Rookie; and"}
+                                  {:li "To alert you to other useful information regarding any of the foregoing or Rookie via email, direct mail, telephone or other means"}]
+                           :secondary-text {:text "In addition to the uses discussed above, Rookie may use non-personally identifiable information in any manner in its de-identified
+                                                   or aggregated form. These uses may include, without limitation, analysis of website trends and how the Rookie Platform are used;
+                                                   improving navigation of the Rookie Platform; analysis of the performance of the Rookie Platform and diagnosis of problems; analysis
+                                                   and developing advertisements and advertising campaigns; and providing you with special offers and promotions and determining the
+                                                   effectiveness of same.
+
+                                                   Rookie also may use your non-personally identifiable information to present you with targeted content and
+                                                   advertisements (including on third party websites and applications). Such targeted content and advertisements may include marketing
+                                                   for the Rookie Platform, the products or services of Rookie or its business and advertising partners, and Activities.
+                                                   Your non-personally identifiable information also may be used to optimize and determine the effectiveness of content and
+                                                   advertisements, and to analyze interactions with content and advertisements.
+
+                                                   Some of Rookie's third party partners may participate in the Digital Advertising Alliance’s Self-Regulatory Program for Online Behavioral Advertising or the Network
+                                                   Advertising Initiative Consumer Opt-Out, which allow consumers to opt-out of targeted advertising based on web activity tracking.
+                                                   For more information regarding the foregoing, please visit www.aboutads.info/choices/ and www.networkadvertising.org/choices/#completed.
+                                                   Please note that even if Rookie’s third party partners participate in the Digital Advertising Alliance’s Self-Regulatory Program for
+                                                   Online Behavioral Advertising or the Network Advertising Initiative Consumer Opt-Out, if you opt out of targeted advertising based on
+                                                   web activity tracking, you still may receive standard advertisements from us and targeted advertisements from third parties after clicking
+                                                   the link and following the instructions provided therein. You may need to re-click the links and follow the instructions provided again
+                                                   if you delete cookies or other Collection Technology or use a different computer, device or browser."}}
                           {:section "6."
-                           :title "Introduction"
-                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}
+                           :title "How we respond to \"Do Not Track\" signals"
+                           :text  "Rookie does not alter the practices detailed herein based upon your selection of the
+                                 \"Do Not Track\" setting or other \"opt out\" setting or feature that may be offered by your browser;
+                                 however, Rookie reserves the right to do so in the future without notice to you."}
                           {:section "7."
-                           :title "Introduction"
-                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}
+                           :title "Communication With You"
+                           :text  "You authorize Rookie to transmit email or postal mail to you, text you, or to telephone you. If we send any emails to promote our services,
+                                   unsubscribe instructions will be included in each such promotional email from Rookie to the extent required by law. Please note that unsubscribe
+                                   requests may take up to ten (10) business days to become effective. You may not opt out of receiving communications regarding your dealings with Rookie,
+                                   Submitted Training Sessions, the Rookie Platform or technical information about the Rookie Platform.
+                                   CLIENTS WHO SUBMIT A TRAINING SESSION AUTHORIZE THE TRAINER FOR THE TRAINING SESSION TO CONTACT THE CLIENT ABOUT THE TRAINING SESSION BY EMAIL, POSTAL MAIL, TEXT AND TELEPHONE.
+                                   TRAINERS WHO ACCEPT A CLIENT'S TRAINING SESSION, AUTHORIZE THE CLIENT WHO SUBMITTED THE TRAINING SESSION TO CONTACT THE TRAINER ABOUT THE TRAINING SESSION BY EMAIL, POSTAL MAIL, TEXT AND TELEPHONE."}
                           {:section "8"
-                           :title "Introduction"
-                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}
+                           :title "Information Sharing with Third Parties"
+                           :text  "Rookie may disclose the information it collects to third parties, including (i) to merchants and vendors engaged for the purpose of managing, administering or executing an Activity; (ii)
+                                   for purposes of outsourcing one or more of Rookie’s functions to service providers who work on behalf of or with Rookie, including, without limitation, agents, vendors, software
+                                   licensors, merchants, advertisers, consultants and affiliates; (iii) to confirm or update information provided by you; (iv) in the event of any reorganization, merger, sale,
+                                   joint venture, assignment, transfer or disposition of all or any portion of Rookie’s business or operations (including, without limitation, in connection with bankruptcy or any similar proceedings);
+                                   (v) to its business partners and co-sponsors of Activities or partners for our and their internal purposes; or (vi) as otherwise authorized or permitted by you.
+
+                                   Rookie will not share your health or financial information with third parties for their direct marketing purposes, unless you provide your affirmative consent for Rookie to share such information.
+                                   Rookie may share all other personally identifiable information it collects with Rookie’s business partners, vendors or other third parties for their direct marketing purposes.
+                                   If you are a Client and submit, transmit, post or select information relating to a Training Session or your Training Session preferences through the Rookie Platform or other interaction with Rookie,
+                                   such information may be shared with Trainers (“Training Session Preferences”). Information regarding Client’s past Training Sessions and information from Client’s profile may also be available to the
+                                   Trainer you submit a Training Session with and the Trainers  of your future Training Sessions.
+                                   Trainers’ availability, Training Sessions offered and other Trainer information may also be available to users of
+                                   the Rookie Platform.
+
+                                   We also may share your information in response to a subpoena, legal order or official request, when we believe you have acted in violation of the Terms of Services
+                                   or supplemental terms and/or policies of Rookie, to investigate, prevent or take action regarding suspected illegal activities, fraud or potential threats, or to exercise legal rights or
+                                   defend against claims, when we believe that doing so may protect your safety or the safety of Rookie or others, or as otherwise permitted or required by law. Additionally, we may take
+                                   personally identifiable information and de-identify it and share it in a de-identified or aggregated form with third parties, advertisers and/or business partners to analyze the Rookie
+                                   Platform’s usage or demographics, or improve our content or services, improve our user experience, or for similar purposes. When sharing non-personally identifiable in such a manner we
+                                   will ask our contracting parties to agree to keep the data in its de-identified form. The Rookie Platform also may contain plugins for social media websites, such as Facebook, Twitter,
+                                   and LinkedIn.  We recommend reviewing the privacy policies with respect to the plugins for each of these websites, prior to clicking on such plugins.
+
+                                   From time to time, portions of the Rookie Platform may include features that enable you to send information, materials, emails, and other types of messages or notices to Rookie or
+                                   to others users of the Rookie Platform, create a profile in connection with your account accessible to other users of the Rookie Platform or the public, submit reviews, opinions,
+                                   biographical information and other content that others may be able to access or view, or to make other information, materials or submissions available on or through the Rookie Platform
+                                   (“User Content”). Although we are under no obligation to do so, we have the right to review any and all User Content, for any purpose, including, without limitation,to enforce our Terms of Service
+                                   and or supplemental terms and/or policies of Rookie.  Also, remember that some types of User Content are open to other users of the Rookie Platform or the public, and, therefore, may be seen by anyone,
+                                   may be indexable by search engines, are not protected by us or any other entity, and may be collected and used by others. Please use your discretion when deciding whether and what to transmit, submit or
+                                   post through the Rookie Platform and whom to contact and message. 8. CHILDREN Rookie does not knowingly collect information from any person under age 18. If you are under age 18, you are not permitted to
+                                   use the Rookie Platform or to submit any personally identifiable information to the Rookie Platform. If you provide information to Rookie or any Trainer or Client through the Rookie Platform, you represent
+                                   that you are 18 years of age or older. The Rookie Platform are directed to persons 18 years of age or older residing in the United States or Canada. If you submit a Training Session for someone who is
+                                   between the ages of 13 and 17 years old, you represent and warrant to Rookie that: (a) you are that individual’s parent or guardian, (b) you agree to this Privacy Policy on that individual’s behalf, (c) you have the right to
+                                   provide personally identifiable information about that individual to Rookie and agree that Rookie may use such personally identifiable information in accordance with its Privacy Policy, and (d) you will supervise
+                                   the Training Session and the submission process to the Rookie Platform. You are not permitted to submit a Training Session for, or to provide information to Rookie regarding, anyone under the age of 13
+                                   and no individual under the  age of 13 may participate in any Training Session."}
                           {:section "9."
-                           :title "Introduction"
-                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."
-                           :color "#777"}
+                           :title "Children"
+                           :text  "Rookie does not knowingly collect information from any person under age 18.
+                                   If you are under age 18, you are not permitted to use the Rookie Platform or
+                                   to submit any personally identifiable information to the Rookie Platform.
+                                   If you provide information to Rookie or any Trainer or Client through the
+                                   Rookie Platform, you represent that you are 18 years of age or older.
+                                   The Rookie Platform are directed to persons 18 years of age or older
+                                   residing in the United States or Canada. If you submit a Training Session for
+                                   someone who is between the ages of 13 and 17 years old, you represent and
+                                   warrant to Rookie that:
+                                   (a) you are that individual’s parent or guardian,
+                                   (b) you agree to this Privacy Policy on that individual’s behalf,
+                                   (c) you have the right to provide personally identifiable information about that individual to Rookie and agree that Rookie may use such personally identifiable information in accordance with its Privacy Policy, and (d) you will supervise or participate in the Workout.
+                                   You are not permitted to submit a Training Session for, or to provide information to Rookie regarding, anyone under the age of 13 and no individual under the  age of 13 may participate in any Training Session."}
                           {:section "10."
-                           :title "Introduction"
-                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}
+                           :title "Protection of Personally Identifiable Information"
+                           :text  "Rookie uses reasonable administrative, physical and electronic security measures to protect
+                                   against the loss, misuse and alteration of personally identifiable information. No transmission
+                                   of data over the internet is guaranteed to be completely secure. It may be possible for third
+                                   parties not under the control of Rookie to intercept or access transmissions or private communications
+                                   unlawfully. While we strive to protect personally identifiable information, neither Rookie nor our
+                                   service providers can ensure or warrant the security of any information you transmit to us over the internet.
+                                   Any such transmission is at your own risk.
+                                   By using the Rookie Platform, or by submitting your personally identifiable information to
+                                   Rookie online or offline, you expressly consent to the storage and processing of your personally
+                                   identifiable information in Canada or other jurisdictions, in accordance with applicable laws in
+                                   those jurisdictions."}
                           {:section "11."
-                           :title "Introduction"
-                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}
+                           :title "Updating Your Information"
+                           :text  "You are responsible for keeping your information current. You may update your information through
+                                   your account or by contacting us at hi@getrookie.com. We will use reasonable efforts to process any change you make;
+                                   provided, however, that requests to delete information are subject to Rookie’s internal reporting,
+                                   processing and retention policies and all applicable legal obligations."}
                           {:section "12."
+                           :title "Links"
+                           :text  "You may have the opportunity to follow links on the Rookie Platform to other sites that may be of interest to you.
+                                   Rookie endeavors to only link to reputable organizations. Because other sites may not be hosted or controlled by Rookie,
+                                   we are not responsible for the privacy practices of those sites or the content provided thereon.
+                                   Therefore, the privacy policies with respect to other sites may differ from those applicable to the Rookie Platform.
+                                   We encourage you to review the privacy policies of each other site. This Privacy Policy only applies to information collected and obtained by Rookie.
+                                   QUESTIONS? If you have any questions or concerns regarding this Privacy Policy, please contact us at hi@getrookie.com.
+
+                                   Please note that email communications may not be secure. Accordingly, you should not include personal or other
+                                   sensitive information in your email correspondence to the Rookie Platform or to Rookie."}]}}
+
+ ;=========================================================================================
+ ; Rookie - Terms of Service
+ ;=========================================================================================
+
+ "terms-of-service-title"
+ {:template "one-feature"
+  :data {:page-padding {:top "3em"}
+         :heading   {:text "Terms of Service"
+                     :color "#fff"
+                     :transform "uppercase"}
+         :description {:color "#fff"}
+         :background {:color "linear-gradient(-45deg, #4B4EC2 0%, #373D96 50%, #232B69 100%)"}}}
+
+ "rookie-terms-of-service"
+ {:template "text"
+  :data     {:background  {:color "#fff"}
+             :title       {:color          "#232B69"
+                           :font-size      "1.75em"
+                           :text-transform "uppercase"}
+             :revision    {:date "Last Revised: 14/3/2017"}
+             :sections   [{:section "1."
                            :title "Introduction"
-                           :text  "Welcome to Rookie! The Privacy Policy describes how Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) treats information that Rookie collects or receives from you through getrookie.com and Rookie’s other websites, online locations, and mobile applications (collectively, the \"Sites\"), as well as through offline and online interactions with Rookie and from third parties. Rookie provides an online marketplace through the Sites that connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”) who offer classes/sessions (each a “Workout”) with clients who seek to schedule Workouts with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Workouts they offer and for Clients to schedule and pay for Workouts, and other services offered by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content, as defined in the Terms of Service, and all features and functionality available through the Sites, the “Rookie Platform”).  When used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse the Rookie Platform."}]}}
+                           :text  "Rookie App, Inc. and its affiliates (“Rookie,” we,” “us,” or “our”) welcomes you to
+                                   getrookie.com, and Rookie’s other websites, online locations, and mobile applications
+                                   (collectively, the \"Sites\"). \nRookie provides an online marketplace through the Sites that
+                                   connects independent personal trainers, fitness experts and other trainers (collectively, “Trainers”)
+                                   who offer classes/sessions (each a “Training Session”) with clients who seek to submit Training Sessions
+                                   with Trainers (“Clients”), a platform for Trainers to list information about themselves and the Training
+                                   Sessions they offer and for Clients to submit and pay for Training Sessions, and other services offered
+                                   by Rookie through the Sites (collectively, the “Marketplace Services,” together with the Sites, the Content,
+                                   defined below, and all features and functionality available through the Sites, the “Rookie Platform”). When
+                                   used herein, the term “user” or “users” refers to Clients, Trainers, and any others that access, use or browse
+                                   the Rookie Platform.
+
+                                   These Terms of Service together with any Supplemental Terms, defined below (collectively, these “Terms”)
+                                   govern your access to, and use and browsing of the Rookie Platform.
+
+                                   YOUR SUBMISSION AND PARTICIPATION IN ANY TRAINING SESSION IS SOLELY AT YOUR OWN RISK.
+                                   YOU UNDERSTAND AND AGREE THAT ROOKIE  IS NOT A PARTY TO ANY TRAINING SESSIONS OR TRAINING SESSION
+                                   ARRANGEMENTS BETWEEN CLIENTS AND TRAINERS. YOU UNDERSTAND AND AGREE THAT TRAINERS ARE NOT EMPLOYEES,
+                                   AGENTS, JOINT VENTURERS OR PARTNERS OF ROOKIE . THE ROOKIE  PLATFORM SOLELY OFFERS A PLATFORM FOR
+                                   TRAINERS AND CLIENTS TO CONNECT WITH ONE ANOTHER AND FOR CLIENTS TO ENGAGE TRAINERS DIRECTLY. ROOKIE
+                                   DOES NOT HIRE TRAINERS FOR CLIENTS. TRAINERS ACT EXCLUSIVELY ON THEIR OWN BEHALF AND NOT ON BEHALF OF
+                                   ROOKIE . ROOKIE  MAKES NO REPRESENTATIONS, WARRANTIES GUARANTEES, OR ENDORSEMENTS AS TO ANY TRAINER OR
+                                   OTHER THIRD PARTY PRODUCTS OR SERVICES, THE COMPATIBILITY OF ANY CLIENT WITH ANY TRAINER, OR THE QUALITY,
+                                   TIMING, LEGALITY OR OTHER ASPECT OF THE SERVICES OR PRODUCTS OFFERED OR DELIVERED BY TRAINERS, OR OTHERWISE
+                                   RECOMMENDED, ADVERTISED, OR OFFERED ON OR THROUGH THE ROOKIE  PLATFORM. ROOKIE  MAKES NO REPRESENTATIONS,
+                                   WARRANTIES OR GUARANTEES AS TO AMOUNTS TRAINERS MAY EARN THROUGH THE ROOKIE  PLATFORM, THE CONDUCT OF ANY
+                                   CLIENT OR TRAINING SESSION PARTICIPANT, OR CLIENT OR TRAINER CANCELING ANY TRAINING SESSION."}
+
+                          {:section "2."
+                           :title "Acceptance of Terms of Service"
+                           :text  "By accessing, using or browsing the Rookie Platform or any part thereof, you acknowledge
+                           that you have read, understood and agree to be bound by these Terms, including, without limitation,
+                           the Privacy Policy, which form an agreement that is as effective as if you had signed it.
+
+                           If at any time you do not agree to these Terms, please do not access, use or browse the Rookie Platform.
+
+                           YOUR ACCESS TO, USE OF AND BROWSING OF THE ROOKIE  PLATFORM IS SUBJECT TO THESE TERMS, ROOKIE ’S
+                           PRIVACY POLICY, AND ALL APPLICABLE LAWS AND REGULATIONS.  IF YOU DO NOT AGREE TO THESE TERMS, YOUR
+                           PERMISSION TO ACCESS, USE OR BROWSE THE ROOKIE  PLATFORM IS AUTOMATICALLY AND IMMEDIATELY REVOKED.
+
+                           These Terms may be revised or updated from time to time. Accordingly, you should check the Terms
+                           regularly for updates. You can determine when the Terms were last revised by referring to
+                           the \"Last Revised\" date at the top of this page. Each time you access, use or browse the Rookie Platform,
+                           you signify your acceptance of the then-current Terms. \nRookie may make changes to all content available on
+                           or through the Rookie Platform including, without limitation, text, brands, photographs, documents, graphics,
+                           audio, videos, logos, icons, images, media, data, charts, maps, software and other information and materials
+                           ideas, proposals, concepts, content, materials, works and deliverables (collectively, the “Content”), services
+                           or features of the Rookie Platform, and any other aspect of the Rookie Platform or any part or any of the
+                           foregoing, at any time. You understand and agree that Rookie may discontinue or restrict your use of all or any
+                           part of the Rookie Platform at any time for any reason or no reason and with or without notice.Your access to or
+                           use of certain aspects of the Rookie Platform may be subject to additional terms, conditions, details and
+                           specifications, posted to the Rookie Platform, or may require you to agree with and accept additional terms
+                           and conditions (\"Supplemental Terms\"). By accessing or using those aspects of the Rookie Platform you are
+                           expressly agreeing to such Supplemental Terms. If there is a conflict between any part of these Terms and any
+                           Supplemental Terms, the Supplemental Terms will take precedence with respect to your access to or use of those
+                           aspects of the Rookie Platform.\nIf you accept or agree to these Terms on behalf of a company, legal entity,
+                           association, partnership or other entity (“Entity”), you represent and warrant that you have the authority to
+                           bind that Entity to these Terms and, in such event, \"you\" or \"your\" will refer and apply to that Entity.
+                           Even if you are using the Rookie Platform or the Marketplace Services on behalf of an Entity, you agree that you,
+                           as an individual, are bound by these Terms and the Privacy Policy."}
+
+                          {:section "3."
+                           :title "Eligibility"
+                           :text  "In consideration of your use of the Rookie Platform, you represent that you are 18 years
+                                   of age or older, or of an age to form a legal binding contract where you reside and you
+                                   are that not prohibited from accessing or using the Rookie Platform or participating in
+                                   any Training Session under the laws of the United States or any other applicable jurisdiction.
+
+                                   The Rookie Platform is directed to persons 18 years of age or older residing in the United States
+                                   and Canada. Rookie does not knowingly collect information from any person under age 18. If you
+                                   are under age 18, you are not permitted to use the Rookie Platform or to submit any personally
+                                   identifiable information to the Rookie Platform. If you provide information to Rookie or any
+                                   Trainer or Client through the Rookie Platform, you represent that you are 18 years of age or
+                                   older. Notwithstanding the foregoing, if you are between 13 and 17 years of age, you may participate
+                                   in a Training Session if your parent or guardian submits and pays for the Training Session through
+                                   the Rookie Platform, agrees to these Terms on your behalf, and supervises or participates in the
+                                   Training Session. If you submit a Training Session for someone who is between the ages of 13 and 17
+                                   years old, you represent and warrant to Rookie that: (a) you are that individual’s parent or guardian,
+                                   (b) that you agree to these Terms on that individual’s behalf, (c) that you have permission to provide
+                                   personally identifiable information about that individual to Rookie and that Rookie may use such
+                                   personally identifiable information in accordance with its Privacy Policy, and (d) that you will
+                                   supervise or participate in the Training Session. You are not permitted to submit a Training Session for,
+                                   or to provide information to Rookie regarding, anyone under the age of 13 and no individual under the
+                                   age of 13 may participate in any Training Session."}
+
+                          {:section "4."
+                           :title "Marketplace Services"
+                           :list [{:li "(A) Registration: Prior to using the Marketplace Services you must register an
+                                         account with a username and password (“Account”).
+                                         You agree to follow the on-screen instructions, and to complete the applicable
+                                         forms and input information requested in connection with the registration process.
+                                         You represent and warrant that the information you provide in connection with the
+                                         registration process or as otherwise requested for the Account or in connection
+                                         with use of the Marketplace Services will at all times be accurate, truthful,
+                                         current and complete.You agree to prevent anyone other than yourself from accessing
+                                         or using the Account, and you agree to  take all reasonable and appropriate security
+                                         measures to prevent any unauthorized access or use of the Account or other breach of
+                                         security relating to the Rookie Platform or data accessible through the Account.
+                                         You agree to keep the Account username and password confidential and not to provide
+                                         Account information to anyone else.
+                                         You are fully responsible for all uses of the Account. Without limiting the foregoing,
+                                         you are fully responsible for all statements made and acts or omissions that occur while your
+                                         Account password is being used, whether by you or third parties.
+                                         You shall log out of the Account at the end of each session.
+                                         Rookie is authorized to act on instructions or information received through
+                                         use of any Account and is not liable for any loss or damage arising from your
+                                         failure to comply with this Section."}
+                                  {:li "(B) Marketplace Services for Clients: When logged into your Account you may submit
+                                        Training Sessions with Trainers. When submitting a Training Session you will be asked
+                                        to specify the following (“Training Session Selection”): (a) a exercise or skill type
+                                        for your Training Session (e.g., boxing, yoga, pilates, strength training etc.), and
+                                        (b) a Trainer for your Training Session. As part of your Training Session Selection,
+                                        you also may have the option to provide the Trainer with additional information, such
+                                        as preferences for your Training Session. \nAfter submitting your Training Session Selection,
+                                        the Trainer you selected will be notified of your selections and will have the option of
+                                        accepting or denying the Training Session. If the Trainer agrees to the Training Session,
+                                        you will receive a notification of the Trainer’s acceptance (“Trainer’s Acceptance”).
+
+                                        If the Trainer you select is not available or does not agree to the Training Session,
+                                        Rookie will select another Trainer and upon the replacement Trainer’s Acceptance,
+                                        will send you an email regarding the change in Trainer and the replacement Trainer’s Acceptance.
+
+                                        If you do not cancel your Training Session, your Training Session will remain with the replacement Trainer.
+                                        Client agrees, and shall cause each Training Session Participant in a Training Session submited by Client
+                                        to agree, to be bound by all obligations and all terms and conditions that apply to Client under these Terms,
+                                        provided that only Client will have the obligation to make payments for the Training Session and only Client
+                                        will have the right to submit and cancel Training Sessions or cancel Client’s subscription for any Membership Plan,
+                                        defined below. Client acknowledges and agrees that only individuals who agree to the foregoing may participate in
+                                        Training Sessions. Client shall be fully responsible and liable for each Training Session Participant's breach
+                                        of these Terms. Client agrees that upon request, Client shall disclose to Rookie the name and contact information
+                                        for each Training Session Participant. Client shall immediately notify Rookie if Client becomes aware of any
+                                        breach of these Terms by Client or any Training Session Participant."}
+
+                                  {:li "(C) Fees and Payments: Clients will have the option to subscribe to a monthly membership
+                                         plan where the Client will be charged a monthly fee for a pre-selected number of Training Sessions
+                                         per month (“Membership Plan”) or to submit and pay for a single Training Session (“Single Training Session Option”).
+                                         You also may be charged additional fees for Training Sessions that consist of more than one participant (apart from the Trainer).
+                                         The fees for the Single Training Session Option or Membership Plan that you select, as well as additional described
+                                         in the preceding sentence, will be displayed when you checkout (collectively, the “Fees”).
+
+                                         If you subscribe to a Membership Plan you will have until the end of the billing period
+                                         (the one-month period after your subscribing to the Membership Plan and each one-month
+                                         period starting on the one-month anniversary of your subscription thereafter) (each a “Billing Period”)
+                                         to complete your pre-selected number of Training Sessions for that Billing Period.
+                                         You will not be provided with any refund or credits for failing to use your pre-selected
+                                         number of Training Sessions within the applicable Billing Period.
+
+                                         AUTOMATIC RECURRING MONTHLY CHARGES:  IF YOU SUBSCRIBE TO A MEMBERSHIP PLAN,
+                                         THE MEMBERSHIP PLAN THAT YOU SELECT WILL CONTINUE MONTH-TO-MONTH UNTIL
+                                         YOU CANCEL YOUR MEMBERSHIP PLAN (AS EXPLAINED IN THE NEXT SECTION) OR ROOKIE
+                                         TERMINATES THE MEMBERSHIP PLAN OR YOUR ACCESS TO THE ROOKIE  PLATFORM.
+                                         UNTIL SUCH TIME, YOU WILL BE CHARGED FEES FOR YOUR MEMBERSHIP PLAN ON A RECURRING
+                                         MONTHLY BASIS (“MEMBERSHIP PLAN MONTHLY FEE”). BY PURCHASING A MEMBERSHIP PLAN,
+                                         YOU AUTHORIZE ROOKIE  TO CHARGE THE RECURRING MEMBERSHIP PLAN MONTHLY FEE,
+                                         AND ANY OTHER CHARGES YOU MAY INCUR IN CONNECTION WITH THE ACCOUNT, AT THE
+                                         THEN CURRENT RATE TO YOUR PAYMENT METHOD ON FILE WITHOUT FURTHER AUTHORIZATION.
+
+                                         TO AVOID BEING CHARGED THE MEMBERSHIP PLAN MONTHLY FEE, YOU MUST CANCEL YOUR MEMBERSHIP PLAN
+                                         PRIOR TO THE COMMENCEMENT OF THE NEXT BILLING PERIOD. YOU ACKNOWLEDGE THAT THE AMOUNT YOU ARE
+                                         CHARGED EACH MONTH MAY VARY FROM MONTH TO MONTH FOR REASONS THAT MAY INCLUDE PROMOTIONAL OFFERS
+                                         AND/OR CHANGES YOU MAKE TO YOUR MEMBERSHIP PLAN. YOU AUTHORIZE ROOKIE  TO CHARGE YOUR PAYMENT
+                                         METHOD ON FILE FOR SUCH VARYING AMOUNTS.\nRookie may increase any Fees at any time, with at least
+                                         thirty (30) days’ notice to Client, provided that: (a) Clients who subscribe to a Membership
+                                         Plan may cancel the subscription to their Membership Plan within such notice period or otherwise
+                                         as provided in the next section; and (b) any increase in Fees will not impact Training Sessions
+                                         that are already submitted through a Single Training Session Plan. Notice of any increase in
+                                         Fees will be provided to you via an email address associated with the Account.
+                                         Fees for the Single Training Session Plan may be due and payable any time after the
+                                         Trainer’s Acceptance. Fees for a Membership Plan will become due and payable as follows:
+                                         (a) the first payment of the Membership Monthly Fee will be due and payable upon your
+                                         subscribing to a Membership Plan; and (b) each subsequent payment of the Membership Plan
+                                         Monthly Fee will be due and payable on the commencement of a new Billing Period.
+
+                                         You authorize Rookie to charge your credit card, debit card or other payment method on
+                                         file in the Account and to collect payment through such method for any and all Fees as
+                                         they become due and payable. If you desire to designate a different payment method to
+                                         be charged for future Fees, or there is a change in validity or details with respect to
+                                          such payment method, you shall update the Account promptly.
+
+                                          At Rookie’s sole discretion, pro rata refunds or credits may be granted in extenuating
+                                          circumstances for Training Sessions that Client did not receive, as a result of specific
+                                          refund guarantee promotion, to correct any errors made by Rookie, or in the event that
+                                          Rookie permanently terminates or ceases to offer the Marketplaces Services or terminates
+                                          your access to the Marketplace Services for any reason other than your breach of these Terms.
+
+                                          Other than pursuant to the preceding sentence, all Fees paid to Rookie are non-refundable.
+                                          All Fees charged to Client are exclusive of all taxes, levies, or duties imposed by taxing authorities,
+                                          and Client shall be responsible for payment of all taxes, levies, or duties associated with his or
+                                          her purchases made in connection with the Rookie Platform."}
+
+                                  {:li   "(D) Cancelling Training Sessions: You may cancel any submitted Training Session
+                                          through the Account  or by emailing hi@getrookie.com if a coach has not opened
+                                          or reviewed the footage. If you cancel a Training Session you submitted, you
+                                          will only be entitled to a refund of Fees paid for the canceled Training Session,
+                                          if the Training Session was canceled at least twelve (12) hours prior to the
+                                          submitted Training Session.  If you cancel a Training Session you submitted
+                                          under your Membership Plan, you will not be entitled to any refund of the Fees
+                                          paid for the Training Session, but you will be entitled to submit a new Training
+                                          Session in place of the canceled Training Session."}
+                                  {:li   "Cancelling Your Subscription to a Membership Plan:
+                                          CLIENT MAY CANCEL ANY MEMBERSHIP PLAN TO WHICH CLIENT HAS SUBSCRIBED AT ANY
+                                          TIME BY EMAILING HI@ROOKIE APP.COM. CANCELLATIONS WILL BE EFFECTIVE AS OF THE
+                                          END OF THE THEN CURRENT BILLING PERIOD, AND  YOU WILL BE RESPONSIBLE FOR ALL
+                                          FEES INCURRED TO THE ACCOUNT THROUGH THE EFFECTIVE DATE OF THE TERMINATION.
+                                          NO REFUND FOR A PARTIAL MONTH WILL BE PROVIDED."}
+                                  {:li "(E) Marketplace Services for Trainers In addition to these Terms
+                                        (excluding the prior section for Clients), Trainers must agree to the Terms and
+                                        Conditions for Trainers prior to offering or accepting any Training Sessions
+                                        through the Rookie Platform. The Terms and Conditions for Trainers will be
+                                        presented to Trainers for acceptance after a Trainer applies to be a Trainer."}]}
+
+                          {:section "5."
+                           :title "Permitted Uses"
+                           :text  "The Rookie Platform and all Content are made available for your personal,
+                                   noncommercial use, provided that Trainers may use the Rookie Platform to
+                                   promote and receive payment for services that they perform at Training Sessions,
+                                   so long as the Trainer is in full compliance with these Terms. You agree to
+                                   abide by any posted limitations relating to use, reproduction or dissemination
+                                   of any Content. Any use of the Rookie Platform, including, without limitation,
+                                   the Sites, Content or any part of any of the foregoing, in any way not expressly
+                                   permitted by these Terms is prohibited, and may be actionable under the law.
+
+                                   The Rookie Platform is controlled within Canada and are directed to individuals
+                                   residing in the United States and Canada. Those who choose to access the Rookie
+                                   Platform from locations outside of the United States or Canada do so on their own
+                                   initiative, and are responsible for compliance with local laws if and to the extent
+                                   local laws are applicable. Rookie does not represent that the Rookie Platform is
+                                   appropriate outside the United States of America or Canada. Rookie reserves the
+                                   right to limit the availability of the Rookie Platform for any person, geographic
+                                   area or jurisdiction at any time in its sole discretion.
+
+                                   You are responsible for your use of the Rookie Platform.
+                                   You agree that the following actions, without limitation,
+                                   are prohibited and constitute a material breach of these Terms.
+                                   This list is not meant to be exhaustive, and Rookie reserves the right to
+                                   determine what types of conduct it considers to be inappropriate use of the Rookie
+                                   Platform or any part thereof. In the case of inappropriate use, Rookie may take such
+                                   measures as it determines in its sole discretion. By way of example, and not as
+                                   limitation, you agree that you will not:"
+                           :list [{:li "use the Marketplace Services for any purpose other than obtaining or offering
+                                       personal training and fitness services via Training Sessions; no other services
+                                       may be obtained or offered in connection with the Marketplace Services;"}
+                                  {:li "submit a Training Session outside of the Rookie Platform with any Trainer or
+                                        Client that you were introduced to through the Rookie Platform; pay any Trainer
+                                        or accept payment from Clients outside of the Rookie Platform;"}
+                                  {:li "display any disrespectful or inappropriate behavior at any time during any Training Session;"}
+                                  {:li "contact a Client if you are a Trainer or contact a Trainer if you are a Client for any reason
+                                        other than for reasons that pertain to a Training Session that was submitted, provided that a
+                                        Client may only contact a Trainer, and a Trainer may only contact a Client, through text or
+                                        telephone during the following times: (a) between the hours of 8:00 a.m. and 8:00 p.m. local time."}
+                                  {:li "transfer or sell any Training Session; Training Sessions may not be transferred to other individuals and may not be sold;"}
+                                  {:li "violate any law or regulation or use the Rookie Platform for any improper purpose or to take any action in violation of any law or regulation;"}
+                                  {:li "violate or infringe any other user of the Rookie Platform or third party’s intellectual property, privacy, publicity, or other legal or contractual rights;"}
+                                  {:li "use the Rookie Platform to transmit, distribute, post, or submit any information concerning any other person or entity, including without limitation, photographs or
+                                        personal contact information of others, without their permission, other than with respect to reviews that you may leave for Trainers or Clients through the Rookie Platform;"}
+                                  {:li "transmit anything that is illegal, abusive, harassing, harmful to reputation, pornographic, indecent, profane, obscene, hateful, racist, or otherwise objectionable;"}
+                                  {:li "send unsolicited or unauthorized advertising or commercial communications, such as spam;"}
+                                  {:li "transmit any malicious code, computer viruses, cancel bots, Trojan horses, flood pings, denial-of-service attacks, packet or IP spoofing, forged routing or electronic mail address information, or similar methods or technology;"}
+                                  {:li "stalk, harass, defame,  threaten, or harm another individual;"}
+                                  {:li "impersonate or misrepresent your identity or your affiliation with any person or entity;"}
+                                  {:li "create a false impression that you are endorsed by, partnering with, or acting on behalf of or for the benefit of Rookie;"}
+                                  {:li "use any automated devices, bots, agents, crawl, scraping, scripts, intelligent search or any similar means of access to Content
+                                        or other information or materials available through the Rookie Platform;"}
+                                  {:li  "systematically retrieve data or other Content from the Rookie Platform to create or compile,
+                                         directly or indirectly, in single or multiple downloads, a collection, compilation, database,
+                                         directory or the like, whether by manual or automated methods (although operators of public
+                                         search engines may use spiders to index materials from the Rookie Platform for the sole
+                                         purpose of creating publicly available searchable indices of the materials, and Rookie
+                                         reserves the right to revoke these exceptions either generally or in specific cases);"}
+                                  {:li "use automated methods to use the Rookie Platform in a manner that sends more requests to the Rookie servers
+                                        in a given period of time than a human can reasonably produce in the same period by using a conventional web browser;"}
+                                  {:li "interfere with or damage, or attempt to interfere with or damage, the Rookie Platform or any functionality thereof,
+                                        in any way, including, without limitation, by using any device, software or routine or the like, or attempt to
+                                        access any area of the Rookie Platform to which your access is not authorized;"}
+                                  {:li "register for more than one Account, register for an Account on behalf of an individual other than yourself,
+                                        or transfer the Account to another party without our consent;"}
+                                  {:l "use the Rookie Platform to recruit or otherwise solicit any user to join third
+                                       party services or websites that are competitive to Rookie, without Rookie’s prior written approval;"}
+                                  {:li "use, display, mirror, or frame the Rookie Platform or any individual element within the Rookie Platform,
+                                       Rookie’s name, any Rookie trademark, logo, or other proprietary information, or the layout and design of
+                                       any page or form contained on a page, without Rookie’s express written consent;"}
+                                  {:li "copy, adapt, modify, prepare derivative works based upon, distribute, aggregate, license, sublicense,
+                                        sell, resell, transfer, assign, publicly display, publicly perform, transmit, broadcast or otherwise
+                                        exploit the Rookie Platform or its Content, except as expressly permitted in these Terms;"}
+                                  {:li "access, tamper with, or use non-public areas of the Rookie Platform, Rookie’s computer systems, or the technical delivery systems of Rookie’s providers;"}
+                                  {:li "falsify or delete any author attributions, legal or other notices, or proprietary designations or labels of origin or source;"}
+                                  {:li "attempt to probe, scan, or test the vulnerability of any Rookie system or network or breach any security or authentication measures;"}
+                                  {:li "access the Rookie Platform for purposes of monitoring their availability, performance or functionality, or for any other benchmarking
+                                        or competitive purposes, including, but not limited to, building a competitive product or service;"}
+                                  {:li "take any action that imposes an unreasonable or disproportionately large burden on the Rookie Platform’s infrastructure or that otherwise
+                                        may adversely affect performance of the Rookie Platform or restrict any other user or Rookie from using or enjoying the Rookie Platform;"}
+                                  {:li "harvest or otherwise collect information about others, including, without limitation, email addresses or other contact information, without
+                                        their consent, or hack or violate any security measures of the Rookie Platform;"}
+                                  {:li "avoid, bypass, remove, deactivate, impair, descramble, or otherwise circumvent any technological measure implemented by Rookie or
+                                       any of Rookie’s providers or any other third party (including another user) to protect the Rookie Platform;"}
+                                  {:li "attempt to decipher, decompile, disassemble, or reverse engineer any of the software used to provide the Rookie Platform,
+                                        except as permitted by applicable law;"}
+                                  {:li "engage in any other action that, in the judgment of Rookie, exposes it or any third party to potential liability or detriment of any type; or
+                                        cause, advocate, encourage, or assist any third party in doing any of the foregoing."}]
+                           :secondary-text {:text "You acknowledge that Rookie has no obligation to monitor your access to or use of the Rookie Platform, but has the right to do so
+                                                   for any purpose, in its sole discretion. Rookie may at its discretion investigate and prosecute violations of these Terms to the fullest extent of the law.
+                                                   Rookie may involve and cooperate with law enforcement authorities in prosecuting users who violate these Terms."}}
+                          {:section "6."
+                           :title "User Content"
+                           :text  "The Rookie Platform may include features that enable you to send information, materials,
+                                   emails and other types of messages or notices to Rookie or to others users of the Rookie
+                                   Platform, create a profile in connection with your Account accessible to other users of the
+                                   Rookie Platform or the public, submit reviews, opinions, biographical information and other
+                                   content that others may be able to access or view, or to make other information, materials
+                                   or submissions available on or through the Rookie Platform (“User Content”).
+
+                                   User Content shall be deemed part of the defined term “Content” for purposes of these Terms.
+                                   You retain the rights you hold in your User Content. All User Content made available on the Rookie
+                                   Platform is strictly that of the originating author or user, who shall be solely responsible for such content.
+                                   Rookie may or may not screen, review, monitor or respond to any User Content submitted by users, and is not
+                                   responsible for the accuracy or truthfulness of any User Content. However, Rookie reserves the right to edit,
+                                   block, or remove any User Content at any time for any reason, in its sole discretion. Use of or reliance on
+                                   User Content is entirely at your own risk.
+
+                                   ROOKIE  HAS NO OBLIGATION TO SCREEN OR MONITOR ANY USER CONTENT AND DOES NOT GUARANTEE THAT ANY CONTENT COMPLIES
+                                   WITH THESE TERMS OR IS SUITABLE FOR ALL USERS OF THE ROOKIE  PLATFORM.
+
+                                   By submitting User Content, you grant Rookie a royalty-free, perpetual, irrevocable,
+                                   worldwide license, without further compensation, to use, host, store, reproduce, modify,
+                                   create derivative works, communicate, publish, publicly perform, publicly display,
+                                   and distribute such User Content for any purposes, including, without limitation to
+                                   advertise and promote Rookie or the Rookie Platform. You warrant and covenant that your
+                                   User Content is true, your own original work, and does not violate any applicable law,
+                                   infringe or violate any other person's or entity's rights, or require any third party
+                                   releases or any payment to a third party."}
+
+                          {:section "7."
+                           :title "Ownership and Proprietary Rights"
+                           :text "You acknowledge and agree that, as between Rookie and you, all right, title, and interest in
+                                  and to the Rookie Platform, including, without limitation, any patents, copyrights,
+                                  trademarks, trade secrets, inventions, know-how, and all other intellectual property rights,
+                                  are owned exclusively by Rookie, its licensors, related entities and other content providers,
+                                  and are protected by Canadian intellectual property and other applicable laws.
+
+                                  You acknowledge and agree that, as between Rookie and you, all Content, other than
+                                  the User Content, available on or through the Rookie Platform shall remain the
+                                  exclusive property of Rookie and Rookie shall retain all rights with respect to same,
+                                  including, without limitation, the sole right to implement, use, publish and/or publicly
+                                  disseminate the Content.  You agree that you will not use any Content other than as permitted
+                                  herein, without Rookie’s prior written consent."
+
+                           :list [{:li "(A) Copyright: All Content (other than User Content) is the copyright and property of Rookie,
+                                    its licensors, related entities or content providers and is protected by U.S. and international
+                                    copyright laws.  Other than with respect to your own User Content, you agree not to copy, modify,
+                                    distribute, transmit, republish, sell, resell or exploit, for any purpose, any portion of the
+                                    Rookie Platform, including, without limitation, the Content other than as expressly authorized
+                                    by Rookie in writing."}
+                                  {:li "(B) Trademarks: The trademarks, service marks, logos, slogans, trade names and trade dress used
+                                     on the Rookie Platform is proprietary to Rookie, its licensors, related entities, or content providers.
+                                     Third party trademarks referenced on the Rookie Platform do not constitute or imply affiliation with,
+                                     endorsement, or recommendation of Rookie by the respective trademark owners."}]}
+                          {:section "8."
+                           :title "Copyright Infringement Claims Policy"
+                           :text "If you believe that your work has been copied in a way that constitutes copyright infringement,
+                                 or your intellectual property rights have been otherwise violated, please provide the following information to our Copyright Agent:"
+                           :list [{:li "A. a electronic or physical signature of the person authorized to act on behalf of the owner of the copyright or other intellectual property interest;"}
+                                  {:li "B. a description of the copyrighted work or other intellectual property that you claim has been infringed;"}
+                                  {:li "C. a description of where the material that you claim is infringing is located on the Rookie Platform (providing URL(s) in the body of the communication is the best way to help Rookie locate content quickly);"}
+                                  {:li "D. your name, address, telephone number and e-mail address;"}
+                                  {:li "E. a signed statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law; and"}
+                                  {:li "F. a statement by you, made under penalty of perjury, that the information provided in your notice is accurate and that you are the copyright or intellectual property owner or authorized to act on the copyright or intellectual property owner’s behalf."}]
+                           :secondary-text {:text
+                                                   "Rookie’s copyright agent can be reached as follows:
+                                                    Rookie Inc., Gladstone Ave. Toronto Ontario, CA
+                                                    Attn: Simon Jalbert
+                                                    Email: simon@getrookie.com (Please put \"Copyright Infringement\" in the subject line).
+                                                    Rookie may, in its sole discretion, disable and/or terminate use of the Rookie Platform by users
+                                                    who infringe the intellectual property of others, including, without limitation, repeat offenders."}}
+                          {:section "9."
+                           :title "Privacy"
+                           :text "Please review our Privacy Policy, which is incorporated in these Terms.  If you do not agree with the Privacy Policy,
+                                  you are not authorized to access or use the Rookie Platform."}
+                          {:section "10."
+                           :title "Links"
+                           :text "The Rookie Platform may contain advertisements, posts and links to websites operated by other parties.
+                                  The Rookie Platform provide these as a convenience, and your interaction with or use of these advertisements,
+                                  posts, links and other websites is at your own risk.  The advertisements, posts and linked websites are not
+                                  under the control of Rookie which is not responsible for their content or privacy practices.
+                                  Such advertisements, posts or links or references to other parties’ products or services do not
+                                  imply Rookie’s endorsement of any other party or its information, material, products or services or website.
+                                  Rookie disclaims all liability with regard to your access to and use of such information, material, products
+                                  or services or transactions with such linked websites or other parties.  You acknowledge and agree that Rookie
+                                  is not responsible or liable, directly or indirectly, for any damage, loss or other claim caused or alleged to
+                                  be caused by or in connection with, access to, use of or reliance on any content available on or through any
+                                  other website or resource."}
+                          {:section "11."
+                           :title "Suspension and Termination"
+                           :text "Rookie reserves the right, at its sole discretion, immediately and without notice,
+                                  to suspend, discontinue, or terminate your access to the Rookie Platform or any
+                                  portion thereof for any reason, including, without limitation, any breach by you of
+                                  these Terms.  You agree that Rookie shall not be liable to you or any third party for
+                                  any such suspension, discontinuance or termination. If you breach or violate any of
+                                  these Terms, your permission to access or use the Rookie Platform is automatically
+                                  and immediately revoked and you may not continue using the Rookie Platform or participate
+                                  in any Training Session."}
+                          {:section "12"
+                           :title "Disclaimers and Limitations of Liability"
+                           :list [{:li "A. General Disclaimers: ROOKIE  PROVIDES THE ROOKIE  PLATFORM UNDER NO WARRANTY ON
+                                        AN “AS IS” AND “AS AVAILABLE” BASIS AND “WITH ALL FAULTS.” ROOKIE  AND ITS LICENSORS,
+                                        AND THEIR RESPECTIVE OFFICERS, MEMBERS, EMPLOYEES, DIRECTORS, SHAREHOLDERS, AGENTS,
+                                        REPRESENTATIVES AND SUCCESSORS AND ASSIGNS (“ROOKIE  PARTIES”) MAKE NO REPRESENTATIONS
+                                        OR WARRANTIES, WRITTEN OR ORAL, OR EXPRESS OR IMPLIED, WITH RESPECT TO THE ROOKIE
+                                        PLATFORM, ANY TRAINING SESSION, OR ANY PART OF ANY OF THE FOREGOING, AND EXPRESSLY
+                                        DISCLAIMS ALL OTHER REPRESENTATIONS AND WARRANTIES, INCLUDING WITHOUT LIMITATION ANY
+                                        IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, SATISFACTORY
+                                        QUALITY, UNINTERRUPTED USE, ACCURACY, COMPLETENESS, OPERABILITY AND/OR NON-INFRINGEMENT.
+
+                                       NOTHING IN THIS AGREEMENT SHALL BE DEEMED TO BE A REPRESENTATION OR WARRANTY BY ROOKIE
+                                       OR ITS LICENSORS OF THE SAFETY, SUITABILITY, FUNCTIONALITY OR USEFULNESS OF THE ROOKIE
+                                       PLATFORM, ANY TRAINING SESSION, ANY PART OF ANY OF THE FOREGOING, OR THAT ANY DATA
+                                       IMPLEMENTED OR ACCESSED THROUGH THE ROOKIE  PLATFORM WILL BE COMPLETE, ACCURATE OR FREE
+                                       FROM ERRORS. WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, YOU ACKNOWLEDGE THAT NONE
+                                       OF THE ROOKIE  PARTIES IS RESPONSIBLE FOR OR INDEPENDENTLY VERIFIES ANY USER CONTENT,
+                                       USER STATEMENTS OR COMMUNICATIONS MADE THROUGH THE ROOKIE  PLATFORM OR OUTSIDE OF THE
+                                       ROOKIE  PLATFORM, OR THIRD PARTY MATERIALS ACCESSED OR RECEIVED THROUGH THE ROOKIE
+                                       PLATFORM. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY YOU FROM ROOKIE,
+                                       THROUGH THE ROOKIE  PLATFORM OR THROUGH ANY CLIENT, TRAINER, OTHER USER OF THE ROOKIE
+                                       PLATFORM OR ANY OTHER INDIVIDUAL OR ENTITY THAT YOU MAY COMMUNICATE, INTERACT OR DEAL
+                                       WITH AS A RESULT OF YOUR USE OF THE ROOKIE  PLATFORM, WILL CREATE ANY WARRANTY NOT
+                                       EXPRESSLY MADE IN THESE TERMS.
+
+                                       YOUR USE OF THE ROOKIE  PLATFORM AND ANY MATERIAL OR INFORMATION ACCESSED, RECEIVED OR
+                                       OTHERWISE OBTAINED THROUGH THE USE OF THE ROOKIE  PLATFORM IS AT YOUR OWN RISK, AND YOU
+                                       WILL BE SOLELY RESPONSIBLE FOR ANY LOSSES, DEFINED BELOW, ARISING FROM SAME."}
+                                  {:li "B. Disclaimers Regarding Your Communications, Interactions and Dealings with Users
+                                        YOU ARE SOLELY RESPONSIBLE FOR ALL OF YOUR COMMUNICATIONS, INTERACTIONS AND DEALINGS WITH
+                                        OTHER USERS OF THE ROOKIE  PLATFORM AND WITH OTHER INDIVIDUALS OR ENTITIES THAT YOU
+                                        COMMUNICATE, INTERACT OR DEAL WITH THROUGH THE ROOKIE  PLATFORM OR AS A RESULT OF YOUR USE
+                                        OF THE ROOKIE  PLATFORM, INCLUDING, BUT NOT LIMITED TO, CLIENTS, TRAINERS, AND OTHER THIRD PARTIES.
+                                        ROOKIE  IS NOT OBLIGATED TO CONDUCT REVIEWS, VERIFICATIONS, BACKGROUND CHECKS OR OTHER SCREENINGS
+                                        (SUCH AS SEX OFFENDER REGISTER SEARCHES) OF TRAINERS OR CLIENTS. ACCORDINGLY, YOU AGREE TO TAKE
+                                        ALL REASONABLE PRECAUTIONS AND TO CONDUCT WHATEVER INVESTIGATION YOU FEEL NECESSARY OR APPROPRIATE
+                                        BEFORE PROCEEDING WITH SUCH COMMUNICATIONS, INTERACTIONS OR DEALINGS. ROOKIE  IS NOT RESPONSIBLE
+                                        OR LIABLE FOR ANY LOSSES OF ANY KIND OR NATURE INCURRED AS THE RESULT OF SUCH COMMUNICATIONS,
+                                        INTERACTIONS OR DEALINGS. ROOKIE  MAKES NO REPRESENTATIONS, WARRANTIES, OR GUARANTEES AS TO THE
+                                        CONDUCT, ACTIONS, INTEGRITY, OR RESPONSIBILITY OF OTHER USERS OF THE ROOKIE  PLATFORM OR ANY
+                                        OTHER INDIVIDUAL OR ENTITY THAT YOU MAY COMMUNICATE, INTERACT OR DEAL WITH AS A RESULT OF YOUR
+                                        USE OF THE ROOKIE  PLATFORM, INCLUDING, BUT NOT LIMITED TO, CLIENTS, TRAINERS, AND OTHER THIRD
+                                        PARTIES, AND ROOKIE  DISCLAIMS ALL LIABILITY IN THIS REGARD TO THE MAXIMUM EXTENT PERMITTED BY LAW.
+                                        ROOKIE  HAS NO CONTROL OVER, AND NO RIGHT TO CONTROL, USERS OF THE ROOKIE  PLATFORM, OR ANY OTHER
+                                        INDIVIDUAL OR ENTITY THAT YOU MAY COMMUNICATE, INTERACT OR DEAL WITH AS A RESULT OF YOUR USE OF THE
+                                        ROOKIE  PLATFORM, INCLUDING, BUT NOT LIMITED TO, CLIENTS, TRAINERS, AND OTHER THIRD PARTIES,
+                                        OR THEIR ACTIVITY OR CONDUCT ON OR OUTSIDE OF THE ROOKIE  PLATFORM. WITHOUT LIMITING ANY OF
+                                        THE FOREGOING, ROOKIE  DISCLAIMS ANY RESPONSIBILITY OR LIABILITY ASSOCIATED WITH THE ROOKIE
+                                        PLATFORM OR ANY ACTIVITY OCCURRING OUTSIDE OF THE ROOKIE  PLATFORM, INCLUDING, WITHOUT LIMITATION,
+                                        CONDUCT OCCURRING DURING TRAINING SESSIONS OR ANY OTHER ASPECT OF ANY TRAINING SESSIONS.
+
+                                        ROOKIE  EXPRESSLY DISCLAIMS ALL LIABILITY FOR ANY ACT OR OMISSION OF ANY CLIENT, TRAINER,
+                                        OTHER USER OF THE ROOKIE  PLATFORM OR THIRD PARTY."
+
+                                   {:li "C. Limitations of Liability:
+                                         EXCEPT FOR INSTANCES OF GROSS NEGLIGENCE, INTENTIONAL WRONGDOING, WILLFUL,
+                                         MALICIOUS OR WANTON MISCONDUCT OR WHERE OTHERWISE REQUIRED BY LAW, UNDER NO
+                                         CIRCUMSTANCE SHALL ANY OF THE ROOKIE  PARTIES HAVE ANY LIABILITY TO YOU OR ANY
+                                         OTHER PERSON FOR OR ON ACCOUNT OF (A) ANY CLAIMS, LOSSES, LIABILITIES, DAMAGES,
+                                         JUDGMENTS, INTEREST, FINES, PENALTIES, COSTS AND EXPENSES OF ANY KIND OR NATURE
+                                         INCLUDING REASONABLE ATTORNEY FEES AND COSTS (COLLECTIVELY, “LOSSES”) SUSTAINED,
+                                         ASSESSED OR IMPOSED ON YOU OR ANY OTHER PERSON, OR (B) ANY CONSEQUENTIAL, SPECIAL,
+                                         EXEMPLARY OR PUNITIVE DAMAGES OR LOSSES OF ANY KIND (INCLUDING WITHOUT LIMITATION
+                                         LOST PROFITS, LOST BUSINESS, OR ANY INTERRUPTION OF BUSINESS) WHETHER BASED IN TORT,
+                                         CONTRACT, NEGLIGENCE, STRICT LIABILITY, STATUTORY LIABILITY OR OTHERWISE, WHICH
+                                         ARISE OUT OF OR RELATE TO OR ARE IN CONNECTION WITH THE ROOKIE  PLATFORM, ANY
+                                         TRAINING SESSION, OR ANY PART OF THE ANY OF THE FOREGOING, INCLUDING WITHOUT
+                                         LIMITATION LOSSES CAUSED BY DISRUPTION OF THE ROOKIE  PLATFORM, DELETION OF YOUR DATA,
+                                         UNAUTHORIZED ACCESS TO THE ROOKIE  PLATFORM OR YOUR PERSONAL OR FINANCIAL INFORMATION,
+                                         COMPUTER MALFUNCTION, MALICIOUS CODE THAT MAY BE TRANSMITTED ON OR THROUGH THE ROOKIE
+                                         PLATFORM, ERRORS, MISTAKES, OR INACCURACIES OF CONTENT, PERSONAL INJURY OR PROPERTY
+                                         DAMAGE RESULTING FROM YOUR ACCESS TO OR USE OF THE ROOKIE  PLATFORM OR PARTICIPATION
+                                         IN ANY TRAINING SESSION, OR ANY OTHER LOSSES INCURRED BY YOU OR ANY OTHER PERSON,
+                                         WHETHER OR NOT ROOKIE  KNEW OR SHOULD HAVE KNOWN OF THE POSSIBILITY OF SUCH LOSSES."}
+                                   {:li "D. Exclusions: Because some jurisdictions, including the State of New Jersey,
+                                         do not allow for certain limitations with respect to duration or disclaimer of warranties,
+                                         or exclusion or limitation of liability for certain types of damages,  portions of
+                                         this Section 11 may not apply to you. IF, FOR ANY REASON, ANY OF THE FOREGOING LIMITATIONS
+                                         IS FOUND TO BE INVALID OR UNENFORCEABLE AS FINALLY DETERMINED BY A COURT OF LAW, THE SOLE
+                                         AND TOTAL LIABILITY OF ANY OF THE ROOKIE  PARTIES SHALL BE LIMITED, IN THE AGGREGATE,
+                                         TO THE LESSER OF: (1) THE AMOUNT OF COMMISSION THAT ROOKIE  RECEIVED FOR YOUR USE OF
+                                         THE ROOKIE  PLATFORM DURING THE TWELVE MONTH PERIOD PRIOR TO THE CAUSE OF ACTION GIVING
+                                         RISE TO THE CLAIM; OR (2) $1,000. THE FOREGOING LIMITATION OF LIABILITY IS FAIR AND REASONABLE
+                                         UNDER THE CIRCUMSTANCES AND IN CONSIDERATION FOR THE RIGHTS GRANTED HEREUNDER."}}]}
+                          {:section "13."
+                           :title "Disputes with other Users"
+                           :text "BY USING THE ROOKIE  PLATFORM, YOU AGREE THAT ANY LEGAL REMEDY OR LIABILITY THAT YOU SEEK
+                                  TO OBTAIN FOR ACTIONS OR OMISSIONS OF OTHER USERS OF THE ROOKIE  PLATFORM OR WITH OTHER
+                                  INDIVIDUALS OR ENTITIES THAT YOU COMMUNICATE, INTERACT OR DEAL WITH AS A RESULT OF YOUR USE
+                                  OF THE ROOKIE  PLATFORM, INCLUDING, BUT NOT LIMITED TO, CLIENTS, TRAINERS, AND OTHER THIRD PARTIES,
+                                  WILL BE LIMITED TO A CLAIM AGAINST THE PARTICULAR INDIVIDUAL OR ENTITY THAT CAUSED YOU HARM AND YOU AGREE
+                                  NOT TO ATTEMPT TO IMPOSE LIABILITY ON, OR SEEK ANY LEGAL REMEDY FROM ROOKIE  WITH RESPECT TO SUCH ACTIONS OR OMISSIONS.
+
+                                 In the event of a dispute between you and any other user of the Rookie Platform or with other individuals or entities
+                                 that you communicate, interact or deal with as a result of your use of the Rookie Platform, including, but not limited to,
+                                 Clients, Trainers, and other third parties, you understand and agree that Rookie is under no obligation to become involved
+                                 and you hereby release and discharge the Rookie Parties from all Losses of every kind or nature, known and unknown, suspected
+                                 and unsuspected, disclosed and undisclosed, arising out of or in any way related to such dispute.
+
+                                 You expressly waive United States Civil Code § 1542, if you are a United States resident, or any other statute of similar import or effect,
+                                 that otherwise may exclude unknown claims from this release, as follows:
+                                 /“A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF EXECUTING THE RELEASE,
+                                 WHICH IF KNOWN BY HIM OR HER MUST HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT WITH THE DEBTOR./”"}
+                          {:section "14."
+                           :title "Indemnification"
+                           :text  "You agree to indemnify, hold harmless and defend the Rookie Parties from and against
+                                   any and all Losses arising out of, relating to, resulting from or in connection with:"
+                           :list [{:li "(a) your breach or violation of any term, condition, obligation, representation, warranty
+                                        or covenant set forth in these Terms, violation of any applicable law or violation of
+                                        the rights of Rookie or any third party damaged by your actions or by the actions of
+                                        anyone else accessing the Account;"}
+                                  {:li "(b) any information (including your User Content or any other content) that you
+                                        submit, post, or transmit on or through the Rookie Platform; or"}
+                                  {:li "(c) any activity that occurs in connection with use of the Account, your activity and
+                                        conduct in connection with any Training Session, or your dispute with any other
+                                        user of the Rookie Platform or with other individuals or entities that you communicate,
+                                        interact or deal with as a result of your use of the Rookie Platform, including,
+                                        but not limited to, Clients, Trainers, and other third parties (each of the foregoing for the purposes
+                                        of this Section 13, a “Claim”)."}]
+                           :secondary-text {:text "Rookie shall have the unilateral right to undertake the control and defense and
+                                                   settlement or other disposition of any Claim hereunder with counsel of
+                                                   its choice with all attorney fees and costs paid or reimbursed by you on demand,
+                                                   provided however that (i) you at your own expense may participate with Rookie in the
+                                                   defense of any Claim, and (ii) you shall not stipulate or consent to judgment or settle
+                                                   any Claim without Rookie’s prior written consent. You shall provide Rookie with
+                                                   reasonable cooperation in connection with any such defense."}}
+                          {:section "15."
+                           :title "Other Provisions"
+                           :text "If any provision of these Terms is held to be invalid or unenforceable, such provision
+                                  shall be struck and the remaining provisions shall be enforced to the fullest extent allowed by law.
+                                  Headings are for reference purposes only and in no way define, limit, construe or
+                                  describe the scope or extent of such section. Rookie’s failure to act with respect to
+                                  any failure by you or others to comply with these Terms does not waive Rookie’s right
+                                  to act with respect to subsequent or similar failures. These Terms may not be amended
+                                  by any course of dealing, usage or trade practice. A failure in the Rookie Platform,
+                                  including, without limitation, the Sites, Content, or any portion or any of the foregoing,
+                                  cannot be imputed to Rookie if such failure arises by reason of an event of force majeure,
+                                  such as labor strikes, floods, earthquakes, war, terrorism, or unforeseen acts of god
+                                  or any other cause, either similar or dissimilar to the foregoing, which is beyond
+                                  Rookie’s reasonable control and Rookie shall not be deemed to be in breach in its
+                                  performance of an obligation under these Terms to the extent that such performance is
+                                  temporarily prevented or delayed as a result of such an event.  These Terms, together
+                                  with the Privacy Policy (and, if you are a Trainer, the Terms and Conditions for Trainers),
+                                  set forth the entire understanding and agreement between you and Rookie with respect to
+                                  the subject matter hereof. You may not assign or transfer your rights or obligations under
+                                  these Terms without the prior written consent of Rookie, and any assignment or transfer
+                                  in violation of this provision shall be null and void.  Rookie reserves the right to seek
+                                  all remedies available at law and in equity for violations of these Terms, or any other
+                                  special terms or rules set forth on or through the Rookie Platform, including, without
+                                  limitation, the right to block access from a particular internet address."}]}}
 
 
+ ;=========================================================================================
+ ; Rookie - Press Room
+ ;=========================================================================================
 
+ "press-room-title"
+ {:template "one-feature"
+  :data {:page-padding {:top "3em"}
+         :heading   {:text "Press Room"
+                     :color "#fff"
+                     :transform "uppercase"}
+         :description {:color "#fff"}
+         :background {:color "linear-gradient(-45deg, #4B4EC2 0%, #373D96 50%, #232B69 100%)"}}}
+
+ "rookie-press-room"
+ {:template "press-room"
+  :data {:page-padding {:top "3em"}
+         :styles       {:border "1px solid #eee"}
+         :heading      {:color          "#2E3944"
+                        :font-size      "1.75em"
+                        :spacer "0.15em"
+                        :text-transform "uppercase"}
+         :subtitle     {:text "Our Logos"}
+
+         :logos        [{:image-url "/rookie/images/rookie-light-logo-press-room.png"
+                         :button [{:text "png"
+                                   :url "/rookie/images/rookie-coaching-navy-logo.png"}
+                                  {:text "eps"
+                                   :url "/rookie/images/rookie-coaching-navy-logo.eps"}]}
+                        {:image-url "/rookie/images/rookie-dark-logo-press-room.png"
+                         :button  [{:text "png"
+                                    :url "/rookie/images/rookie-coaching-white-logo.png"}
+                                   {:text "eps"
+                                    :url "/rookie/images/rookie-coaching-white-logo.eps"}]}]
+
+         :product      {:image "/rookie/images/rookie-athlete-app-example.jpg"
+                        :subtitle "Product Images"
+                        :url "/rookie/images/rookie-athlete-app-images.zip"
+                        :button "zip"}
+
+         :contact      {:subtitle "Contact Information"
+                        :name  "Marketing Department"
+                        ;:position "Co-founder"
+                        :role     "Marketing & Communications"
+                        :email {:url "mailto:simon@getrookie.com"
+                                :text "simon@getrookie.com"}
+                        :phone "647-267-5292"}
+         :description  {:color "#fff"}
+         :background   {:color "linear-gradient(-45deg, #4B4EC2 0%, #373D96 50%, #232B69 100%)"}}}
+
+ ;=========================================================================================
+ ; Rookie - Careers
+ ;=========================================================================================
+
+ "careers-title"
+ {:template "one-feature"
+  :data {:page-padding {:top "3em"}
+         :heading   {:text "Careers"
+                     :color "#fff"
+                     :transform "uppercase"}
+         :description {:color "#fff"
+                       :text "We’re looking for passionate, hard-working people."}
+         :background {:color "#2D3589"}}}
+
+ "careers-text"
+ {:template "text"
+  :data {:sections [{:title "Openings"
+                     :text  "Currently we do not have any listed positions, but we are always looking to recruit top talent,
+                            feel free to send us your resume or website to hi@getrookie.com and tell us about the type of position you are looking for."}]}}
+
+ "rookie-testimonial"
+ {:template "image-testimonial"
+  :data     {:heading    ""
+             :background {:image-url  "/rookie/images/derrell-testimonial.png"
+                          :mobile-url "/rookie/images/derrell-testimonial-small-screen.png"}}}
+
+
+ ;=========================================================================================
+ ; Rookie - About
+ ;=========================================================================================
+ "about-title"
+ {:template "one-feature"
+  :data {:page-padding {:top "3em"}
+         :heading   {:text "We were the first Coaches on Rookie"
+                     :color "#fff"
+                     :transform "uppercase"}
+         :description {:color "#fff"
+                       :text "We started by coaching, and ended up creating a platform of our own."}
+         :background {:color "linear-gradient(-45deg, #4B4EC2 0%, #373D96 50%, #232B69 100%)"}}}
+
+ "rookie-about"
+ {:template "about"
+  :data {:styles ""
+         :description [{:item "Two years ago one of our founders started coaching basketball to athletes from instagram through video.
+                              There was enormous interest, but the process to coach someone online just didn't work for us or our clients.
+                              We fumbled with video editors, payment collection tools and messaging
+                              apps all to give feedback on a short video clip."}
+
+                       {:item "We wanted to train more people online through video but we weren't setup for it.
+                               So we built Rookie, and we soon realized not only basketball coaches could benefit from our tool
+                               but other coaches and personal trainers could benefit from an easy to use platform to build their
+                               online training business."}
+                       {:item "We focus on making online training better for both the coach and the athlete. With Rookie,
+                               coaches can focus on what they do best: giving advice and feedback.
+                               And athletes can finally get feedback on their form and no longer have to follow training
+                               programs blindly."}]
+         :containers [{:heading "Career opportunities"
+                       :text "We’re growing, and we’re looking for talented people who can make one on one training better."
+                       :button-text "Join our team"
+                       :url "./careers"
+                       :image "/rookie/images/about-icon-weight.png"}
+                      {:heading "Contact us"
+                       :text "Got a question about using Rookie? The support team is available 8am - 8pm EST"
+                       :button-text "Get in Touch"
+                       :url "mailto:hi@getrookie.com"
+                       :image "/rookie/images/"}
+                      {:heading "Press & media"
+                       :text "Looking for press releases, logos or contact info?"
+                       :button-text "Go to Press Room"
+                       :url "./pressroom"
+                       :image "/rookie/images/"}]}}
+
+
+ ;=========================================================================================
+ ; Rookie - Pricing
+ ;=========================================================================================
+ "pricing-title"
+ {:template "one-feature"
+  :data {:page-padding {:top "3em"}
+         :heading   {:text "Pricing"
+                     :color "#fff"
+                     :transform "uppercase"}
+         :description {:color "#fff"
+                       :text "A plan that fits your business."}
+         :background {:color "linear-gradient(-45deg, #4B4EC2 0%, #373D96 50%, #232B69 100%)"}}}
 
  ;=========================================================================================
  ; Rookie - Analytics and plugins

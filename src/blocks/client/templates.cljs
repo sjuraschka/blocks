@@ -1,5 +1,6 @@
 (ns blocks.client.templates
   (:require
+    blocks.client.templates.about
     blocks.client.templates.analytics
     blocks.client.templates.braid-conversations
     blocks.client.templates.cta
@@ -18,6 +19,7 @@
     blocks.client.templates.multiple-logo-footer
     blocks.client.templates.one-feature
     blocks.client.templates.pre-footer-menu
+    blocks.client.templates.press-room
     blocks.client.templates.pricing
     blocks.client.templates.quote
     blocks.client.templates.raw
