@@ -31,11 +31,11 @@
              :text-transform   "uppercase"
              :size             "0.85em"
              :menu             [{:text "Press Room"
-                                 :url "#"}
+                                 :url "./press-room/"}
                                 {:text "Privacy"
                                  :url  "./privacy-policy/"}
                                 {:text "Terms"
-                                 :url  "mailto:hi@getrookie.com"}]}}
+                                 :url  "./terms-of-service/"}]}}
 
 
  ;=========================================================================================
