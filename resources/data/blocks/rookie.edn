@@ -1242,8 +1242,10 @@
                      :transform "uppercase"}
          :description {:color "#fff"
                        :text "We’re looking for passionate, hard-working people."}
-         :background {:color "#2D3589"}}}
-
+         :background {:size "cover"
+                      :height "300px"
+                      :image ""
+                      :color "#2D3589"}}}
  "careers-text"
  {:template "text"
   :data {:sections [{:title "Openings"
