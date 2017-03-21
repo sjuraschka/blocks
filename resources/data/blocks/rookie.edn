@@ -274,6 +274,14 @@
                       :height "700px"
                       :image "/rookie/images/rookie-training-mobile-app-personal-training.jpg"}}}
 
+ "rookie-secondary-nav"
+ {:template "secondary-nav"
+  :data {:background {:color "#fff"}
+         :color "#2E3944"
+         :menu [{:title "Create"}
+                {:title "Invite"}
+                {:title  "Review"}]}}
+
  "rookie-product-feature-1"
  {:template "feature-highlight"
   :data     {:heading     {:text           "Invite your athletes"

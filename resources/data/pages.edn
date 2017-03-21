@@ -134,6 +134,7 @@
 
   :blocks ["rookie-header"
            "title-section-rookie"
+           "rookie-secondary-nav"
            "rookie-product-feature-1"
            "rookie-product-feature-2"
            "rookie-product-feature-3"

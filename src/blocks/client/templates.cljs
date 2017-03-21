@@ -25,6 +25,7 @@
     blocks.client.templates.raw
     blocks.client.templates.roadmap
     blocks.client.templates.rookie-three-values-text
+    blocks.client.templates.secondary-nav
     blocks.client.templates.text
     blocks.client.templates.three-features
     blocks.client.templates.video))
