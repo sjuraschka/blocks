@@ -364,7 +364,7 @@
                            :position  "right"}}}
 
 
- "rookie-product-feature-5"
+ "rookie-product-feature-4"
  {:template "feature-highlight"
   :data     {:anchor "get-paid"
              :heading     {:step           4
@@ -387,6 +387,23 @@
              :image       {:image-url "/rookie/images/get-paid-with-rookie-coaching-app.png"
                            :position  "left"}}}
 
+
+ "rookie-testimonial-1"
+ {:template "image-testimonial"
+  :data     {:styles {:image-height "100%"
+                      :image-width "296px"
+                      :left  "inherit"
+                      :right 0
+                      :background-size "296px 533px"
+                      :color "#232b69"}
+             :heading   {:text "\"Rookie makes online training worthwhile since it’s so customizable and easy to set up. It also serves as a great way for me to differentiate my services from other trainers.\""
+                         :transform "sentence-case"}
+             :label {:text "Courtney Ustrzycki, Courtneyforlife.com"}
+             :min-height "500px"
+             :background {:image-url  "/rookie/images/courtneyforlife-testimonial.png"
+                          :mobile-url "/rookie/images/courtneyforlife-testimonial.png"
+                          :color "#F5F5F5"
+                          :direction "row-reverse"}}}
 
  ;=========================================================================================
  ; Rookie - Privacy Policy
@@ -1315,9 +1332,20 @@
 
  "rookie-testimonial"
  {:template "image-testimonial"
-  :data     {:heading    ""
+  :data     {:styles {:image-height "100%"
+                      :image-width "700px"
+                      :left  0
+                      :right "inherit"
+                      :background-size "100%"
+                      :color "#232b69"}
+             :heading   {:text "\"With my USA hockey combines I can now train participants beyond the one weekend a year I see them in person.\""
+                         :transform "sentence-case"}
+             :label {:text "Derrell Levy, In-Tech High Performance Training"}
+             :min-height "400px"
              :background {:image-url  "/rookie/images/derrell-testimonial.png"
-                          :mobile-url "/rookie/images/derrell-testimonial-small-screen.png"}}}
+                          :mobile-url "/rookie/images/derrell-testimonial-small-screen.png"
+                          :color "linear-gradient(45deg, #9BFFF3 27%, #AEEAE6 100%)"
+                          :direction "row"}}}
 
 
  ;=========================================================================================

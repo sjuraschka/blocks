@@ -10,19 +10,22 @@
    {:box-sizing       "border-box"
     :position         "relative"
     :display          "flex"
+    :flex-direction (get-in data [:background :direction])
     :justify-content  "flex-end"
-    :background-image "linear-gradient(45deg, #9BFFF3 27%, #AEEAE6 100%)"
+    :background (get-in data [:background :color])
     :width            "100vw"
-    :min-height       "400px"}
+    :min-height       (data :min-height)}
 
 
    [:.image
     {:background-image  (str "url(" (get-in data [:background :image-url]) ")")
+     :background-size   (get-in data [:styles :background-size])
      :background-repeat "no-repeat"
      :position          "absolute"
-     :height            "100%"
-     :width             "700px"
-     :left              0
+     :height            (get-in data [:styles :image-height])
+     :width             (get-in data [:styles :image-width])
+     :left              (get-in data [:styles :left])
+     :right             (get-in data [:styles :right])
      :bottom            0}]
 
 
@@ -32,15 +35,16 @@
      :width           "40vw"
      :display         "flex"
      :flex-direction  "column"
-     :padding         "2em"
+     :padding         "3em"
+     :margin-left     "8em"
      :align-items     "flex-start"
      :justify-content "center"
-     :color           "#232b69"}
+     :color           (get-in data [:styles :color])}
 
     [:.title
-     {:font-size      "1.75em"
-      :padding-bottom "1.5rem"
-      :text-transform "uppercase"}]
+     {:font-size      "1.5em"
+      :padding-bottom "1rem"
+      :text-transform (get-in data [:heading :transform])}]
 
     [:.subtitle
      {:max-width  "30rem"
@@ -51,7 +55,8 @@
              [:&
               [:.image]
               [:.testimonial
-               {:background "rgba(240, 240, 240, 0.55)"
+               {:margin-left 0
+                :background "rgba(240, 240, 240, 0.55)"
                 :width      "100vw"}]])
 
    (at-media {:max-width "450px"}
@@ -67,8 +72,8 @@
    [:div.image]
 
    [:div.testimonial
-    [:h1.title "\"With my USA hockey combines I can now train participants beyond the one weekend a year I see them in person.\""]
-    [:p.subtitle "Derrell Levy, In-Tech High Performance Training"]]])
+    [:h1.title (get-in data [:heading :text])]
+    [:p.subtitle (get-in data [:label :text])]]])
 
 
 (defmethod template "image-testimonial" [_]
