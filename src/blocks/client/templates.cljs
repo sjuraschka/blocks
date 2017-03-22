@@ -3,6 +3,7 @@
     blocks.client.templates.about
     blocks.client.templates.analytics
     blocks.client.templates.braid-conversations
+    blocks.client.templates.center-text
     blocks.client.templates.cta
     blocks.client.templates.downloads
     blocks.client.templates.features-grid

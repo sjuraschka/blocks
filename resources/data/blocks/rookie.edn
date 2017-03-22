@@ -266,7 +266,7 @@
   :data {:page-padding {:top "3em"}
          :heading   {:text "Learn how to use Rookie"
                      :color "#fff"
-                     :transform ""}
+                     :transform "uppercase"}
          :description {:text "New to Rookie? We’ll walk you through it."
                        :color "#fff"}
          :background {:size "cover"
@@ -1362,29 +1362,32 @@
          :description {:color "#fff"
                        :text "We started by coaching, and ended up creating a platform of our own."}
          :background {:size "cover"
-                      :height "300px"
-                      :image ""
+                      :height "700px"
+                      :image "/rookie/images/about-hero-image-rookie-training-app.jpg"
                       :color "#2D3589"}}}
  "rookie-about-intro"
  {:template "center-text"
-  :date {:background "red"}}
+  :data {:background "red"
+         :city "Toronto"
+         :headline "We’re a passionate team who believes that one to one coaching will always the best way to learn."
+         :description "We’re a Bloom Ventures backed startup with a growing user base of coaches and athletes. "}}
 
  "rookie-about"
  {:template "about"
   :data {:styles ""
-         :description [{:item "Two years ago one of our founders started coaching basketball to athletes from instagram through video.
-                              There was enormous interest, but the process to coach someone online just didn't work for us or our clients.
-                              We fumbled with video editors, payment collection tools and messaging
-                              apps all to give feedback on a short video clip."}
+         :description [{:item "In 2014, Simon was approached by an athlete who wanted his help with his basketball
+                               training. Since they lived on different sides of the country, Simon suggested that he send
+                               him videos of himself doing specific drills. Not only did the athlete send in his videos
+                               but he recruited three more athletes who wanted to do the same."}
 
-                       {:item "We wanted to train more people online through video but we weren't setup for it.
-                               So we built Rookie, and we soon realized not only basketball coaches could benefit from our tool
-                               but other coaches and personal trainers could benefit from an easy to use platform to build their
-                               online training business."}
-                       {:item "We focus on making online training better for both the coach and the athlete. With Rookie,
-                               coaches can focus on what they do best: giving advice and feedback.
-                               And athletes can finally get feedback on their form and no longer have to follow training
-                               programs blindly."}]
+                       {:item "The interest was growing but the process to coach someone online didn't make any sense.
+                               Simon fumbled with different video editors,  payment collection tools and messaging apps
+                               all to give feedback on a short video clip."}
+
+                       {:item "Rookie was founded to solve all of these problems, which happened to be shared by all
+                               trainers thinking of offering online programs."}
+                       {:item "Coaches and trainers should only have to focus on what they do best while Rookie does the rest."}]
+
          :containers [{:heading "Career opportunities"
                        :text "We’re growing, and we’re looking for talented people who can make one on one training better."
                        :button-text "Join our team"
