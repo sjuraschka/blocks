@@ -275,11 +275,23 @@
 
  "rookie-secondary-nav"
  {:template "secondary-nav"
-  :data {:background {:color "#fff"}
-         :color "#2E3944"
-         :menu [{:title "Create"}
-                {:title "Invite"}
-                {:title  "Review"}]}}
+  :data {:styles {:background {:color "#fff"}
+                  :color "#2E3944"
+                  :border "1px solid #eee"
+                  :bold-border "2px solid #2E3944"
+                  :font-weight 900
+                  :font-size "0.85rem"}
+         :container {:height "4em"}
+
+         :menu [{:title "1. Create"
+                 :url "#"}
+                {:title "2. Invite"
+                 :url "#"}
+                {:title  "3. Review"
+                 :url "#"}]
+         :title-final {:text "4. Get Paid"
+                       :url "#"}}}
+
 
  "rookie-product-feature-1"
  {:template "feature-highlight"
