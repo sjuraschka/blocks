@@ -8,6 +8,7 @@
  {:template "header"
   :data     {:color      "#fff"
              :padding    "0.75em"
+             :text-transform "uppercase"
              ;:position   "fixed"
              :overlay?   true
              :logo       {:image-url "/rookie/images/rookie-white-logo.svg"
@@ -15,7 +16,11 @@
              :height     "1.25rem"
              :background {:color "rgba(0, 21, 132, 0)"}
              ;:shadow     "0px 0px 10px 0px rgba(0, 0, 0, 0.12)"
-             :menu       [{:text "647-267-5292"
+             :menu       [{:text "How It Works"
+                           :url "./how-it-works"}
+                          {:text "Pricing"
+                           :url "./pricing"}
+                          {:text "647-267-5292"
                            :url  "tel:6472675292"
                            :icon \uf095}
                           {:text "hi@getrookie.com"
