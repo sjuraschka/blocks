@@ -22,7 +22,6 @@
                            :url  "mailto:hi@getrookie.com"
                            :icon \uf003}]}}
 
-
  "rookie-footer"
  {:template "footer"
   :data     {:height           "1em"
@@ -251,11 +250,6 @@
                                       :url ""}
                                      {:name "hi@getrookie.com"
                                       :url "mailto:hi@getrookie.com"}]}]}}
-
-
-
-
-
 
  ;=========================================================================================
  ; Rookie - how it works
