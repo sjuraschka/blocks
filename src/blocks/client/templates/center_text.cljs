@@ -3,7 +3,7 @@
 
 (defn styles [data]
   [:.center-text
-   {:padding "3em"
+   {:padding-top "3em"
     :background (get-in data [:styles :background :color])
     :text-align "center"
     :display "flex"
