@@ -26,43 +26,51 @@
 
    [:.text
     {:min-width "15em"
+     :display "flex"
+     :flex-direction "column"
+     :align-items "center"
      :max-width "30em"
+     :text-align (data :alignment)
      :flex-basis "30%"
-     :margin "3em 0"}]
+     :margin "3em 0"}
+
+    [:div.circle
+     {:font-family "apple-system, BlinkMacSystemFont, Roboto, \"Droid Sans\", \"Helvetica Neue\", Helvetica,Arial,sans-serif;"
+      :display "inline-block"
+      :margin-bottom "0.75rem"
+      :width "1.75em"
+      :height "1.75em"
+      :line-height "1.75em"
+      :text-align "center"
+      :background "#fff"
+      :border "1px solid #eee"
+      :box-shadow "0 1px 3px 0 rgba(148,145,145,0.30)"
+      :border-radius "50%"
+      :color "#232B69"}]]
 
    [:h1
     {:color (get-in data [:heading :color])
      :font-size (get-in data [:heading :font-size])
      :letter-spacing (get-in data [:heading :spacer])
      :text-transform (get-in data [:heading :text-transform])
-     :margin-bottom "0.5em"
+     :font-weight (get-in data [:heading :font-weight])
+     :margin-bottom "1.5rem"
      :position "relative"
-     :z-index 0}
-
-    ["&[data-step]::before"
-     {:content "attr(data-step)"
-      :display "inline-block"
-      :position "absolute"
-      :top "-1.3em"
-      :left "-1.5em"
-      :width "2em"
-      :height "2em"
-      :line-height "2em"
-      :text-align "center"
-      :background "orange"
-      :border-radius "50%"
-      :color "white"
-      :z-index -1
-      :opacity 0.5}]]
+     :z-index 0}]
 
    [:.underline
     {:margin-top "-1em"}]
 
    [:p
-    {:color (get-in data [:description :color])
+    {:font-size "0.85em"
+     :color (get-in data [:description :color])
      :font-weight (get-in data [:description :weight])
      :white-space (get-in data [:description :white-space])
      :line-height (get-in data [:description :line-height])}]
+
+   [:a
+    {:text-decoration "none"
+     :color (get-in data [:circle :color])}]
 
 
    [:img.feature
