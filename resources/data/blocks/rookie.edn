@@ -1383,7 +1383,7 @@
  "rookie-about"
  {:template "about"
   :data {:styles {:color "#2E3944"
-                  :link-color}
+                  :link-color "#3A4EDA"}
          :description [{:item "In 2014, Simon was approached by an athlete who wanted his help with his basketball
                                training. Since they lived on different sides of the country, Simon suggested that he send
                                him videos of himself doing specific drills. Not only did the athlete send in his videos
