@@ -92,6 +92,7 @@
 
 (defn component [data]
   [:section.feature-highlight
+   [:a {:name (data :anchor)}]
    [:div.content {:class (get-in data [:image :position])}
     [:div.text
      (when (get-in data [:heading :step])

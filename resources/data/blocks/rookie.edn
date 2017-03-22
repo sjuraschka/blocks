@@ -284,18 +284,19 @@
          :container {:height "4em"}
 
          :menu [{:title "1. Create"
-                 :url "#"}
+                 :url "#create"}
                 {:title "2. Invite"
-                 :url "#"}
+                 :url "#invite"}
                 {:title  "3. Review"
-                 :url "#"}]
+                 :url "#review"}]
          :title-final {:text "4. Get Paid"
-                       :url "#"}}}
+                       :url "#get-paid"}}}
 
 
  "rookie-product-feature-1"
  {:template "feature-highlight"
-  :data     {:heading     {:step           1
+  :data     {:anchor "create"
+             :heading     {:step           1
                            :text           "Create your custom Rookie profile + app"
                            :color          "#2E3944"
                            :font-size      "1.15em"
@@ -317,7 +318,8 @@
 
  "rookie-product-feature-2"
  {:template "feature-highlight"
-  :data     {:heading     {:step           2
+  :data     {:anchor "invite"
+             :heading     {:step           2
                            :text           "Invite your athletes + clients"
                            :color          "#2E3944"
                            :font-size      "1.15em"
@@ -340,7 +342,8 @@
 
  "rookie-product-feature-3"
  {:template "feature-highlight"
-  :data     {:heading     {:step           3
+  :data     {:anchor "review"
+             :heading     {:step           3
                            :text           "Assign workouts and give feedback"
                            :color          "#2E3944"
                            :font-size      "1.15em"
@@ -363,7 +366,8 @@
 
  "rookie-product-feature-5"
  {:template "feature-highlight"
-  :data     {:heading     {:step           4
+  :data     {:anchor "get-paid"
+             :heading     {:step           4
                            :text           "Get Paid"
                            :color          "#2E3944"
                            :font-size      "1.15em"
