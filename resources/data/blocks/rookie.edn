@@ -1367,9 +1367,17 @@
                       :color "#2D3589"}}}
  "rookie-about-intro"
  {:template "center-text"
-  :data {:background "red"
+  :data {:styles {:background "#fff"
+                  :heading {:color "#2E3944"
+                            :size "1.10em"}
+                  :subtitle {:color "#2E3944"
+                             :size "0.85em"}
+                  :label {:color "#959595"
+                          :size "0.85em"
+                          :transform "uppercase"}}
+
          :city "Toronto"
-         :headline "We’re a passionate team who believes that one to one coaching will always the best way to learn."
+         :headline "We’re a passionate team who believes that one to one coaching will always be the best way to learn."
          :description "We’re a Bloom Ventures backed startup with a growing user base of coaches and athletes. "}}
 
  "rookie-about"
