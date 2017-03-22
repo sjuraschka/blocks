@@ -1,6 +1,7 @@
 (ns blocks.client.templates.pre-footer-menu
   (:require [blocks.client.template :refer [template]]
-            [blocks.client.templates.mixins :refer [fontawesome-mixin button-mixin]]))
+            [blocks.client.templates.mixins :refer [fontawesome-mixin button-mixin]]
+            [garden.stylesheet :refer [at-media]]))
 
 (defn styles [data]
   [:.pre-footer-menu
@@ -51,6 +52,7 @@
          :justify-content "space-between"}]]]]
 
     [:.social
+     {:margin-bottom "1em"}
      [:.icon
       [:&:after
        {:border-radius "200px"
@@ -99,7 +101,18 @@
         :margin-right "1em"}]
       [:h2
        {:text-transform "uppercase"
-        :letter-spacing "0.075em"}]]]]])
+        :letter-spacing "0.075em"}]]]
+
+    (at-media {:max-width "700px"}
+      [:&
+       {:flex-direction  "column"
+        :justify-content "center"
+        :align-items     "center"}
+       [:div.logo-column
+        {:max-width "18em"
+         :padding-top "1em"}]])]])
+
+
 
 (defn component [data]
   [:div.pre-footer-menu
