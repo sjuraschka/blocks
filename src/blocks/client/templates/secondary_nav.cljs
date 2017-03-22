@@ -33,8 +33,8 @@
        :color (get-in data [:styles :color])
        :text-decoration "none"}
       [:&:hover
-       {:background "#eee"
-        :border (get-in data [:styles :bold-border])}]
+       {:background "#eee"}]
+        ;:border (get-in data [:styles :bold-border])}]
       [:&.final:hover
        {:background "#3D50CF"
         :color "#fff"}]]
