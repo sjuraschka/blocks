@@ -28,8 +28,8 @@
     {:min-width "15em"
      :display "flex"
      :flex-direction "column"
-     :align-items "center"
      :max-width "30em"
+     :align-items (get-in data [:heading :align])
      :text-align (data :alignment)
      :flex-basis "30%"
      :margin "3em 0"}
@@ -54,12 +54,15 @@
      :letter-spacing (get-in data [:heading :spacer])
      :text-transform (get-in data [:heading :text-transform])
      :font-weight (get-in data [:heading :font-weight])
-     :margin-bottom "1.5rem"
+     :margin-bottom "1.75rem"
      :position "relative"
      :z-index 0}]
 
+
    [:.underline
-    {:margin-top "-1em"}]
+    {:margin-top "-2em"
+     :margin-bottom "1em"
+     :width "2em"}]
 
    [:p
     {:font-size "0.85em"

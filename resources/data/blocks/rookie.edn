@@ -295,17 +295,19 @@
 
  "rookie-product-feature-1"
  {:template "feature-highlight"
-  :data     {:anchor "create"
+  :data     {:alignment "center"
+             :anchor "create"
              :heading     {:step           1
                            :text           "Create your custom Rookie profile + app"
                            :color          "#2E3944"
                            :font-size      "1.15em"
                            :font-weight     100
                            :spacer "0.05em"
-                           :text-transform ""}
+                           :text-transform ""
+                           :align "center"}
              :circle {:color "#232B69"
                       :background "#fff"}
-             :alignment "center"
+
              :background  {:color "#FDFEFE"}
              :spacing {:left  "2.5em"
                        :right "2em"}
