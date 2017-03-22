@@ -96,10 +96,10 @@
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url(/rookie/images/rookie-coaching-logo.png)"}
   :favicon "/rookie/images/rookie-favicon.png"
-  :styles {:fonts {:body {:name "Roboto"
+  :styles {:fonts {:body {:name "Nunito Sans"
                           :source "google"
-                          :weight 300}
-                   :headings {:name "Hind"
+                          :weight 400}
+                   :headings {:name "Nunito Sans"
                               :source "google"
                               :weight 700}}}
   :assets ["rookie"
@@ -125,10 +125,10 @@
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url (/rookie/images/rookie-coaching-logo.png)"}
   :favicon "/rookie/images/rookie-favicon.png"
-  :styles {:fonts {:body {:name "Roboto"
+  :styles {:fonts {:body {:name "Nunito Sans"
                           :source "google"
-                          :weight 300}
-                   :headings {:name "Hind"
+                          :weight 400}
+                   :headings {:name "Nunito Sans"
                               :source "google"
                               :weight 700}}}
 
@@ -152,10 +152,10 @@
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url (/rookie/images/rookie-coaching-logo.png)"}
   :favicon "/rookie/images/rookie-favicon.png"
-  :styles {:fonts {:body {:name "Roboto"
+  :styles {:fonts {:body {:name "Nunito Sans"
                           :source "google"
-                          :weight 300}
-                   :headings {:name "Hind"
+                          :weight 400}
+                   :headings {:name "Nunito Sans"
                               :source "google"
                               :weight 700}}}
 
@@ -173,10 +173,10 @@
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url (/rookie/images/rookie-coaching-logo.png)"}
   :favicon "/rookie/images/rookie-favicon.png"
-  :styles {:fonts {:body {:name "Roboto"
+  :styles {:fonts {:body {:name "Nunito Sans"
                           :source "google"
-                          :weight 300}
-                   :headings {:name "Hind"
+                          :weight 400}
+                   :headings {:name "Nunito Sans"
                               :source "google"
                               :weight 700}}}
 
@@ -194,13 +194,12 @@
                        Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url (/rookie/images/rookie-coaching-logo.png)"}
   :favicon "/rookie/images/rookie-favicon.png"
-  :styles {:fonts {:body {:name "Roboto"
+  :styles {:fonts {:body {:name "Nunito Sans"
                           :source "google"
-                          :weight 300}
-                   :headings {:name "Hind"
+                          :weight 400}
+                   :headings {:name "Nunito Sans"
                               :source "google"
                               :weight 700}}}
-
   :blocks ["rookie-header"
            "press-room-title"
            "rookie-press-room"
@@ -215,10 +214,10 @@
                        Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url (/rookie/images/rookie-coaching-logo.png)"}
   :favicon "/rookie/images/rookie-favicon.png"
-  :styles {:fonts {:body {:name "Roboto"
+  :styles {:fonts {:body {:name "Nunito Sans"
                           :source "google"
-                          :weight 300}
-                   :headings {:name "Hind"
+                          :weight 400}
+                   :headings {:name "Nunito Sans"
                               :source "google"
                               :weight 700}}}
 
@@ -237,15 +236,16 @@
                        Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url (/rookie/images/rookie-coaching-logo.png)"}
   :favicon "/rookie/images/rookie-favicon.png"
-  :styles {:fonts {:body {:name "Roboto"
+  :styles {:fonts {:body {:name "Nunito Sans"
                           :source "google"
-                          :weight 300}
-                   :headings {:name "Hind"
+                          :weight 400}
+                   :headings {:name "Nunito Sans"
                               :source "google"
                               :weight 700}}}
 
   :blocks ["rookie-header"
            "about-title"
+           "rookie-about-intro"
            "rookie-about"
            "rookie-pre-footer"
            "rookie-footer"
