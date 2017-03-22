@@ -1382,7 +1382,8 @@
 
  "rookie-about"
  {:template "about"
-  :data {:styles ""
+  :data {:styles {:color "#2E3944"
+                  :link-color}
          :description [{:item "In 2014, Simon was approached by an athlete who wanted his help with his basketball
                                training. Since they lived on different sides of the country, Simon suggested that he send
                                him videos of himself doing specific drills. Not only did the athlete send in his videos
@@ -1400,18 +1401,17 @@
                        :text "We’re growing, and we’re looking for talented people who can make one on one training better."
                        :button-text "Join our team"
                        :url "./careers"
-                       :image "/rookie/images/about-icon-weight.png"}
+                       :image ""}
                       {:heading "Contact us"
                        :text "Got a question about using Rookie? The support team is available 8am - 8pm EST"
                        :button-text "Get in Touch"
                        :url "mailto:hi@getrookie.com"
-                       :image "/rookie/images/"}
+                       :image ""}
                       {:heading "Press & media"
                        :text "Looking for press releases, logos or contact info?"
                        :button-text "Go to Press Room"
                        :url "./pressroom"
-                       :image "/rookie/images/"}]}}
-
+                       :image ""}]}}
 
  ;=========================================================================================
  ; Rookie - Pricing

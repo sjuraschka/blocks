@@ -12,9 +12,8 @@
     :text-align "center"
     :box-sizing "border-box"}
 
-
    [:.text-content
-    {:padding "3em"}
+    {:padding "1em"}
     [:p
      {:color (get-in data [:description :color])
       :font-size "1em"
@@ -27,7 +26,8 @@
      :margin "0.5em"}
 
     [:.container
-     {:border "1px solid #ddd"
+     {:position "relative"
+      :border "1px solid #ddd"
       :margin "0.5em"
       :border-radius "3px"
       :padding "1em"
@@ -35,15 +35,20 @@
       :height "12em"
       :display "flex"
       :flex-direction "column"
-      ;:justify-content "space-between"
-      :align-items "center"}
-     [:img
-      {:height "4em"
-       :margin-bottom "1em"}]]
+      :align-items "center"
+      :justify-content "center"}
 
-    [:a
-     {:text-decoration "none"}]]])
+     [:h2
+      {:position "absolute"
+       :top "2em"
+       :color (get-in data [:styles :color])}]
+     [:p (get-in data [:styles :color])]
 
+     [:a
+      {:position "absolute"
+       :bottom "2em"
+       :text-decoration "none"
+       :color (get-in data [:styles :link-color])}]]]])
 
 (defn component [data]
   [:div.about
@@ -58,12 +63,10 @@
     (into
      ( for [container (data :containers)]
       [:div.container
-       [:img.icon {:src (container :image)}]
        [:h2 (container :heading)]
        [:p (container :text)]
        [:a {:href (container :url)}
         (container :button-text)]]))]])
-
 
 (defmethod template "about" [_]
   {:css styles
