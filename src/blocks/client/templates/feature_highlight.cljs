@@ -94,11 +94,16 @@
   [:section.feature-highlight
    [:div.content {:class (get-in data [:image :position])}
     [:div.text
+     (when (get-in data [:heading :step])
+       [:div.circle
+        [:div (get-in data [:heading :step])]])
      [:h1 {:data-step (get-in data [:heading :step])}
       (get-in data [:heading :text])]
      [:img.underline {:src (get-in data [:heading :underline])}]
 
-     [:p (get-in data [:description :text])]]
+     [:p {:dangerouslySetInnerHTML
+          {:__html (get-in data [:description :text])}}]]
+
     [:div
      [:img.feature {:src (get-in data [:image :image-url])}]]]])
 
