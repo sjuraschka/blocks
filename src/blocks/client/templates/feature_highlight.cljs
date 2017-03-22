@@ -72,7 +72,6 @@
     {:text-decoration "none"
      :color (get-in data [:circle :color])}]
 
-
    [:img.feature
     {:max-width "32em"
      :margin-top "2em"}]
