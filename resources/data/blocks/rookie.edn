@@ -228,10 +228,10 @@
                         :categories [{:name "How It Works"
                                       :url "./how-it-works/"}
                                      {:name "Coach Login"
-                                      :url "https://www.coach.getrookie.com"
+                                      :url "https://coach.getrookie.com"
                                       :target "_blank"}
                                      {:name "Athlete App"
-                                      :url "https://www.athlete.getrookie.com"}]}
+                                      :url "https://athlete.getrookie.com"}]}
                                     ; {:name "Pricing"
                                      ; :url "./pricing"}]}
 
