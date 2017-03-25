@@ -48,14 +48,14 @@
 
 (defroutes api-routes
   (GET "/api/domains/:domain/pages/*" {{domain :domain url :*} :params}
-    (when-let [page (path->page domain (str "/" (strip-slash url)))]
+    (when-let [page (path->page domain (str "/" url))]
       {:status 200
        :headers {"Content-Type" "application/edn"}
        :body (pr-str (get-page-data page))})))
 
 (defroutes dev-routes
   (GET ["/:domain/*"] {{domain :domain url :*} :params}
-    (when-let [page (path->page domain (str "/" (strip-slash url)))]
+    (when-let [page (path->page domain (str "/" url))]
       {:status 200
        :headers {"Content-Type" "text/html"}
        :body (html
