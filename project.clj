@@ -13,6 +13,7 @@
                  [me.raynes/fs "1.4.6"]
                  [environ "1.0.3"]
                  [org.clojure/data.json "0.2.6"]
+                 [digest "1.4.5"]
                  [clj-aws-s3 "0.3.10" :exclusions [joda-time 
                                                    clj-time
                                                    org.apache.httpcomponents/httpclient 

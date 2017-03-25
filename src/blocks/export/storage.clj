@@ -2,10 +2,22 @@
   (:require
     [environ.core :refer [env]]
     [me.raynes.fs :as fs]
-    [aws.sdk.s3 :as s3])
+    [aws.sdk.s3 :as s3]
+    [digest :as digest])
   (:import
     [java.nio.file Paths]
     [java.net URI]))
+
+(defn remote-files-md5 [domain]
+  (->> (s3/list-objects 
+        {:access-key (env :s3-id)
+         :secret-key (env :s3-secret)}
+        (env :s3-bucket)
+        {:prefix domain})
+      :objects
+      (reduce 
+        (fn [memo object]
+          (assoc memo (object :key) (get-in object [:metadata :etag]))) {})))
 
 (defn relative-path [path-1 path-2]
   (let [path-1 (Paths/get (URI. (str "file://" (.getPath (fs/file path-1)))))
@@ -17,17 +29,23 @@
   [{:keys [directory domain]}]
   (println "STR: Uploading files for" domain)
   (let [files (->> (file-seq (fs/file directory))
-                   (filter fs/file?))]
+                   (filter fs/file?))
+        remote-files-md5 (remote-files-md5 domain)
+        uploaded-files (atom [])]
     (doseq [f files]
-      (let [remote-path (str domain "/" (relative-path directory f))]
-        (println "STR:\tUploading " remote-path)
-        (s3/put-object {:access-key (env :s3-id)
-                        :secret-key (env :s3-secret)} 
-                       (env :s3-bucket) 
-                       remote-path
-                       f)))
-    (for [f files]
-      (relative-path directory f))))
+      (let [rel-path (relative-path "./export/" f)]
+        (if (= (digest/md5 f)
+               (remote-files-md5 rel-path))
+          (println "STR:\t Skipping " rel-path)
+          (do 
+            (println "STR:\tUploading " rel-path)
+            (s3/put-object {:access-key (env :s3-id)
+                            :secret-key (env :s3-secret)} 
+                           (env :s3-bucket) 
+                           rel-path
+                           f)
+            (swap! uploaded-files conj (relative-path directory f))))))
+    @uploaded-files))
 
 
 
