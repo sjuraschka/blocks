@@ -147,7 +147,7 @@
 
 
  {:domain "www.getrookie.com"
-  :url "/privacy-policy"
+  :url "/privacy-policy/"
   :meta {:title "Online Coaching and Personal Training Software - Get Rookie - Free Trial"
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url (/rookie/images/rookie-coaching-logo.png)"}
@@ -168,7 +168,7 @@
 
 
  {:domain "www.getrookie.com"
-  :url "/terms-of-service"
+  :url "/terms-of-service/"
   :meta {:title "Online Coaching and Personal Training Software - Get Rookie - Free Trial"
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software. Use Rookie’s One on One video coaching platform to train more clients and grow your business."
          :image "url (/rookie/images/rookie-coaching-logo.png)"}
@@ -188,7 +188,7 @@
            "rookie-analytics"]}
 
  {:domain "www.getrookie.com"
-  :url "/press-room"
+  :url "/press-room/"
   :meta {:title "Press Room - Online Coaching and Personal Training Software - Get Rookie"
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software.
                        Use Rookie’s One on One video coaching platform to train more clients and grow your business."
@@ -208,7 +208,7 @@
            "rookie-analytics"]}
 
  {:domain "www.getrookie.com"
-  :url "/careers"
+  :url "/careers/"
   :meta {:title "Careers - Online Coaching and Personal Training Software - Get Rookie"
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software.
                        Use Rookie’s One on One video coaching platform to train more clients and grow your business."
@@ -230,7 +230,7 @@
            "rookie-analytics"]}
 
  {:domain "www.getrookie.com"
-  :url "/our-story"
+  :url "/our-story/"
   :meta {:title "Our Story - Online Coaching and Personal Training Software - Get Rookie"
          :description "Create a worldwide coaching business online in minutes with our Personal Training Software.
                        Use Rookie’s One on One video coaching platform to train more clients and grow your business."

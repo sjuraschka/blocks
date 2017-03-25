@@ -16,7 +16,7 @@
              :height     "1.25rem"
              :background {:color "rgba(0, 21, 132, 0)"}
              :menu       [{:text "How It Works"
-                           :url "./how-it-works"}
+                           :url "/how-it-works/"}
                           ;{:text "Pricing"
                            ;:url "./pricing"}
                           {:text "647-267-5292"
@@ -34,11 +34,11 @@
              :text-transform   "uppercase"
              :size             "0.85em"
              :menu             [{:text "Press Room"
-                                 :url "./press-room/"}
+                                 :url "/press-room/"}
                                 {:text "Privacy"
-                                 :url  "./privacy-policy/"}
+                                 :url  "/privacy-policy/"}
                                 {:text "Terms"
-                                 :url  "./terms-of-service/"}]}}
+                                 :url  "/terms-of-service/"}]}}
 
 
  ;=========================================================================================
@@ -162,13 +162,13 @@
              :columns    [
                           {:title    "Receive videos from your athletes"
                            :subtitle "Learn How Athletes use Rookie"
-                           :url "./how-it-works/"}
+                           :url "/how-it-works/"}
                           {:title    "Give feedback with our video editor"
                            :subtitle "Learn about the Coach Editor"
-                           :url "./how-it-works/"}
+                           :url "/how-it-works/"}
                           {:title    "Get paid automatically with Rookie"
                            :subtitle "Learn how payments work"
-                           :url "./how-it-works/"}]}}
+                           :url "/how-it-works/"}]}}
 
  "rookie-step-1"
  {:template "feature-highlight"
@@ -226,7 +226,7 @@
              :columns [
                        {:title      "Product"
                         :categories [{:name "How It Works"
-                                      :url "./how-it-works/"}
+                                      :url "/how-it-works/"}
                                      {:name "Coach Login"
                                       :url "https://coach.getrookie.com"
                                       :target "_blank"}
@@ -243,9 +243,9 @@
 
                        {:title      "Company"
                         :categories [{:name "Our Story"
-                                      :url "./our-story"}
+                                      :url "/our-story/"}
                                      {:name "Careers"
-                                      :url "./careers"}]}
+                                      :url "/careers/"}]}
                                      ;{:name "Get In Touch"}]}
                        {:title      "Connect"
                         :categories [{:name "+1-647-267-5292"
@@ -1397,7 +1397,7 @@
          :containers [{:heading "Career opportunities"
                        :text "We’re growing, and we’re looking for talented people who can make one on one training better."
                        :button-text "Join our team"
-                       :url "./careers"
+                       :url "/careers/"
                        :image ""}
                       {:heading "Contact us"
                        :text "Got a question about using Rookie? The support team is available 8am - 8pm EST"
@@ -1407,7 +1407,7 @@
                       {:heading "Press & media"
                        :text "Looking for press releases, logos or contact info?"
                        :button-text "Go to Press Room"
-                       :url "./pressroom"
+                       :url "/press-room/"
                        :image ""}]}}
 
  ;=========================================================================================
