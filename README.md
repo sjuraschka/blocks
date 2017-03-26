@@ -48,6 +48,9 @@ Set the following in `profiles.clj`:
     {:cdn77-login "..."
      :cdn77-password "..."
      :cdn77-storage-location "..."
+     :s3-bucket "..."
+     :s3-id "..."
+     :s3-secret "..."
      :cloudflare-email "..."
      :cloudflare-key "..."}}}
 ```
@@ -57,26 +60,11 @@ Set the following in `profiles.clj`:
 Mac: `brew install phantomjs`
 Unix: `apt-get install phantomjs`
 
-#### Install `rsync`
-
-Mac: `brew install rsync`
-Unix:  `apt-get install rsync`
-
-#### Install `sshpass`
-
-Mac: `brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb`
-
-Unix: `apt-get install sshpass`
-
 ### The process:
-
-`lein cljsbuild once prod`
 
 `lein with-profiles +bloom repl`
 
-`(start! 6543)`
+`(require 'blocks.deploy.core)`
 
-`(require 'blocks.export.core)`
-
-`(blocks.export.core/release! "www.domain.com" "/")`
+`(blocks.deploy.core/deploy! "www.domain.com" "/")`
 

@@ -1,4 +1,4 @@
-(ns blocks.export.cdn
+(ns blocks.deploy.cdn
   (:require
     [org.httpkit.client :as http]
     [clojure.data.json :as json]

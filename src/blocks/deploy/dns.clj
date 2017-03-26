@@ -1,8 +1,8 @@
-(ns blocks.export.dns
+(ns blocks.deploy.dns
   (:require
     [clojure.data.json :as json]
-    [org.httpkit.client :as http]
-    [environ.core :refer [env]]))
+    [environ.core :refer [env]]
+    [org.httpkit.client :as http]))
 
 (def api-base-url
   "https://api.cloudflare.com/client/v4/")

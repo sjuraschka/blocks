@@ -1,9 +1,9 @@
-(ns blocks.export.storage
+(ns blocks.deploy.storage
   (:require
-    [environ.core :refer [env]]
-    [me.raynes.fs :as fs]
     [aws.sdk.s3 :as s3]
-    [digest :as digest])
+    [digest :as digest]
+    [environ.core :refer [env]]
+    [me.raynes.fs :as fs])
   (:import
     [java.nio.file Paths]
     [java.net URI]))
@@ -34,9 +34,14 @@
         uploaded-files (atom [])]
     (doseq [f files]
       (let [rel-path (relative-path "./export/" f)]
-        (if (= (digest/md5 f)
-               (remote-files-md5 rel-path))
+        (cond
+          (contains? #{".DS_Store"} (.getName f))
+          (println "STR:\t Ignoring " rel-path)
+
+          (= (digest/md5 f) (remote-files-md5 rel-path))
           (println "STR:\t Skipping " rel-path)
+
+          :else
           (do 
             (println "STR:\tUploading " rel-path)
             (s3/put-object {:access-key (env :s3-id)

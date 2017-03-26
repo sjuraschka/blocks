@@ -1,9 +1,10 @@
 (ns blocks.server.figwheel
-  (:require [com.stuartsierra.component :as component]
-            [figwheel-sidecar.components.figwheel-server :as server]
-            [figwheel-sidecar.components.file-system-watcher :as fsw]
-            [figwheel-sidecar.system :as sys]
-            [figwheel-sidecar.utils :as utils]))
+  (:require 
+    [com.stuartsierra.component :as component]
+    [figwheel-sidecar.components.figwheel-server :as server]
+    [figwheel-sidecar.components.file-system-watcher :as fsw]
+    [figwheel-sidecar.system :as sys]
+    [figwheel-sidecar.utils :as utils]))
 
 (def figwheel-config
   {:figwheel-options {:server-port 3434}

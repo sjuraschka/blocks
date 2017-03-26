@@ -1,25 +1,15 @@
-(ns blocks.export.core
+(ns blocks.deploy.core
   (:require
     [clojure.string :as string]
-    [blocks.export.export :as export]
-    [blocks.export.cdn :as cdn]
-    [blocks.export.storage :as storage]
-    [blocks.export.dns :as dns]
-    [environ.core :refer [env]]))
+    [environ.core :refer [env]]
+    [blocks.deploy.cdn :as cdn]
+    [blocks.deploy.dns :as dns]
+    [blocks.deploy.export :as export]
+    [blocks.deploy.storage :as storage]
+    [blocks.server.data :refer [read-pages-edn path->page]]))
 
-(defn read-pages-edn []
-  (read-string (slurp (clojure.java.io/resource "data/pages.edn"))))
-
-(defn get-page-config [domain url]
-  (->> (read-pages-edn)
-       (filter (fn [page]
-                 (and
-                   (= (page :domain) domain)
-                   (= (page :url) url))))
-       first))
-
-(defn release! [domain url]
-  (let [page-config (get-page-config domain url)
+(defn deploy! [domain url]
+  (let [page-config (path->page domain url)
         _ (export/export! page-config)
         files-changed (storage/upload! {:directory (str "./export/" domain "/")
                                         :domain domain})
@@ -37,4 +27,4 @@
                              :file-paths paths-changed})
         _ (cdn/prefetch-files! {:cdn-id (:id cdn)
                                 :file-paths paths-changed})]
-    (println "Released " domain url "successfully!")))
+    (println "Deployed " domain url "successfully!")))
