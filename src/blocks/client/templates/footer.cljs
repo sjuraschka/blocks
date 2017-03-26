@@ -1,8 +1,9 @@
 (ns blocks.client.templates.footer
   (:require [blocks.client.template :refer [template]]
-            [garden.stylesheet :refer [at-media]]))
+            [garden.stylesheet :refer [at-media]]
+            [blocks.client.templates.mixins :refer [fontawesome-mixin button-mixin]]))
 
-(def pad "3rem")
+(def pad "1.5rem")
 
 (defn styles [data]
   [:footer
@@ -20,17 +21,26 @@
      {:color (data :text-color)
       :white-space "nowrap"}
 
+     [:p.icon
+      {:font-size "0.85em"
+       :text-transform "uppercase"
+       :font-weight 100}
+
+      [:&::before
+       (fontawesome-mixin \uf1f9)
+       {:margin-right "0.5em"}]]
+
      [:img
       {:height (data :height)
        :display "inline-block"
        :vertical-align "middle"
-       :margin-right "0.5em" }]
+       :margin-right "0.5em"}]
 
      [:h1
       {:display "inline-block"
        :font-size "1.25em"
        :line-height "2rem"
-       :vertical-align "middle" }]
+       :vertical-align "middle"}]
 
      [:.version
       {:display "inline-block"
@@ -52,7 +62,9 @@
        :text-decoration "none"
        :margin-left "2em"
        :transition "opacity 0.1s ease-in-out"
-       :line-height "2em"}
+       :line-height "2em"
+       :text-transform (data :text-transform)
+       :font-size (data :size)}
 
       [:&:hover
        {:opacity 1}]
@@ -67,7 +79,7 @@
         :border [["1px" "solid" (data :text-color)]]
         :border-radius "0.25em"
         :height "2em"
-        :padding "0 0.5em" }]]]]
+        :padding "0 0.5em"}]]]]
 
    (at-media {:max-width "500px"}
              [:nav
@@ -78,8 +90,10 @@
   [:footer
    [:div.content
     [:a.logo {:href (get-in data [:logo :url])}
+     [:p.icon "Copyright Rookie 2017"]
      [:img {:src (get-in data [:logo :image-url])}]
      [:h1 (data :title)]]
+
     (into
       [:nav]
       (for [link (data :menu)]

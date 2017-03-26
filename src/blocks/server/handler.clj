@@ -1,5 +1,6 @@
 (ns blocks.server.handler
   (:require
+    [clojure.string :as string]
     [hiccup.core :refer [html]]
     [compojure.core :refer [defroutes GET routes]]
     [compojure.route :refer [not-found]]
@@ -39,16 +40,22 @@
                          first)]
       page)))
 
+(defn strip-slash
+  [s]
+  (if (string/ends-with? s "/")
+    (apply str (butlast s))
+    s))
+
 (defroutes api-routes
   (GET "/api/domains/:domain/pages/*" {{domain :domain url :*} :params}
-    (when-let [page (path->page domain (str "/" url))]
+    (when-let [page (path->page domain (str "/" (strip-slash url)))]
       {:status 200
        :headers {"Content-Type" "application/edn"}
        :body (pr-str (get-page-data page))})))
 
 (defroutes dev-routes
   (GET ["/:domain/*"] {{domain :domain url :*} :params}
-    (when-let [page (path->page domain (str "/" url))]
+    (when-let [page (path->page domain (str "/" (strip-slash url)))]
       {:status 200
        :headers {"Content-Type" "text/html"}
        :body (html
