@@ -30,7 +30,7 @@
    :url_signing_key ""
    :url_signing_on 0}
 
-(defn get-cdn [domain]
+(defn get-cdn [{:keys [domain]}]
   (println "CDN: Retrieving CDN for" domain)
   (let [response (-> @(http/request
                         {:method :get
@@ -48,7 +48,8 @@
                      (= (cdn :cname) domain)))
            first))))
 
-(defn create-cdn! [domain storage]
+(defn create-cdn! [{:keys [domain
+                           origin-url]}]
   (println "CDN: Creating CDN for" domain)
   (let [response (-> @(http/request
                         {:method :post
@@ -56,9 +57,10 @@
                          :form-params {:login (env :cdn77-login)
                                        :passwd (env :cdn77-password)
                                        :type "standard"
+                                       :origin_scheme "http"
+                                       :origin_url origin-url
                                        :cname domain
                                        :label domain
-                                       :storage_id (:id storage)
                                        :instant_ssl 1}})
                      :body
                      (json/read-str :key-fn keyword))]
@@ -68,7 +70,8 @@
       (-> response
           :cdnResource))))
 
-(defn purge-files! [cdn-id file-paths]
+(defn purge-files! [{:keys [cdn-id
+                            file-paths]}]
   (println "CDN: Purging files " file-paths)
   (when (seq file-paths)
     (let [response (-> @(http/request
@@ -85,7 +88,8 @@
             (println response))
         (-> response)))))
 
-(defn prefetch-files! [cdn-id file-paths]
+(defn prefetch-files! [{:keys [cdn-id
+                               file-paths]}]
   (println "CDN: Prefetching files " file-paths)
   (when (seq file-paths)
     (let [response (-> @(http/request

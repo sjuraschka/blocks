@@ -1,81 +1,51 @@
 (ns blocks.export.storage
   (:require
-    [clojure.string :as string]
-    [clojure.java.shell :refer [sh]]
-    [clojure.data.json :as json]
     [environ.core :refer [env]]
-    [org.httpkit.client :as http]))
+    [me.raynes.fs :as fs]
+    [aws.sdk.s3 :as s3]
+    [digest :as digest])
+  (:import
+    [java.nio.file Paths]
+    [java.net URI]))
 
-(defn domain->zone [domain]
-  (string/replace domain #"\." "-"))
+(defn remote-files-md5 [domain]
+  (->> (s3/list-objects 
+        {:access-key (env :s3-id)
+         :secret-key (env :s3-secret)}
+        (env :s3-bucket)
+        {:prefix domain})
+      :objects
+      (reduce 
+        (fn [memo object]
+          (assoc memo (object :key) (get-in object [:metadata :etag]))) {})))
 
-; storage schema:
-#_{:cdn_resources []
-   :credentials {:host "..."
-                 :pass "..."
-                 :protocol "FTP, SFTP"
-                 :user "..."}
-   :id "..."
-   :storage_location_id "..."
-   :used_space "..."
-   :zone_name "..."}
-
-(defn get-storage
-  [domain]
-  (println "STR: Getting storage for" domain)
-  (let [response (-> @(http/request
-                        {:method :get
-                         :url "https://api.cdn77.com/v2.0/storage/list"
-                         :query-params {:login (env :cdn77-login)
-                                        :passwd (env :cdn77-password)}})
-                     :body
-                     (json/read-str :key-fn keyword))]
-    (if (= "error" (response :status))
-      (do (println "STR: Did not find storage-id")
-          (println response))
-      (->> response
-           :storages
-           (filter (fn [storage]
-                     (= (storage :zone_name) (domain->zone domain))))
-           first))))
-
-(defn create-storage!
-  "Creates storage at CDN77"
-  [domain]
-  (println "STR: Creating storage for" domain)
-  (let [response (-> @(http/request {:method :post
-                                     :url "https://api.cdn77.com/v2.0/storage/create"
-                                     :form-params {:login (env :cdn77-login)
-                                                   :passwd (env :cdn77-password)
-                                                   :zone_name (domain->zone domain)
-                                                   :storage_location_id (env :cdn77-storage-location)}})
-                     :body
-                     (json/read-str :key-fn keyword))]
-    (if (= "error" (response :status))
-      (do (println "STR: Could not create storage")
-          (println response))
-      (->> response
-           :storage))))
+(defn relative-path [path-1 path-2]
+  (let [path-1 (Paths/get (URI. (str "file://" (.getPath (fs/file path-1)))))
+        path-2 (Paths/get (URI. (str "file://" (.getPath (fs/file path-2)))))]
+    (.toString (.relativize path-1 path-2))))
 
 (defn upload!
   "Uploads files to CDN77 storage; returns list of updated files"
-  [domain storage]
+  [{:keys [directory domain]}]
   (println "STR: Uploading files for" domain)
-  (let [directory (str "./export/" domain "/")
-        user (get-in storage [:credentials :user])
-        password (get-in storage [:credentials :pass])
-        host (get-in storage [:credentials :host])
-        domain (env :cdn77-storage-location)]
-    (let [result (sh "rsync"
-                     "-aic"
-                     "--exclude" "*.DS_Store"
-                     "-e" (str "sshpass -p " password " ssh -o PubkeyAuthentication=no -l " user )
-                     directory
-                     (str user "@" host ":/www/"))]
-      (println result)
-      (-> result
-          :out
-          (string/split #"\n")
-          (->> (map (fn [f]
-                      (last (re-matches #"<.* (.*)" f))))
-               (remove nil?))))))
+  (let [files (->> (file-seq (fs/file directory))
+                   (filter fs/file?))
+        remote-files-md5 (remote-files-md5 domain)
+        uploaded-files (atom [])]
+    (doseq [f files]
+      (let [rel-path (relative-path "./export/" f)]
+        (if (= (digest/md5 f)
+               (remote-files-md5 rel-path))
+          (println "STR:\t Skipping " rel-path)
+          (do 
+            (println "STR:\tUploading " rel-path)
+            (s3/put-object {:access-key (env :s3-id)
+                            :secret-key (env :s3-secret)} 
+                           (env :s3-bucket) 
+                           rel-path
+                           f)
+            (swap! uploaded-files conj (relative-path directory f))))))
+    @uploaded-files))
+
+
+
