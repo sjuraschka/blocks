@@ -55,18 +55,19 @@
    [:div.text-content
     [:div
      [:h2 ""]
-     (into
+     (into 
+       [:div]
        (for [paragraph (data :description)]
          [:p (paragraph :item)]))]]
 
-   [:div.containers
-    (into
-     ( for [container (data :containers)]
-      [:div.container
-       [:h2 (container :heading)]
-       [:p (container :text)]
-       [:a {:href (container :url)}
-        (container :button-text)]]))]])
+   (into 
+     [:div.containers]
+     (for [container (data :containers)]
+       [:div.container
+        [:h2 (container :heading)]
+        [:p (container :text)]
+        [:a {:href (container :url)}
+         (container :button-text)]]))])
 
 (defmethod template "about" [_]
   {:css styles

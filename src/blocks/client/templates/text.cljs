@@ -37,13 +37,17 @@
          [:span.number (section :section)]
          (section :title)]
         [:p (section :text)]
-        (for [list (section :list)]
-           [:ul
-            [:li (list :li)]])
+        (into 
+          [:div]
+          (for [list (section :list)]
+            [:ul
+             [:li (list :li)]]))
         [:p (get-in section [:secondary-text :text])]
-        (for [list-two (get-in section [:secondary-text :secondary-list])]
-          [:ul
-           [:li (list-two :bullet)]])]))])
+        (into 
+          [:div] 
+          (for [list-two (get-in section [:secondary-text :secondary-list])]
+            [:ul
+             [:li (list-two :bullet)]]))]))])
 
 (defmethod template "text" [_]
   {:css styles

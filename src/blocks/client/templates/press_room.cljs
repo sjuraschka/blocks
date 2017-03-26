@@ -76,15 +76,15 @@
    [:div.images.container
     [:h2 (get-in data [:logos :subtitle])
      (into
-       [:div.images
-        (for [logo (data :logos)]
-          [:div.image
-           [:img.border {:src (logo :image-url)}]
-           (into
-             [:div.buttons 
-              (for [button (logo :button)]
-                [:a.button {:target "_blank"
-                            :href (button :url)} (button :text)])])])])]]
+       [:div.images]
+       (for [logo (data :logos)]
+         [:div.image
+          [:img.border {:src (logo :image-url)}]
+          (into
+            [:div.buttons]
+            (for [button (logo :button)]
+              [:a.button {:target "_blank"
+                          :href (button :url)} (button :text)]))]))]]
 
    [:div.images.container
     [:h2 (get-in data [:product :subtitle])]

@@ -127,10 +127,11 @@
        (for [column (data :columns)]
          [:div.column
           [:h2.title (column :title)]
-          [:div.menu
-           (for [category (column :categories)]
-             [:a.link {:target (category :target)
-                       :href (category :url)}(category :name)])]]))]
+          (into 
+            [:div.menu]
+            (for [category (column :categories)]
+              [:a.link {:target (category :target)
+                        :href (category :url)}(category :name)]))]))]
 
     [:div.column.app-info
      [:div.social
