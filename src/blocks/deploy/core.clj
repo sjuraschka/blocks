@@ -8,9 +8,14 @@
     [blocks.deploy.storage :as storage]
     [blocks.server.data :refer [read-pages-edn path->page]]))
 
-(defn deploy! [domain url]
-  (let [page-config (path->page domain url)
-        _ (export/export! page-config)
+(defn deploy! [domain]
+  (println "DEP: Deploying" domain)
+  (let [pages (->> (read-pages-edn)
+                   (filter (fn [page]
+                             (= (page :domain) domain))))
+
+        _ (export/export! domain pages)
+
         files-changed (storage/upload! {:directory (str "./export/" domain "/")
                                         :domain domain})
         origin (str (env :s3-bucket) ".s3-website-us-east-1.amazonaws.com/" domain "/")
@@ -27,4 +32,5 @@
                              :file-paths paths-changed})
         _ (cdn/prefetch-files! {:cdn-id (:id cdn)
                                 :file-paths paths-changed})]
-    (println "Deployed " domain url "successfully!")))
+    
+    (println "DEP: Deployed" domain "successfully!\n")))

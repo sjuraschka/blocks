@@ -66,5 +66,5 @@ Unix: `apt-get install phantomjs`
 
 `(require 'blocks.deploy.core)`
 
-`(blocks.deploy.core/deploy! "www.domain.com" "/")`
+`(blocks.deploy.core/deploy! "www.domain.com")`
 

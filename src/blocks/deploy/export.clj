@@ -31,14 +31,11 @@
         (spit digest-path (dir-digest watch-path))))))
 
 (defn prepare-assets! 
-  [{:keys [site-directory asset-folders page-path]}]
+  [{:keys [site-directory asset-folders]}]
 
   (when (fs/exists? site-directory)
     (println "EXP: Removing " site-directory)
     (fs/delete-dir site-directory))
-
-  (println "EXP: Creating export directory" site-directory)
-  (fs/mkdirs (str site-directory page-path))
 
   (doseq [asset-folder asset-folders]
     (println "EXP: Copying asset folder" asset-folder)
@@ -50,21 +47,18 @@
             (str site-directory "/js/blocks.min.js")))
 
 (defn scrape! 
-  [{:keys [url-to-scrape out-path]}]
+  [{:keys [url-to-scrape page-directory]}]
   (println "EXP: Scraping page" url-to-scrape)
+  (fs/mkdirs page-directory)
   (let [html (sh "phantomjs" "export.js" url-to-scrape)]
     (if (= 1 (:exit html))
       (println "EXP: Could not load site. Did you start the server?")
-      (spit out-path (:out html)))))
+      (spit (str page-directory "index.html") (:out html)))))
 
 (defn export!
   "Exports assets for page"
-  [page-config]
-  (let [app-domain (str "http://localhost:" server/port "/")
-        page-domain (page-config :domain)
-        page-path (page-config :url)
-        export-path "./export/"
-        site-directory (str export-path page-domain)]
+  [domain pages]
+  (let [site-directory (str "./export/" domain)]
 
     (println "EXP: Starting server")
     (server/start!)
@@ -72,11 +66,14 @@
     (maybe-compile-cljs!)
 
     (prepare-assets! {:site-directory site-directory
-                      :asset-folders (page-config :assets)
-                      :page-path page-path})
+                      :asset-folders (->> pages
+                                          (map :assets)
+                                          (apply concat)
+                                          set)})
 
-    (scrape! {:url-to-scrape (str app-domain page-domain page-path)
-              :out-path (str site-directory page-path "index.html")})
+    (doseq [page pages]
+      (scrape! {:url-to-scrape (str "http://localhost:" server/port "/" domain (page :url))
+                :page-directory (str site-directory (page :url))}))
     
     (println "EXP: Stopping server")
     (server/stop!)))
