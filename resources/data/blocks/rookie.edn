@@ -285,9 +285,9 @@
                 {:title "2. Invite"
                  :url "#invite"}
                 {:title  "3. Review"
-                 :url "#review"}]
-         :title-final {:text "4. Get Paid"
-                       :url "#get-paid"}}}
+                 :url "#review"}
+                {:title "4. Get Paid"
+                 :url "#get-paid"}]}}
 
 
  "rookie-product-feature-1"
