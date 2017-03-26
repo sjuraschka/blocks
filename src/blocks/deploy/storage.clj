@@ -1,4 +1,4 @@
-(ns blocks.export.storage
+(ns blocks.deploy.storage
   (:require
     [aws.sdk.s3 :as s3]
     [digest :as digest]

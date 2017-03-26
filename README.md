@@ -68,7 +68,7 @@ Unix: `apt-get install phantomjs`
 
 `(start-release! 6543)`
 
-`(require 'blocks.export.core)`
+`(require 'blocks.deploy.core)`
 
-`(blocks.export.core/release! "www.domain.com" "/")`
+`(blocks.deploy.core/deploy! "www.domain.com" "/")`
 

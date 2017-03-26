@@ -1,4 +1,4 @@
-(ns blocks.export.export
+(ns blocks.deploy.export
   (:require
     [clojure.java.shell :refer [sh]]
     [me.raynes.fs :as fs]))

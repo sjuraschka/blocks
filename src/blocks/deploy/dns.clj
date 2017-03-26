@@ -1,4 +1,4 @@
-(ns blocks.export.dns
+(ns blocks.deploy.dns
   (:require
     [clojure.data.json :as json]
     [environ.core :refer [env]]
