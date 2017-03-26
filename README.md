@@ -66,7 +66,7 @@ Unix: `apt-get install phantomjs`
 
 `lein with-profiles +bloom repl`
 
-`(start! 6543)`
+`(start-release! 6543)`
 
 `(require 'blocks.export.core)`
 

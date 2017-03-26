@@ -122,7 +122,7 @@
   (str "sha256-" (sha256-file path)))
 
 (defroutes release-routes
- (GET ["/export/:domain/*"] {{domain :domain url :*} :params}
+  (GET ["/:domain/*"] {{domain :domain url :*} :params}
     (when-let [page (path->page domain (str "/" url))]
       {:status 200
        :headers {"Content-Type" "text/html"}
@@ -169,4 +169,7 @@
 
 (def release-app
   (-> (routes
-        release-routes)))
+        release-routes)
+      (wrap-resource "public")
+      (wrap-resource "data/assets")
+      (wrap-content-type)))

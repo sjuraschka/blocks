@@ -12,7 +12,7 @@
         asset-folders (page-config :assets)
         export-path "./export/"
         site-directory (str export-path page-domain)
-        scrape-url (str app-domain "export/" page-domain page-path)]
+        scrape-url (str app-domain page-domain page-path)]
 
     (when (fs/exists? site-directory)
       (println "EXP: Removing " site-directory)
