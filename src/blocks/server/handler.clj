@@ -1,9 +1,9 @@
 (ns blocks.server.handler
   (:require
     [clojure.string :as string]
-    [hiccup.core :refer [html]]
     [compojure.core :refer [defroutes GET routes]]
     [compojure.route :refer [not-found]]
+    [hiccup.core :refer [html]]
     [ring.middleware.resource :refer [wrap-resource]]
     [ring.middleware.not-modified :refer [wrap-not-modified]]
     [ring.middleware.content-type :refer [wrap-content-type]]

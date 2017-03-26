@@ -1,11 +1,11 @@
 (ns blocks.export.core
   (:require
     [clojure.string :as string]
-    [blocks.export.export :as export]
+    [environ.core :refer [env]]
     [blocks.export.cdn :as cdn]
-    [blocks.export.storage :as storage]
     [blocks.export.dns :as dns]
-    [environ.core :refer [env]]))
+    [blocks.export.export :as export]
+    [blocks.export.storage :as storage]))
 
 (defn read-pages-edn []
   (read-string (slurp (clojure.java.io/resource "data/pages.edn"))))

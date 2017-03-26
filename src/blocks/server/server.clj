@@ -1,7 +1,8 @@
 (ns blocks.server.server
-  (:require [com.stuartsierra.component :as component]
-            [org.httpkit.server :refer [run-server]]
-            [blocks.server.handler :refer [app]]))
+  (:require 
+    [com.stuartsierra.component :as component]
+    [org.httpkit.server :refer [run-server]]
+    [blocks.server.handler :refer [app]]))
 
 (defrecord Server [stop-fn port]
   component/Lifecycle

@@ -1,9 +1,9 @@
 (ns blocks.export.storage
   (:require
-    [environ.core :refer [env]]
-    [me.raynes.fs :as fs]
     [aws.sdk.s3 :as s3]
-    [digest :as digest])
+    [digest :as digest]
+    [environ.core :refer [env]]
+    [me.raynes.fs :as fs])
   (:import
     [java.nio.file Paths]
     [java.net URI]))

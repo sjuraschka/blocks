@@ -1,9 +1,9 @@
 (ns blocks.server.core
   (:gen-class)
-  (:require [com.stuartsierra.component :as component]
-            [blocks.server.figwheel :refer [figwheel-server file-watcher]]
-            [blocks.server.server :refer [server-component]]))
-
+  (:require 
+    [com.stuartsierra.component :as component]
+    [blocks.server.figwheel :refer [figwheel-server file-watcher]]
+    [blocks.server.server :refer [server-component]]))
 
 (def system
   (atom
