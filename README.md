@@ -62,8 +62,6 @@ Unix: `apt-get install phantomjs`
 
 ### The process:
 
-`lein cljsbuild once prod`
-
 `lein with-profiles +bloom repl`
 
 `(require 'blocks.deploy.core)`
