@@ -1,37 +1,54 @@
 (ns blocks.deploy.export
   (:require
     [clojure.java.shell :refer [sh]]
-    [me.raynes.fs :as fs]))
+    [me.raynes.fs :as fs]
+    [blocks.deploy.server :as server]))
+
+(defn prepare-assets! 
+  [{:keys [site-directory asset-folders page-path]}]
+
+  (when (fs/exists? site-directory)
+    (println "EXP: Removing " site-directory)
+    (fs/delete-dir site-directory))
+
+  (println "EXP: Creating export directory" site-directory)
+  (fs/mkdirs (str site-directory page-path))
+
+  (doseq [asset-folder asset-folders]
+    (println "EXP: Copying asset folder" asset-folder)
+    (fs/copy-dir (str "./resources/data/assets/" asset-folder)
+                 (str site-directory "/" asset-folder)))
+
+  (println "EXP: Copying blocks.min.js")
+  (fs/copy+ "./resources/public/js/blocks.min.js"
+            (str site-directory "/js/blocks.min.js")))
+
+(defn scrape! 
+  [{:keys [url-to-scrape out-path]}]
+  (println "EXP: Scraping page" url-to-scrape)
+  (let [html (sh "phantomjs" "export.js" url-to-scrape)]
+    (if (= 1 (:exit html))
+      (println "EXP: Could not load site. Did you start the server?")
+      (spit out-path (:out html)))))
 
 (defn export!
   "Exports assets for page"
   [page-config]
-  (let [app-domain "http://localhost:6543/"
+  (let [app-domain (str "http://localhost:" server/port "/")
         page-domain (page-config :domain)
         page-path (page-config :url)
-        asset-folders (page-config :assets)
         export-path "./export/"
-        site-directory (str export-path page-domain)
-        scrape-url (str app-domain page-domain page-path)]
+        site-directory (str export-path page-domain)]
 
-    (when (fs/exists? site-directory)
-      (println "EXP: Removing " site-directory)
-      (fs/delete-dir site-directory))
+    (println "EXP: Starting server")
+    (server/start!)
 
-    (println "EXP: Creating export directory" site-directory)
-    (fs/mkdirs (str site-directory page-path))
+    (prepare-assets! {:site-directory site-directory
+                      :asset-folders (page-config :assets)
+                      :page-path page-path})
 
-    (doseq [asset-folder asset-folders]
-      (println "EXP: Copying asset folder" asset-folder)
-      (fs/copy-dir (str "./resources/data/assets/" asset-folder)
-                   (str site-directory "/" asset-folder)))
-
-    (println "EXP: Copying blocks.min.js")
-    (fs/copy+ "./resources/public/js/blocks.min.js"
-              (str site-directory "/js/blocks.min.js"))
-
-    (println "EXP: Scraping page" scrape-url)
-    (let [html (sh "phantomjs" "export.js" scrape-url)]
-      (if (= 1 (:exit html))
-        (println "EXP: Could not load site. Did you start the server?")
-        (spit (str site-directory page-path "index.html") (:out html))))))
+    (scrape! {:url-to-scrape (str app-domain page-domain page-path)
+              :out-path (str site-directory page-path "index.html")})
+    
+    (println "EXP: Stopping server")
+    (server/stop!)))

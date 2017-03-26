@@ -66,8 +66,6 @@ Unix: `apt-get install phantomjs`
 
 `lein with-profiles +bloom repl`
 
-`(start-release! 6543)`
-
 `(require 'blocks.deploy.core)`
 
 `(blocks.deploy.core/deploy! "www.domain.com" "/")`

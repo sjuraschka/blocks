@@ -5,21 +5,11 @@
     [blocks.deploy.cdn :as cdn]
     [blocks.deploy.dns :as dns]
     [blocks.deploy.export :as export]
-    [blocks.deploy.storage :as storage]))
-
-(defn read-pages-edn []
-  (read-string (slurp (clojure.java.io/resource "data/pages.edn"))))
-
-(defn get-page-config [domain url]
-  (->> (read-pages-edn)
-       (filter (fn [page]
-                 (and
-                   (= (page :domain) domain)
-                   (= (page :url) url))))
-       first))
+    [blocks.deploy.storage :as storage]
+    [blocks.server.data :refer [read-pages-edn path->page]]))
 
 (defn deploy! [domain url]
-  (let [page-config (get-page-config domain url)
+  (let [page-config (path->page domain url)
         _ (export/export! page-config)
         files-changed (storage/upload! {:directory (str "./export/" domain "/")
                                         :domain domain})
