@@ -21,7 +21,7 @@
       (wrap-resource "data/assets")
       (wrap-content-type)))
 
-(def port 6543)
+(def port 7384)
 
 (defstate export-server 
   :start (run-server #'export-app {:port port})
