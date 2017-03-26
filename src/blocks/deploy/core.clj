@@ -6,7 +6,7 @@
     [blocks.deploy.dns :as dns]
     [blocks.deploy.export :as export]
     [blocks.deploy.storage :as storage]
-    [blocks.server.data :refer [read-pages-edn path->page]]))
+    [blocks.server.data :refer [read-pages-edn]]))
 
 (defn deploy! [domain]
   (println "DEP: Deploying" domain)
