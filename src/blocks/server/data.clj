@@ -24,11 +24,9 @@
                                  (blocks block-id)) bs)))))))
 
 (defn path->page [domain url]
-  (let [pages (read-pages-edn)]
-    (when-let [page (->> pages
-                         (filter (fn [page]
-                                   (and
-                                     (= (page :url) url)
-                                     (= (page :domain) domain))))
-                         first)]
-      page)))
+  (->> (read-pages-edn)
+       (filter (fn [page]
+                 (and
+                   (= (page :url) url)
+                   (= (page :domain) domain))))
+       first))
