@@ -15,7 +15,7 @@
                       (file-watcher)
                       [:figwheel-server]))))
 
-(defn start-dev! [port]
+(defn start! [port]
   (swap! dev-system (fn [s] (-> s
                                 (assoc :port port)
                                 component/start))))
