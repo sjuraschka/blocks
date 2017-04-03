@@ -3,8 +3,12 @@
 
 (defn styles [data]
   [:.one-feature
-   {:background (get-in data [:background :color])
+   {:background-image (str "url(" (get-in data [:background :image]) ")")
+    :background-color (get-in data [:background :color])
+    :background-size (get-in data [:background :size])
+    :background-repeat "no-repeat"
     :display "flex"
+    :min-height (get-in data [:background :height])
     :flex-direction "column"
     :justify-content "center"
     :align-items "center"
@@ -27,8 +31,8 @@
 (defn component [data]
   [:div.one-feature
    [:div.content
-   [:h1 (get-in data [:heading :text])]
-   [:p (get-in data [:description :text])]]])
+    [:h1 (get-in data [:heading :text])]
+    [:p (get-in data [:description :text])]]])
 
 (defmethod template "one-feature" [_]
   {:css styles

@@ -13,6 +13,12 @@
                  [me.raynes/fs "1.4.6"]
                  [environ "1.0.3"]
                  [org.clojure/data.json "0.2.6"]
+                 [digest "1.4.5"]
+                 [mount "0.1.11"]
+                 [clj-aws-s3 "0.3.10" :exclusions [joda-time 
+                                                   clj-time
+                                                   org.apache.httpcomponents/httpclient 
+                                                   com.fasterxml.jackson.core/jackson-core]]
 
                  ; client-side
                  [org.clojure/clojurescript "1.9.293"]

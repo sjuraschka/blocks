@@ -141,15 +141,13 @@
    [:div.content
     [:h1.title "How you'll use Rookie with your athletes"]
     [:p.subtitle "Whether your clients are in the local gym, on social media,\nor across the globe, Rookie will help you train them."]
-    [:a.button {:href "./how-it-works"} "Learn How It Works"]
+    [:a.button {:href "./how-it-works/"} "Learn How It Works"]
     [:video {:src "/rookie/videos/how-it-works-small.m4v"
              :auto-play true
              :preload "auto"
              :fullscreen false
              :muted true
              :loop true}]
-
-
     (into
       [:div.columns]
       (for [column (data :columns)]
