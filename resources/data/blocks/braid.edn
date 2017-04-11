@@ -108,31 +108,29 @@
 
  "braid-com-letter"
  {:template "letter"
-  :data     {:heading    {:text        "Why We Built Braid"
-                          :title-color "#384d51"}
-             :background "#f7f8f9"
-             :paragraph  {:text  "Chat rooms didn't work for us.\n They didn't match our model of how we work.\n Chatrooms are
-                          like a group of people, each with a loudspeaker, trying to get things done\n thats not how things work, you have a lot of people, you end up have lots of small
-                          related conversations + FOMO, constant checking\n Slack, HipChat and other group chat
-                          apps promised to make us more productive, but instead, they demand our constant attention and rob us of our focus.
+  :data     {:heading    {:text        "We love our small and organized discussions, and we think you will too."
+                          :title-color "#444"}
+             :background "#fff"
+             :paragraph  {:color "#aaa"
+                          :text
+                            "Chatrooms are like a group of people, each with a loudspeaker, trying to get things done.
+                             <span>Chatrooms cause FOMO</span>, constant checking Slack, HipChat and other group chat
+                             apps promised to make us more productive, but instead, they demand our constant attention and <span>rob us of our focus</span>.<br><br>
 
-                          These problems aren't new, but they definitely won't be solved by repackaging the same ideas we've
-                          had since IRC, over and over. We need a new approach. We need an app that respects your focus,
-                          keeps conversations in context, and doesn't demand your constant attention, while still allowing for
-                          quick and casual conversations. A few of us have been toying with this problem and we think we've stumbled onto something pretty
-                          neat.
+                             These problems aren't new, but they definitely won't be solved by repackaging the same ideas we've
+                             had since IRC, over and over. <span>We need a new approach</span>.<br><br>
 
-                          It turns out, if you free yourself from having chat rooms, and focus on conversations instead,
-                          many of the problems go away. We've built a prototype around this concept, and though it still has
-                          some rough edges, it's already become our go-to chat app (and for a bunch of other folks too)
+                             We need an app that respects your focus, keeps conversations in context, and doesn't demand your constant attention, while still allowing for
+                             quick and casual conversations. A few of us have been toying with this problem and we think we've stumbled onto something pretty
+                             neat.<br><br>
 
-                          We call it Braid and we'd love for you to join us in making it better.
-                          Raf & James
+                             It turns out, if you free yourself from having chat rooms, and focus on conversations instead,
+                             many of the problems go away. We've built a prototype around this concept, and though it still has
+                             some rough edges, it's already become our go-to chat app (and for a bunch of other folks too)<br><br>
+
+                             We call it <span>Braid</span> and we'd love for you to join us in making it better."}}}
 
 
-                         Small tagged conversations makes it easy to find what you looking for. No more scrolling through chat histories to find an article or document.
-
-                         "
 
                           :color "#5f6c73"}}}
 
