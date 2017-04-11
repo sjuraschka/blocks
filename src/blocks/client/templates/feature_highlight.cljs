@@ -1,5 +1,6 @@
 (ns blocks.client.templates.feature-highlight
   (:require [blocks.client.template :refer [template]]
+            [blocks.client.templates.mixins :refer [fontawesome-mixin]]
             [garden.stylesheet :refer [at-media]]))
 
 (def pad "4em")
@@ -58,18 +59,28 @@
      :position "relative"
      :z-index 0}]
 
-
    [:.underline
     {:margin-top "-2em"
      :margin-bottom "1em"
      :width "2em"}]
 
    [:p
-    {:font-size "0.85em"
+    {:font-size (get-in data [:description :size])
      :color (get-in data [:description :color])
      :font-weight (get-in data [:description :weight])
      :white-space (get-in data [:description :white-space])
      :line-height (get-in data [:description :line-height])}]
+
+   [:.bullet-points
+    {:margin-top "1em"}
+    [:.bullet
+     {:font-size (get-in data [:bullets-style :size])
+      :padding "0.25em"
+      :color (get-in data [:heading :color])}
+     [:&::before
+      (fontawesome-mixin \uf00c)
+      {:margin-right "0.5rem"
+       :color (get-in data [:bullets-style :icon])}]]]
 
    [:a
     {:text-decoration "none"
@@ -105,8 +116,12 @@
      [:img.underline {:src (get-in data [:heading :underline])}]
 
      [:p {:dangerouslySetInnerHTML
-          {:__html (get-in data [:description :text])}}]]
-
+          {:__html (get-in data [:description :text])}}]
+     (into
+       [:div.bullet-points]
+       (for [bullet (data :bullets)]
+         [:div.bullet (bullet :text)]))]
+    let
     [:div
      [:img.feature {:src (get-in data [:image :image-url])}]]]])
 
