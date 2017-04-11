@@ -88,7 +88,7 @@
                 :width "7rem"
                 :box-sizing "border-box"
                 :text-align "center"}]
-       
+
        [:a.button
         (button-mixin (get-in data [:button-colors]))
         [:&

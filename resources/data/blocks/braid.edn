@@ -257,11 +257,11 @@
                          :description "Adding text formatting to your chat is simple."}
                         {:icon        \uf0c0
                          :title       "Multiple Groups"
-                         :description "You can create and join as many groups as your heart desires."}
+                         :description "You can create and join as many groups as your heart desires."}]}}
 
                         ; emoji
                         ; link embeds
-                        ]}}
+
 
  "braid-com-pricing"
  {:template "pricing"
@@ -318,9 +318,9 @@
                                   :features-title "Everything in Team, plus"
                                   :features       ["Self-Hosted"
                                                    "SAML Single Sign-on"
-                                                   "Custom Integrations"
+                                                   "Custom Integrations"]
                                                    ; TODO
-                                                   ]
+
                                   :price          {:button {:text "Contact Us"}}}]
              :notes             "14 Day Trial"}}
 
@@ -367,8 +367,7 @@
                           ["Coming Soon"
                            [{:name "E2E encryption"}
                             {:name "Matrix.org integration"}]]]}}
-
-
+ 
  "braid-pre-footer"
  {:template "pre-footer-menu"
   :data     {:logo {:url "/"
@@ -408,7 +407,6 @@
                                      {:name "hi@braidchat.com"
                                       :url "mailto:hi@braidchat.com"}]}]}}
 
-
  "braid-com-footer"
  {:template "footer"
   :data     {:logo             {}
@@ -426,11 +424,6 @@
                                  :url  "mailto:hi@braidchat.com"
                                  :icon \uf003}]}}
 
-
-
-
-
-
  "braid-com-downloads"
  {:template "downloads"
   :data     {:platforms {:linux   ""
@@ -438,3 +431,13 @@
                          :windows ""
                          :ios     ""
                          :android ""}}}}
+
+"braid-com-how-it-works"
+{:template "video"
+ :data     {:styles   {:background "#384d51"}
+            :heading  {:title "Beyond Chatrooms"
+                       :color "#fff"}
+            :subtitle {:text  "Our Secret? Short conversations & tags (instead of rooms)"
+                       :color "#fff"}
+            :video    {:id        "YeH-8_PUXPk"
+                       :thumbnail "/braid/images/video-player.png"}}}
