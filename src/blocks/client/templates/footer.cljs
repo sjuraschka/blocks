@@ -19,7 +19,8 @@
 
     [:a.logo
      {:color (data :text-color)
-      :white-space "nowrap"}
+      :white-space "nowrap"
+      :text-decoration "none"}
 
      [:p.icon
       {:font-size "0.85em"
@@ -90,7 +91,7 @@
   [:footer
    [:div.content
     [:a.logo {:href (get-in data [:logo :url])}
-     [:p.icon "Copyright Rookie 2017"]
+     [:p.icon (data :text)]
      [:img {:src (get-in data [:logo :image-url])}]
      [:h1 (data :title)]]
 

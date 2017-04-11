@@ -29,6 +29,7 @@
  "rookie-footer"
  {:template "footer"
   :data     {:height           "1em"
+             :text             "Copyright Rookie 2017"
              :background-color "#00175a"
              :text-color       "#FFF"
              :text-transform   "uppercase"
