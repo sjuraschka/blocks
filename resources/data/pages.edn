@@ -25,18 +25,19 @@
   :colors {}
 
 
-  :styles {:fonts {:body {:name "Hind"
+  :styles {:fonts {:body {:name "Roboto"
                           :source "google"
                           :weight 300}
-                   :headings {:name "Hind"
+                   :headings {:name "Roboto"
                               :source "google"
                               :weight 400}}}
   :blocks ["braid-com-header"
            "braid-com-column-hero"
            "braid-com-conversations"
+           "braid-social-proof"
            "braid-com-letter"
-           "braid-com-how-it-works"
-           "braid-com-hero"
+           ;"braid-com-how-it-works"
+           ;"braid-com-hero"
            "braid-com-benefit-better-conversations"
            "braid-com-benefit-focus"
            "braid-com-benefit-deep-integrations"
@@ -45,7 +46,9 @@
            "braid-com-roadmap"
            "braid-com-pricing"
            "braid-com-cta"
+           "braid-pre-footer"
            "braid-com-footer"]}
+
 
  {:domain "www.braidchat.com"
   :url "/pricing"
