@@ -226,11 +226,11 @@
  {:template "features-grid"
   :data     {:title    "Plus, all the features you expect:"
              :columns  3
-             :styles   {:main-color        "#384d51"
-                        :background-color  ""
-                        :heading-color     "#384d51"
-                        :description-color "#777"
-                        :icon-color        "#384d51"}
+             :styles   {:main-color        "#fff"
+                        :background-color  "#3D75FB"
+                        :heading-color     "#fff"
+                        :description-color "#fff"
+                        :icon-color        "#fff"}
              :features [{:icon        \uf1c5
                          :title       "Drag and Drop File Sharing"
                          :description "Drop a file into any chat and it's instantly uploaded and easy to tag so you can find it later."}

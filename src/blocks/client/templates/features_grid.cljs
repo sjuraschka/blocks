@@ -5,7 +5,8 @@
   (let [padding "1.5em"]
 
     [:.features-grid
-     {:padding-top "3em"}
+     {:padding-top "3em"
+      :background (get-in data [:styles :background-color])}
 
      [:.content
       {:display "flex"
