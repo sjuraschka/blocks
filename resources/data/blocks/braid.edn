@@ -327,18 +327,18 @@
  "braid-com-cta"
  {:template "cta"
   :data     {:heading     {:text  "Get started by creating a team"
-                           :color "#384d51"}
+                           :color "#fff"}
              :description {:text  "No credit card or long term commitment to get started."
-                           :color "#384d51"}
-             :background  {:color "#d9e8ea;"}
+                           :color "#fff"}
+             :background  {:color "#3D75FB"}
              :form        {:prompt-text ""
                            :placeholder "you@yourgroup.com"
                            :button      {:text   "Create Your Group"
                                          :color  "#fff"
                                          :colors {:text      "#fff"
-                                                  :bg        "#f17130"
-                                                  :bg-hover  "#f36027"
-                                                  :bg-active "#d6490c"}}}}}
+                                                  :bg        "#55C1C4"
+                                                  :bg-hover  "#3ba8ab"
+                                                  :bg-active "#94d8da"}}}}}
 
  "braid-com-roadmap"
  {:template "roadmap"

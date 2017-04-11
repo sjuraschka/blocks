@@ -15,6 +15,10 @@
      :white-space "pre"
      :margin "0.5em"}]
 
+   [:p.error
+    {:font-size "0.95rem"
+     :padding-top "2em"}]
+
    [:p.before
     {:color (get-in data [:before :color])
      :font-size "1em"}]
