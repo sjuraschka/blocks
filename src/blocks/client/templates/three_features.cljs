@@ -9,12 +9,12 @@
     :color (get-in data [:heading :color])}
 
    [:.content
-    {:padding "4em 3em"}
+    {};:padding "4em 3em"
 
     [:h1
      {:text-transform (get-in data [:title :transform])
       :text-align "center"
-      :padding "2em"
+      :padding-top (get-in data [:title :padding])
       :color  (get-in data [:title])
       :font-size      "1.75em"
       :letter-spacing (get-in data [:title :spacing])}]

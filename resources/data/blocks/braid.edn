@@ -198,20 +198,27 @@
 
  "braid-com-other-benefits"
  {:template "three-features"
-  :data     {:styles  {:background "#65A8B6"}
-             :heading {:color "#fff"}
+  :data     {:styles  {:background "#fff"}
+             :title {:copy "Just a few of the reasons you're going to love Braid."
+                     :transform ""
+                     :padding "1em"
+                     :size  "1.75em"}
+             :column-title {:size "1.25em"
+                            :transform ""}
+             :heading {:color "#444"}
+             :image {:width "4em"}
              :column  3
-             :columns [{:icon        \uf0e7
+             :columns [{:image "/braid/images/fast-icon-braid-chat.svg"
                         :title       "Fast"
                         :description "Built with Clojure - so you know it's not going to be holding you back."}
 
-                       {:image       "/braid/images/open-source.svg"
+                       {:image       "/braid/images/open-source.png"
                         :title       "Open Source"
                         :description "Braid is an Open Source project built with Clojure.
                                   Everything from the fonts we use to the documentation are made by the
                                   community."}
 
-                       {:icon        \uf023
+                       {:image       "/braid/images/braid-security-lock.svg"
                         :title       "Secure"
                         :description "Braid's conversations receive a 256-bit SSL encryption."}]}}
 

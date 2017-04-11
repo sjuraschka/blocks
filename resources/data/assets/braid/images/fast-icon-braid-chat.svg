@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="87px" height="96px" viewBox="0 0 87 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-12" transform="translate(-429.000000, -30.000000)">
+            <g id="Group-4" transform="translate(421.000000, 16.000000)">
+                <g id="Group-2">
+                    <g id="Group" transform="translate(50.105135, 58.294258) rotate(16.000000) translate(-50.105135, -58.294258) translate(13.105135, 8.294258)"></g>
+                    <g id="Group-2-Copy-13" transform="translate(51.137807, 63.519043) rotate(14.000000) translate(-51.137807, -63.519043) translate(12.137807, 12.519043)">
+                        <polygon id="Triangle" stroke="#3D75FB" stroke-width="1.70000005" fill="#FFFFFF" transform="translate(8.275987, 54.110611) rotate(-300.000000) translate(-8.275987, -54.110611) " points="8.27598707 48.6106106 15.2759871 59.6106106 1.27598707 59.6106106"></polygon>
+                        <polygon id="Triangle-Copy-5" stroke="#3D75FB" stroke-width="1.83999991" fill="#FFFFFF" transform="translate(34.445827, 7.027206) rotate(-31.000000) translate(-34.445827, -7.027206) " points="31.9918208 2.24022797 39.4651672 8.36779538 29.4264868 11.814185"></polygon>
+                        <polygon id="Triangle-Copy-4" fill="#55C1C4" transform="translate(67.665257, 26.370418) rotate(1.000000) translate(-67.665257, -26.370418) " points="67.6652568 22.6641072 71.3715676 30.0767289 63.9589459 30.0767289"></polygon>
+                        <polygon id="Triangle-Copy-6" fill="#55C1C4" transform="translate(63.690180, 83.856222) rotate(-48.000000) translate(-63.690180, -83.856222) " points="62.153148 80.9389683 67.4253189 86.0317661 59.9550407 86.7734758"></polygon>
+                        <polygon id="Triangle-Copy" fill="#F74768" points="9.08591535 18.1756175 14.5859154 29.1756175 3.58591535 29.1756175"></polygon>
+                        <polygon id="Triangle-Copy-8" fill="#F17130" points="7.3200948 75.3904433 11.8200948 84.3904433 2.8200948 84.3904433"></polygon>
+                        <polygon id="Triangle-Copy-9" fill="#F17130" transform="translate(70.641663, 8.500000) rotate(135.000000) translate(-70.641663, -8.500000) " points="70.6416634 4 75.1416634 13 66.1416634 13"></polygon>
+                        <polygon id="Triangle-Copy-7" fill="#F74768" transform="translate(69.341047, 55.096321) rotate(70.000000) translate(-69.341047, -55.096321) " points="69.3410471 52.0963205 72.3410471 58.0963205 66.3410471 58.0963205"></polygon>
+                        <polygon id="Triangle-Copy-2" fill="#3D75FB" transform="translate(26.309641, 95.620868) rotate(-48.000000) translate(-26.309641, -95.620868) " points="26.3096405 91.6259477 30.3045609 99.6157886 22.3147201 99.6157886"></polygon>
+                        <polygon id="Triangle-Copy-3" fill="#3D75FB" transform="translate(53.557692, 15.103666) rotate(60.000000) translate(-53.557692, -15.103666) " points="53.5576916 9.60366626 59.0576916 20.6036663 48.0576916 20.6036663"></polygon>
+                    </g>
+                </g>
+                <g id="Group-3" transform="translate(33.000000, 29.000000)" font-family="FontAwesome" font-weight="normal">
+                    <text id="" font-size="70" fill="#3D75FB">
+                        <tspan x="0" y="66"></tspan>
+                    </text>
+                    <text id="" font-size="73.1808" fill="#B2C8FD">
+                        <tspan x="4" y="63"></tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
