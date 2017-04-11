@@ -83,6 +83,17 @@
                                                   :bg-hover  "#d4460f"
                                                   :bg-active "#d6490c"}}}}}
 
+
+ "braid-social-proof"
+ {:template "social-proof"
+  :data {:background {:color "#fff"}
+         :heading {:text "Used by great companies, big and small"
+                   :color "#3D75FB"}
+         :partners [{:image "/braid/images/bloom-ventures.svg"}
+                    {:image "/rookie/images/rookie-grey-logo.svg"}
+                    {:image "/braid/images/mealsurfers-logo.png"}]
+         :styles {:color "#ccc"}}}
+
  "braid-com-conversations"
  {:template "braid-conversations"
   :data     {:background {:color ""}}}
