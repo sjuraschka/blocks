@@ -25,12 +25,17 @@
       :display "block"
       :text-decoration "none"}
      [:&:hover
-      {:color "#3C50CF"}]]
-
+      {:color (get-in data [:nav :color :hover])}]]
 
     [:div.logo-column
      {:max-width "14em"
       :padding "2em"}
+     [:.logo
+      {:display "flex"
+       :text-decoration "none"
+       :color "#555"}
+      [:h1
+       {:margin-left "0.35rem"}]]
      [:img
       {:height "1em"}]
      [:p
@@ -67,7 +72,6 @@
       [:&.facebook:after
        (fontawesome-mixin \uf09a)
        {:background "#4F7AC5"}]
-
       [:&.twitter:after
        (fontawesome-mixin \uf099)
        {:background "#5FCAF3"}]
@@ -112,14 +116,13 @@
         {:max-width "18em"
          :padding-top "1em"}]])]])
 
-
-
 (defn component [data]
   [:div.pre-footer-menu
    [:div.footer-content
     [:div.logo-column
      [:a.logo {:href (get-in data [:logo :url])}
-      [:img {:src (get-in data [:logo :image-url])}]]
+      [:img {:src (get-in data [:logo :image-url])}]
+      [:h1 (get-in data [:logo :text])]]
      [:p (get-in data [:title :description])]]
     [:div.menu-content
      (into
@@ -136,13 +139,13 @@
     [:div.column.app-info
      [:div.social
       [:a.icon.instagram {:target "_blank"
-                          :href "https://www.instagram.com/rookietraining"}]
+                          :href (get-in data [:social :instagram :url])}]
       [:a.icon.twitter   {:target "_blank"
-                          :href "https://www.twitter.com/rookiehq"}]
+                          :href (get-in data [:social :twitter :url])}]
       [:a.icon.linkedin  {:target "_blank"
-                          :href "https://www.linkedin.com/company/rookie-inc"}]
+                          :href (get-in data [:social :linkedin :url])}]
       [:a.icon.facebook  {:target "_blank"
-                          :href "https://www.facebook.com/tryrookiehq"}]]]]])
+                          :href (get-in data [:social :facebook :url])}]]]]])
 
 ;buttons for appstore or desktop app
 #_[:a.app {:href "#"}

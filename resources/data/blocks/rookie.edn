@@ -221,8 +221,20 @@
   :data     {:logo {:url "/"
                     :image-url "/rookie/images/rookie-navy-logo.svg"}
              :title {:description "It’s never been easier to start an online coaching business. Rookie handles everything from client acquisition and payments, to video editing and feedback."}
+             :nav {:color {:hover "#3C50CF"}}
              :button {:athlete  {:image "/rookie/images/app-rookie-training-video-capture.png"}
                       :coach    {:image "/rookie/images/chrome-desktop-app-rookie-training.png"}}
+             :social {:instagram {:url "https://www.instagram.com/rookietraining"
+                                  :icon ""}
+
+                      :facebook {:url "https://www.facebook.com/tryrookiehq"
+                                 :image ""}
+
+                      :twitter {:url "https://www.twitter.com/rookiehq"
+                                :icon ""}
+
+                      :linkedin {:url "https://www.linkedin.com/company/rookie-inc"
+                                 :icon ""}}
              :columns [
                        {:title      "Product"
                         :categories [{:name "How It Works"

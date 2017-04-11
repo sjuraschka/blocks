@@ -369,17 +369,67 @@
                             {:name "Matrix.org integration"}]]]}}
 
 
+ "braid-pre-footer"
+ {:template "pre-footer-menu"
+  :data     {:logo {:url "/"
+                    :text "Braid"
+                    :image-url "/braid/images/braid-logo-grey.png"}
+             :title {:description "Be productive again. Group chat doesn't have to be a distraction, work better together with Braid."}
+             :nav {:color {:hover "#098BEE"}}
+             :button {:athlete  {:image "/rookie/images/app-rookie-training-video-capture.png"}
+                      :coach    {:image "/rookie/images/chrome-desktop-app-rookie-training.png"}}
+             :social {:instagram {:url "https://www.instagram.com/braidchat"
+                                  :icon ""}
+
+                      :facebook {:url "https://www.facebook.com/braidchat"
+                                 :image ""}
+
+                      :twitter {:url "https://www.twitter.com/braidchat"
+                                :icon ""}
+
+                      :linkedin {:url "https://www.linkedin.com/company/braidchat"
+                                 :icon ""}}
+             :columns [
+                       {:title      "Product"
+                        :categories [{:name "Open Source"
+                                      :url "https://www.braidchat.org"}
+                                     {:name "Pricing"
+                                      :url "./pricing"}]}
+                       {:title      "Company"
+                        :categories [{:name "Why we built Braid?"
+                                      :url "https://github.com/braidchat/braid#motivation"
+                                      :target "_blank"}
+                                     {:name "Careers"
+                                      :url "/careers/"}]}
+                       ;{:name "Get In Touch"}]}
+                       {:title      "Connect"
+                        :categories [{:name "+1-647-267-5292"
+                                      :url ""}
+                                     {:name "hi@braidchat.com"
+                                      :url "mailto:hi@braidchat.com"}]}]}}
+
+
  "braid-com-footer"
  {:template "footer"
-  :data     {:logo             {:image-url "/braid/images/braid-logo-light.svg"
-                                :url       "./"}
-             :background-color "#384d51"
+  :data     {:logo             {}
+             :height           "1em"
+             :text             "Copyright Braid 2017"
+             :background-color "#575757"
              :text-color       "#FFF"
-             :title            "Braid"
-             :height           "2em"
-             :menu             [{:text "hi@braidchat.com"
+             :text-transform   "uppercase"
+             :size             "0.85em"
+             :menu             [{:text "Privacy"
+                                 :url  "/privacy-policy/"}
+                                {:text "Terms"
+                                 :url  "/terms-of-service/"}
+                                {:text "hi@braidchat.com"
                                  :url  "mailto:hi@braidchat.com"
                                  :icon \uf003}]}}
+
+
+
+
+
 
  "braid-com-downloads"
  {:template "downloads"
