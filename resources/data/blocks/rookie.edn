@@ -107,7 +107,8 @@
   :data     {:styles  {:background "#fff"}
              :title {:copy "How Rookie Works"
                      :transform "uppercase"
-                     :size  "1.75em"}
+                     :size  "1.75em"
+                     :padding "2em"}
              :column-title {:size "1.25em"
                             :transform "uppercase"}
 
@@ -324,6 +325,7 @@
              :description {:text  "Get running with Rookie in less than five minutes by downloading the app <a href=\"https://coach.getrookie.com\" target=\"_blank\"> here</a>.<br><br>\n\n Even launch your own sales page so you can start collecting leads without having to code or design anything."
                            :color "#929292"
                            :underline "none"
+                           :size "0.85em"
                            :weight 200}
              :image       {:image-url "/rookie/images/rookie-training-courtneyforlife-custom-landing-page.png"
                            :position  "right"}}}
