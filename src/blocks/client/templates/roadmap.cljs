@@ -33,7 +33,9 @@
 
      [:.phase
       {:flex-basis "25%"
-       :background "#bedede"
+       :background (get-in data [:phase :background])
+       :box-shadow "0 8px 15px 0px rgba(0,0,0,0.05)"
+       :border "1px solid #fafafa"
        :padding "0.5em"
        :margin-right "2em"
        :border-radius "0.25em"}
@@ -50,7 +52,8 @@
        {:margin "0.5em 0"
         :padding "0.5em"
         :border-radius "0.25em"
-        :background "#fff"
+        :border "1px solid #90b0fd"
+        :background "f4f7ff"
         :position "relative"
         :color "#384d51"}
 
@@ -61,13 +64,13 @@
         {:padding-right "1em"}
 
         [:&:after
-         {:content "\"\uf058\""
+         {:content "\"\uf00c\""
           :font-family "FontAwesome"
           :position "absolute"
           :right "0.5em"
           :top "0.5em"
-          :color "#f17130"
-          :font-size "1.1em"}]]]]]]])
+          :color "#3D75FB"
+          :font-size "0.85em"}]]]]]]])
 
 (defn component [data]
   [:section.roadmap
