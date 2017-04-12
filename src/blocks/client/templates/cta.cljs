@@ -1,12 +1,14 @@
 (ns blocks.client.templates.cta
   (:require [blocks.client.template :refer [template]]
-            [blocks.client.templates.partials.email-field :as email-field]))
+            [blocks.client.templates.partials.email-field :as email-field]
+            [garden.stylesheet :refer [at-media]]))
 
-(def pad "6em")
 
 (defn styles [data]
   [:.cta
-   {:padding pad
+   {:padding "0 4em"
+    :padding-top "4em"
+    :padding-bottom "2em"
     :background (get-in data [:background :color])
     :text-align "center"}
 
@@ -15,14 +17,19 @@
     [:h1
      {:color (get-in data [:heading :color])
       :font-weight "bolder"
-      :font-size "2.2em"}]
+      :font-size "1.75em"
+      :padding-bottom "1em"}]
 
     [:p
      {:color (get-in data [:description :color])
       :font-size "1.25rem"
       :margin-bottom "2em"}]
 
-    (email-field/styles (data :form))]])
+    (email-field/styles (data :form))]
+
+   (at-media {:max-width "700px"}
+     [:&
+      {:padding "1em"}])])
 
 (defn component [data]
   [:section.cta
