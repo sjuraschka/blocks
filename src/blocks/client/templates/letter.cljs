@@ -48,6 +48,7 @@
                 :text-align "center"}]
               [:.lower
                {:flex-direction "column"}
+
                [:div.left
                 {:width "100%"
                  :order 1}
@@ -58,7 +59,8 @@
                  :width 0}]
                [:div.right
                 {:width "100%"
-                 :order -1}]]])])
+                 :order -1
+                 :text-align "center"}]]])])
 
 (defn component [data]
   [:div.letter
