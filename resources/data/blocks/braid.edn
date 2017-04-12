@@ -12,9 +12,9 @@
                           :url       "./"}
              :height     "2em"
              :menu       [{:text "Pricing"
-                           :url  "./pricing"}
+                           :url  "/pricing/"}
                           {:text "Downloads"
-                           :url  "./downloads"}
+                           :url  "/downloads"}
                           {:text "Open Source"
                            :url  "https://www.braidchat.org/"}
                           {:text  "Sign In"
