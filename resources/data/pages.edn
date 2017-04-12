@@ -71,23 +71,24 @@
  {:domain "www.braidchat.com"
    :url "/pricing/"
    :favicon "/braid/images/braid-favicon.png"
-   :styles {:fonts {:body {:name "Poppins"
+   :styles {:fonts {:body {:name "Roboto"
                            :source "google"
                            :weight 300}
-                    :headings {:name "Poppins"
+                    :headings {:name "Roboto"
                                :source "google"
                                :weight 400}}}
    :blocks ["braid-com-header"
+            "braid-pricing-title"
             "braid-com-pricing"
             "braid-com-footer"]}
 
  {:domain "www.braidchat.com"
   :url "/downloads/"
   :favicon "/braid/images/braid-favicon.png"
-  :styles {:fonts {:body {:name "Muli"
+  :styles {:fonts {:body {:name "Roboto"
                           :source "google"
                           :weight 300}
-                   :headings {:name "Muli"
+                   :headings {:name "Roboto"
                               :source "google"
                               :weight 400}}}
   :blocks ["braid-com-header"
