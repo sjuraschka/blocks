@@ -57,7 +57,7 @@
      [:a
       {:color           (data :color)
        :text-transform (data :text-transform)
-       :font-size       "0.85em"
+       :font-size       "0.95em"
        :opacity         0.75
        :text-decoration "none"
        :margin-left     "2em"
