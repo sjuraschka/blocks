@@ -17,7 +17,7 @@
     [:h1
      {:color (get-in data [:heading :color])
       :font-weight "bolder"
-      :font-size "1.75em"
+      :font-size "1.75rem"
       :padding-bottom "1em"}]
 
     [:p
@@ -29,7 +29,9 @@
 
    (at-media {:max-width "700px"}
      [:&
-      {:padding "1em"}])])
+      {:padding "0 2rem"
+       :padding-top "2rem"
+       :padding-bottom "1em"}])])
 
 (defn component [data]
   [:section.cta
