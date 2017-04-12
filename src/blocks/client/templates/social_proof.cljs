@@ -1,5 +1,6 @@
 (ns blocks.client.templates.social-proof
-  (:require [blocks.client.template :refer [template]]))
+  (:require [blocks.client.template :refer [template]]
+            [garden.stylesheet :refer [at-media]]))
 
 (def pad "2em")
 
@@ -33,11 +34,17 @@
      :right 0
      :width "85vw"
      :border "none"
-     :border-bottom "1px solid #eee"}]])
+     :border-bottom "1px solid #eee"}]
 
-
-
-
+   (at-media {:max-width "800px"}
+     [:.content
+      {:flex-direction "column"}
+      [:.text
+       {:margin-bottom "1em"}]
+      [:div.images
+       [:.partner-logo
+        {:margin "0 1em"
+         :height "1em"}]]])])
 
 (defn component [data]
   [:section.social-proof
