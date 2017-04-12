@@ -271,7 +271,6 @@
  ; Rookie - how it works
  ;=========================================================================================
 
-
  "title-section-rookie"
  {:template "one-feature"
   :data {:page-padding {:top "3em"}
