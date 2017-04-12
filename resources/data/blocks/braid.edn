@@ -32,7 +32,7 @@
                    :title-type "inherit"}
          :sub-heading {:text "Braid is a new kind of group collaboration tool,\ndesigned for teams that <em>hate</em> interruptions\nand just want to <em>get shit done</em>.\n\nSay goodbye to chatrooms, and say hello to Braid!"
                        :color "#fff"
-                       :weight "200"}
+                       :weight "400"}
          :featured-image {:url "/rookie/images/rookie-phone.png"
                           :height "15em"}
          :background {:image-url "/braid/images/hero-bg-people.jpg"
