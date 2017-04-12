@@ -43,11 +43,22 @@
 
    (at-media {:max-width "575px"}
              [:.content
-              [:.text
-               {:column-count 1
-                :column-gap 0
-                :padding 0
-                :text-align "center"}]])])
+              [:h1.title
+               {:padding-bottom "1rem"
+                :text-align "center"}]
+              [:.lower
+               {:flex-direction "column"}
+               [:div.left
+                {:width "100%"
+                 :order 1}
+                [:.text-content
+                 {:margin-top "1rem"}]]
+               [:div.spacer
+                {:display "hidden"
+                 :width 0}]
+               [:div.right
+                {:width "100%"
+                 :order -1}]]])])
 
 (defn component [data]
   [:div.letter
