@@ -64,7 +64,6 @@
        (button-mixin (get-in data [:button :signup :colors]))
        {:margin-left "1em"}]
 
-
       [:a.button.demo
        (button-mixin (get-in data [:button :demo :colors]))
 
@@ -74,13 +73,7 @@
 
       (email-field/styles (data :form))]]
 
-    [:div.right
-     [:video
-      {:position "absolute"
-       :left "1.25em"
-       :top "-2em"
-       :border-radius "2em"}]]]
-
+    [:div.right]]
 
    (at-media {:max-width "700px"}
              [:&
@@ -98,13 +91,24 @@
                [:h1
                 {:font-size "1.65em"
                  :white-space "normal"
-                 :width "20rem"}]
+                 :width "20rem"
+                 :text-align "center"}]
 
                ["> p"
                 {:font-size "1.15em"
                  :color (get-in data [:sub-heading :mobile-color])
                  :width "17rem"
-                 :white-space "normal"}]]])])
+                 :white-space "normal"
+                 :text-align "center"}]
+
+               [:.cta
+                {:flex-direction "column"}
+                [:.button
+                 {:margin-top "1em"
+                  :width "15em"
+                  :text-align "center"}]
+                [:a.button.signup
+                 {:margin-left 0}]]]])])
 
 
 (defn hero [data]
