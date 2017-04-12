@@ -430,7 +430,59 @@
                          :mac     ""
                          :windows ""
                          :ios     ""
-                         :android ""}}}}
+                         :android ""}}}
+
+;=========================================================================================
+; braid - Careers
+;=========================================================================================
+
+ "braid-careers-title"
+ {:template "one-feature"
+  :data {:page-padding {:top "3em"}
+         :heading   {:text "Careers"
+                     :color "#fff"
+                     :transform "uppercase"}
+         :description {:color "#fff"
+                       :text "We’re looking for passionate, hard-working people."}
+         :background {:size "cover"
+                      :height "300px"
+                      :image ""
+                      :color "#F74768"}}}
+ "braid-careers-text"
+ {:template "text"
+  :data {:sections [{:title "Openings"
+                     :text "Currently we do not have any listed positions, but we are always looking to recruit top talent,
+                     feel free to send us your resume or website to hi@braidchat.com and tell us about the type of position you are looking for."}]}}
+
+ "braid-com-careers-other-benefits"
+ {:template "three-features"
+  :data     {:styles  {:background "#d3e0fe"}
+             :title {:copy "Just a few of the reasons you're going to love Braid."
+                     :transform ""
+                     :padding "1em"
+                     :size  "1.75em"}
+             :column-title {:size "1.25em"
+                            :transform ""}
+             :heading {:color "#444"}
+             :image {:width "4em"}
+             :column  3
+             :columns [{:image "/braid/images/fast-icon-braid-chat.svg"
+                        :title       "Fast"
+                        :description "Built with Clojure - so you know it's not going to be holding you back."}
+
+                       {:image       "/braid/images/open-source.png"
+                        :title       "Open Source"
+                        :description "Braid is an Open Source project built with Clojure.
+                                   Everything from the fonts we use to the documentation are made by the
+                                   community."}
+
+                       {:image       "/braid/images/braid-security-lock.svg"
+                        :title       "Secure"
+                        :description "Braid's conversations receive a 256-bit SSL encryption."}]}}}
+
+;==============================================
+;Data for templates not being used
+;==============================================
 
 "braid-com-how-it-works"
 {:template "video"
