@@ -478,7 +478,24 @@
 
                        {:image       "/braid/images/braid-security-lock.svg"
                         :title       "Secure"
-                        :description "Braid's conversations receive a 256-bit SSL encryption."}]}}}
+                        :description "Braid's conversations receive a 256-bit SSL encryption."}]}}
+;=========================================================================================
+; braid - Pricing
+;=========================================================================================
+
+ "braid-pricing-title"
+  {:template "one-feature"
+   :data {:page-padding {:top "3em"}
+          :heading   {:text "Pricing"
+                      :color "#fff"
+                      :transform "uppercase"}
+          :description {:color "#fff"
+                        :text "Find a plan that's right for you."}
+          :background {:size "cover"
+                       :height "300px"
+                       :image ""
+                       :color "#F17130"}}}
+
 
 ;==============================================
 ;Data for templates not being used
