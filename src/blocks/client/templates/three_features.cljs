@@ -16,7 +16,7 @@
       :text-align "center"
       :padding-top (get-in data [:title :padding])
       :color  (get-in data [:title])
-      :font-size      "1.75em"
+      :font-size      (get-in data [:title :size])
       :letter-spacing (get-in data [:title :spacing])}]
 
     [:.columns
