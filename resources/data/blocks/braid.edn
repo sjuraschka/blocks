@@ -199,10 +199,10 @@
  "braid-com-other-benefits"
  {:template "three-features"
   :data     {:styles  {:background "#fff"}
-             :title {:copy "Just a few of the reasons you're going to love Braid."
-                     :transform ""
-                     :padding "1em"
-                     :size  "1.75em"}
+             :title {};:copy "Just a few of the reasons you're going to love Braid."
+                     ;:transform ""}
+                     ;:padding "1em"}
+                     ;:size  "2.2em"}
              :column-title {:size "1.25em"
                             :transform ""}
              :heading {:color "#444"}
