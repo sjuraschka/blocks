@@ -37,7 +37,6 @@
        :font-weight (get-in data [:heading :weight])
        :color (get-in data [:heading :color])
        :white-space "pre"
-       :font-family "-apple-system, BlinkMacSystemFont, Roboto,\"Droid Sans\",\"Helvetica Neue\",Helvetica, Arial, sans-serif"
        :line-height "0.9em"
        :letter-spacing "0.1em"
        :text-transform (get-in data [:heading :title-type])}]
@@ -116,8 +115,10 @@
      [:p {:dangerouslySetInnerHTML
           {:__html (get-in data [:sub-heading :text])}}]
      [:div.cta
-      [:a.button.demo {:href ""} (get-in data [:button :demo :text])]
-      [:a.button.signup {:href ""} (get-in data [:button :signup :text])]]]
+      [:a.button.demo {:href (get-in data [:button :demo :url])}
+       (get-in data [:button :demo :text])]
+      [:a.button.signup {:href (get-in data [:button :signup :url])}
+       (get-in data [:button :signup :text])]]]
     [:div.content.right]]])
 
 

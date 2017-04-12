@@ -42,12 +42,14 @@
 
 
                 :button {:demo {:text "Watch the Demo"
+                                :url "#video"
                                 :colors {:text "#fff"
                                          :bg "#FD6275"
                                          :bg-hover "#E64A5E"
                                          :bg-active "#E64A5E"
                                          :shadow "0 1px 2px 0 rgba(152,31,59,.2)"}}
                          :signup {:text "Create Your Team"
+                                  :url "#signup"
                                   :colors {:text "#575757"
                                            :bg "#EDEDED"
                                            :bg-hover "#D1CBCB"
@@ -326,7 +328,8 @@
 
  "braid-com-cta"
  {:template "cta"
-  :data     {:heading     {:text  "Get started by creating a team"
+  :data     {:anchor "signup"
+             :heading     {:text  "Get started by creating a team"
                            :color "#fff"}
              :description {:text  "No credit card or long term commitment to get started."
                            :color "#fff"}

@@ -26,6 +26,7 @@
 
 (defn component [data]
   [:section.cta
+    [:a {:name (data :anchor)}]
     [:div.content
       [:div.text
         [:h1 (get-in data [:heading :text])]

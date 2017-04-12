@@ -60,6 +60,7 @@
   (let [play? (r/atom false)]
     (fn [data]
       [:div.video
+       [:a {:name (data :anchor)}]
        [:div.content
         [:h1 (get-in data [:heading :title])]
         [:h2 (get-in data [:subtitle :text])]
