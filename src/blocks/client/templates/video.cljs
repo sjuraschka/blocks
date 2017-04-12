@@ -6,7 +6,7 @@
 
 (defn styles [data]
   [:.video
-   {:padding "4em"
+   {:padding "2em"
     :background (get-in data [:styles :background])}
 
    [:.content
@@ -18,7 +18,7 @@
 
     [:h1
      {:color (get-in data [:heading :color])
-      :font-size "2.2rem"
+      :font-size "1.75rem"
       :font-weight "bolder"
       :position "relative"
       :z-index 0}]
@@ -31,11 +31,20 @@
     [:.video
      {:width "100%"
       :max-height "80vh"}
+
      [:iframe
       {:background "black"}]]
 
     [:p {:padding "1em"
-         :color "#fff"}]]])
+         :color "#fff"}]]
+   (at-media {:max-width "700px"}
+     [:&
+      {:padding "2em 0"}
+      [:.content
+       [:.video
+        [:a.thumbnail
+         [:img
+          {:width "90vw"}]]]]])])
 
 (defn video-type [id]
   (cond
