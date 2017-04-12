@@ -11,14 +11,16 @@
     :align-items "center"
     :background-color (data :background)}
    [:.section-title
-    {:padding-top "4rem"
-     :font-size "2.2em"
+    {:text-align "center"
+     :padding-top "4rem"
+     :font-size (get-in data [:heading :title :font-size])
      :font-weight "bolder"
      :color (get-in data [:heading :title :color])}]
    [:.section-subtitle
     {:font-size "1.25em"
      :color (get-in data [:heading :subtitle :color])
-     :padding-bottom "2rem"}]
+     :padding "1rem"
+     :text-align "center"}]
    [:.options
     {:display         "flex"
      :justify-content "space-between"
@@ -33,7 +35,7 @@
       :box-shadow     "0 8px 15px 0px rgba(0,0,0,0.05)"
       :border         "1px solid #fafafa"
       :box-sizing     "border-box"
-      :min-width      "18em"
+      :min-width      "20em"
       :height         "25em"
       :margin-right   "2em"
       :text-align     "center"
@@ -63,8 +65,8 @@
        {:color       (get-in data [:title-color])
         :font-weight "bolder"
         :font-size   "1.25em"}]
-      [:h2
-       {}]
+      [:h2]
+
 
       [:.price
        {:margin-top "1em"}
@@ -116,15 +118,15 @@
         :left       0
         :right      0}]]]]
 
-   (at-media {:max-width "950px"}
-             [:section.pricing
-              {:display "flex"
-               :flex-direction "column"
-               :flex-wrap "wrap"}
-              [:.options
-               {:display "flex"
-                :flex-direction "column"
-                :flex-wrap "wrap"}]])])
+   (at-media {:max-width "750px"}
+     [:&
+      [:.options
+       {:flex-direction "column"
+        :padding "1em"}
+       [:.option
+        {:margin 0
+         :width "90vw"
+         :margin-bottom "2em"}]]])])
 
 (defn component [data]
   [:section.pricing
