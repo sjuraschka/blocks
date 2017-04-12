@@ -36,8 +36,6 @@
            "braid-com-conversations"
            "braid-social-proof"
            "braid-com-letter"
-           ;"braid-com-how-it-works"
-           ;"braid-com-hero"
            "braid-com-benefit-better-conversations"
            "braid-com-benefit-focus"
            "braid-com-benefit-deep-integrations"
@@ -49,22 +47,42 @@
            "braid-pre-footer"
            "braid-com-footer"]}
 
-
  {:domain "www.braidchat.com"
-  :url "/pricing"
+  :url "/careers/"
+  :meta {:title "Careers at Braid - Work Better Together"
+         :description "Braid is a group chat application that promotes productive team communication, while still respecting each individual's need for focus. Instead of chatrooms, Braid takes a new approach: discrete conversations and tags."
+         :image "url(/braid/images/braid-icon-256.png)"}
   :favicon "/braid/images/braid-favicon.png"
-  :styles {:fonts {:body {:name "Poppins"
+  :colors {}
+  :styles {:fonts {:body {:name "Roboto"
                           :source "google"
                           :weight 300}
-                   :headings {:name "Poppins"
+                   :headings {:name "Roboto"
                               :source "google"
                               :weight 400}}}
+
   :blocks ["braid-com-header"
-           "braid-com-pricing"
+           "braid-careers-title"
+           "braid-careers-text"
+           "braid-com-careers-other-benefits"
+           "braid-pre-footer"
            "braid-com-footer"]}
 
  {:domain "www.braidchat.com"
-  :url "/downloads"
+   :url "/pricing/"
+   :favicon "/braid/images/braid-favicon.png"
+   :styles {:fonts {:body {:name "Poppins"
+                           :source "google"
+                           :weight 300}
+                    :headings {:name "Poppins"
+                               :source "google"
+                               :weight 400}}}
+   :blocks ["braid-com-header"
+            "braid-com-pricing"
+            "braid-com-footer"]}
+
+ {:domain "www.braidchat.com"
+  :url "/downloads/"
   :favicon "/braid/images/braid-favicon.png"
   :styles {:fonts {:body {:name "Muli"
                           :source "google"
@@ -113,10 +131,6 @@
            "rookie-hero-testimonial"
            "rookie-pitch"
            "rookie-three-features"
-           ;"rookie-video-hero"
-           ;"rookie-hero"
-           ;"rookie-testimonial"
-           ;"rookie-how-it-works"
            "rookie-step-1"
            "rookie-step-2"
            "rookie-step-3"
@@ -148,7 +162,6 @@
            "rookie-pre-footer"
            "rookie-footer"
            "rookie-analytics"]}
-
 
 
  {:domain "www.getrookie.com"
@@ -255,10 +268,7 @@
            "rookie-pre-footer"
            "rookie-footer"
            "rookie-analytics"]}
-
-
-
-
+ 
  {:domain "courtneyforlife.getrookie.com"
   :url "/"
   :meta {:title "Train with Courtney Ustrzycki online with Rookie"
