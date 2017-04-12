@@ -266,7 +266,7 @@
  {:template "pricing"
   :data     {:background        "#f7f8f9"
              :heading           {:title    {:text      "We have a plan for your team"
-                                            :color     "#384d51"
+                                            :color     "#444"
                                             :font-size "1.75em"}
 
                                  :subtitle {:text      "Start your team on Braid, try it out it's free! No credit card required."
