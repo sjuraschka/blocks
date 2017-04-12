@@ -393,7 +393,7 @@
                         :categories [{:name "Open Source"
                                       :url "https://www.braidchat.org"}
                                      {:name "Pricing"
-                                      :url "./pricing"}]}
+                                      :url "/pricing/"}]}
                        {:title      "Company"
                         :categories [{:name "Why we built Braid?"
                                       :url "https://github.com/braidchat/braid#motivation"
