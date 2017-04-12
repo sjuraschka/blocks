@@ -56,9 +56,6 @@
                                            :bg-active "#ACA7A7"
                                            :shadow "0 1px 2px 0 rgba(152,31,59,.2)"}}}}}
 
-
-
-
  "braid-com-hero"
  {:template "hero-middle"
   :data     {:heading     {:text   "Work Better Together"
