@@ -81,6 +81,7 @@
    :blocks ["braid-com-header"
             "braid-pricing-title"
             "braid-com-pricing"
+            "braid-pre-footer"
             "braid-com-footer"]}
 
  {:domain "www.braidchat.com"
@@ -93,7 +94,9 @@
                               :source "google"
                               :weight 400}}}
   :blocks ["braid-com-header"
+           "braid-downloads-title"
            "braid-com-downloads"
+           "braid-pre-footer"
            "braid-com-footer"]}
 
 

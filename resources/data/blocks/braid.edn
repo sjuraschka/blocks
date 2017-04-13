@@ -496,11 +496,26 @@
                        :image ""
                        :color "#F17130"}}}
 
+;=========================================================================================
+; braid - Downloads
+;=========================================================================================
+
+  "braid-downloads-title"
+ {:template "one-feature"
+  :data {:page-padding {:top "3em"}
+         :heading   {:text "Downloads"
+                     :color "#444"
+                     :transform "uppercase"}
+         :description {:color "#444"
+                       :text "Start using Braid on your go-to device"}
+         :background {:size "cover"
+                      :height "300px"
+                      :gradient "linear-gradient(-178deg, #55C1C4 0%, #BEF3F4 100%)"}}}
 
 ;==============================================
-;Data for templates not being used
+;Video
 ;==============================================
-
+;
  "braid-com-how-it-works"
   {:template "video"
    :data     {:anchor "video"
@@ -511,3 +526,44 @@
                          :color "#fff"}
               :video    {:id        "YeH-8_PUXPk"
                          :thumbnail "/braid/images/video-player.png"}}}}
+
+
+;==============================================
+;Data for templates not being used
+;==============================================
+
+"braid-com-hero"
+{:template "hero-middle"
+ :data     {:heading     {:text   "Work Better Together"
+                          :color  "#384d51"
+                          :size   "3.5em"
+                          :weight "bold"}
+            :padding     "3em"
+            :sub-heading {:text  "Braid is a new kind of group collaboration tool,\ndesigned for teams that <em>hate</em> interruptions\nand just want to <em>get shit done</em>.\n\nSay goodbye to chatrooms, and say hello to Braid!"
+                          :color "#777777"}
+            :background  {:color "#d9e8ea"
+                          :image-url "/braid/images/hero-bg-people.jpg"
+                          :size "cover"}
+            :form        {:placeholder "you@yourgroup.com"
+                          :before      {:text  "Get a free Braid group for your team, and have it up and running in seconds:"
+                                        :color "#777777"}
+                          :after       {:text  "\n\n\n\n\n\nIntrigued, but want to learn more?\nKeep scrolling to discover how Braid is different."
+                                        :icon  \uf107
+                                        :color "#777777"}
+                          ;:autofocus true
+                          :button      {:text   "Create A Group"
+                                        :color  "#fff"
+                                        :colors {:text      "#fff"
+                                                 :bg        "#FD6275"
+                                                 :bg-hover  "#d4460f"
+                                                 :bg-active "#d6490c"}}}}}
+
+
+"braid-com-why"
+{:template "one-feature"
+ :data     {:heading     {:text  "More productive group communication"
+                          :color "#fff"}
+            :background  {:color "#65a8b6"}
+            :description {:text  "Don't let your chat platform be a never-ending meeting."
+                          :color "#fff"}}}
+
