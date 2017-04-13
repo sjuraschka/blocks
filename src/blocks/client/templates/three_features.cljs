@@ -9,8 +9,6 @@
     :color (get-in data [:heading :color])}
 
    [:.content
-    {};:padding "4em 3em"
-
     [:h1
      {:text-transform (get-in data [:title :transform])
       :text-align "center"
@@ -73,15 +71,12 @@
 
    (at-media {:max-width "700px"}
      [:.content
-      {:height "220vh"}
       [:.columns
-       {:display "flex"
-        :flex-direction "column"
-        :align-items "center"
-        :justify-content "center"}
+       {:display "block"}
 
        [:column
         {:padding 0
+         :margin "1em"
          :text-align "center"
          :max-width "100%"
          :flex-basis 0
