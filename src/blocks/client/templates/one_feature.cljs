@@ -4,6 +4,7 @@
 (defn styles [data]
   [:.one-feature
    {:background-image (str "url(" (get-in data [:background :image]) ")")
+    :background (get-in data [:background :gradient])
     :background-color (get-in data [:background :color])
     :background-size (get-in data [:background :size])
     :background-repeat "no-repeat"
