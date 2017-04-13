@@ -19,7 +19,6 @@
      {:color (get-in data [:heading :title :color])
       :font-size "1.75rem"}]
 
-
     [:h2
      {:font-size "1.25em"
       :color (get-in data [:heading :subtitle :color])
