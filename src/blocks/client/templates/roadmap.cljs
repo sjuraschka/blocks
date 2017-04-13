@@ -1,14 +1,15 @@
 (ns blocks.client.templates.roadmap
-  (:require [blocks.client.template :refer [template]]))
+  (:require [blocks.client.template :refer [template]]
+            [garden.stylesheet :refer [at-media]]))
 
-(def pad "3em")
+(def pad "2em")
 
 (defn styles [data]
   [:.roadmap
    {:background (data :background)}
 
    [:.content
-    {:padding "6em 3em"
+    {:padding pad
      :display "flex"
      :flex-direction "column"
      :justify-content "center"
@@ -16,7 +17,7 @@
 
     [:h1
      {:color (get-in data [:heading :title :color])
-      :font-size "2.2em"
+      :font-size "1.75rem"
       :font-weight "bolder"
       :-webkit-font-smoothing "antialiased"}]
 
@@ -32,12 +33,11 @@
       :justify-content "space-between"}
 
      [:.phase
-      {:flex-basis "25%"
+      {:margin-right "1em"
        :background (get-in data [:phase :background])
        :box-shadow "0 8px 15px 0px rgba(0,0,0,0.05)"
-       :border "1px solid #fafafa"
+       :border "1px solid #eee"
        :padding "0.5em"
-       :margin-right "2em"
        :border-radius "0.25em"}
 
       [:&:last-child
@@ -53,7 +53,7 @@
         :padding "0.5em"
         :border-radius "0.25em"
         :border "1px solid #90b0fd"
-        :background "f4f7ff"
+        :background "#f4f7ff"
         :position "relative"
         :color "#384d51"}
 
@@ -61,7 +61,9 @@
         {:margin-bottom 0}]
 
        [:&.complete
-        {:padding-right "1em"}
+        {:padding-right "2em"
+         :background "#ecf8f9"
+         :border "1px solid #55c1c4"}
 
         [:&:after
          {:content "\"\uf00c\""
@@ -69,8 +71,17 @@
           :position "absolute"
           :right "0.5em"
           :top "0.5em"
-          :color "#3D75FB"
-          :font-size "0.85em"}]]]]]]])
+          :color "#55c1c4"
+          :font-size "0.85em"}]]]]]]
+   (at-media {:max-width "600px"}
+     [:&
+      [:.content
+       [:.kanban
+        {:flex-direction "column"}
+        [:.phase
+         {:margin-right 0
+          :margin-bottom "1em"
+          :width "20rem"}]]]])])
 
 (defn component [data]
   [:section.roadmap
