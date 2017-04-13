@@ -14,7 +14,7 @@
              :menu       [{:text "Pricing"
                            :url  "/pricing/"}
                           {:text "Downloads"
-                           :url  "/downloads"}
+                           :url  "/downloads/"}
                           {:text "Open Source"
                            :url  "https://www.braidchat.org/"}
                           {:text  "Sign In"
@@ -56,32 +56,9 @@
                                            :bg-active "#ACA7A7"
                                            :shadow "0 1px 2px 0 rgba(152,31,59,.2)"}}}}}
 
- "braid-com-hero"
- {:template "hero-middle"
-  :data     {:heading     {:text   "Work Better Together"
-                           :color  "#384d51"
-                           :size   "3.5em"
-                           :weight "bold"}
-             :padding     "3em"
-             :sub-heading {:text  "Braid is a new kind of group collaboration tool,\ndesigned for teams that <em>hate</em> interruptions\nand just want to <em>get shit done</em>.\n\nSay goodbye to chatrooms, and say hello to Braid!"
-                           :color "#777777"}
-             :background  {:color "#d9e8ea"
-                           :image-url "/braid/images/hero-bg-people.jpg"
-                           :size "cover"}
-             :form        {:placeholder "you@yourgroup.com"
-                           :before      {:text  "Get a free Braid group for your team, and have it up and running in seconds:"
-                                         :color "#777777"}
-                           :after       {:text  "\n\n\n\n\n\nIntrigued, but want to learn more?\nKeep scrolling to discover how Braid is different."
-                                         :icon  \uf107
-                                         :color "#777777"}
-                           ;:autofocus true
-                           :button      {:text   "Create A Group"
-                                         :color  "#fff"
-                                         :colors {:text      "#fff"
-                                                  :bg        "#FD6275"
-                                                  :bg-hover  "#d4460f"
-                                                  :bg-active "#d6490c"}}}}}
-
+ "braid-com-conversations"
+ {:template "braid-conversations"
+  :data     {:background {:color ""}}}
 
  "braid-social-proof"
  {:template "social-proof"
@@ -93,24 +70,12 @@
                     {:image "/braid/images/mealsurfers-logo.png"}]
          :styles {:color "#ccc"}}}
 
- "braid-com-conversations"
- {:template "braid-conversations"
-  :data     {:background {:color ""}}}
-
- "braid-com-why"
- {:template "one-feature"
-  :data     {:heading     {:text  "More productive group communication"
-                           :color "#fff"}
-             :background  {:color "#65a8b6"}
-             :description {:text  "Don't let your chat platform be a never-ending meeting."
-                           :color "#fff"}}}
-
  "braid-com-letter"
  {:template "letter"
   :data     {:heading    {:text        "We love our small and organized discussions, and we think you will too."
                           :title-color "#444"}
              :background "#fff"
-             :paragraph  {:color "#aaa"
+             :paragraph  {:color "#888"
                           :text
                             "Chatrooms are like a group of people, each with a loudspeaker, trying to get things done.
                              <span>Chatrooms cause FOMO</span>, constant checking Slack, HipChat and other group chat
@@ -159,7 +124,8 @@
                            :font-size "1.15em"}
 
              :background  {:color "#F7F8F9"}
-             :description {:text  "With search you no longer have to scroll or try to remember when you chatted about this or that. Search like you do in your inbox."
+             :description {:text  "With search you no longer have to scroll or try to remember when you chatted about this
+             or that. Search like you do in your inbox."
                            :color "#777"
                            :size "0.95em"}
 
@@ -173,6 +139,7 @@
 
              :image       {:image-url "/braid/images/search-braid-chat.png"
                            :position  "right"}}}
+
  "braid-com-benefit-deep-integrations"
  {:template "feature-highlight"
   :data      {:heading     {:text  "Awesome Integrations"
@@ -377,27 +344,23 @@
              :nav {:color {:hover "#098BEE"}}
              :button {:athlete  {:image "/rookie/images/app-rookie-training-video-capture.png"}
                       :coach    {:image "/rookie/images/chrome-desktop-app-rookie-training.png"}}
-             :social {:instagram {:url "https://www.instagram.com/braidchat"
-                                  :icon ""}
-
-                      :facebook {:url "https://www.facebook.com/braidchat"
-                                 :image ""}
-
-                      :twitter {:url "https://www.twitter.com/braidchat"
-                                :icon ""}
-
-                      :linkedin {:url "https://www.linkedin.com/company/braidchat"
-                                 :icon ""}}
+             :social {:facebook {:url "https://www.facebook.com/braidchat"}
+                      :twitter {:url "https://www.twitter.com/braidchat"}}
              :columns [
                        {:title      "Product"
-                        :categories [{:name "Open Source"
-                                      :url "https://www.braidchat.org"}
-                                     {:name "Pricing"
-                                      :url "/pricing/"}]}
+                        :categories [{:name  "Sign In"
+                                      :url   "https://braid.chat/"}
+                                     {:name "Downloads"
+                                      :url  "/downloads/"}
+                                     {:name "Open Source"
+                                      :url "https://www.braidchat.org"}]}
+
                        {:title      "Company"
                         :categories [{:name "Why we built Braid?"
                                       :url "https://github.com/braidchat/braid#motivation"
                                       :target "_blank"}
+                                     {:name "Pricing"
+                                      :url "/pricing/"}
                                      {:name "Careers"
                                       :url "/careers/"}]}
                        ;{:name "Get In Touch"}]}

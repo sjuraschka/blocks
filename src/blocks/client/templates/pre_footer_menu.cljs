@@ -137,15 +137,14 @@
                         :href (category :url)}(category :name)]))]))]
 
     [:div.column.app-info
-     [:div.social
-      [:a.icon.instagram {:target "_blank"
-                          :href (get-in data [:social :instagram :url])}]
-      [:a.icon.twitter   {:target "_blank"
-                          :href (get-in data [:social :twitter :url])}]
-      [:a.icon.linkedin  {:target "_blank"
-                          :href (get-in data [:social :linkedin :url])}]
-      [:a.icon.facebook  {:target "_blank"
-                          :href (get-in data [:social :facebook :url])}]]]]])
+     (into
+       [:div.social]
+       (for [network [:instagram :twitter :linkedin :facebook]]
+         (when (get-in data [:social network :url])
+           [:a.icon
+            {:class (name network)
+             :target "_blank"
+             :href (get-in data [:social network :url])}])))]]])
 
 ;buttons for appstore or desktop app
 #_[:a.app {:href "#"}
