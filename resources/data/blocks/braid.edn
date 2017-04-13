@@ -201,7 +201,7 @@
              :title {};:copy "Just a few of the reasons you're going to love Braid."
                      ;:transform ""}
                      ;:padding "1em"}
-                     ;:size  "2.2em"}
+                     ;:size  "1.75em"}
              :column-title {:size "1.25em"
                             :transform ""}
              :heading {:color "#444"}

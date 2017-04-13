@@ -22,6 +22,7 @@
     [:h2
      {:font-size "1.25em"
       :color (get-in data [:heading :subtitle :color])
+      :padding-top "1rem"
       :padding-bottom "2rem"
       :text-align "center"
       :-webkit-font-smoothing "antialiased"}]

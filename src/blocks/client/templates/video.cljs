@@ -6,7 +6,7 @@
 
 (defn styles [data]
   [:.video
-   {:padding "2em"
+   {:padding "3em"
     :background (get-in data [:styles :background])}
 
    [:.content
@@ -21,12 +21,15 @@
       :font-size "1.75rem"
       :font-weight "bolder"
       :position "relative"
-      :z-index 0}]
+      :z-index 0
+      :-webkit-font-smoothing "antialiased"}]
 
     [:h2
      {:color (get-in data [:subtitle :color])
+      :margin-top "1rem"
       :font-size "1.25em"
-      :padding-bottom "2em"}]
+      :padding-bottom "1em"
+      :-webkit-font-smoothing "antialiased"}]
 
     [:.video
      {:width "100%"

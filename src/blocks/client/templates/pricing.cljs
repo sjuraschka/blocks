@@ -17,9 +17,10 @@
      :font-weight "bolder"
      :color (get-in data [:heading :title :color])}]
    [:.section-subtitle
-    {:font-size "1.25em"
+    {:font-size "1.25rem"
      :color (get-in data [:heading :subtitle :color])
-     :padding "1rem"
+     :padding "0 1rem"
+     :padding-top "1rem"
      :text-align "center"}]
    [:.options
     {:display         "flex"

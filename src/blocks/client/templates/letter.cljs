@@ -13,7 +13,7 @@
      :padding "1em"}
 
     [:h1.title
-     {:font-size "1.85em"
+     {:font-size "1.75em"
       :padding "1em"
       :color (get-in data [:heading :title-color])
       :font-weight "bolder"}]
