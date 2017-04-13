@@ -18,7 +18,8 @@
      {:color (get-in data [:heading :color])
       :font-weight "bolder"
       :font-size "1.75rem"
-      :padding-bottom "1em"}]
+      :padding-bottom "1em"
+      :-webkit-font-smoothing "antialiased"}]
 
     [:p
      {:color (get-in data [:description :color])

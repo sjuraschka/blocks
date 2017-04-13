@@ -5,7 +5,7 @@
   (let [padding "1.5em"]
 
     [:.features-grid
-     {:padding-top "3em"
+     {:padding-top "2em"
       :background (get-in data [:styles :background-color])}
 
      [:.content
@@ -16,8 +16,9 @@
        :padding padding}
 
       [:h1
-       {:font-size "2.2em"
-        :font-weight "bolder"
+       {:text-align "center"
+        :-webkit-font-smoothing "antialiased"
+        :font-size "1.75em"
         :color (get-in data [:styles :main-color])}]
 
       [:h2.subtitle
@@ -47,6 +48,7 @@
         [".icon[data-icon]::before"
          {:content "attr(data-icon)"
           :font-family "FontAwesome"
+          :-webkit-font-smoothing "antialiased"
           :display "block"
           :margin-bottom "0.5rem"
           :font-size "3em"
