@@ -5,7 +5,7 @@
   (let [padding "1.5em"]
 
     [:.features-grid
-     {:padding-top "2em"
+     {:padding-top "2rem"
       :background (get-in data [:styles :background-color])}
 
      [:.content
@@ -23,6 +23,7 @@
 
       [:h2.subtitle
        {:font-size "1.25em"
+        :padding-top "1rem"
         :color (get-in data [:styles :description-color])
         :padding-bottom "2em"}]
 
