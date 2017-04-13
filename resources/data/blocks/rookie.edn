@@ -331,17 +331,19 @@
 
  "rookie-product-feature-2"
  {:template "feature-highlight"
-  :data     {:anchor "invite"
+  :data     {:alignment "center"
+             :anchor "invite"
              :heading     {:step           2
                            :text           "Invite your athletes + clients"
                            :color          "#2E3944"
                            :font-size      "1.15em"
                            :font-weight     100
                            :spacer "0.05em"
-                           :text-transform ""}
+                           :text-transform ""
+                           :align "center"}
              :circle {:color "#232B69"
                       :background "#fff"}
-             :alignment "center"
+
              :background  {:color "#FDFEFE"}
              :spacing {:left  "2.5em"
                        :right "2em"}
@@ -355,17 +357,19 @@
 
  "rookie-product-feature-3"
  {:template "feature-highlight"
-  :data     {:anchor "review"
+  :data     {:alignment "center"
+             :anchor "review"
              :heading     {:step           3
                            :text           "Assign workouts and give feedback"
                            :color          "#2E3944"
                            :font-size      "1.15em"
                            :font-weight     100
                            :spacer "0.05em"
-                           :text-transform ""}
+                           :text-transform ""
+                           :align "center"}
              :circle {:color "#232B69"
                       :background "#fff"}
-             :alignment "center"
+
              :background  {:color "#FDFEFE"}
              :spacing {:left  "2.5em"
                        :right "2em"}
@@ -379,17 +383,19 @@
 
  "rookie-product-feature-4"
  {:template "feature-highlight"
-  :data     {:anchor "get-paid"
+  :data     {:alignment "center"
+             :anchor "get-paid"
              :heading     {:step           4
                            :text           "Get Paid"
                            :color          "#2E3944"
                            :font-size      "1.15em"
                            :font-weight     100
                            :spacer "0.05em"
-                           :text-transform ""}
+                           :text-transform ""
+                           :align "center"}
              :circle {:color "#232B69"
                       :background "#fff"}
-             :alignment "center"
+
              :background  {:color "#FDFEFE"}
              :spacing {:left  "2.5em"
                        :right "2em"}
