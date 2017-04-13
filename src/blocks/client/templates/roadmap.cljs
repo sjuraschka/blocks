@@ -17,9 +17,8 @@
 
     [:h1
      {:color (get-in data [:heading :title :color])
-      :font-size "1.75rem"
-      :font-weight "bolder"
-      :-webkit-font-smoothing "antialiased"}]
+      :font-size "1.75rem"}]
+
 
     [:h2
      {:font-size "1.25em"
