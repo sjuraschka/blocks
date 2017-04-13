@@ -18,13 +18,13 @@
      {:color (get-in data [:heading :color])
       :font-weight "bolder"
       :font-size "1.75rem"
-      :padding-bottom "1em"
       :-webkit-font-smoothing "antialiased"}]
 
     [:p
      {:color (get-in data [:description :color])
+      :padding-top "1rem"
       :font-size "1.25rem"
-      :margin-bottom "2em"}]
+      :margin-bottom "2rem"}]
 
     (email-field/styles (data :form))]
 
@@ -32,7 +32,7 @@
      [:&
       {:padding "0 2rem"
        :padding-top "2rem"
-       :padding-bottom "1em"}])])
+       :padding-bottom 0}])])
 
 (defn component [data]
   [:section.cta
