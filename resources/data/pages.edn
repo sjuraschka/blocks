@@ -304,7 +304,7 @@
                           :weight 400}
                    :headings {:name "Roboto"
                               :source "google"
-                              :weight 700}}}
+                              :weight 900}}}
   :assets ["rookie_intech"
            "rookie_shared"
            "rookie"]
@@ -312,5 +312,29 @@
            "intech-rookie-hero"
            "intech-rookie-values-text"
            "intech-rookie-quote"
-           "intech-rookie-footer"]}]
+           "intech-rookie-footer"]}
+
+ {:domain "bodyclub.getrookie.com"
+  :url "/"
+  :meta {:title "Train with Body Club"
+         :description "Affordable personal training to acheive your goals."
+         :image "url (/rookie/images/rookie-coaching-logo.png)"}
+  :styles {:fonts {:body {:name "Source Sans Pro"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Source Sans Pro"
+                              :source "google"
+                              :weight 500}}}
+  :assets ["rookie_bodyclub"
+           "rookie_shared"
+           "rookie"]
+  :blocks ["bodyclub-rookie-header"
+           "bodyclub-rookie-hero"
+           "bodyclub-value-1"
+           "bodyclub-value-2"
+           "bodyclub-value-3"]}]
+
+
+
+
 

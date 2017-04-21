@@ -15,8 +15,8 @@
     :height (data :height)
     :width            "100vw"
     :background-color (get-in data [:background :color])
-    :background-image "linear-gradient(82deg, #A4BAC0 16%, #95C5D2 92%)"
-    :background-size (get-in data [:background :size])
+    :background-image (get-in data [:background :gradient])
+    :background-size  (get-in data [:background :size])
     :background-repeat "no-repeat"
     :background-position (get-in data [:background :position] "right bottom")}
 
@@ -24,33 +24,32 @@
     {:width "100vw"}
 
     [:div.right
-     {;:width "100%"
-      :position "absolute"
-      :right 0
-      :bottom 0
-      :top 0
-      :height            "800px"
-      :width "960px"}
+     {:position  "absolute"
+      :right     0
+      :bottom    0
+      :top       0
+      :height    "800px"
+      :width     "960px"}
 
      [:div.image
       {:position "absolute"
-       :right 0
-       :top 0
-       :bottom 0
+       :right    0
+       :top      0
+       :bottom   0
        :background-image  (str "url(" (get-in data [:featured-image :url]) ")")
        :background-repeat "no-repeat"
        :background-size "100%"
-       :height            "800px"
-       :width "960px"}
+       :height (get-in data [:featured-image :height])
+       :width (get-in data [:featured-image :width])}
 
       [:.caption
        {:position "relative"
-        :z-index 50
-        :top "15em"
-        :left "25em"
+        :z-index  50
+        :top      "15em"
+        :left     "25em"
         :font-size "9px"
         :white-space "pre"
-        :opacity "0.5"}
+        :opacity     "0.5"}
 
 
        [:div.coach-name
@@ -58,8 +57,8 @@
 
        [:a.coach-link
         {:text-decoration "none"
-         :text-transform "uppercase"
-         :color "#3D50CF"}
+         :text-transform  "uppercase"
+         :color           "#3D50CF"}
         [:&::after
          (fontawesome-mixin \uf138)
          {:padding-left "0.5em"}]
@@ -80,13 +79,17 @@
       {:font-size (get-in data [:heading :size])
        :font-weight (get-in data [:heading :weight])
        :color (get-in data [:heading :color])
+       :font-family (data :font-family)
        :white-space "pre"
-       :line-height "0.9em"
+       :line-height (get-in data [:heading :line])
        :letter-spacing "0.1em"
-       :text-transform (get-in data [:heading :title-type])}]
+       :text-transform (get-in data [:heading :title-type])}
+      [:span {:color ""}]]
+
 
      [:p
-      {:font-size "1.4em"
+      {:font-family (data :font-family)
+       :font-size "1.4em"
        :margin [["0.75em" 0]]
        :width (get-in data [:sub-heading :width])
        :text-align "left"
@@ -127,7 +130,6 @@
                 {:font-size "1.65em"
                  :white-space "normal"}]
 
-
                ["> p"
                 {:font-size "1.15em"
                  :color (get-in data [:sub-heading :mobile-color])
@@ -156,17 +158,12 @@
          :height "500px"}]]])])
 
 
-
-
-
-
-
-
 (defn hero [data]
   [:section.hero-testimonial
    [:div.page-content
     [:div.content.left
-     [:h1 (get-in data [:heading :text])]
+     [:h1 {:dangerouslySetInnerHTML
+           {:__html (get-in data [:heading :text])}}]
      [:p {:dangerouslySetInnerHTML
            {:__html (get-in data [:sub-heading :text])}}]
      (when (data :button)
@@ -177,8 +174,10 @@
     [:div.content.right
      [:div.image
       [:div.caption
-       [:div.coach-name "Derrell Levy\nIn-Tech High Performance Training"]
-       [:a.coach-link {:href "http://intech.getrookie.com"} "See how Intech uses Rookie"]]]]]])
+       [:div.coach-name (get-in data [:caption :text])]
+       (when (data :caption)
+        [:a.coach-link {:href (get-in data [:caption :url])}
+         (get-in data [:caption :link-text])])]]]]])
 
 
 (defmethod template "hero-testimonial" [_]

@@ -1,0 +1,98 @@
+{
+ "bodyclub-rookie-header"
+ {:template "header"
+  :data     {:color      "#141F41"
+             :padding    "1.15em"
+             :overlay?   true
+             :height     "2.5em"
+             :logo       {:image-url "/rookie_bodyclub/images/body-club-logo.svg"
+                          :url       "./"}
+             :background {:color ""}
+             :menu       [{:text ""
+                           :url  ""}
+                          {:text "Email BodyClub"
+                           :url  "mailto:sam@bodyclub.ca"
+                           :icon \uf003}]}}
+
+ "bodyclub-rookie-hero"
+ {:template "hero-testimonial"
+  :data {:font-family "-apple-system,BlinkMacSystemFont, Roboto, \"Helvetica Neue\", Helvetica, Arial"
+         :padding "10em"
+         :height "750px"
+         :mobile-height "650px"
+         :heading {:text "Personal training from<br>your own home at a<br>fraction of the price."
+                   :color "#1C1F4C"
+                   :size "2.7em"
+                   :weight "600"
+                   :alignment "left"
+                   :title-type "uppercase"
+                   :line "1.1em"}
+         :sub-heading {:text "Body Club gives you access to your own personal trainer<br>to help you achieve your goals. Every week receive<br>custom workouts, video analysis, and one-on-one check-ins."
+                       :color "#1C1F4C"
+                       :weight "200"}
+         :featured-image {:url "/rookie_bodyclub/images/body-club-hompage-legs.png"
+                          :width "770px"
+                          :height "750px"
+                          :mobile-url "/rookie/images/intech-hero-mobile-image.png"}
+         :background {:gradent "radial-gradient(46% 10%, #4D88F7 48%, #FDF7E7 95%)"
+                      :mobile-url "radial-gradient(46% 10%, #232B69 48%, #4D88F7 95%)"
+                      :color "#FDF7E7"
+                      :size "cover"
+                      :position "center top"}
+         :form {:after {:text "We frequently accept new members on our waitlist\nwhen trainers have openings in their schedule."
+                        :align "center"}
+                :placeholder "your-email@example.com"
+                :autofocus true
+                :background "#fff"
+                :post-submit-message "Thank you for your interest in Body Club. We'll be in touch soon."
+                :ajax {:method :put
+                       :action "https://athlete.getrookie.com/signup"
+                       :params {:coach-id "0c9f9f72-4676-4866-b54c-5ac4ab2dd706"}}
+
+                :button {:text "get on the waitlist"
+                         :colors {:text "#fff"
+                                  :bg "#4D88F7"
+                                  :bg-hover "#7ea9f9"
+                                  :bg-active "#0c5df4"}}}}}
+
+
+ "bodyclub-value-1"
+ {:template "value-banner"
+  :data {:font-family "-apple-system,BlinkMacSystemFont, Roboto, \"Helvetica Neue\", Helvetica, Arial"
+         :styles {:text-color "#151E3F"}
+         :block-margin "2em 2em 1em 2em"
+         :background {:height "480px"
+                      :color "#F0EFEF"
+                      :image "/rookie_bodyclub/images/body-club-value-banner-1.png"}
+         :heading {:text "Train from the comfort of your own home."}
+         :sub-text {:text "You receive receive custom workouts weekly. We use video analysis to give you feedback and you can message your trainer anytime."}}}
+
+ "bodyclub-value-2"
+ {:template "value-banner"
+  :data {:font-family "-apple-system,BlinkMacSystemFont, Roboto, \"Helvetica Neue\", Helvetica, Arial"
+         :styles {:text-color "#FFF"}
+         :block-margin "1em 2em"
+         :position "right"
+         :background {:height "480px"
+                      :width ""
+                      :color "#2D43BD"
+                      :image "/rookie_bodyclub/images/body-club-value-banner-2.png"}
+         :heading {:text "Online Personal training with renowned coaches."}
+         :sub-text {:text "Our members love having a coach to stay accountable to their goals. Body Club trainers adjust each member's workout plan based on how they are feeling."}}}
+
+
+ "bodyclub-value-3"
+ {:template "value-banner"
+  :data {:font-family "-apple-system,BlinkMacSystemFont, Roboto, \"Helvetica Neue\", Helvetica, Arial"
+         :styles {:text-color "#151E3F"}
+         :block-margin "1em 2em 2em 2em"
+         :background {:height "480px"
+                      :color "#F8AA8D"
+                      :image "/rookie_bodyclub/images/body-club-value-banner-3.png"}
+         :heading {:text "World-class trainers can finally be in your budget."}
+         :sub-text {:text "No need to opt for a generic plan or app. Our platform helps our personal trainers provide plans and one on one check-in’s."}}}}
+
+
+
+
+

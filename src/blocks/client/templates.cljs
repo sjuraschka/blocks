@@ -1,5 +1,6 @@
 (ns blocks.client.templates
   (:require
+    blocks.client.templates.value-banner
     blocks.client.templates.about
     blocks.client.templates.analytics
     blocks.client.templates.braid-conversations
