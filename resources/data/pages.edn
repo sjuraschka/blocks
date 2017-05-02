@@ -141,7 +141,8 @@
            "rookie-step-3"
            "rookie-pre-footer"
            "rookie-footer"
-           "rookie-analytics"]}
+           "rookie-analytics"
+           "rookie-drift"]}
 
  {:domain "www.getrookie.com"
   :url "/how-it-works/"
@@ -332,7 +333,8 @@
            "bodyclub-rookie-hero"
            "bodyclub-value-1"
            "bodyclub-value-2"
-           "bodyclub-value-3"]}]
+           "bodyclub-value-3"
+           "bodyclub-drift"]}]
 
 
 
