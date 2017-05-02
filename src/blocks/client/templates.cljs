@@ -7,6 +7,7 @@
     blocks.client.templates.center-text
     blocks.client.templates.cta
     blocks.client.templates.downloads
+    blocks.client.templates.drift
     blocks.client.templates.features-grid
     blocks.client.templates.feature-highlight
     blocks.client.templates.footer
