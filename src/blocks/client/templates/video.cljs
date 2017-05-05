@@ -2,52 +2,58 @@
   (:require
     [reagent.core :as r]
     [blocks.client.template :refer [template]]
+    [blocks.client.templates.mixins :refer [button-mixin fontawesome-mixin]]
     [garden.stylesheet :refer [at-media]]))
 
+(def height "80vh")
+
 (defn styles [data]
-  [:.video
-   {:padding "3em"
-    :background (get-in data [:styles :background])}
+  [:>.video
+   {}
 
-   [:.content
-    {:display "flex"
-     :flex-direction  "column"
-     :justify-content "center"
+   [:>.content
+    {:padding "3em 0"
+     :box-sizing "border-box"
+     :height height
+     :background (get-in data [:styles :background])
+     :background-size "cover"
+     :background-repeat "no-repeat"
+     :max-width "inherit"
+     :display "flex"
      :align-items "center"
-     :text-align "center"}
+     :justify-content "space-between"}
 
-    [:h1
-     {:color (get-in data [:heading :color])
-      :font-size "1.75rem"
-      :font-weight "bolder"
-      :position "relative"
-      :z-index 0
-      :-webkit-font-smoothing "antialiased"}]
+    [:>button
+     {:white-space "nowrap"
+      :text-transform "uppercase"
+      :margin-right "-5em"
+      :letter-spacing "0.05em"
+      :z-index 100}
+     (button-mixin (get-in data [:button :colors] {}))
 
-    [:h2
-     {:color (get-in data [:subtitle :color])
-      :margin-top "1rem"
-      :font-size "1.25em"
-      :padding-bottom "1em"
-      :-webkit-font-smoothing "antialiased"}]
+     [:&::after
+      {:margin-left "0.5em"}
+      (fontawesome-mixin \uf04b)]]
 
-    [:.video
-     {:width "100%"
-      :max-height "80vh"}
+    [:>.spacer
+     {:width "30%"
+      :min-width "3em"
+      :flex-grow 2}]
 
-     [:iframe
-      {:background "black"}]]
+    [:>img
+     {:margin-bottom "-1em"
+      :margin-right "-2em"
+      :height "100%"}]]
 
-    [:p {:padding "1em"
-         :color "#fff"}]]
+   [:iframe
+    {:background (get-in data [:video :background])
+     :height height}]
+
    (at-media {:max-width "700px"}
      [:&
-      {:padding "2em 0"}
-      [:.content
-       [:.video
-        [:a.thumbnail
-         [:img
-          {:width "90vw"}]]]]])])
+      [:>.content
+       [:>button
+        {:margin-right "-25%"}]]])])
 
 (defn video-type [id]
   (cond
@@ -73,22 +79,21 @@
     (fn [data]
       [:div.video
        [:a {:name (data :anchor)}]
-       [:div.content
-        [:h1 (get-in data [:heading :title])]
-        [:h2 (get-in data [:subtitle :text])]
-        [:div.video
-         (if @play?
-           [:iframe {:src (embed-url (get-in data [:video :id]))
-                     :width "100%"
-                     :height "100%"
-                     :frameborder 0
-                     :allow-full-screen true}]
-           [:a.thumbnail {:href (video-url (get-in data [:video :id]))
-                          :on-click (fn [e]
-                                      (.preventDefault e)
-                                      (reset! play? true))}
-            [:img {:src (or (get-in data [:video :thumbnail])
-                            (thumbnail-url (get-in data [:video :id])))}]])]]])))
+       (if @play?
+         [:iframe {:src (embed-url (get-in data [:video :id]))
+                   :width "100%"
+                   :height "100%"
+                   :auto-play true
+                   :frameborder 0
+                   :allow-full-screen true}]
+
+         [:div.content
+          [:div.spacer]
+          [:button {:on-click (fn [e]
+                                (.preventDefault e)
+                                (reset! play? true))}
+           (get-in data [:button :text])]
+          [:img {:src (get-in data [:image :url])}]])])))
 
 (defmethod template "video" [_]
   {:css       styles
