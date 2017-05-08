@@ -6,7 +6,7 @@
 
 (defn styles [data]
   [:section.hero-columns
-   {:padding [[(get data :padding "1em") 0]]
+   {:padding [[(get data :padding "1em") 0 "20em"]]
     :text-align "center"
     :display "flex"
     :flex-direction "column"
@@ -24,6 +24,7 @@
      :display "flex"
      :justify-content "space-between"}
 
+
     [:.left
      {:display "flex"
       :flex-direction "column"
@@ -39,7 +40,8 @@
        :white-space "pre"
        :line-height "0.9em"
        :letter-spacing "0.1em"
-       :text-transform (get-in data [:heading :title-type])}]
+       :text-transform (get-in data [:heading :title-type])
+       :text-shadow "0px 1px 5px #000000"}]
 
      [:p
       {:font-size "1em"
@@ -48,7 +50,9 @@
        :text-align "left"
        :white-space "pre"
        :font-weight (get-in data [:sub-heading :weight])
-       :color (get-in data [:sub-heading :color])}
+       :color (get-in data [:sub-heading :color])
+       :text-shadow "0px 1px 4px #000000"}
+
       [:em
        {:font-weight "bold"}]]
 
@@ -58,17 +62,20 @@
       [:a.button
        {:text-transform "uppercase"
         :font-weight "600"
+
         :font-family "-apple-system, BlinkMacSystemFont, Roboto,\"Droid Sans\",\"Helvetica Neue\",Helvetica, Arial, sans-serif"}]
 
       [:a.button.signup
        (button-mixin (get-in data [:button :signup :colors]))
+       {:box-shadow "0px 5px 10px rgba(0,0,0,0.5) !important"}
        {:margin-left "1em"}]
 
       [:a.button.demo
        (button-mixin (get-in data [:button :demo :colors]))
+       {:box-shadow "0px 5px 10px rgba(0,0,0,0.5) !important"}
 
        [:&:before
-        (fontawesome-mixin \uf01d)
+        (fontawesome-mixin \uf04b)
         {:margin-right "0.5em"}]]
 
       (email-field/styles (data :form))]]
