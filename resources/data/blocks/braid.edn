@@ -36,7 +36,7 @@
                        :weight "400"}
          :featured-image {:url "/rookie/images/rookie-phone.png"
                           :height "15em"}
-         :background {:image-url "/braid/images/hero-bg-people.jpg"
+         :background {:image-url "/braid/images/hero-bg-people-flipped.jpg"
                       :mobile-url "/braid/images/hero-bg-people-mobile.jpg"
                       :size "cover"
                       :position "center top"}
