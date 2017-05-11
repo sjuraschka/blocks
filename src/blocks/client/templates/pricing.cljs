@@ -10,18 +10,21 @@
     :justify-content "center"
     :align-items "center"
     :background-color (data :background)}
+
    [:.section-title
     {:text-align "center"
      :padding-top "4rem"
      :font-size (get-in data [:heading :title :font-size])
      :font-weight "bolder"
      :color (get-in data [:heading :title :color])}]
+
    [:.section-subtitle
     {:font-size "1.25rem"
      :color (get-in data [:heading :subtitle :color])
      :padding "0 1rem"
      :padding-top "1rem"
      :text-align "center"}]
+
    [:.options
     {:display         "flex"
      :justify-content "space-between"

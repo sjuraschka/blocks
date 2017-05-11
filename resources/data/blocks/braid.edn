@@ -2,11 +2,12 @@
  "braid-com-header"
  {:template "header"
   :data     {:color      "#fff"
+             :text-shadow "0px 1px 8px #000000"
              :padding    "0.75em"
              :title      "Braid"
              :version    "beta"
              :overlay? true
-             :background {:color ""}
+             ;:background {:color "rgba(0,0,0,0.2)"}
              :logo       {:image-url "/braid/images/braid-logo-white.svg"
                           :color     "#fff"
                           :url       "./"}
@@ -35,7 +36,7 @@
                        :weight "400"}
          :featured-image {:url "/rookie/images/rookie-phone.png"
                           :height "15em"}
-         :background {:image-url "/braid/images/hero-bg-people.jpg"
+         :background {:image-url "/braid/images/hero-bg-people-flipped.jpg"
                       :mobile-url "/braid/images/hero-bg-people-mobile.jpg"
                       :size "cover"
                       :position "center top"}
@@ -289,6 +290,10 @@
 
                                   :price          {:button {:text "Contact Us"}}}]
              :notes             "14 Day Trial"}}
+
+ "braid-com-braid-pricing"
+ {:template "braid-pricing"
+  :data {}}
 
  "braid-com-cta"
  {:template "cta"
