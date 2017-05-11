@@ -90,9 +90,9 @@
                       :color "#F8AA8D"
                       :image "/rookie_bodyclub/images/body-club-value-banner-3.png"}
          :heading {:text "World-class trainers can finally be in your budget."}
-         :sub-text {:text "No need to opt for a generic plan or app. Our platform helps our personal trainers provide plans and one on one check-in’s."}}}}
+         :sub-text {:text "No need to opt for a generic plan or app. Our platform helps our personal trainers provide plans and one on one check-in’s."}}}
 
 
-
-
-
+ "bodyclub-drift"
+ {:template "drift"
+  :data {:id "4rrwh4huv6p2"}}}

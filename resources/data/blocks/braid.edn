@@ -2,11 +2,12 @@
  "braid-com-header"
  {:template "header"
   :data     {:color      "#fff"
+             :text-shadow "0px 1px 8px #000000"
              :padding    "0.75em"
              :title      "Braid"
              :version    "beta"
              :overlay? true
-             :background {:color ""}
+             ;:background {:color "rgba(0,0,0,0.2)"}
              :logo       {:image-url "/braid/images/braid-logo-white.svg"
                           :color     "#fff"
                           :url       "./"}
@@ -35,7 +36,7 @@
                        :weight "400"}
          :featured-image {:url "/rookie/images/rookie-phone.png"
                           :height "15em"}
-         :background {:image-url "/braid/images/hero-bg-people.jpg"
+         :background {:image-url "/braid/images/hero-bg-people-flipped.jpg"
                       :mobile-url "/braid/images/hero-bg-people-mobile.jpg"
                       :size "cover"
                       :position "center top"}
@@ -290,6 +291,10 @@
                                   :price          {:button {:text "Contact Us"}}}]
              :notes             "14 Day Trial"}}
 
+ "braid-com-braid-pricing"
+ {:template "braid-pricing"
+  :data {}}
+
  "braid-com-cta"
  {:template "cta"
   :data     {:anchor "signup"
@@ -482,14 +487,16 @@
  "braid-com-how-it-works"
   {:template "video"
    :data     {:anchor "video"
-              :styles   {:background "#55C1C4"}
-              :heading  {:title "Beyond Chatrooms"
-                         :color "#fff"}
-              :subtitle {:text  "Our Secret? Short conversations & tags (instead of rooms)"
-                         :color "#fff"}
-              :video    {:id        "YeH-8_PUXPk"
-                         :thumbnail "/braid/images/video-player.png"}}}}
-
+              :styles {:background "#6cbdc4 url(/braid/images/braid-video-bg.png)"}
+              :image {:url "/braid/images/braid-screenshot-archer.png"}
+              :button {:text "Watch the Tour"
+                       :colors {:text "#fff"
+                                :bg "#FD6275"
+                                :bg-hover "#E64A5E"
+                                :bg-active "#E64A5E"
+                                :shadow "0 1px 2px 0 rgba(152,31,59,.2)"}}
+              :video {:id  "YeH-8_PUXPk"
+                      :background "#6cbdc4"}}}}
 
 ;==============================================
 ;Data for templates not being used

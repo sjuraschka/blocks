@@ -58,7 +58,9 @@
       {:color           (data :color)
        :text-transform (data :text-transform)
        :font-size       "0.95em"
-       :opacity         0.75
+       :text-shadow (data :text-shadow)
+       :opacity         0.85
+       :font-weight (data :weight)
        :text-decoration "none"
        :margin-left     "2em"
        :transition      "opacity 0.1s ease-in-out"
