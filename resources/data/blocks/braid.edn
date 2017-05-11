@@ -175,7 +175,7 @@
              :heading {:color "#444"}
              :image {:width "4em"}
              :column  3
-             :columns [{:image "/braid/images/fast-icon-braid-chat.svg"
+             :columns [{:image "/braid/images/fast-icon-braid-chat.png"
                         :title       "Fast"
                         :description "Built with Clojure - so you know it's not going to be holding you back."}
 
