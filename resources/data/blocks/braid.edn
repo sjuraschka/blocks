@@ -291,6 +291,10 @@
                                   :price          {:button {:text "Contact Us"}}}]
              :notes             "14 Day Trial"}}
 
+ "braid-com-braid-pricing"
+ {:template "braid-pricing"
+  :data {}}
+
  "braid-com-cta"
  {:template "cta"
   :data     {:anchor "signup"

@@ -34,7 +34,7 @@
   :blocks ["braid-com-header"
            "braid-com-column-hero"
            "braid-com-conversations"
-           "braid-social-proof"
+           ;"braid-social-proof"
            "braid-com-letter"
            "braid-com-how-it-works"
            "braid-com-benefit-better-conversations"
@@ -43,7 +43,8 @@
            "braid-com-other-benefits"
            "braid-com-features"
            "braid-com-roadmap"
-           "braid-com-pricing"
+          ; "braid-com-pricing"
+           "braid-com-braid-pricing"
            "braid-com-cta"
            "braid-pre-footer"
            "braid-com-footer"]}
