@@ -185,9 +185,9 @@
                                   Everything from the fonts we use to the documentation are made by the
                                   community."}
 
-                       {:image       "/braid/images/braid-security-lock.svg"
-                        :title       "Secure"
-                        :description "Braid's conversations receive a 256-bit SSL encryption."}]}}
+                       {:image       "/braid/images/self-hosting-icon-braid.png"
+                        :title       "Hosted or Self Hosted"
+                        :description "Braid can be hosted on our server or your own."}]}}
 
  "braid-com-features"
  {:template "features-grid"
