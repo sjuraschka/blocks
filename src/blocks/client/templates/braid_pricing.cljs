@@ -4,37 +4,10 @@
     [blocks.client.templates.mixins :refer [button-mixin]]
     [garden.stylesheet :refer [at-media]]))
 
-(def data
-  {:background "#f7f8f9"
-   :plans [{:title "Community"
-            :color "#3D75FB"
-            :subtitle "Open group with public access"
-            :price ["Free Forever"]
-            :features ["∞ Users"
-                       "∞ History"
-                       "∞ Integrations"]
-            :button {:text "Get Started"
-                     :colors {:text      "#fff"
-                              :bg "#3D75FB"
-                              :bg-hover  "#054aef"
-                              :bg-active "#043bbd"}}}
-           {:title "Team"
-            :color "#FD6275"
-            :subtitle "Private group with invite-only access"
-            :price ["30 day free trial"
-                    "then pick your own price"]
-            :features ["∞ Users"
-                       "∞ History"
-                       "∞ Integrations"]
-            :button {:text "Get Started"
-                     :colors {:text      "#fff"
-                              :bg "#FD6275"
-                              :bg-hover  "#fc1f3a"
-                              :bg-active "#d4031c"}}}]
-   :contact {:email "mailto:hi@braidchat.com"
-             :color "#3D75FB"}})
+(def data)
 
-(defn styles [_]
+
+(defn styles [data]
   [:.braid-pricing
    {:background-color (data :background)
     :padding "2em 0"}
@@ -110,7 +83,7 @@
      {:font-weight 600
       :color (get-in data [:contact :color])}]]])
 
-(defn component [_]
+(defn component [data]
   [:div.braid-pricing
    [:h1 "Pick your plan:"]
    [:div.plans

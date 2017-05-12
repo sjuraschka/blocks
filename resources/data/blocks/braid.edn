@@ -96,6 +96,78 @@
                              We call it <span>Braid</span> and we'd love for you to join us in making it better."}}}
 
 
+ "braid-product-feature-1"
+ {:template "feature-highlight"
+  :data     {:heading     {:text  "Multiple Chats"
+                           :color "#444444"
+                           :font-size "1.15em"}
+
+             :background  {:color "#fff"}
+             :description {:text  "Channels are great for some things, but small conversations are better. With multiple chats you never have to worry about missing important discussions when you close your chat window."
+                           :color "#777"
+                           :size "0.95em"}
+
+             :bullets-style  {:color ""
+                              :size "0.85em"
+                              :icon "#3D75FB"}
+
+             :image       {:image-url "/braid/images/multiple-chats-braid.png"
+                           :position  "left"}}}
+
+ "braid-product-feature-2"
+ {:template "feature-highlight"
+  :data     {:heading     {:text  "Tags"
+                           :color "#444444"
+                           :font-size "1.15em"}
+
+             :background  {:color "#fff"}
+             :description {:text  "Use tags keep your chats organized. Use the power of tags, like you would in an email."
+                           :color "#777"
+                           :size "0.95em"}
+
+             :bullets-style  {:color ""
+                              :size "0.85em"
+                              :icon "#3D75FB"}
+
+             :image       {:image-url "/braid/images/tagging-braid.png"
+                           :position  "left"}}}
+
+ "braid-product-feature-3"
+ {:template "feature-highlight"
+  :data     {:heading     {:text  "Mentions"
+                           :color "#444444"
+                           :font-size "1.15em"}
+
+             :background  {:color "#fff"}
+             :description {:text  "Start private conversations or add someone to a conversation just with an @."
+                           :color "#777"
+                           :size "0.95em"}
+
+             :bullets-style  {:color ""
+                              :size "0.85em"
+                              :icon "#3D75FB"}
+
+             :image       {:image-url "/braid/images/mentions-braid-chat.png"
+                           :position  "left"}}}
+
+ "braid-product-feature-4"
+ {:template "feature-highlight"
+  :data     {:heading     {:text  "Search"
+                           :color "#444444"
+                           :font-size "1.15em"}
+
+             :background  {:color "#fff"}
+             :description {:text  "Forget remembering or scrolling to find a chat. Braid is built to use search, so you can get back to any conversation without missing a beat."
+                           :color "#777"
+                           :size "0.95em"}
+
+             :bullets-style  {:color ""
+                              :size "0.85em"
+                              :icon "#3D75FB"}
+
+             :image       {:image-url "/braid/images/search-feature-braid-chat.png"
+                           :position  "left"}}}
+
  "braid-com-benefit-better-conversations"
  {:template "feature-highlight"
   :data     {:heading     {:text  "Better Conversations"
@@ -118,15 +190,15 @@
              :image       {:image-url "/braid/images/multiple-conversations.png"
                            :position  "left"}}}
 
+
  "braid-com-benefit-focus"
  {:template "feature-highlight"
-  :data     {:heading     {:text  "Stop scrolling, start searching"
+  :data     {:heading     {:text  "Stay in Focus"
                            :color "#444444"
                            :font-size "1.15em"}
 
              :background  {:color "#F7F8F9"}
-             :description {:text  "With search you no longer have to scroll or try to remember when you chatted about this
-             or that. Search like you do in your inbox."
+             :description {:text  "Other chat apps rob us of our focus. Get your productivity back and contribute to group chat on your own schedule."
                            :color "#777"
                            :size "0.95em"}
 
@@ -134,11 +206,11 @@
                               :size "0.85em"
                               :icon "#3D75FB"}
 
-             :bullets     [{:text "Tag conversations by topic or person"}
-                           {:text "Search by text or a phrase"}
-                           {:text "Archive old conversations"}]
+             :bullets     [{:text "Chats can be live or asyncronous "}
+                           {:text "Close and reopen any discussion"}
+                           {:text "Seperate chat windows keep your conversations small and organized"}]
 
-             :image       {:image-url "/braid/images/search-braid-chat.png"
+             :image       {:image-url "/braid/images/slack-robs-focus-braid.png"
                            :position  "right"}}}
 
  "braid-com-benefit-deep-integrations"
@@ -175,7 +247,7 @@
              :heading {:color "#444"}
              :image {:width "4em"}
              :column  3
-             :columns [{:image "/braid/images/fast-icon-braid-chat.svg"
+             :columns [{:image "/braid/images/fast-icon-braid-chat.png"
                         :title       "Fast"
                         :description "Built with Clojure - so you know it's not going to be holding you back."}
 
@@ -185,9 +257,9 @@
                                   Everything from the fonts we use to the documentation are made by the
                                   community."}
 
-                       {:image       "/braid/images/braid-security-lock.svg"
-                        :title       "Secure"
-                        :description "Braid's conversations receive a 256-bit SSL encryption."}]}}
+                       {:image       "/braid/images/self-hosting-icon-braid.png"
+                        :title       "Hosted or Self Hosted"
+                        :description "Braid can be hosted on our server or your own."}]}}
 
  "braid-com-features"
  {:template "features-grid"
@@ -293,7 +365,34 @@
 
  "braid-com-braid-pricing"
  {:template "braid-pricing"
-  :data {}}
+  :data {:background "#f7f8f9"
+         :plans [{:title "Community"
+                  :color "#3D75FB"
+                  :subtitle "Open group with public access"
+                  :price ["Free Forever"]
+                  :features ["∞ Users"
+                             "∞ History"
+                             "∞ Integrations"]
+                  :button {:text "Get Started"
+                           :colors {:text      "#fff"
+                                    :bg "#3D75FB"
+                                    :bg-hover  "#054aef"
+                                    :bg-active "#043bbd"}}}
+                 {:title "Team"
+                  :color "#FD6275"
+                  :subtitle "Private group with invite-only access"
+                  :price ["30 day free trial"
+                          "then pick your own price"]
+                  :features ["∞ Users"
+                             "∞ History"
+                             "∞ Integrations"]
+                  :button {:text "Get Started"
+                           :colors {:text      "#fff"
+                                    :bg "#FD6275"
+                                    :bg-hover  "#fc1f3a"
+                                    :bg-active "#d4031c"}}}]
+         :contact {:email "mailto:hi@braidchat.com"
+                   :color "#3D75FB"}}}
 
  "braid-com-cta"
  {:template "cta"
