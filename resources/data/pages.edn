@@ -47,7 +47,6 @@
            "braid-com-other-benefits"
            "braid-com-features"
            "braid-com-roadmap"
-          ; "braid-com-pricing"
            "braid-com-braid-pricing"
            "braid-com-cta"
            "braid-pre-footer"
@@ -70,7 +69,7 @@
   :blocks ["braid-com-header"
            "braid-careers-title"
            "braid-careers-text"
-           "braid-com-careers-other-benefits"
+           "braid-com-other-benefits"
            "braid-pre-footer"
            "braid-com-footer"]}
 
@@ -85,7 +84,7 @@
                                :weight 400}}}
    :blocks ["braid-com-header"
             "braid-pricing-title"
-            "braid-com-pricing"
+            "braid-com-braid-pricing"
             "braid-pre-footer"
             "braid-com-footer"]}
 

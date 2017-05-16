@@ -3,12 +3,11 @@
             [blocks.client.templates.mixins :refer [fontawesome-mixin]]
             [garden.stylesheet :refer [at-media]]))
 
-(def pad "4em")
-
 (defn styles [data]
   [:.feature-highlight
-   {:padding pad
-    :background (get-in data [:background :color])}
+     {:padding (data :pad)
+      :background (get-in data [:background :color])
+      :border-top (data :border)}
 
    [:.content
     {:display "flex"
@@ -87,7 +86,8 @@
      :color (get-in data [:circle :color])}]
 
    [:img.feature
-    {:max-width "32em"
+    {:max-width (get-in data [:image :size])
+     :margin-left (get-in data [:image :margin])
      :margin-top "2em"}]
 
    (at-media {:max-width "575px"}
@@ -121,7 +121,6 @@
        [:div.bullet-points]
        (for [bullet (data :bullets)]
          [:div.bullet (bullet :text)]))]
-    let
     [:div
      [:img.feature {:src (get-in data [:image :image-url])}]]]])
 

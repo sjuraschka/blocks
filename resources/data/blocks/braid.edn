@@ -95,11 +95,12 @@
 
                              We call it <span>Braid</span> and we'd love for you to join us in making it better."}}}
 
-
  "braid-product-feature-1"
  {:template "feature-highlight"
-  :data     {:heading     {:text  "Multiple Chats"
-                           :color "#444444"
+  :data     {:pad "0em"
+             :border "1px solid #eee"
+             :heading     {:text  "Multiple Chats"
+                           :color "#3D75FB"
                            :font-size "1.15em"}
 
              :background  {:color "#fff"}
@@ -112,12 +113,16 @@
                               :icon "#3D75FB"}
 
              :image       {:image-url "/braid/images/multiple-chats-braid.png"
-                           :position  "left"}}}
+                           :position  "right"
+                           :size "20em"
+                           :margin "4em"}}}
 
  "braid-product-feature-2"
  {:template "feature-highlight"
-  :data     {:heading     {:text  "Tags"
-                           :color "#444444"
+  :data     {:pad "0"
+             :border "1px solid #eee"
+             :heading     {:text  "Tags"
+                           :color "#3D75FB"
                            :font-size "1.15em"}
 
              :background  {:color "#fff"}
@@ -130,12 +135,16 @@
                               :icon "#3D75FB"}
 
              :image       {:image-url "/braid/images/tagging-braid.png"
-                           :position  "left"}}}
+                           :position  "right"
+                           :size "20em"
+                           :margin "4em"}}}
 
  "braid-product-feature-3"
  {:template "feature-highlight"
-  :data     {:heading     {:text  "Mentions"
-                           :color "#444444"
+  :data     {:pad "0"
+             :border "1px solid #eee"
+             :heading     {:text  "Mentions"
+                           :color "#3D75FB"
                            :font-size "1.15em"}
 
              :background  {:color "#fff"}
@@ -148,12 +157,16 @@
                               :icon "#3D75FB"}
 
              :image       {:image-url "/braid/images/mentions-braid-chat.png"
-                           :position  "left"}}}
+                           :position  "right"
+                           :size "20em"
+                           :margin "4em"}}}
 
  "braid-product-feature-4"
  {:template "feature-highlight"
-  :data     {:heading     {:text  "Search"
-                           :color "#444444"
+  :data     {:pad "0"
+             :border "1px solid #eee"
+             :heading     {:text  "Search"
+                           :color "#3D75FB"
                            :font-size "1.15em"}
 
              :background  {:color "#fff"}
@@ -166,15 +179,18 @@
                               :icon "#3D75FB"}
 
              :image       {:image-url "/braid/images/search-feature-braid-chat.png"
-                           :position  "left"}}}
+                           :position  "right"
+                           :size "20em"
+                           :margin "4em"}}}
 
  "braid-com-benefit-better-conversations"
  {:template "feature-highlight"
-  :data     {:heading     {:text  "Better Conversations"
+  :data     {:pad "4em"
+             :heading     {:text  "Better Conversations"
                            :color "#444444"
                            :font-size "1.15em"}
 
-             :background  {:color "#F7F8F9"}
+             :background  {:color "#f7f8f9"}
              :description {:text  "Unlike most chat apps that rob you of your focus, Braid’s chat threads are built to be asynchronous. You can contribute to a conversation on your own schedule, without worrying about missing out on an important decision or discussion."
                            :color "#777"
                            :size "0.95em"}
@@ -188,12 +204,14 @@
                            {:text "Multiple conversations at the same time"}]
 
              :image       {:image-url "/braid/images/multiple-conversations.png"
-                           :position  "left"}}}
-
+                           :position  "left"
+                           :size "32em"
+                           :margin "4em"}}}
 
  "braid-com-benefit-focus"
  {:template "feature-highlight"
-  :data     {:heading     {:text  "Stay in Focus"
+  :data     {:pad "4em"
+             :heading     {:text  "Stay in Focus"
                            :color "#444444"
                            :font-size "1.15em"}
 
@@ -211,11 +229,13 @@
                            {:text "Seperate chat windows keep your conversations small and organized"}]
 
              :image       {:image-url "/braid/images/slack-robs-focus-braid.png"
-                           :position  "right"}}}
+                           :position  "right"
+                           :size "32em"}}}
 
  "braid-com-benefit-deep-integrations"
  {:template "feature-highlight"
-  :data      {:heading     {:text  "Awesome Integrations"
+  :data      {:pad "4em"
+              :heading     {:text  "Awesome Integrations"
                             :color "#444444"
                             :font-size "1.15em"}
 
@@ -233,7 +253,8 @@
                             {:text "Build any bot or integration you can think of"}]
 
               :image       {:image-url "/braid/images/braid-chat-awesome-integrations.png"
-                            :position  "left"}}}
+                            :position  "left"
+                            :size "22em"}}}
 
  "braid-com-other-benefits"
  {:template "three-features"
@@ -260,6 +281,7 @@
                        {:image       "/braid/images/self-hosting-icon-braid.png"
                         :title       "Hosted or Self Hosted"
                         :description "Braid can be hosted on our server or your own."}]}}
+
 
  "braid-com-features"
  {:template "features-grid"
@@ -300,7 +322,6 @@
 
                         ; emoji
                         ; link embeds
-
 
  "braid-com-pricing"
  {:template "pricing"
@@ -360,8 +381,8 @@
                                                    "Custom Integrations"]
                                                    ; TODO
 
-                                  :price          {:button {:text "Contact Us"}}}]
-             :notes             "14 Day Trial"}}
+                                  :price          {:button {:text "Contact Us"}}
+                                  :notes             "14 Day Trial"}]}}
 
  "braid-com-braid-pricing"
  {:template "braid-pricing"
@@ -515,37 +536,13 @@
                       :height "300px"
                       :image ""
                       :color "#F74768"}}}
+
  "braid-careers-text"
  {:template "text"
   :data {:sections [{:title "Openings"
                      :text "Currently we do not have any listed positions, but we are always looking to recruit top talent,
                      feel free to send us your resume or website to hi@braidchat.com and tell us about the type of position you are looking for."}]}}
 
- "braid-com-careers-other-benefits"
- {:template "three-features"
-  :data     {:styles  {:background "#d3e0fe"}
-             :title {:copy "Just a few of the reasons you're going to love Braid."
-                     :transform ""
-                     :padding "1em"
-                     :size  "1.75em"}
-             :column-title {:size "1.25em"
-                            :transform ""}
-             :heading {:color "#444"}
-             :image {:width "4em"}
-             :column  3
-             :columns [{:image "/braid/images/fast-icon-braid-chat.svg"
-                        :title       "Fast"
-                        :description "Built with Clojure - so you know it's not going to be holding you back."}
-
-                       {:image       "/braid/images/open-source.png"
-                        :title       "Open Source"
-                        :description "Braid is an Open Source project built with Clojure.
-                                   Everything from the fonts we use to the documentation are made by the
-                                   community."}
-
-                       {:image       "/braid/images/braid-security-lock.svg"
-                        :title       "Secure"
-                        :description "Braid's conversations receive a 256-bit SSL encryption."}]}}
 ;=========================================================================================
 ; braid - Pricing
 ;=========================================================================================
@@ -560,8 +557,8 @@
                         :text "Find a plan that's right for you."}
           :background {:size "cover"
                        :height "300px"
-                       :image ""
-                       :color "#F17130"}}}
+                       :image "/braid/images/braid-video-bg.png"
+                       :color "#55C1C4"}}}
 
 ;=========================================================================================
 ; braid - Downloads
@@ -571,18 +568,18 @@
  {:template "one-feature"
   :data {:page-padding {:top "3em"}
          :heading   {:text "Downloads"
-                     :color "#444"
+                     :color "white"
                      :transform "uppercase"}
-         :description {:color "#444"
+         :description {:color "white"
                        :text "Start using Braid on your go-to device"}
          :background {:size "cover"
                       :height "300px"
-                      :gradient "linear-gradient(-178deg, #55C1C4 0%, #BEF3F4 100%)"}}}
+                      :image "/braid/images/braid-video-bg.png"}}}
 
 ;==============================================
 ;Video
 ;==============================================
-;
+
  "braid-com-how-it-works"
   {:template "video"
    :data     {:anchor "video"
@@ -627,7 +624,6 @@
                                                  :bg-hover  "#d4460f"
                                                  :bg-active "#d6490c"}}}}}
 
-
 "braid-com-why"
 {:template "one-feature"
  :data     {:heading     {:text  "More productive group communication"
@@ -635,4 +631,3 @@
             :background  {:color "#65a8b6"}
             :description {:text  "Don't let your chat platform be a never-ending meeting."
                           :color "#fff"}}}
-
