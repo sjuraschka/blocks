@@ -1,5 +1,4 @@
 {
-
  ;=========================================================================================
  ; Rookie - shared
  ;=========================================================================================
@@ -40,7 +39,6 @@
                                  :url  "/privacy-policy/"}
                                 {:text "Terms"
                                  :url  "/terms-of-service/"}]}}
-
 
  "rookie-drift"
  {:template "drift"
@@ -94,7 +92,8 @@
                                   :bg-active "#3D50CF"}}}}}
  "rookie-pitch"
  {:template "feature-highlight"
-  :data  {:heading     {:text           "Meet Rookie"
+  :data  {:pad "4em"
+          :heading     {:text           "Meet Rookie"
                         :color          "#2E3944"
                         :font-size      "1.75em"
                         :spacer "0.15em"
@@ -110,7 +109,9 @@
 
 
           :image       {:image-url "/rookie/images/rookie-pitch-image.png"
-                        :position  "right"}}}
+                        :position  "right"
+                        :size "32em"}}}
+
 
  "rookie-three-features"
  {:template "three-features"
@@ -184,7 +185,8 @@
 
  "rookie-step-1"
  {:template "feature-highlight"
-  :data     {:heading     {:text           "Improve how you coach your athletes"
+  :data     {:pad "4em"
+             :heading     {:text           "Improve how you coach your athletes"
                            :color          "#2E3944"
                            :font-size      "1.75em"
                            :spacer "0.15em"
@@ -194,11 +196,13 @@
              :description {:text  "Give thorough video feedback, assign workouts, and communicate with your athletes all through one platform."
                            :color "#2E3944"}
              :image       {:image-url "/rookie/images/rookie-sales-0.png"
-                           :position  "right"}}}
+                           :position  "right"
+                           :size "32em"}}}
 
  "rookie-step-2"
  {:template "feature-highlight"
-  :data     {:heading     {:text           "Keep track of your athletes’ progress"
+  :data     {:pad "4em"
+             :heading     {:text           "Keep track of your athletes’ progress"
                            :color          "#2E3944"
                            :font-size      "1.75em"
                            :spacer "0.15em"
@@ -208,12 +212,14 @@
              :description {:text  "View detailed performance data about each of your athlete’s lifts and drills progression."
                            :color "#2E3944"}
              :image       {:image-url "/rookie/images/rookie-sales.png"
-                           :position  "left"}}}
+                           :position  "left"
+                           :size "32em"}}}
 
 
  "rookie-step-3"
  {:template "feature-highlight"
-  :data     {:heading     {:text           "Access an endless client base"
+  :data     {:pad "4em"
+             :heading     {:text           "Access an endless client base"
                            :color          "#2E3944"
                            :font-size      "1.75em"
                            :spacer "0.15em"
@@ -223,7 +229,8 @@
              :description {:text  " Attract and train athletes from all over the world."
                            :color "#2E3944"}
              :image       {:image-url "/rookie/images/rookie-sales-3.png"
-                           :position  "right"}}}
+                           :position  "right"
+                           :size "32em"}}}
 
 
 
@@ -315,7 +322,8 @@
 
  "rookie-product-feature-1"
  {:template "feature-highlight"
-  :data     {:alignment "center"
+  :data     {:pad "4em"
+             :alignment "center"
              :anchor "create"
              :heading     {:step           1
                            :text           "Create your custom Rookie profile + app"
@@ -337,11 +345,13 @@
                            :size "0.85em"
                            :weight 200}
              :image       {:image-url "/rookie/images/rookie-training-courtneyforlife-custom-landing-page.png"
-                           :position  "right"}}}
+                           :position  "right"
+                           :size "32em"}}}
 
  "rookie-product-feature-2"
  {:template "feature-highlight"
-  :data     {:alignment "center"
+  :data     {:pad "4em"
+             :alignment "center"
              :anchor "invite"
              :heading     {:step           2
                            :text           "Invite your athletes + clients"
@@ -362,12 +372,14 @@
                            :underline "none"
                            :weight 200}
              :image       {:image-url "/rookie/images/invite-athetes-to-rookie-courtneyforlife.png"
-                           :position  "left"}}}
+                           :position  "left"
+                           :size "32em"}}}
 
 
  "rookie-product-feature-3"
  {:template "feature-highlight"
-  :data     {:alignment "center"
+  :data     {:pad "4em"
+             :alignment "center"
              :anchor "review"
              :heading     {:step           3
                            :text           "Assign workouts and give feedback"
@@ -388,12 +400,14 @@
                            :underline "none"
                            :weight 200}
              :image       {:image-url "/rookie/images/rookie-personal-trainer-using-video-editor.png"
-                           :position  "right"}}}
+                           :position  "right"
+                           :size "32em"}}}
 
 
  "rookie-product-feature-4"
  {:template "feature-highlight"
-  :data     {:alignment "center"
+  :data     {:pad "4em"
+             :alignment "center"
              :anchor "get-paid"
              :heading     {:step           4
                            :text           "Get Paid"
@@ -414,7 +428,8 @@
                            :underline "none"
                            :weight 200}
              :image       {:image-url "/rookie/images/get-paid-with-rookie-coaching-app.png"
-                           :position  "left"}}}
+                           :position  "left"
+                           :size "32em"}}}
 
 
  "rookie-testimonial-1"
@@ -1455,6 +1470,7 @@
                       :height "300px"
                       :image ""
                       :color "#2D3589"}}}
+
  ;=========================================================================================
  ; Rookie - Analytics and plugins
  ;=========================================================================================
