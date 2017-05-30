@@ -95,4 +95,8 @@
 
  "bodyclub-drift"
  {:template "drift"
-  :data {:id "4rrwh4huv6p2"}}}
+  :data {:id "4rrwh4huv6p2"}}
+
+ "bodyclub-google-analytics"
+ {:template "analytics"
+  :data {:id "UA-91884854-2"}}}
