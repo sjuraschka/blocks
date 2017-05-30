@@ -50,7 +50,7 @@
                                          :bg-active "#E64A5E"
                                          :shadow "0 1px 2px 0 rgba(152,31,59,.2)"}}
                          :signup {:text "Create Your Group"
-                                  :url "#signup"
+                                  :url "https://braid.chat/gateway/create-group"
                                   :colors {:text "#575757"
                                            :bg "#EDEDED"
                                            :bg-hover "#D1CBCB"
@@ -395,6 +395,7 @@
                              "∞ History"
                              "∞ Integrations"]
                   :button {:text "Get Started"
+                           :url "https://braid.chat/gateway/create-group?group-type=public"
                            :colors {:text      "#fff"
                                     :bg "#3D75FB"
                                     :bg-hover  "#054aef"
@@ -408,6 +409,7 @@
                              "∞ History"
                              "∞ Integrations"]
                   :button {:text "Get Started"
+                           :url "https://braid.chat/gateway/create-group?group-type=private"
                            :colors {:text      "#fff"
                                     :bg "#FD6275"
                                     :bg-hover  "#fc1f3a"
@@ -424,6 +426,9 @@
                            :color "#fff"}
              :background  {:color "#3D75FB"}
              :form        {:prompt-text ""
+                           :ajax {:method :get
+                                  :action "https://braid.chat/gateway/create-group"
+                                  :non-ajax? true}
                            :placeholder "you@yourgroup.com"
                            :button      {:text   "Create Your Group"
                                          :color  "#fff"

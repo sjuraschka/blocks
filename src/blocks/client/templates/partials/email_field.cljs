@@ -119,19 +119,25 @@
                                                      (if ok
                                                        (reset! submitted? true)
                                                        (reset! error-message "Something went wrong. Please try again.")))}))
-            submit-form! (fn []
-                           (reset! loading? true)
-                           (ajax-request!))]
+            submit-form! (if (get-in data [:ajax :non-ajax?])
+                           (fn [e])
+                           (fn [e]
+                             (.preventDefault e)
+                             (reset! loading? true)
+                             (ajax-request!)))]
 
         (if @submitted?
           [:div (data :post-submit-message)]
-          [:form {:class (str (when @loading? "loading") " "
+          [:form {:method (name (get-in data [:ajax :method]))
+                  :action (get-in data [:ajax :action])
+                  :class (str (when @loading? "loading") " "
                               (when @error-message "error") " ")
                   :on-submit (fn [e]
-                               (.preventDefault e)
                                (if (not (re-matches #".+@.+\..+" @email))
-                                 (reset! error-message "That doesn't look like an email. Please try again.")
-                                 (submit-form!)))}
+                                 (do
+                                   (.preventDefault e)
+                                   (reset! error-message "That doesn't look like an email. Please try again."))
+                                 (submit-form! e)))}
            [:fieldset
             [:input {:type "email"
                      :name "email"

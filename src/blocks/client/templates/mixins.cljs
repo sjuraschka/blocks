@@ -13,6 +13,8 @@
     :font-weight "bold"
     :cursor "pointer"
     :outline "none"
+    :text-align "center"
+    :box-sizing "border-box"
     :text-decoration "none"
     :display "inline-block"
     :color (colors :text)

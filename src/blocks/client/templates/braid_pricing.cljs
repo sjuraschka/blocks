@@ -11,6 +11,7 @@
   [:.braid-pricing
    {:background-color (data :background)
     :padding "2em 0"}
+
    [:>h1
     {:text-align "center"
      :font-weight "bolder"
@@ -65,15 +66,14 @@
       [:>.features
        [:>.feature]]
 
-      [:>button
-
+      [:>.button
        {:width "100%"
         :margin-top "2em"}]]]
 
     (map-indexed (fn [index plan]
                    [(str ">.plan:nth-child(" (+ index 1) ")")
                     [:>.content
-                     [:>button
+                     [:>.button
                       (button-mixin (get-in plan [:button :colors] {}))]]])
                  (data :plans))]
 
@@ -99,7 +99,7 @@
         [:div.features
          (for [feature (plan :features)]
            [:div.feature feature])]
-        [:button
+        [:a.button {:href (get-in plan [:button :url])}
          (get-in plan [:button :text])]]])]
    [:p
     "Need more features, custom integrations or want to host it yourself? "
