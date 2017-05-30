@@ -14,8 +14,8 @@
              :height     "2em"
              :menu       [{:text "Pricing"
                            :url  "/pricing/"}
-                          {:text "Downloads"
-                           :url  "/downloads/"}
+                          ;{:text "Downloads"
+                           ;:url  "/downloads/"}
                           {:text "Open Source"
                            :url  "https://www.braidchat.org/"}
                           {:text  "Sign In"
@@ -473,30 +473,30 @@
              :title {:description "Be productive again. Group chat doesn't have to be a distraction, work better together with Braid."}
              :nav {:color {:hover "#098BEE"}}
              :button {:athlete  {:image "/rookie/images/app-rookie-training-video-capture.png"}
-                      :coach    {:image "/rookie/images/chrome-desktop-app-rookie-training.png"}}
-             :social {:facebook {:url "https://www.facebook.com/braidchat"}
+                      :coach    {:image "/rookie/images/chrome-desktop-app-rookie-training.png"}
+             ;:social {:facebook {:url "https://www.facebook.com/braidchat"}
                       :twitter {:url "https://www.twitter.com/braidchat"}}
              :columns [
                        {:title      "Product"
                         :categories [{:name  "Sign In"
                                       :url   "https://braid.chat/"}
-                                     {:name "Downloads"
-                                      :url  "/downloads/"}
+                                     ;{:name "Downloads"
+                                      ;:url  "/downloads/"}
                                      {:name "Open Source"
                                       :url "https://www.braidchat.org"}]}
 
                        {:title      "Company"
                         :categories [{:name "Why we built Braid?"
                                       :url "https://github.com/braidchat/braid#motivation"
-                                      :target "_blank"}
-                                     {:name "Pricing"
-                                      :url "/pricing/"}
-                                     {:name "Careers"
-                                      :url "/careers/"}]}
+                                      :target "_blank"}]}
+                                     ;{:name "Pricing"
+                                      ;:url "/pricing/"}]}
+                                    ; {:name "Careers"
+                                     ; :url "/careers/"}]}
                        ;{:name "Get In Touch"}]}
                        {:title      "Connect"
-                        :categories [{:name "+1-647-267-5292"
-                                      :url ""}
+                        :categories [;{:name "+1-647-267-5292"
+                                      ;:url ""
                                      {:name "hi@braidchat.com"
                                       :url "mailto:hi@braidchat.com"}]}]}}
 
@@ -509,10 +509,10 @@
              :text-color       "#FFF"
              :text-transform   "uppercase"
              :size             "0.85em"
-             :menu             [{:text "Privacy"
-                                 :url  "/privacy-policy/"}
-                                {:text "Terms"
-                                 :url  "/terms-of-service/"}
+             :menu             [;{:text "Privacy"
+                                 ;:url  "/privacy-policy/"
+                                ;{:text "Terms"
+                                 ;:url  "/terms-of-service/"
                                 {:text "hi@braidchat.com"
                                  :url  "mailto:hi@braidchat.com"
                                  :icon \uf003}]}}
