@@ -339,7 +339,26 @@
            "bodyclub-value-2"
            "bodyclub-value-3"
            "bodyclub-drift"
-           "bodyclub-google-analytics"]}]
+           "bodyclub-google-analytics"]}
+
+ {:domain "pairwise.bloomventures.io"
+  :url "/"
+  :meta {:title "Make Decisions Faster | Compare Images, Names, Logos and more"
+         :description "Compare your choices quickly and easily and get feedback from your team or friends"
+         :image "url (/pairwise/images/pairwise-logo.png)"}
+  :styles {:fonts {:body {:name "Source Sans Pro"
+                          :source "google"
+                          :weight 300}
+                   :headings {:name "Source Sans Pro"
+                              :source "google"
+                              :weight 500}}}
+  :blocks ["pairwise-header"
+           "pairwise-hero"
+           "pairwise-values"
+           "pairwise-promotion"
+           "pairwise-footer"
+           "pairwise-analytics"]}]
+
 
 
 

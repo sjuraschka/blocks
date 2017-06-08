@@ -25,6 +25,7 @@
     blocks.client.templates.pre-footer-menu
     blocks.client.templates.press-room
     blocks.client.templates.pricing
+    blocks.client.templates.promotion
     blocks.client.templates.quote
     blocks.client.templates.raw
     blocks.client.templates.roadmap

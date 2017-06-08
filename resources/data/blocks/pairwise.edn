@@ -1,0 +1,119 @@
+{
+ "pairwise-header"
+ {:template "header"
+  :data     {:color      "#fff"
+             :text-shadow "0px 1px 8px #000000"
+             :padding    "1.15em"
+             :overlay?   true
+             :height     "2.5em"
+             :title      "Pairwise"
+             :version    "beta"
+             :logo       {:image-url "/pairwise/images/pairwise-logo.png"
+                          :color     "#fff"
+                          :url       "./"}
+             :background {:color ""}
+             :menu       [{:text ""
+                           :url  ""}
+                          {:text ""
+                           :url  "mailto:sam@bloomventures.io"
+                           :icon \uf003}]}}
+
+ "pairwise-hero"
+ {:template "hero-testimonial"
+  :data {:font-family "-apple-system,BlinkMacSystemFont, Roboto, \"Helvetica Neue\", Helvetica, Arial"
+         :padding "10em"
+         :height "750px"
+         :mobile-height "650px"
+         :heading {:text "Make decisions faster."
+                   :color "#fff"
+                   :size "2.7em"
+                   :weight "600"
+                   :alignment "left"
+                   :title-type "sentence-case"
+                   :line "1.1em"}
+         :sub-heading {:text "All you need is a little help from your friends."
+                       :color "#fff"
+                       :weight "200"}
+         :featured-image {:url "/pairwise/images/pairwise-demo.png"}
+         :background {:color "#2F60FF"
+                      :size "cover"
+                      :position "center top"}
+         :form {:after {:text "Enter your email to start the comparison survey. It’s free to use!"
+                        :align "center"}
+                :placeholder "your-email@example.com"
+                :autofocus true
+                :background "#fff"
+                :post-submit-message ""
+                :ajax {:method :get
+                       :non-ajax? true
+                       :action "http://admin.pairwise.bloomventures.io/signup"}
+
+
+                :button {:text "Start Survey"
+                         :colors {:text "#fff"
+                                  :bg "#7ED321"
+                                  :bg-hover "#7ea9f9"
+                                  :bg-active "#0c5df4"}}}}}
+
+ "pairwise-values"
+ {:template "feature-highlight"
+  :data     {:pad "4em"
+             :heading     {:text  "Pairwise helps you make a decision so you can get back to what matters."
+                           :color "#444444"
+                           :font-size "1.25em"}
+
+             :background  {:color "#f7f8f9"}
+             :description {:text  "Use the Pairwise comparison to help you rank your options. Pairwise compares your options in pairs to judge which entry is preferred."
+                           :color "#777"
+                           :size "1.05em"}
+
+             :bullets-style  {:color ""
+                              :size "1em"
+                              :icon "#3D75FB"}
+
+             :bullets     [{:text "Compare and rank images, logos or concepts"}
+                           {:text "Compare and rank text, names, or domain names"}
+                           {:text "Easily share with your friends, team or social network"}]
+
+             :image       {:image-url "/pairwise/images/example-pairwise.png"
+                           :position  "right"
+                           :size "32em"
+                           :margin "4em"}}}
+
+
+
+
+ "pairwise-promotion"
+ {:template "promotion"
+  :data {:image "/rookie/images/rookie-coaching-white-logo.png"
+         :styles {:background {;:color "blue"
+                               :url "/rookie/images/rookie-training-mobile-app-personal-training.jpg"}
+                  :heading {:color "#fff"
+                            :size "2em"}
+                  :about {:color "#fff"
+                          :size "1em"
+                          :transform "uppercase"}
+                  :sub-heading {:color "#fff"}}
+
+         :button {:text "Get started on Rookie Free"}
+         :content {:link "https://getrookie.com"
+                   :headline "Pairwise is  a tool made by the Rookie Team"
+                   :promo-text "We build tools to help coaches and trainers grow their business."
+                   :sub-heading "Form analysis and client management for your online coaching business."}}}
+
+
+
+
+ "pairwise-footer"
+ {:template "footer"
+  :data     {:logo             {}
+             :height           "1em"
+             :text             "Copyright 2017 | Pairwise by Rookie"
+             :background-color "#000"
+             :text-color       "#FFF"
+             :text-transform   "sentence case"
+             :size             "0.95em"}}
+
+ "pairwise-analytics"
+ {:template "analytics"
+  :data {:id "UA-91884854-2"}}}
